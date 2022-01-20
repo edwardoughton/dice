@@ -1,6 +1,6 @@
-=================================================
-Welcome to DICE! (The Digital Infrastructure Costing Model)
-=================================================
+================
+Welcome to DICE!
+================
 
 .. image:: https://readthedocs.org/projects/dice-docs/badge/?version=latest
     :target: https://cdcam.readthedocs.io/en/latest/?badge=latest
@@ -10,8 +10,8 @@ The **Digital Infrastructure Costing Model** (``dice``) helps decision makers un
 how much annual investment is required to ensure universal broadband can plausibly be
 achieved by 2030.
 
-Citations
----------
+Citation
+--------
 
     - TBC
 
@@ -26,9 +26,10 @@ However, there are few tools that can guide decision makers to understand the re
 investment needs to achieve SDG Target 9c. There are even fewer examples of tools which
 can help support cross-country comparisons using a consistent methodological approach.
 
-Additionally, using the DICE model allows users to take advantage of either the baseline
-model parameters, or user-defined parameter values, enabling a left of interactivity
-which helps to boost analyst understanding.
+Additionally, using the DICE model allows users to take advantage of either baseline
+model parameters or user-defined parameter values. This interactivity helps the model
+user to understand the implications of different demographic, technological or financial
+scenarios.
 
 Applications
 ------------
