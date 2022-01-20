@@ -129,6 +129,12 @@ def add_settings(ws):
     data_val.add(ws["B15"])
     ws['B15'] = "Baseline"
 
+    ws['A16'] = "Sites Availability"
+    data_val = DataValidation(type="list", formula1='=Options!F2:F4')
+    ws.add_data_validation(data_val)
+    data_val.add(ws["B15"])
+    ws['B16'] = "Baseline"
+
     ########Deciles
     ws['D6'] = "Decile"
     for row in range(1, 11):
