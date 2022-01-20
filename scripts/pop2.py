@@ -13,7 +13,8 @@ import csv
 import pandas as pd
 import geopandas as gpd
 import pyproj
-from shapely.geometry import Polygon, MultiPolygon, mapping, shape, MultiLineString, LineString
+from shapely.geometry import (Polygon, MultiPolygon, mapping, shape,
+    MultiLineString, LineString, box)
 from shapely.ops import transform, unary_union, nearest_points
 import fiona
 import fiona.crs
@@ -174,7 +175,7 @@ def process_settlement_layer(country):
 
     """
     iso3 = country['iso3']
-    regional_level = country['regional_level']
+    # regional_level = country['regional_level']
 
     path_settlements = os.path.join(DATA_RAW,'settlement_layer',
         'ppp_2020_1km_Aggregated.tif')
@@ -195,12 +196,15 @@ def process_settlement_layer(country):
     path_country = os.path.join(DATA_INTERMEDIATE, iso3)
     shape_path = os.path.join(path_country, 'settlements.tif')
 
-    if os.path.exists(shape_path):
-        return print('Completed settlement layer processing')
+    # if os.path.exists(shape_path):
+    #     return print('Completed settlement layer processing')
 
     geo = gpd.GeoDataFrame()
-
-    geo = gpd.GeoDataFrame({'geometry': country['geometry']})
+    minx, miny, maxx, maxy = country['geometry'].total_bounds
+    bbox = box(minx, miny, maxx, maxy)
+    geo = gpd.GeoDataFrame({'geometry': bbox}, index=[0])
+    # bbox = country['geometry']
+    # geo = gpd.GeoDataFrame({'geometry': bbox})
 
     coords = [json.loads(geo.to_json())['features'][0]['geometry']]
 
@@ -219,7 +223,7 @@ def process_settlement_layer(country):
     with rasterio.open(shape_path, "w", **out_meta) as dest:
             dest.write(out_img)
 
-    return
+    return print("Written raster layer")
 
 
 def get_pop_and_luminosity_data(country):
@@ -238,11 +242,13 @@ def get_pop_and_luminosity_data(country):
 
     path_output = os.path.join(DATA_INTERMEDIATE, iso3, 'regional_data.csv')
 
-    if os.path.exists(path_output):
-        return print('Regional data already exists')
+    # if os.path.exists(path_output):
+    #     return print('Regional data already exists')
 
     path_settlements = os.path.join(DATA_INTERMEDIATE, iso3,
         'settlements.tif')
+    # path_settlements = os.path.join(DATA_RAW,'settlement_layer',
+    #     'ppp_2020_1km_Aggregated.tif')
 
     filename = 'regions_{}_{}.shp'.format(level, iso3)
     folder = os.path.join(DATA_INTERMEDIATE, iso3, 'regions')
@@ -265,11 +271,10 @@ def get_pop_and_luminosity_data(country):
                 array,
                 stats=['sum'],
                 affine=affine,
-                nodata=0
+                nodata=255
                 )][0]
 
         area_km2 = round(area_of_polygon(region['geometry']) / 1e6)
-
 
         if area_km2 > 0:
             population_km2 = (
@@ -279,7 +284,7 @@ def get_pop_and_luminosity_data(country):
 
         results.append({
             'GID_0': region['GID_0'],
-            # 'GID_id': region[gid_level],
+            'GID_id': region[gid_level],
             'GID_level': gid_level,
             # 'mean_luminosity_km2': mean_luminosity_km2,
             'population': (population_summation if population_summation else 0),
@@ -289,9 +294,25 @@ def get_pop_and_luminosity_data(country):
 
     results_df = pd.DataFrame(results)
 
+    print(round(results_df['population'].sum()/1e6,2))
+
     results_df.to_csv(path_output, index=False)
 
     return
+
+
+def area_of_polygon(geom):
+    """
+    Returns the area of a polygon. Assume WGS84 as crs.
+    """
+    geod = pyproj.Geod(ellps="WGS84")
+
+    poly_area, poly_perimeter = geod.geometry_area_perimeter(
+        geom
+    )
+
+    return abs(poly_area)
+
 
 def collect_results(countries):
     """
@@ -359,33 +380,33 @@ if __name__ == '__main__':
 
     countries = find_country_list([])
 
-    # for country in countries:
+    for country in countries:
 
-    #     # if not country['iso3'] == 'MEX':
-    #     #     continue
+        if not country['iso3'] == 'GBR':
+            continue
 
-    #     # path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
+        # path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
 
-    #     # if not os.path.exists(path):
-    #     #     print(country['country_name'], country['iso3'])
-    #     # print('--Working on {}'.format(country['iso3']))
+        # if not os.path.exists(path):
+        #     print(country['country_name'], country['iso3'])
+        # print('--Working on {}'.format(country['iso3']))
 
-    #     try:
-    #         print('Processing country boundary')
-    #         process_country_shapes(country)
+        # try:
+        print('Processing country boundary')
+        process_country_shapes(country)
 
-    #         print('Processing regions')
-    #         response = process_regions(country)
-    #         if response == 'All small shapes':
-    #             continue
+        print('Processing regions')
+        response = process_regions(country)
+        if response == 'All small shapes':
+            continue
 
-    #         print('Processing settlement layer')
-    #         process_settlement_layer(country)
+        print('Processing settlement layer')
+        process_settlement_layer(country)
 
-    #         print('Getting population and luminosity')
-    #         get_pop_and_luminosity_data(country)
+        print('Getting population and luminosity')
+        get_pop_and_luminosity_data(country)
 
-    #     except:
-    #         continue
+        # except:
+        #     continue
 
     collect_results(countries)

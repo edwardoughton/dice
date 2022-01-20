@@ -50,10 +50,8 @@ def generate_workbook():
     costs = wb.create_sheet("Costs", (7-1))
     costs = add_cost_sheet(costs)
 
-    # # #edit population workbook sheet
-
-
-
+    gdp = wb.create_sheet("GDP", (8-1))
+    gdp = add_gdp_sheet(gdp)
 
     wb.save('Oughton et al. (2021) DICE (v0.1).xlsx')
 
@@ -85,7 +83,7 @@ def add_settings(ws):
     ws['A5'] = ""
 
     ## Add parameters box
-    set_border(ws, 'A6:B16', "thin", "000000")
+    set_border(ws, 'A6:B15', "thin", "000000")
     ws['A6'] = "Parameter"
     ws['B6'] = "Option"
 
@@ -105,7 +103,7 @@ def add_settings(ws):
     data_val = DataValidation(type="list", formula1='=Options!C2:C4')
     ws.add_data_validation(data_val)
     data_val.add(ws["B10"])
-    ws['B10'] = "-"
+    ws['B10'] = "Baseline"
 
     ws['A11'] = "Market Share (%)"
     ws['B11'] = 25
@@ -129,7 +127,7 @@ def add_settings(ws):
     data_val = DataValidation(type="list", formula1='=Options!F2:F4')
     ws.add_data_validation(data_val)
     data_val.add(ws["B15"])
-    ws['B15'] = "-"
+    ws['B15'] = "Baseline"
 
     ########Deciles
     ws['D6'] = "Decile"
@@ -192,8 +190,33 @@ def add_settings(ws):
         ws[cell] = "=Supply!L{}".format(row+1)
         ws[cell].style = 'Comma'
 
+    ws.column_dimensions['K'].width = 25
+    for row in range(1, 12):
+        cell = "K{}".format(5+row)
+        ws[cell] = "=Costs!H{}".format(row)
+        ws[cell].style = 'Comma'
+
+    ws.column_dimensions['L'].width = 25
+    for row in range(1, 12):
+        cell = "L{}".format(5+row)
+        ws[cell] = "=Costs!I{}".format(row)
+        ws[cell].style = 'Comma'
+
+    ws.column_dimensions['M'].width = 25
+    for row in range(1, 12):
+        cell = "M{}".format(5+row)
+        ws[cell] = "=Costs!J{}".format(row)
+        ws[cell].style = 'Comma'
+
+    ws.column_dimensions['N'].width = 25
+    ws['N6'] = "Share of Annual GDP (%)"
+    for row in range(1, 11):
+        cell = "N{}".format(6+row)
+        ws[cell] = "=VLOOKUP($B$8,GDP!$A$2:$B$266,2)/M{}".format(6+row)
+        # ws[cell].style = 'Comma'
+
     ##Set deciles box
-    set_border(ws, 'D6:J16', "thin", "000000")
+    set_border(ws, 'D6:N16', "thin", "000000")
 
     return ws
 
@@ -275,6 +298,8 @@ def add_population_sheet(ws):
         'area_km2',
         'population_km2',
         ]]
+
+    population['population'] = round(population['population'])
 
     for r in dataframe_to_rows(population, index=False, header=True):
         ws.append(r)
@@ -565,41 +590,118 @@ def add_cost_sheet(ws):
     """
     ws.sheet_properties.tabColor = "9966ff"
 
-    for i in range(1, 11): #Decile
+    #Column dimensions
+    ws.column_dimensions['A'].width = 15
+    ws.column_dimensions['B'].width = 15
+    ws.column_dimensions['C'].width = 15
+    ws.column_dimensions['D'].width = 15
+    ws.column_dimensions['E'].width = 15
+    ws.column_dimensions['F'].width = 15
+    ws.column_dimensions['G'].width = 15
+    ws.column_dimensions['H'].width = 15
+    ws.column_dimensions['I'].width = 15
+    ws.column_dimensions['J'].width = 15
+
+    ##Spectrum Portfolio Box
+    set_border(ws, 'A14:C18', "thin", "000000")
+    ws.merge_cells('A14:C14')
+    ws['A14'] = "Equipment Costs"
+
+    ws['A15'] = 'Asset'
+    ws['A16'] = 'RAN'
+    ws['A17'] = 'Fiber'
+    ws['A18'] = 'Towers'
+
+    ws['B15'] = 'Cost ($)'
+    ws['B16'] = 30000
+    ws['B17'] = 10
+    ws['B18'] = 30000
+
+    ws['C15'] = 'Unit'
+    ws['C16'] = "Per Tower"
+    ws['C17'] = "Per Meter"
+    ws['C18'] = "Per Tower"
+
+    #Deciles
+    set_border(ws, 'A1:J11', "thin", "000000")
+
+    for i in range(1, 12): #Decile
         cell = "A{}".format(i)
         ws[cell] = "=Demand!A{}".format(i)
 
-    for i in range(1, 11): #Population
+    for i in range(1, 12): #Population
         cell = "B{}".format(i)
         ws[cell] = "=Demand!B{}".format(i)
 
-    for i in range(1, 11): #Area
+    for i in range(1, 12): #Area
         cell = "C{}".format(i)
         ws[cell] = "=Demand!C{}".format(i)
 
-    for i in range(1, 11): #Sites
+    for i in range(1, 12): #Sites
         cell = "D{}".format(i)
         ws[cell] = "=Supply!L{}".format(i)
 
     ws["E1"] = "RAN"
-    for i in range(1, 11): #RAN
+    for i in range(2, 12): #RAN
         cell = "E{}".format(i)
-        ws[cell] = "=Supply!L{}".format(i)
+        ws[cell] = "=Supply!L{}*VLOOKUP($E$1, $A$14:$B$24, 2, FALSE)".format(i)
 
     ws["F1"] = "Fiber"
-    for i in range(1, 11): #Fiber
+    for i in range(2, 12): #Fiber
         cell = "F{}".format(i)
-        ws[cell] = "=Supply!L{}".format(i)
+        ws[cell] = "=Supply!L{}*VLOOKUP($F$1, $A$14:$B$24, 2, FALSE)".format(i)
 
     ws["G1"] = "Towers"
-    for i in range(1, 11): #Towers
+    for i in range(2, 12): #Towers
         cell = "G{}".format(i)
-        ws[cell] = "=Supply!L{}".format(i)
+        ws[cell] = "=Supply!L{}*VLOOKUP($G$1, $A$14:$B$24, 2, FALSE)".format(i)
 
+    ws["H1"] = "Total MNO Cost"
+    for i in range(2, 12): #Towers
+        cell = "H{}".format(i)
+        ws[cell] = "=SUM(E{}, F{}, G{})".format(i,i,i)
+
+    ws["I1"] = "Cost Per User"
+    for i in range(2, 12): #Towers
+        cell = "I{}".format(i)
+        ws[cell] = "=H{}/Demand!E{}".format(i,i)
+
+    ws["J1"] = "Total Market Cost"
+    for i in range(2, 12): #Towers
+        cell = "J{}".format(i)
+        ws[cell] = "=I{}*B{}".format(i,i)
 
     return ws
 
 
+def add_gdp_sheet(ws):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "ffff33"
+
+    path = os.path.join(DATA_RAW, 'gdp.csv')
+    gdp = pd.read_csv(path)
+
+    # population = population.rename({
+    #     'GID_0': 'iso3',
+    #     }, axis='columns')
+
+    gdp = gdp[[
+        'iso3',
+        # 'country',
+        'gdp',
+        'income_group',
+        'source',
+        'Date',
+        ]]
+
+    gdp = gdp.sort_values('iso3')
+
+    for r in dataframe_to_rows(gdp, index=False, header=True):
+        ws.append(r)
+
+    return gdp
 
 # for i in range(1,11+1):
 
