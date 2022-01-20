@@ -53,7 +53,7 @@ def generate_workbook():
     gdp = wb.create_sheet("GDP", (8-1))
     gdp = add_gdp_sheet(gdp)
 
-    wb.save('Oughton et al. (2021) DICE (v0.1).xlsx')
+    wb.save('Oughton et al. (2022) DICE.xlsx')
 
     return print("Generated workbook")
 
