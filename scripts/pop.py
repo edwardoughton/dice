@@ -318,44 +318,80 @@ def collect_results(countries):
     """
 
     """
-    output = []
+    missing_data = set()
 
-    for country in countries:
+    metrics = [
+        ('population', 0),
+        ('area_km2', 0),
+        ('population_km2', 2),
+    ]
 
-        path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
+    for metric in metrics:
 
-        if os.path.exists(path):
+        output = []
 
-            data = pd.read_csv(path)
+        for country in countries:
 
-            data = data.sort_values(by='population_km2', ascending=True)#.reset_index()
+            # if not country['iso3'] == 'GBR':
+            #     continue
 
-            try:
-                data['decile'] = pd.qcut(data['population_km2'],
-                    q=10, #precision=0,
-                    labels=[100,90,80,70,60,50,40,30,20,10],
-                    duplicates='drop'
-                    ) #[0,10,20,30,40,50,60,70,80,90,100]
-            except:
+            if country['iso3'] in ['MAC', 'STP', 'WLF']:
                 continue
 
-            data = data[['GID_0', 'decile', 'population', 'area_km2']]
+            path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
 
-            data = data.groupby(['GID_0','decile'])[
-                ['population', 'area_km2']
-                ].sum().reset_index()
+            if os.path.exists(path):
 
-            data['population_km2'] = data['population'] / data['area_km2']
+                data = pd.read_csv(path)
 
-            data['country_name'] = country['country_name']
+                data = data.sort_values(by='population_km2', ascending=True)
 
-            data = data.to_dict('records')
+                try:
+                    deciles = [100,90,80,70,60,50,40,30,20,10]
+                    data['decile'] = pd.qcut(data['population_km2'],
+                        q=10, #precision=0,
+                        labels=deciles,
+                        duplicates='drop'
+                        ) #[0,10,20,30,40,50,60,70,80,90,100]
+                except:
+                    continue
 
-            output = output + data
+                data = data[['GID_0', 'decile', 'population', 'area_km2']]
 
-    output = pd.DataFrame(output)
-    path = os.path.join(DATA_INTERMEDIATE, 'all_pop_data.csv')
-    output.to_csv(path, index=False)
+                data = data.groupby(['GID_0','decile'])[
+                    ['population', 'area_km2']
+                    ].sum().reset_index()
+
+                data['population_km2'] = data['population'] / data['area_km2']
+
+                data = data[['GID_0', 'decile', metric[0]]]
+
+                if metric[0] == 'population_km2':
+                    data[metric[0]] = round(data[metric[0]], metric[1]).astype(float)
+                else:
+                    data[metric[0]] = round(data[metric[0]], metric[1]).astype(int)
+
+                data = data.to_dict('records')
+
+                wide_dict = {}
+                wide_dict['GID_0'] = country['iso3']
+                wide_dict['country_name'] = country['country_name']
+                for decile in reversed(deciles):
+                    for item in data:
+                        if decile == item['decile']:
+                            wide_dict[decile] = item[metric[0]]
+
+                output.append(wide_dict)
+
+            else:
+                missing_data.add(country['country_name'])
+
+        output = pd.DataFrame(output)
+        filename = 'all_pop_data_{}.csv'.format(metric[0])
+        path = os.path.join(DATA_INTERMEDIATE, filename)
+        output.to_csv(path, index=False)
+
+    print('The following countries had missing data: {}'.format(missing_data))
 
 
 def define_deciles(regions):
@@ -380,33 +416,33 @@ if __name__ == '__main__':
 
     countries = find_country_list([])
 
-    for country in countries:
+    # for country in countries:
 
-        if not country['iso3'] == 'GBR':
-            continue
+    #     if not country['iso3'] == 'GBR':
+    #         continue
 
-        # path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
+    #     # path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
 
-        # if not os.path.exists(path):
-        #     print(country['country_name'], country['iso3'])
-        # print('--Working on {}'.format(country['iso3']))
+    #     # if not os.path.exists(path):
+    #     #     print(country['country_name'], country['iso3'])
+    #     # print('--Working on {}'.format(country['iso3']))
 
-        # try:
-        print('Processing country boundary')
-        process_country_shapes(country)
+    #     # try:
+    #     print('Processing country boundary')
+    #     process_country_shapes(country)
 
-        print('Processing regions')
-        response = process_regions(country)
-        if response == 'All small shapes':
-            continue
+    #     print('Processing regions')
+    #     response = process_regions(country)
+    #     if response == 'All small shapes':
+    #         continue
 
-        print('Processing settlement layer')
-        process_settlement_layer(country)
+    #     print('Processing settlement layer')
+    #     process_settlement_layer(country)
 
-        print('Getting population and luminosity')
-        get_pop_and_luminosity_data(country)
+    #     print('Getting population and luminosity')
+    #     get_pop_and_luminosity_data(country)
 
-        # except:
-        #     continue
+    #     # except:
+    #     #     continue
 
     collect_results(countries)

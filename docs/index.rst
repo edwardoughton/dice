@@ -15,10 +15,10 @@ Citation
 
     - TBC
 
-Statement of Need
------------------
+Why do we need DICE?
+--------------------
 
-Target 9c of the United Nations’ Sustainable Development Goals (SDGs) aims to ensure
+Target 9c of the UN Sustainable Development Goals (SDGs) aims to ensure
 that affordable universal broadband connectivity is available to all citizens, given
 the widely acknowledged economic development benefits.
 
@@ -36,8 +36,8 @@ Applications
 
 There are many applications for the DICE model. The two main applications include:
 
-- Exploring the cost of delivering different quality of service levels to users, in terms
-of the per user broadband speed achievable (e.g., 10 Mbps per user).
+- Exploring the cost of delivering different quality of service levels to users, in terms of the
+per user broadband speed achievable (e.g., 10 Mbps per user).
 - Exploring the cost of using different broadband infrastructure strategies to achieve
 SDG Target 9c (e.g., using 4G).
 
