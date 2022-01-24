@@ -32,26 +32,56 @@ def generate_workbook():
     settings = wb.active
     settings = add_settings(settings)
 
-    options = wb.create_sheet("Options", (2-1))
-    options = add_options(options)
+    population = wb.create_sheet("Population", (2-1))
+    population = add_country_data(population, 'population')
 
-    population = wb.create_sheet("Population", (3-1))
-    population = add_population_sheet(population)
+    area = wb.create_sheet("Area", (3-1))
+    area = add_country_data(area, 'area_km2')
 
-    demand = wb.create_sheet("Demand", (4-1))
-    demand = add_demand_sheet(demand)
+    pop_density = wb.create_sheet("Pop_Density", (4-1))
+    pop_density = add_country_data(pop_density, 'population_km2')
 
-    supply = wb.create_sheet("Supply", (5-1))
-    supply = add_supply_sheet(supply)
+    cols = ['A','B','C','D','E','F','G','H','I','J','K','L']
+    users = wb.create_sheet("Users", (5-1))
+    users = add_users(users, cols)
+    users.sheet_properties.tabColor = "66ff99"
 
-    capacity = wb.create_sheet("Capacity", (6-1))
-    capacity = add_capacity_sheet(capacity)
+    data_demand = wb.create_sheet("Data Demand", (6-1))
+    data_demand = add_data_demand(data_demand, cols)
+    data_demand.sheet_properties.tabColor = "66ff99"
 
-    costs = wb.create_sheet("Costs", (7-1))
-    costs = add_cost_sheet(costs)
+    coverage = wb.create_sheet("Coverage", (7-1))
+    coverage = add_coverage_sheet(coverage, cols)
+    coverage.sheet_properties.tabColor = "0000ff"
 
-    gdp = wb.create_sheet("GDP", (8-1))
+    towers = wb.create_sheet("Towers", (8-1))
+    towers = add_towers_sheet(towers, cols)
+    towers.sheet_properties.tabColor = "0000ff"
+
+    lookups = wb.create_sheet("Lookups", (9-1))
+    lookups = add_lookups_sheet(lookups)
+    lookups.sheet_properties.tabColor = "0000ff"
+
+    capacity = wb.create_sheet("Capacity", (10-1))
+    capacity = add_capacity_sheet(capacity, cols)
+    capacity.sheet_properties.tabColor = "0000ff"
+
+    sites = wb.create_sheet("Total Sites", (11-1))
+    sites = add_sites_sheet(sites, cols)
+    sites.sheet_properties.tabColor = "0000ff"
+
+    new = wb.create_sheet("New Sites", (12-1))
+    new = add_new_sites_sheet(new, cols)
+    new.sheet_properties.tabColor = "0000ff"
+
+    costs = wb.create_sheet("Costs", (13-1))
+    costs = add_cost_sheet(costs, cols)
+
+    gdp = wb.create_sheet("GDP", (14-1))
     gdp = add_gdp_sheet(gdp)
+
+    options = wb.create_sheet("Options", (15-1))
+    options = add_options(options)
 
     wb.save('Oughton et al. (2022) DICE.xlsx')
 
@@ -66,8 +96,14 @@ def add_settings(ws):
     set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
 
     ##Set column width
-    ws.column_dimensions['A'].width = 25
+    ws.column_dimensions['A'].width = 15
     ws.column_dimensions['B'].width = 15
+    ws.column_dimensions['C'].width = 15
+    ws.column_dimensions['D'].width = 30
+    ws.column_dimensions['E'].width = 15
+    ws.column_dimensions['F'].width = 15
+    ws.column_dimensions['G'].width = 30
+    ws.column_dimensions['H'].width = 15
 
     ##Allocate title
     ws.title = "Settings"
@@ -83,146 +119,189 @@ def add_settings(ws):
     ws['A5'] = ""
 
     ## Add parameters box
-    set_border(ws, 'A6:B15', "thin", "000000")
-    ws['A6'] = "Parameter"
-    ws['B6'] = "Option"
+    set_border(ws, 'A6:B11', "thin", "000000")
+    ws.merge_cells('A6:B6')
+    ws['A6'] = "Country Parameters"
 
-    ws['A7'] = "Country"
+    ws['A7'] = "Parameter"
+    ws['B7'] = "Option"
+
+    ws['A8'] = "Country"
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
-    data_val.add(ws["B7"])
-    ws['B7'] = "Afghanistan"
+    data_val.add(ws["B8"])
+    ws['B8'] = "Afghanistan"
 
-    ws['A8'] = "ISO3"
-    ws['B8'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!B7, Options!A2:A1611)), \"\")"
+    ws['A9'] = "ISO3"
+    ws['B9'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!B8, Options!A2:A1611)), \"\")"
 
-    ws['A9'] = "Speed Target (Mbps)"
-    ws['B9'] = 10
+    ws['A10'] = "Start Year"
+    ws['B10'] = 2022
 
-    ws['A10'] = "Adoption Scenario"
-    data_val = DataValidation(type="list", formula1='=Options!C2:C4')
-    ws.add_data_validation(data_val)
-    data_val.add(ws["B10"])
-    ws['B10'] = "Baseline"
+    ws['A11'] = "End Year"
+    ws['B11'] = 2030
 
-    ws['A11'] = "Market Share (%)"
-    ws['B11'] = 25
+    set_border(ws, 'D6:E13', "thin", "000000")
+    ws.merge_cells('D6:E6')
+    ws['D6'] = "Demand Parameters"
 
-    ws['A12'] = "Active Users (%)"
-    ws['B12'] = 5
+    ws['D7'] = "Parameter"
+    ws['E7'] = "Option"
 
-    ws['A13'] = "Infrastructure Strategy"
+    ws['D8'] = "Pop. Growth Annually (%)"
+    ws['E8'] = 3
+
+    ws['D9'] = "Smartphone adoption (%)"
+    ws['E9'] = 95
+
+    ws['D10'] = "Market Share (%)"
+    ws['E10'] = 25
+
+    ws['D11'] = "Active Users (%)"
+    ws['E11'] = 5
+
+    ws['D12'] = "Minimum capacity per user (Mbps)"
+    ws['E12'] = 10
+
+    ws['D13'] = "Data demand per month (GB) "
+    ws['E13'] = 2
+
+    set_border(ws, 'G6:H9', "thin", "000000")
+    ws.merge_cells('G6:H6')
+    ws['G6'] = "Supply Parameters"
+
+    ws['G7'] = "Parameter"
+    ws['H7'] = "Option"
+
+    ws['G8'] = "Infrastructure Strategy"
     data_val = DataValidation(type="list", formula1='=Options!D2:D6')
     ws.add_data_validation(data_val)
-    data_val.add(ws["B13"])
-    ws['B13'] = "4G"
+    data_val.add(ws["H8"])
+    ws['H8'] = "4G"
 
-    ws['A14'] = "Spectrum Availability"
+    ws['G9'] = "Spectrum Availability"
     data_val = DataValidation(type="list", formula1='=Options!E2:E4')
     ws.add_data_validation(data_val)
-    data_val.add(ws["B14"])
-    ws['B14'] = "Baseline"
+    data_val.add(ws["H9"])
+    ws['H9'] = "Baseline"
 
-    ws['A15'] = "Sites Availability"
-    data_val = DataValidation(type="list", formula1='=Options!F2:F4')
-    ws.add_data_validation(data_val)
-    data_val.add(ws["B15"])
-    ws['B15'] = "Baseline"
+    # ws['A15'] = "Sites Availability"
+    # data_val = DataValidation(type="list", formula1='=Options!F2:F4')
+    # ws.add_data_validation(data_val)
+    # data_val.add(ws["B15"])
+    # ws['B15'] = "Baseline"
 
-    ws['A16'] = "Sites Availability"
-    data_val = DataValidation(type="list", formula1='=Options!F2:F4')
-    ws.add_data_validation(data_val)
-    data_val.add(ws["B15"])
-    ws['B16'] = "Baseline"
 
-    ########Deciles
-    ws['D6'] = "Decile"
-    for row in range(1, 11):
-        cell = "D{}".format(6+row)
-        ws[cell] = row * 10
+    # ws['G8'] = "Spectrum Availability"
+    # ws['H8'] =
 
-    ws['E6'] = "Population"
-    ws.column_dimensions['E'].width = 20
-    for row in range(1, 11):
-        cell = "E{}".format(6+row)
-        part1 = "=INDEX(Population!$D$2:$D$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
-        part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
-        ws[cell] = part1 + part2
-        ws[cell].style = 'Comma'
+    # ws['G9'] = "Smartphone adoption (%)"
+    # ws['H9'] = 95
 
-    ws['F6'] = "Area (km^2)"
-    ws.column_dimensions['F'].width = 20
-    for row in range(1, 11):
-        cell = "F{}".format(6+row)
-        part1 = "=INDEX(Population!$E$2:$E$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
-        part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
-        ws[cell] = part1 + part2
-        ws[cell].style = 'Comma'
+    # ws['G10'] = "Market Share (%)"
+    # ws['H10'] = 25
 
-    ws['G6'] = "Pop Density (km^2)"
-    ws.column_dimensions['G'].width = 20
-    for row in range(1, 11):
-        cell = "G{}".format(6+row)
-        part1 = "=INDEX(Population!$F$2:$F$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
-        part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
-        ws[cell] = part1 + part2
-        ws[cell].style = 'Comma'
+    # ws['G11'] = "Active Users (%)"
+    # ws['H11'] = 5
 
-    ws['H6'] = "Active User Density (km^2)"
-    ws.column_dimensions['H'].width = 25
-    for row in range(1, 11):
-        cell = "H{}".format(6+row)
-        ws[cell] = "=Demand!H{}".format(row+1)
-        ws[cell].style = 'Comma'
 
-    ws['I6'] = "Demand Density (Mbps/km^2)"
-    ws.column_dimensions['I'].width = 25
-    for row in range(1, 11):
-        cell = "I{}".format(6+row)
-        ws[cell] = "=Demand!J{}".format(row+1)
-        ws[cell].style = 'Comma'
 
-    ws['I6'] = "Demand Density (Mbps/km^2)"
-    ws.column_dimensions['I'].width = 25
-    for row in range(1, 11):
-        cell = "I{}".format(6+row)
-        ws[cell] = "=Demand!J{}".format(row+1)
-        ws[cell].style = 'Comma'
 
-    ws['J6'] = "Required New Sites"
-    ws.column_dimensions['J'].width = 25
-    for row in range(1, 11):
-        cell = "J{}".format(6+row)
-        ws[cell] = "=Supply!L{}".format(row+1)
-        ws[cell].style = 'Comma'
 
-    ws.column_dimensions['K'].width = 25
-    for row in range(1, 12):
-        cell = "K{}".format(5+row)
-        ws[cell] = "=Costs!H{}".format(row)
-        ws[cell].style = 'Comma'
+    # ws['A16'] = "Sites Availability"
+    # data_val = DataValidation(type="list", formula1='=Options!F2:F4')
+    # ws.add_data_validation(data_val)
+    # data_val.add(ws["B15"])
+    # ws['B16'] = "Baseline"
 
-    ws.column_dimensions['L'].width = 25
-    for row in range(1, 12):
-        cell = "L{}".format(5+row)
-        ws[cell] = "=Costs!I{}".format(row)
-        ws[cell].style = 'Comma'
+    # ########Deciles
+    # ws['D6'] = "Decile"
+    # for row in range(1, 11):
+    #     cell = "D{}".format(6+row)
+    #     ws[cell] = row * 10
 
-    ws.column_dimensions['M'].width = 25
-    for row in range(1, 12):
-        cell = "M{}".format(5+row)
-        ws[cell] = "=Costs!J{}".format(row)
-        ws[cell].style = 'Comma'
+    # ws['E6'] = "Population"
+    # ws.column_dimensions['E'].width = 20
+    # for row in range(1, 11):
+    #     cell = "E{}".format(6+row)
+    #     part1 = "=INDEX(Population!$D$2:$D$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
+    #     part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
+    #     ws[cell] = part1 + part2
+    #     ws[cell].style = 'Comma'
 
-    ws.column_dimensions['N'].width = 25
-    ws['N6'] = "Share of Annual GDP (%)"
-    for row in range(1, 11):
-        cell = "N{}".format(6+row)
-        ws[cell] = "=VLOOKUP($B$8,GDP!$A$2:$B$266,2)/M{}".format(6+row)
-        # ws[cell].style = 'Comma'
+    # ws['F6'] = "Area (km^2)"
+    # ws.column_dimensions['F'].width = 20
+    # for row in range(1, 11):
+    #     cell = "F{}".format(6+row)
+    #     part1 = "=INDEX(Population!$E$2:$E$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
+    #     part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
+    #     ws[cell] = part1 + part2
+    #     ws[cell].style = 'Comma'
 
-    ##Set deciles box
-    set_border(ws, 'D6:N16', "thin", "000000")
+    # ws['G6'] = "Pop Density (km^2)"
+    # ws.column_dimensions['G'].width = 20
+    # for row in range(1, 11):
+    #     cell = "G{}".format(6+row)
+    #     part1 = "=INDEX(Population!$F$2:$F$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
+    #     part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
+    #     ws[cell] = part1 + part2
+    #     ws[cell].style = 'Comma'
+
+    # ws['H6'] = "Active User Density (km^2)"
+    # ws.column_dimensions['H'].width = 25
+    # for row in range(1, 11):
+    #     cell = "H{}".format(6+row)
+    #     ws[cell] = "=Demand!H{}".format(row+1)
+    #     ws[cell].style = 'Comma'
+
+    # ws['I6'] = "Demand Density (Mbps/km^2)"
+    # ws.column_dimensions['I'].width = 25
+    # for row in range(1, 11):
+    #     cell = "I{}".format(6+row)
+    #     ws[cell] = "=Demand!J{}".format(row+1)
+    #     ws[cell].style = 'Comma'
+
+    # ws['I6'] = "Demand Density (Mbps/km^2)"
+    # ws.column_dimensions['I'].width = 25
+    # for row in range(1, 11):
+    #     cell = "I{}".format(6+row)
+    #     ws[cell] = "=Demand!J{}".format(row+1)
+    #     ws[cell].style = 'Comma'
+
+    # ws['J6'] = "Required New Sites"
+    # ws.column_dimensions['J'].width = 25
+    # for row in range(1, 11):
+    #     cell = "J{}".format(6+row)
+    #     ws[cell] = "=Supply!L{}".format(row+1)
+    #     ws[cell].style = 'Comma'
+
+    # ws.column_dimensions['K'].width = 25
+    # for row in range(1, 12):
+    #     cell = "K{}".format(5+row)
+    #     ws[cell] = "=Costs!H{}".format(row)
+    #     ws[cell].style = 'Comma'
+
+    # ws.column_dimensions['L'].width = 25
+    # for row in range(1, 12):
+    #     cell = "L{}".format(5+row)
+    #     ws[cell] = "=Costs!I{}".format(row)
+    #     ws[cell].style = 'Comma'
+
+    # ws.column_dimensions['M'].width = 25
+    # for row in range(1, 12):
+    #     cell = "M{}".format(5+row)
+    #     ws[cell] = "=Costs!J{}".format(row)
+    #     ws[cell].style = 'Comma'
+
+    # ws.column_dimensions['N'].width = 25
+    # ws['N6'] = "Share of Annual GDP (%)"
+    # for row in range(1, 11):
+    #     cell = "N{}".format(6+row)
+    #     ws[cell] = "=VLOOKUP($B$8,GDP!$A$2:$B$266,2)/M{}".format(6+row)
+    #     # ws[cell].style = 'Comma'
+
+    # ##Set deciles box
+    # set_border(ws, 'D6:N16', "thin", "000000")
 
     return ws
 
@@ -282,202 +361,160 @@ def add_options(ws):
     return ws
 
 
-def add_population_sheet(ws):
+def add_country_data(ws, metric):
     """
-    Add the population sheet.
+    Add the country data sheets.
 
     """
     ws.sheet_properties.tabColor = "666600"
 
-    path = os.path.join(DATA_INTERMEDIATE, 'all_pop_data.csv')
-    population = pd.read_csv(path)
+    filename = 'all_pop_data_{}.csv'.format(metric)
+    path = os.path.join(DATA_INTERMEDIATE, filename)
+    data = pd.read_csv(path)
 
-    population = population.rename({
+    data = data.rename({
         'GID_0': 'iso3',
         }, axis='columns')
 
-    population = population[[
-        'iso3',
-        'country_name',
-        'decile',
-        'population',
-        'area_km2',
-        'population_km2',
-        ]]
-
-    population['population'] = round(population['population'])
-
-    for r in dataframe_to_rows(population, index=False, header=True):
+    for r in dataframe_to_rows(data, index=False, header=True):
         ws.append(r)
 
     return ws
 
 
-def add_demand_sheet(ws):
+def add_users(ws, cols):
     """
+    Calculate the total number of users.
 
     """
-    ##Color white
-    set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='Pop_Density'!{}".format(cell)
 
-    ##Set column width
-    ws.column_dimensions['A'].width = 12
-    ws.column_dimensions['B'].width = 12
-    ws.column_dimensions['C'].width = 25
-    ws.column_dimensions['D'].width = 25
-    ws.column_dimensions['E'].width = 25
-    ws.column_dimensions['F'].width = 25
-    ws.column_dimensions['G'].width = 25
-    ws.column_dimensions['H'].width = 25
-    ws.column_dimensions['I'].width = 25
-    ws.column_dimensions['J'].width = 25
+    for col in cols[:2]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Pop_Density'!{}".format(cell)
 
-    ##Allocate title
-    ws.title = "Demand"
-    ws.sheet_properties.tabColor = "66ff99"
-
-    ## Add parameters box
-    set_border(ws, 'A1:J11', "thin", "000000")
-
-    for i in range(1, 12): #Decile
-        cell = "A{}".format(i)
-        ws[cell] = "=Settings!D{}".format(5+i)
-
-    for i in range(1, 12): #Population
-        cell = "B{}".format(i)
-        ws[cell] = "=Settings!E{}".format(5+i)
-
-    for i in range(1, 12): #Area
-        cell = "C{}".format(i)
-        ws[cell] = "=Settings!F{}".format(5+i)
-
-    for i in range(1, 12): #Pop Density
-        cell = "D{}".format(i)
-        ws[cell] = "=Settings!G{}".format(5+i)
-
-    ws['E1'] = 'Users'
-    for i in range(1, 11): #Users
-        cell = "E{}".format(i+1)
-        ws[cell] = "=(Settings!$B$11/100)*B{}".format(i+1)
-
-    ws['F1'] = 'User Density (km^2)'
-    for i in range(1, 11): #User Density
-        cell = "F{}".format(i+1)
-        ws[cell] = "=(Settings!$B$11/100)*D{}".format(i+1)
-
-    ws['G1'] = 'Active Users'
-    for i in range(1, 11): #Users
-        cell = "G{}".format(i+1)
-        ws[cell] = "=(Settings!$B$12/100)*E{}".format(i+1)
-
-    ws['H1'] = 'Active User Density (km^2)'
-    for i in range(1, 11): #User Density
-        cell = "H{}".format(i+1)
-        ws[cell] = "=(Settings!$B$12/100)*F{}".format(i+1)
-
-    ws['I1'] = 'Total Demand (Mbps)'
-    for i in range(1, 11): #Users
-        cell = "I{}".format(i+1)
-        ws[cell] = "=Settings!$B$9*G{}".format(i+1)
-
-    ws['J1'] = 'Demand Density (Mbps)'
-    for i in range(1, 11): #Users
-        cell = "J{}".format(i+1)
-        ws[cell] = "=Settings!$B$9*F{}".format(i+1)
+    for col in cols[2:]:
+        for i in range(2, 250): #Decile
+            cell = "{}{}".format(col, i)
+            part1 = "='Pop_Density'!{}".format(cell) #
+            part2 = "*(POWER(1+(Settings!$E$8/100), Settings!$B$11-Settings!$B$10))"
+            part3 = "*(Settings!$E$9/100)*(Settings!$E$10/100)*(Settings!$E$11/100)"
+            ws[cell] = part1 + part2 + part3
 
     return ws
 
 
-def add_supply_sheet(ws):
+def add_data_demand(ws, cols):
+    """
+    Calculate the total data demand.
+
+    """
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='Users'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Users'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, 250): #Decile
+            cell = "{}{}".format(col, i)
+            part1 = "=(Users!{}*MAX(Settings!$E$12,".format(cell)
+            part2 = "(Settings!$E$13*1024*8*(1/30)*(15/100)*(1/3600))))"
+            ws[cell] = part1 + part2
+
+    return ws
+
+
+def add_coverage_sheet(ws, cols):
     """
 
     """
-    ##Color white
-    set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
+    for col in cols[:2]:
+        for i in range(1, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Data Demand'!{}".format(cell)
 
-    ##Set column width
-    ws.column_dimensions['A'].width = 12
-    ws.column_dimensions['B'].width = 12
-    ws.column_dimensions['C'].width = 25
-    ws.column_dimensions['D'].width = 25
-    ws.column_dimensions['E'].width = 25
-    ws.column_dimensions['F'].width = 25
-    ws.column_dimensions['G'].width = 25
-    ws.column_dimensions['H'].width = 25
-    ws.column_dimensions['I'].width = 25
-    ws.column_dimensions['J'].width = 25
-    ws.column_dimensions['K'].width = 25
-    ws.column_dimensions['L'].width = 25
-
-    ##Allocate title
-    ws.title = "Supply"
-    ws.sheet_properties.tabColor = "0000ff"
-
-    ## Add parameters box
-    set_border(ws, 'A1:L11', "thin", "000000")
-
-    for i in range(1, 12): #Decile
-        cell = "A{}".format(i)
-        ws[cell] = "=Demand!A{}".format(i)
-
-    for i in range(1, 12): #Active Users
-        cell = "B{}".format(i)
-        ws[cell] = "=Demand!G{}".format(i)
-
-    for i in range(1, 12): #Active User Density
+    ws['C1'] = 'Towers'
+    for i in range(2, 250): #Decile
         cell = "C{}".format(i)
-        ws[cell] = "=Demand!H{}".format(i)
+        ws[cell] = 1000
 
-    for i in range(1, 12): #Total Demand
+    ws['D1'] = 'Coverage'
+    for i in range(2, 250): #Decile
         cell = "D{}".format(i)
-        ws[cell] = "=Demand!I{}".format(i)
+        ws[cell] = 50
 
-    for i in range(1, 12): #Demand Density
+    ws['E1'] = 'Sites per covered population'
+    for i in range(2, 250): #Decile
         cell = "E{}".format(i)
-        ws[cell] = "=Demand!J{}".format(i)
-
-    ws['F1'] = 'Total Sites'
-    for i in range(2, 12): #Total Sites
-        cell = "F{}".format(i)
-        ws[cell] = "=Demand!C{}/20".format(i)
-
-    ws['G1'] = 'Total Site Density (km^2)'
-    for i in range(2, 12): #Total Sites Density
-        cell = "G{}".format(i)
-        ws[cell] = "=F{}/Demand!C{}".format(i, i)
-
-    ws['H1'] = 'MNO Sites'
-    for i in range(2, 12): #Total Sites
-        cell = "H{}".format(i)
-        ws[cell] = "=F{}/Settings!$B$11".format(i)
-
-    ws['I1'] = 'MNO Site Density (km^2)'
-    for i in range(2, 12): #Total Sites
-        cell = "I{}".format(i)
-        ws[cell] = "=G{}/Settings!$B$11".format(i)
-
-    ws['J1'] = 'Capacity (Mbps/km^2)'
-    for i in range(2, 12): #Capacity
-        cell = "J{}".format(i)
-        part1 = "=I{}*VLOOKUP(Settings!$B$14,Capacity!$A$3:$B$5, 2)".format(i)
-        part2 = "*VLOOKUP(Settings!$B$13,Capacity!$D$9:$E$11, 2)".format(i)
-        ws[cell] = part1 + part2
-
-    ws['K1'] = 'Required Site Density (Sites/km^2)'
-    for i in range(2, 12): #Capacity
-        cell = "K{}".format(i)
-        ws[cell] = "=MIN(IF(Capacity!$L$3:$L$10>Demand!J{},Capacity!$K$3:$K$10))".format(i)
-        ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
-
-    ws['L1'] = 'Required Sites'
-    for i in range(2, 12): #Capacity
-        cell = "L{}".format(i)
-        ws[cell] = "=IF(I{}<K{},(K{}-I{})*Demand!C{},0)".format(i,i,i,i,i)
+        ws[cell] = "=(SUM(Population!C{}:L{})*(D{}/100)/C{})".format(i,i,i,i)
 
     return ws
 
 
-def add_capacity_sheet(ws):
+def add_towers_sheet(ws, cols):
+    """
+
+    """
+    for col in cols:
+        cell = "{}1".format(col)
+        ws[cell] = "='Data Demand'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(1, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Coverage'!{}".format(cell)
+
+    for i in range(2, 250): #Decile
+        cell = "C{}".format(i)
+        ws[cell] = "=Population!C{}/Coverage!$E${}".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "D{}".format(i)
+        ws[cell] = "=IF(SUM(C2)<Coverage!C3, Population!D{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "E{}".format(i)
+        ws[cell] = "=IF(SUM(C2:D2)<Coverage!C3, Population!E{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "F{}".format(i)
+        ws[cell] = "=IF(SUM(C2:E2)<Coverage!C3, Population!F{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "G{}".format(i)
+        ws[cell] = "=IF(SUM(C2:F2)<Coverage!C3, Population!G{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "H{}".format(i)
+        ws[cell] = "=IF(SUM(C2:G2)<Coverage!C3, Population!H{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "I{}".format(i)
+        ws[cell] = "=IF(SUM(C2:H2)<Coverage!C3, Population!I{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "J{}".format(i)
+        ws[cell] = "=IF(SUM(C2:I2)<Coverage!C3, Population!J{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "K{}".format(i)
+        ws[cell] = "=IF(SUM(C2:J2)<Coverage!C3, Population!K{}/Coverage!$E${},0)".format(i,i)
+
+    for i in range(2, 250): #Decile
+        cell = "L{}".format(i)
+        ws[cell] = "=IF(SUM(C2:K2)<Coverage!C3, Population!L{}/Coverage!$E${},0)".format(i,i)
+
+    return ws
+
+
+def add_lookups_sheet(ws):
     """
 
     """
@@ -588,27 +625,7 @@ def add_capacity_sheet(ws):
     ws.column_dimensions['K'].width = 22
     ws.column_dimensions['L'].width = 22
 
-    return ws
-
-def add_cost_sheet(ws):
-    """
-
-    """
-    ws.sheet_properties.tabColor = "9966ff"
-
-    #Column dimensions
-    ws.column_dimensions['A'].width = 15
-    ws.column_dimensions['B'].width = 15
-    ws.column_dimensions['C'].width = 15
-    ws.column_dimensions['D'].width = 15
-    ws.column_dimensions['E'].width = 15
-    ws.column_dimensions['F'].width = 15
-    ws.column_dimensions['G'].width = 15
-    ws.column_dimensions['H'].width = 15
-    ws.column_dimensions['I'].width = 15
-    ws.column_dimensions['J'].width = 15
-
-    ##Spectrum Portfolio Box
+    ##Cost Information
     set_border(ws, 'A14:C18', "thin", "000000")
     ws.merge_cells('A14:C14')
     ws['A14'] = "Equipment Costs"
@@ -628,54 +645,136 @@ def add_cost_sheet(ws):
     ws['C17'] = "Per Meter"
     ws['C18'] = "Per Tower"
 
+
+    return ws
+
+
+def add_capacity_sheet(ws, cols):
+    """
+
+    """
+    # ##Color white
+    # set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='Data Demand'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Data Demand'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, 250): #Total Sites Density
+            cell = "{}{}".format(col, i)
+            part1 = "=Towers!{}/Area!{}*(Settings!$E$10/100)".format(cell, cell)
+            part2 = "*VLOOKUP(Settings!$H$9, Lookups!$A$3:$B$5, 2)".format(i)
+            part3 = "*VLOOKUP(Settings!$H$8,Lookups!$D$9:$E$11, 2)".format(i)
+            ws[cell] = part1 + part2 + part3
+
+    return ws
+
+
+def add_sites_sheet(ws, cols):
+    """
+
+    """
+    # ##Color white
+    # set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='Capacity'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Capacity'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            # part1 = "=MIN(IF(Lookups!$L$3:$L$10>Data Demand!{},Lookups!$K$3:$K$10))".format(cell)
+            part1 = "=MIN(IF('Lookups'!$L$3:$L$10>'Data Demand'!{},'Lookups'!$K$3:$K$10))".format(cell)
+            # part2 = "*VLOOKUP(Settings!$H$9, Capacity!$A$3:$B$5, 2)".format(i)
+            # part3 = "*VLOOKUP(Settings!$H$8,Capacity!$D$9:$E$11, 2)".format(i)
+            ws[cell] = part1 #+ part2 + part3
+            ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
+
+
+    # ws['L1'] = 'Required Sites'
+    # for i in range(2, 12): #Capacity
+    #     cell = "L{}".format(i)
+    #     ws[cell] = "=IF(I{}<K{},(K{}-I{})*Demand!C{},0)".format(i,i,i,i,i)
+
+    return ws
+
+
+def add_new_sites_sheet(ws, cols):
+    """
+
+    """
+    # ##Color white
+    # set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='Total Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='Total Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            part1 = "=IF(Towers!{}/Area!{}*(Settings!$E$10/100)<'Total Sites'!{},".format(cell, cell, cell)
+            part2 = "('Total Sites'!{}-Towers!{}/Area!{}*(Settings!$E$10/100)),0)".format(cell, cell, cell)
+            ws[cell] = part1 + part2 #+ part3
+            ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
+
+    return ws
+
+
+def add_cost_sheet(ws, cols):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    #Column dimensions
+    # ws.column_dimensions['A'].width = 15
+    # ws.column_dimensions['B'].width = 15
+    # ws.column_dimensions['C'].width = 15
+    # ws.column_dimensions['D'].width = 15
+    # ws.column_dimensions['E'].width = 15
+    # ws.column_dimensions['F'].width = 15
+    # ws.column_dimensions['G'].width = 15
+    # ws.column_dimensions['H'].width = 15
+    # ws.column_dimensions['I'].width = 15
+    # ws.column_dimensions['J'].width = 15
+
     #Deciles
-    set_border(ws, 'A1:J11', "thin", "000000")
+    # set_border(ws, 'A1:J11', "thin", "000000")
 
-    for i in range(1, 12): #Decile
-        cell = "A{}".format(i)
-        ws[cell] = "=Demand!A{}".format(i)
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New Sites'!{}".format(cell)
 
-    for i in range(1, 12): #Population
-        cell = "B{}".format(i)
-        ws[cell] = "=Demand!B{}".format(i)
+    for col in cols[:2]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New Sites'!{}".format(cell)
 
-    for i in range(1, 12): #Area
-        cell = "C{}".format(i)
-        ws[cell] = "=Demand!C{}".format(i)
-
-    for i in range(1, 12): #Sites
-        cell = "D{}".format(i)
-        ws[cell] = "=Supply!L{}".format(i)
-
-    ws["E1"] = "RAN"
-    for i in range(2, 12): #RAN
-        cell = "E{}".format(i)
-        ws[cell] = "=Supply!L{}*VLOOKUP($E$1, $A$14:$B$24, 2, FALSE)".format(i)
-
-    ws["F1"] = "Fiber"
-    for i in range(2, 12): #Fiber
-        cell = "F{}".format(i)
-        ws[cell] = "=Supply!L{}*VLOOKUP($F$1, $A$14:$B$24, 2, FALSE)".format(i)
-
-    ws["G1"] = "Towers"
-    for i in range(2, 12): #Towers
-        cell = "G{}".format(i)
-        ws[cell] = "=Supply!L{}*VLOOKUP($G$1, $A$14:$B$24, 2, FALSE)".format(i)
-
-    ws["H1"] = "Total MNO Cost"
-    for i in range(2, 12): #Towers
-        cell = "H{}".format(i)
-        ws[cell] = "=SUM(E{}, F{}, G{})".format(i,i,i)
-
-    ws["I1"] = "Cost Per User"
-    for i in range(2, 12): #Towers
-        cell = "I{}".format(i)
-        ws[cell] = "=H{}/Demand!E{}".format(i,i)
-
-    ws["J1"] = "Total Market Cost"
-    for i in range(2, 12): #Towers
-        cell = "J{}".format(i)
-        ws[cell] = "=I{}*B{}".format(i,i)
+    for col in cols[2:]:
+        for i in range(2, 250):
+            cell = "{}{}".format(col, i)
+            part1 = "='New Sites'!{}*VLOOKUP('Lookups'!$A$16, 'Lookups'!$A$14:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            part2 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$17, 'Lookups'!$A$17:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            part3 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$18, 'Lookups'!$A$18:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            ws[cell] = part1 + part2 + part3
 
     return ws
 
@@ -689,13 +788,8 @@ def add_gdp_sheet(ws):
     path = os.path.join(DATA_RAW, 'gdp.csv')
     gdp = pd.read_csv(path)
 
-    # population = population.rename({
-    #     'GID_0': 'iso3',
-    #     }, axis='columns')
-
     gdp = gdp[[
         'iso3',
-        # 'country',
         'gdp',
         'income_group',
         'source',
@@ -709,30 +803,6 @@ def add_gdp_sheet(ws):
 
     return gdp
 
-# for i in range(1,11+1):
-
-#     cell = "A{}".format(i)
-
-#     if i == 1:
-#         ws[cell] = "=Title!$A$2:$A$10"
-#     else:
-#         ws[cell] = "=SUM(1, {})".format(i-2)
-
-
-# wb = Workbook()
-
-# ws = wb.create_sheet('New Sheet')
-
-# for number in range(2,11): #Generates 99 "ip" address in the Column A;
-#     ws['A{}'.format(number)].value= "{}".format(number)
-
-# data_val = DataValidation(type="list",formula1='=$A:$A') #You can change =$A:$A with a smaller range like =A1:A9
-# ws.add_data_validation(data_val)
-
-# data_val.add(ws["A1"]) #If you go to the cell B1 you will find a drop down list with all the values from the column A
-
-
-# wb.save('Oughton et al. (2021) DICE (v0.1).xlsx')
 
 if __name__ == "__main__":
 

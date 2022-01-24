@@ -5,9 +5,6 @@ Getting Started
 For non-technical users, it is recommended to download the spreadsheet model present in
 the main DICE GitHub repository page entitled `Oughton et al. (2022) DICE.xlsx`.
 
-
-
-
 The overall sequence of the DICE model is visualized in Figure 1.
 
 .. figure:: /_static/figure1.png
