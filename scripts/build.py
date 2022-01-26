@@ -119,27 +119,18 @@ def add_settings(ws):
     ws['A5'] = ""
 
     ## Add parameters box
-    set_border(ws, 'A6:B11', "thin", "000000")
+    set_border(ws, 'A6:B9', "thin", "000000")
     ws.merge_cells('A6:B6')
-    ws['A6'] = "Country Parameters"
+    ws['A6'] = "Time Parameters"
 
     ws['A7'] = "Parameter"
     ws['B7'] = "Option"
 
-    ws['A8'] = "Country"
-    data_val = DataValidation(type="list", formula1='=Options!A2:A251')
-    ws.add_data_validation(data_val)
-    data_val.add(ws["B8"])
-    ws['B8'] = "Afghanistan"
+    ws['A8'] = "Start Year"
+    ws['B8'] = 2022
 
-    ws['A9'] = "ISO3"
-    ws['B9'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!B8, Options!A2:A1611)), \"\")"
-
-    ws['A10'] = "Start Year"
-    ws['B10'] = 2022
-
-    ws['A11'] = "End Year"
-    ws['B11'] = 2030
+    ws['A9'] = "End Year"
+    ws['B9'] = 2030
 
     set_border(ws, 'D6:E13', "thin", "000000")
     ws.merge_cells('D6:E6')
@@ -185,123 +176,55 @@ def add_settings(ws):
     data_val.add(ws["H9"])
     ws['H9'] = "Baseline"
 
-    # ws['A15'] = "Sites Availability"
-    # data_val = DataValidation(type="list", formula1='=Options!F2:F4')
-    # ws.add_data_validation(data_val)
-    # data_val.add(ws["B15"])
-    # ws['B15'] = "Baseline"
+    set_border(ws, 'A16:E20', "thin", "000000")
 
 
-    # ws['G8'] = "Spectrum Availability"
-    # ws['H8'] =
+    #Cross Country Comparisons
+    ws['A16'] = "Country"
+    ws['B16'] = "ISO3"
+    ws['C16'] = "Total Cost"
+    ws['D16'] = "Mean Annual 10-Year GDP"
+    ws['E16'] = "GDP Percentage"
 
-    # ws['G9'] = "Smartphone adoption (%)"
-    # ws['H9'] = 95
+    ### Country 1
+    data_val = DataValidation(type="list", formula1='=Options!A2:A251')
+    ws.add_data_validation(data_val)
+    data_val.add(ws["A17"])
+    ws['A17'] = "Afghanistan"
+    ws['B17'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A17, Options!A2:A1611)), \"\")"
+    ws['C17'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B17, Costs!A2:A1611)), \"\")"
+    ws['D17'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B17, GDP!A2:A1611))*1e9, \"\")"
+    ws['E17'] = "=(C17/D17)*100"
 
-    # ws['G10'] = "Market Share (%)"
-    # ws['H10'] = 25
+    ### Country 2
+    data_val = DataValidation(type="list", formula1='=Options!A2:A251')
+    ws.add_data_validation(data_val)
+    data_val.add(ws["A18"])
+    ws['A18'] = "Pakistan"
+    ws['B18'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A18, Options!A2:A1611)), \"\")"
+    ws['C18'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B18, Costs!A2:A1611)), \"\")"
+    ws['D18'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B18, GDP!A2:A1611))*1e9, \"\")"
+    ws['E18'] = "=(C18/D18)*100"
 
-    # ws['G11'] = "Active Users (%)"
-    # ws['H11'] = 5
+    ### Country 3
+    data_val = DataValidation(type="list", formula1='=Options!A2:A251')
+    ws.add_data_validation(data_val)
+    data_val.add(ws["A19"])
+    ws['A19'] = "Bangladesh"
+    ws['B19'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A19, Options!A2:A1611)), \"\")"
+    ws['C19'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B19, Costs!A2:A1611)), \"\")"
+    ws['D19'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B19, GDP!A2:A1611))*1e9, \"\")"
+    ws['E19'] = "=(C19/D19)*100"
 
-
-
-
-
-    # ws['A16'] = "Sites Availability"
-    # data_val = DataValidation(type="list", formula1='=Options!F2:F4')
-    # ws.add_data_validation(data_val)
-    # data_val.add(ws["B15"])
-    # ws['B16'] = "Baseline"
-
-    # ########Deciles
-    # ws['D6'] = "Decile"
-    # for row in range(1, 11):
-    #     cell = "D{}".format(6+row)
-    #     ws[cell] = row * 10
-
-    # ws['E6'] = "Population"
-    # ws.column_dimensions['E'].width = 20
-    # for row in range(1, 11):
-    #     cell = "E{}".format(6+row)
-    #     part1 = "=INDEX(Population!$D$2:$D$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
-    #     part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
-    #     ws[cell] = part1 + part2
-    #     ws[cell].style = 'Comma'
-
-    # ws['F6'] = "Area (km^2)"
-    # ws.column_dimensions['F'].width = 20
-    # for row in range(1, 11):
-    #     cell = "F{}".format(6+row)
-    #     part1 = "=INDEX(Population!$E$2:$E$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
-    #     part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
-    #     ws[cell] = part1 + part2
-    #     ws[cell].style = 'Comma'
-
-    # ws['G6'] = "Pop Density (km^2)"
-    # ws.column_dimensions['G'].width = 20
-    # for row in range(1, 11):
-    #     cell = "G{}".format(6+row)
-    #     part1 = "=INDEX(Population!$F$2:$F$1611,MATCH(1,INDEX(($B$8=Population!$A$2:$A$1611)"
-    #     part2 = "*($D${}=Population!$C$2:$C$1611), 0,1),0))".format(6+row)
-    #     ws[cell] = part1 + part2
-    #     ws[cell].style = 'Comma'
-
-    # ws['H6'] = "Active User Density (km^2)"
-    # ws.column_dimensions['H'].width = 25
-    # for row in range(1, 11):
-    #     cell = "H{}".format(6+row)
-    #     ws[cell] = "=Demand!H{}".format(row+1)
-    #     ws[cell].style = 'Comma'
-
-    # ws['I6'] = "Demand Density (Mbps/km^2)"
-    # ws.column_dimensions['I'].width = 25
-    # for row in range(1, 11):
-    #     cell = "I{}".format(6+row)
-    #     ws[cell] = "=Demand!J{}".format(row+1)
-    #     ws[cell].style = 'Comma'
-
-    # ws['I6'] = "Demand Density (Mbps/km^2)"
-    # ws.column_dimensions['I'].width = 25
-    # for row in range(1, 11):
-    #     cell = "I{}".format(6+row)
-    #     ws[cell] = "=Demand!J{}".format(row+1)
-    #     ws[cell].style = 'Comma'
-
-    # ws['J6'] = "Required New Sites"
-    # ws.column_dimensions['J'].width = 25
-    # for row in range(1, 11):
-    #     cell = "J{}".format(6+row)
-    #     ws[cell] = "=Supply!L{}".format(row+1)
-    #     ws[cell].style = 'Comma'
-
-    # ws.column_dimensions['K'].width = 25
-    # for row in range(1, 12):
-    #     cell = "K{}".format(5+row)
-    #     ws[cell] = "=Costs!H{}".format(row)
-    #     ws[cell].style = 'Comma'
-
-    # ws.column_dimensions['L'].width = 25
-    # for row in range(1, 12):
-    #     cell = "L{}".format(5+row)
-    #     ws[cell] = "=Costs!I{}".format(row)
-    #     ws[cell].style = 'Comma'
-
-    # ws.column_dimensions['M'].width = 25
-    # for row in range(1, 12):
-    #     cell = "M{}".format(5+row)
-    #     ws[cell] = "=Costs!J{}".format(row)
-    #     ws[cell].style = 'Comma'
-
-    # ws.column_dimensions['N'].width = 25
-    # ws['N6'] = "Share of Annual GDP (%)"
-    # for row in range(1, 11):
-    #     cell = "N{}".format(6+row)
-    #     ws[cell] = "=VLOOKUP($B$8,GDP!$A$2:$B$266,2)/M{}".format(6+row)
-    #     # ws[cell].style = 'Comma'
-
-    # ##Set deciles box
-    # set_border(ws, 'D6:N16', "thin", "000000")
+    ### Country 4
+    data_val = DataValidation(type="list", formula1='=Options!A2:A251')
+    ws.add_data_validation(data_val)
+    data_val.add(ws["A20"])
+    ws['A20'] = "Nepal"
+    ws['B20'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A20, Options!A2:A1611)), \"\")"
+    ws['C20'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B20, Costs!A2:A1611)), \"\")"
+    ws['D20'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B20, GDP!A2:A1611))*1e9, \"\")"
+    ws['E20'] = "=(C20/D20)*100"
 
     return ws
 
@@ -373,7 +296,7 @@ def add_country_data(ws, metric):
     data = pd.read_csv(path)
 
     data = data.rename({
-        'GID_0': 'iso3',
+        'GID_0': 'ISO3',
         }, axis='columns')
 
     for r in dataframe_to_rows(data, index=False, header=True):
@@ -744,18 +667,6 @@ def add_cost_sheet(ws, cols):
     """
     ws.sheet_properties.tabColor = "9966ff"
 
-    #Column dimensions
-    # ws.column_dimensions['A'].width = 15
-    # ws.column_dimensions['B'].width = 15
-    # ws.column_dimensions['C'].width = 15
-    # ws.column_dimensions['D'].width = 15
-    # ws.column_dimensions['E'].width = 15
-    # ws.column_dimensions['F'].width = 15
-    # ws.column_dimensions['G'].width = 15
-    # ws.column_dimensions['H'].width = 15
-    # ws.column_dimensions['I'].width = 15
-    # ws.column_dimensions['J'].width = 15
-
     #Deciles
     # set_border(ws, 'A1:J11', "thin", "000000")
 
@@ -776,6 +687,11 @@ def add_cost_sheet(ws, cols):
             part3 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$18, 'Lookups'!$A$18:'Lookups'!$B$24, 2, FALSE)".format(cell)
             ws[cell] = part1 + part2 + part3
 
+    ws['M1'] = 'Total Cost ($)'
+    for i in range(2,250):
+        cell = "M{}".format(i)
+        ws[cell] = "=SUM(C{}:L{})".format(i, i)
+
     return ws
 
 
@@ -785,23 +701,29 @@ def add_gdp_sheet(ws):
     """
     ws.sheet_properties.tabColor = "ffff33"
 
-    path = os.path.join(DATA_RAW, 'gdp.csv')
-    gdp = pd.read_csv(path)
+    path = os.path.join(DATA_RAW, 'imf_gdp_2020_2030_real.csv')
+    gdp = pd.read_csv(path, encoding = "ISO-8859-1")
 
-    gdp = gdp[[
-        'iso3',
-        'gdp',
-        'income_group',
-        'source',
-        'Date',
-        ]]
+    gdp.rename(columns={'isocode':'ISO3'}, inplace=True)
 
-    gdp = gdp.sort_values('iso3')
+    for i in range(2020, 2031):
+        col = "GDP{}".format(i)
+        if col in gdp.columns:
+            gdp.rename(columns={col:i}, inplace=True)
+
+    gdp = gdp[['ISO3',2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]]
+
+    gdp = gdp.sort_values('ISO3')
 
     for r in dataframe_to_rows(gdp, index=False, header=True):
         ws.append(r)
 
-    return gdp
+    ws['L1'] = 'Mean 10-Year GDP ($)'
+    for i in range(2,250):
+        cell = 'L{}'.format(i)
+        ws[cell] = "=SUM(B{}:K{})/10".format(i,i)
+
+    return ws
 
 
 if __name__ == "__main__":
