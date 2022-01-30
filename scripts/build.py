@@ -32,13 +32,13 @@ def generate_workbook():
     settings = wb.active
     settings = add_settings(settings)
 
-    population = wb.create_sheet("Population", (2-1))
+    population = wb.create_sheet("Pop", (2-1))
     population = add_country_data(population, 'population')
 
     area = wb.create_sheet("Area", (3-1))
     area = add_country_data(area, 'area_km2')
 
-    pop_density = wb.create_sheet("Pop_Density", (4-1))
+    pop_density = wb.create_sheet("P_Density", (4-1))
     pop_density = add_country_data(pop_density, 'population_km2')
 
     cols = ['A','B','C','D','E','F','G','H','I','J','K','L']
@@ -46,21 +46,21 @@ def generate_workbook():
     users = add_users(users, cols)
     users.sheet_properties.tabColor = "66ff99"
 
-    data_demand = wb.create_sheet("Data Demand", (6-1))
+    data_demand = wb.create_sheet("Data", (6-1))
     data_demand = add_data_demand(data_demand, cols)
     data_demand.sheet_properties.tabColor = "66ff99"
 
-    coverage = wb.create_sheet("Coverage", (7-1))
+    lookups = wb.create_sheet("Lookups", (7-1))
+    lookups = add_lookups_sheet(lookups)
+    lookups.sheet_properties.tabColor = "0000ff"
+
+    coverage = wb.create_sheet("Coverage", (8-1))
     coverage = add_coverage_sheet(coverage, cols)
     coverage.sheet_properties.tabColor = "0000ff"
 
-    towers = wb.create_sheet("Towers", (8-1))
+    towers = wb.create_sheet("Towers", (9-1))
     towers = add_towers_sheet(towers, cols)
     towers.sheet_properties.tabColor = "0000ff"
-
-    lookups = wb.create_sheet("Lookups", (9-1))
-    lookups = add_lookups_sheet(lookups)
-    lookups.sheet_properties.tabColor = "0000ff"
 
     capacity = wb.create_sheet("Capacity", (10-1))
     capacity = add_capacity_sheet(capacity, cols)
@@ -178,7 +178,6 @@ def add_settings(ws):
 
     set_border(ws, 'A16:E20', "thin", "000000")
 
-
     #Cross Country Comparisons
     ws['A16'] = "Country"
     ws['B16'] = "ISO3"
@@ -200,7 +199,7 @@ def add_settings(ws):
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
     data_val.add(ws["A18"])
-    ws['A18'] = "Pakistan"
+    ws['A18'] = "Bhutan"
     ws['B18'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A18, Options!A2:A1611)), \"\")"
     ws['C18'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B18, Costs!A2:A1611)), \"\")"
     ws['D18'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B18, GDP!A2:A1611))*1e9, \"\")"
@@ -220,7 +219,7 @@ def add_settings(ws):
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
     data_val.add(ws["A20"])
-    ws['A20'] = "Nepal"
+    ws['A20'] = "India"
     ws['B20'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A20, Options!A2:A1611)), \"\")"
     ws['C20'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B20, Costs!A2:A1611)), \"\")"
     ws['D20'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B20, GDP!A2:A1611))*1e9, \"\")"
@@ -302,6 +301,18 @@ def add_country_data(ws, metric):
     for r in dataframe_to_rows(data, index=False, header=True):
         ws.append(r)
 
+    if metric == 'population':
+        ws['M1'] = 'pop_sum'
+        for i in range(2,250):
+            cell = 'M{}'.format(i)
+            ws[cell] = "=SUM(C{}:L{})".format(i,i)
+
+    if metric == 'area_km2':
+        ws['M1'] = 'area_km2_sum'
+        for i in range(2,250):
+            cell = 'M{}'.format(i)
+            ws[cell] = "=SUM(C{}:L{})".format(i,i)
+
     return ws
 
 
@@ -312,17 +323,17 @@ def add_users(ws, cols):
     """
     for col in cols:
             cell = "{}1".format(col)
-            ws[cell] = "='Pop_Density'!{}".format(cell)
+            ws[cell] = "='P_Density'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(2, 250):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Pop_Density'!{}".format(cell)
+            ws[cell] = "='P_Density'!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, 250): #Decile
             cell = "{}{}".format(col, i)
-            part1 = "='Pop_Density'!{}".format(cell) #
+            part1 = "='P_Density'!{}".format(cell) #
             part2 = "*(POWER(1+(Settings!$E$8/100), Settings!$B$11-Settings!$B$10))"
             part3 = "*(Settings!$E$9/100)*(Settings!$E$10/100)*(Settings!$E$11/100)"
             ws[cell] = part1 + part2 + part3
@@ -358,25 +369,36 @@ def add_coverage_sheet(ws, cols):
     """
 
     """
-    for col in cols[:2]:
-        for i in range(1, 250):
-            cell = "{}{}".format(col, i)
-            ws[cell] = "='Data Demand'!{}".format(cell)
+    path = os.path.join(DATA_RAW, 'gsma_3g_coverage.csv')
+    coverage = pd.read_csv(path, encoding = "ISO-8859-1")
+    coverage['coverage'] = coverage['coverage'] * 100
+    coverage = coverage.sort_values('ISO3')
+    coverage = coverage.dropna()
+    coverage = coverage[['ISO3', 'country_name', 'coverage']]
 
-    ws['C1'] = 'Towers'
-    for i in range(2, 250): #Decile
-        cell = "C{}".format(i)
-        ws[cell] = 1000
+    path = os.path.join(DATA_RAW, 'site_counts', 'site_counts.csv')
+    sites = pd.read_csv(path, encoding = "ISO-8859-1")
+    sites = sites[['ISO3', 'sites']]
 
-    ws['D1'] = 'Coverage'
-    for i in range(2, 250): #Decile
-        cell = "D{}".format(i)
-        ws[cell] = 50
+    coverage = coverage.merge(sites, left_on='ISO3', right_on='ISO3')
 
-    ws['E1'] = 'Sites per covered population'
+    for r in dataframe_to_rows(coverage, index=False, header=True):
+        ws.append(r)
+
+    # ws['D1'] = 'Towers'
+    # for i in range(2, 250): #Decile
+    #     cell = "D{}".format(i)
+    #     ws[cell] = 1000
+
+    ws['E1'] = 'Population'
     for i in range(2, 250): #Decile
         cell = "E{}".format(i)
-        ws[cell] = "=(SUM(Population!C{}:L{})*(D{}/100)/C{})".format(i,i,i,i)
+        ws[cell] = "=IFERROR(INDEX(Pop!$M$2:$M$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)),"")".format(i)
+
+    ws['F1'] = 'Sites per covered population'
+    for i in range(2, 250): #Decile
+        cell = "F{}".format(i)
+        ws[cell] = "=(E{}*(C{}/100)/D{})".format(i,i,i)
 
     return ws
 
@@ -387,52 +409,86 @@ def add_towers_sheet(ws, cols):
     """
     for col in cols:
         cell = "{}1".format(col)
-        ws[cell] = "='Data Demand'!{}".format(cell)
+        ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(1, 250):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Coverage'!{}".format(cell)
+            ws[cell] = "='Data'!{}".format(cell)
 
     for i in range(2, 250): #Decile
         cell = "C{}".format(i)
-        ws[cell] = "=Population!C{}/Coverage!$E${}".format(i,i)
+        part1 = "=IFERROR(INDEX(Pop!$C$2:$C$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)) /".format(i)
+        part2 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 #+ part3
 
-    for i in range(2, 250): #Decile
+        # part1 = "=IFERROR( (INDEX(Pop!$C$2:$C$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)) /".format(i)
+        # part2 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)) ) /".format(i)
+        # part3 = "INDEX(Area!$C$2:$C$1611,MATCH(A{}, Area!$A$2:$A$1611,0)) ,0)".format(i)
+        # ws[cell] = part1 + part2 + part3
+
+    for i in range(2, 250):
         cell = "D{}".format(i)
-        ws[cell] = "=IF(SUM(C2)<Coverage!C3, Population!D{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i)
+        part2 = "INDEX(Pop!$D$2:$D$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "E{}".format(i)
-        ws[cell] = "=IF(SUM(C2:D2)<Coverage!C3, Population!E{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:D{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$E$2:$E$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "F{}".format(i)
-        ws[cell] = "=IF(SUM(C2:E2)<Coverage!C3, Population!F{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:E{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$F$2:$F$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "G{}".format(i)
-        ws[cell] = "=IF(SUM(C2:F2)<Coverage!C3, Population!G{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:F{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$G$2:$G$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "H{}".format(i)
-        ws[cell] = "=IF(SUM(C2:G2)<Coverage!C3, Population!H{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:G{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$H$2:$H$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "I{}".format(i)
-        ws[cell] = "=IF(SUM(C2:H2)<Coverage!C3, Population!I{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:H{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$I$2:$I$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "J{}".format(i)
-        ws[cell] = "=IF(SUM(C2:I2)<Coverage!C3, Population!J{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:I{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$J$2:$J$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "K{}".format(i)
-        ws[cell] = "=IF(SUM(C2:J2)<Coverage!C3, Population!K{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:J{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$K$2:$K$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250): #Decile
+    for i in range(2, 250):
         cell = "L{}".format(i)
-        ws[cell] = "=IF(SUM(C2:K2)<Coverage!C3, Population!L{}/Coverage!$E${},0)".format(i,i)
+        part1 = "=IF(SUM(C{}:K{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
+        part2 = "INDEX(Pop!$L$2:$L$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
+        part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
+        ws[cell] = part1 + part2 + part3
 
     return ws
 
@@ -508,45 +564,33 @@ def add_lookups_sheet(ws):
     ws.merge_cells('I1:L1')
     ws['I1'] = "Density Lookup Table"
 
-    ws['I2'] = 'Sites'
-    ws['I3'] = 4
-    ws['I4'] = 2
-    ws['I5'] = 1
-    ws['I6'] = 0.5
-    ws['I7'] = 0.25
-    ws['I8'] = 0.1
-    ws['I9'] = 0.05
+    filename = 'capacity_lut_by_frequency.csv'
+    path = os.path.join(DATA_INTERMEDIATE, 'luts', filename)
+    lookup = pd.read_csv(path)
+    lookup = lookup[['environment', 'sites_per_km2', 'capacity_mbps_km2']]
+    lookup = lookup[lookup['capacity_mbps_km2'] != 0].reset_index()
+    df_length = len(lookup)
+    lookup = lookup.sort_values('sites_per_km2')
 
-    ws['J2'] = 'Area'
-    ws['J3'] = 1
-    ws['J4'] = 1
-    ws['J5'] = 1
-    ws['J6'] = 1
-    ws['J7'] = 1
-    ws['J8'] = 1
-    ws['J9'] = 1
+    my_list = [
+        ('I', 'environment'),
+        ('J', 'sites_per_km2'),
+        ('K', 'capacity_mbps_km2'),
+    ]
+    for item in my_list:
+        col = item[0]
+        metric = item[1]
+        for idx, row in lookup.iterrows():
 
-    ws['K2'] = 'Density (sites/km^2)'
-    ws['K3'] = 4
-    ws['K4'] = 2
-    ws['K5'] = 1
-    ws['K6'] = 0.5
-    ws['K7'] = 0.25
-    ws['K8'] = 0.1
-    ws['K9'] = 0.05
+            if idx == 0:
+                col_name_cell = '{}2'.format(col)
+                ws[col_name_cell] = metric
 
-    ws['L2'] = 'Capacity (Mbps/km^2)'
-    ws['L3'] = 2500
-    ws['L4'] = 500
-    ws['L5'] = 100
-    ws['L6'] = 50
-    ws['L7'] = 25
-    ws['L8'] = 1
-    ws['L9'] = 0.5
+            cell = '{}{}'.format(col, idx+3)
+            ws[cell] = row[metric]
+            ws.column_dimensions[col].width = 18
 
-    set_border(ws, 'I1:L9', "thin", "000000")
-    ws.column_dimensions['K'].width = 22
-    ws.column_dimensions['L'].width = 22
+    set_border(ws, 'I1:K{}'.format(df_length+2), "thin", "000000")
 
     ##Cost Information
     set_border(ws, 'A14:C18', "thin", "000000")
@@ -581,20 +625,21 @@ def add_capacity_sheet(ws, cols):
 
     for col in cols:
             cell = "{}1".format(col)
-            ws[cell] = "='Data Demand'!{}".format(cell)
+            ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(2, 250):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Data Demand'!{}".format(cell)
+            ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, 250): #Total Sites Density
             cell = "{}{}".format(col, i)
-            part1 = "=Towers!{}/Area!{}*(Settings!$E$10/100)".format(cell, cell)
-            part2 = "*VLOOKUP(Settings!$H$9, Lookups!$A$3:$B$5, 2)".format(i)
-            part3 = "*VLOOKUP(Settings!$H$8,Lookups!$D$9:$E$11, 2)".format(i)
-            ws[cell] = part1 + part2 + part3
+            part1 = "=INDEX(Towers!${}$2:${}$1611,MATCH(A{}, Towers!$A$2:$A$1611,0))".format(col, col, i)
+            part2 = "/INDEX(Area!${}$2:${}$1611,MATCH(A{}, Area!$A$2:$A$1611,0))".format(col, col, i)
+            part3 = "*(Settings!$E$10/100)*VLOOKUP(Settings!$H$9, Lookups!$A$3:$B$5, 2)"
+            part4 = "*VLOOKUP(Settings!$H$8,Lookups!$D$9:$E$11, 2)"
+            ws[cell] = part1 + part2 + part3 + part4
 
     return ws
 
@@ -618,10 +663,10 @@ def add_sites_sheet(ws, cols):
     for col in cols[2:]:
         for i in range(2, 250):
             cell = "{}{}".format(col, i)
-            # part1 = "=MIN(IF(Lookups!$L$3:$L$10>Data Demand!{},Lookups!$K$3:$K$10))".format(cell)
-            part1 = "=MIN(IF('Lookups'!$L$3:$L$10>'Data Demand'!{},'Lookups'!$K$3:$K$10))".format(cell)
-            # part2 = "*VLOOKUP(Settings!$H$9, Capacity!$A$3:$B$5, 2)".format(i)
-            # part3 = "*VLOOKUP(Settings!$H$8,Capacity!$D$9:$E$11, 2)".format(i)
+            # part1 = "=MIN(IF(Lookups!$L$3:$L$10>Data!{},Lookups!$K$3:$K$10))".format(cell)
+            part1 = "=MIN(IF('Lookups'!$K$3:$K$10>'Data'!{},'Lookups'!$J$3:$J$10))*Area!{}".format(cell,cell)
+            # part2 = "*VLOOKUP(Settings!$H$9, Capacity!$A$3:$B$5, 2)"#.format(i)
+            # part3 = "*VLOOKUP(Settings!$H$8,Capacity!$D$9:$E$11, 2)"#.format(i)
             ws[cell] = part1 #+ part2 + part3
             ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
 
@@ -653,10 +698,10 @@ def add_new_sites_sheet(ws, cols):
     for col in cols[2:]:
         for i in range(2, 250):
             cell = "{}{}".format(col, i)
-            part1 = "=IF(Towers!{}/Area!{}*(Settings!$E$10/100)<'Total Sites'!{},".format(cell, cell, cell)
-            part2 = "('Total Sites'!{}-Towers!{}/Area!{}*(Settings!$E$10/100)),0)".format(cell, cell, cell)
+            part1 = "=IF(Towers!{}*(Settings!$E$10/100)<'Total Sites'!{},".format(cell, cell)
+            part2 = "('Total Sites'!{}-Towers!{}*(Settings!$E$10/100)),0)".format(cell, cell)
             ws[cell] = part1 + part2 #+ part3
-            ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
+            # ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
 
     return ws
 
