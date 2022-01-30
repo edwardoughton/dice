@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-"""Setup itmlogic package
+"""
+Setup dice package.
+
 """
 from glob import glob
 from os.path import basename, splitext
