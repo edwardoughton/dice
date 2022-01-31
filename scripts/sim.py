@@ -549,6 +549,8 @@ if __name__ == '__main__':
         'seed_value2_suburban': 10,
         'seed_value1_rural': 11,
         'seed_value2_rural': 12,
+        'seed_value1_free-space': 13,
+        'seed_value2_free-space': 14,
         'indoor_users_percentage': 50,
         'los_breakpoint_m': 500,
         'tx_macro_baseline_height': 30,
@@ -576,13 +578,13 @@ if __name__ == '__main__':
     }
 
     SPECTRUM_PORTFOLIO = [
-        (0.8, 1, '4G', '2x2'),
-        # (1.7, 1, '4G', '2x2'),
+        (0.8, 10, '4G', '2x2'),
+        # (1.7, 10, '4G', '2x2'),
         # (1.8, 1, '4G', '2x2'),
         # (1.9, 1, '4G', '2x2'),
         # (2.3, 1, '4G', '2x2'),
         # (2.5, 1, '4G', '2x2'),
-        (2.6, 1, '4G', '2x2'),
+        # (2.6, 10, '4G', '2x2'),
     ]
 
     ANT_TYPES = [
@@ -640,15 +642,17 @@ if __name__ == '__main__':
         for n in range(min, max, increment):
             yield n
 
-    INCREMENT_MA = (250,50000,500) #(400, 40400, 1000)
+    INCREMENT_MA = (125,40000,125) #(400, 40400, 1000)
 
     SITE_RADII = {
         'macro': {
-            'urban':
-                generate_site_radii(INCREMENT_MA[0],INCREMENT_MA[1],INCREMENT_MA[2]),
-            'suburban':
-                generate_site_radii(INCREMENT_MA[0],INCREMENT_MA[1],INCREMENT_MA[2]),
-            'rural':
+            # 'urban':
+            #     generate_site_radii(INCREMENT_MA[0],INCREMENT_MA[1],INCREMENT_MA[2]),
+            # 'suburban':
+            #     generate_site_radii(INCREMENT_MA[0],INCREMENT_MA[1],INCREMENT_MA[2]),
+            # 'rural':
+            #     generate_site_radii(INCREMENT_MA[0],INCREMENT_MA[1],INCREMENT_MA[2]),
+            'free-space':
                 generate_site_radii(INCREMENT_MA[0],INCREMENT_MA[1],INCREMENT_MA[2])
             },
         }
@@ -668,9 +672,10 @@ if __name__ == '__main__':
     projected_crs = 'epsg:3857'
 
     environments =[
-        'urban',
-        'suburban',
-        'rural'
+        # 'urban',
+        # 'suburban',
+        # 'rural'
+        'free-space'
     ]
 
     for environment in environments:

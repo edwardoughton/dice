@@ -94,7 +94,7 @@ class SimulationManager(object):
 
         for receiver in self.receivers.values():
 
-            path_loss, r_model, r_distance, type_of_sight = self.estimate_path_loss(
+            path_loss, r_model, r_distance = self.estimate_path_loss(
                 receiver, frequency, environment, simulation_parameters, generation
             )
 
@@ -127,7 +127,7 @@ class SimulationManager(object):
                 'id': receiver.id,
                 'path_loss': path_loss,
                 'r_model': r_model,
-                'type_of_sight': type_of_sight,
+                # 'type_of_sight': type_of_sight,
                 'ave_inf_pl': ave_inf_pl,
                 'received_power': f_received_power,
                 'distance': r_distance,
@@ -149,7 +149,7 @@ class SimulationManager(object):
         return results
 
 
-    def estimate_path_loss(self, receiver, frequency,environment,
+    def estimate_path_loss(self, receiver, frequency, environment,
         simulation_parameters, generation):
         """
 
@@ -195,35 +195,13 @@ class SimulationManager(object):
         if strt_distance < 20:
             strt_distance = 20
 
-        ant_height = self.transmitter.ant_height
-        ant_type =  self.transmitter.ant_type
-
-        if strt_distance < simulation_parameters['los_breakpoint_m'] :
-            type_of_sight = 'los'
-        else:
-            type_of_sight = 'nlos'
-
-        seed_value = (simulation_parameters['seed_value2_{}'.format(generation)] +
-                    simulation_parameters['seed_value2_{}'.format(environment)]
-        )
-
-        path_loss, model = path_loss_calculator(
-            frequency,
+        path_loss, variation = path_loss_calculator(
             strt_distance,
-            ant_height,
-            ant_type,
-            simulation_parameters['building_height'],
-            simulation_parameters['street_width'],
-            environment,
-            type_of_sight,
-            receiver.ue_height,
-            simulation_parameters['above_roof'],
-            receiver.indoor,
-            seed_value,
-            simulation_parameters['iterations']
+            frequency,
+            simulation_parameters
         )
 
-        return path_loss, model, strt_distance, type_of_sight
+        return path_loss, 'fspl', strt_distance#, type_of_sight
 
 
     def estimate_received_power(self, transmitter, receiver, path_loss):
@@ -338,21 +316,8 @@ class SimulationManager(object):
                         simulation_parameters['seed_value2_{}'.format(environment)]
             )
 
-            path_loss, model = path_loss_calculator(
-                frequency,
-                interference_strt_distance,
-                ant_height,
-                ant_type,
-                simulation_parameters['building_height'],
-                simulation_parameters['street_width'],
-                environment,
-                type_of_sight,
-                receiver.ue_height,
-                simulation_parameters['above_roof'],
-                receiver.indoor,
-                seed_value,
-                simulation_parameters['iterations'],
-            )
+            path_loss, variation = path_loss_calculator(
+                interference_strt_distance, frequency, simulation_parameters)
 
             received_interference = self.estimate_received_power(
                 interfering_transmitter,
@@ -373,7 +338,7 @@ class SimulationManager(object):
             ave_pl / len(self.interfering_transmitters.values())
         )
 
-        return interference, model, ave_distance, ave_pl
+        return interference, 'fspl', ave_distance, ave_pl
 
 
     def estimate_noise(self, bandwidth):
