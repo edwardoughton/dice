@@ -157,7 +157,7 @@ def add_settings(ws):
     ws['D13'] = "Data demand per month (GB) "
     ws['E13'] = 2
 
-    set_border(ws, 'G6:H9', "thin", "000000")
+    set_border(ws, 'G6:H10', "thin", "000000")
     ws.merge_cells('G6:H6')
     ws['G6'] = "Supply Parameters"
 
@@ -170,11 +170,17 @@ def add_settings(ws):
     data_val.add(ws["H8"])
     ws['H8'] = "4G"
 
-    ws['G9'] = "Spectrum Availability"
+    ws['G9'] = "Existing Spectrum Availability"
     data_val = DataValidation(type="list", formula1='=Options!E2:E4')
     ws.add_data_validation(data_val)
     data_val.add(ws["H9"])
     ws['H9'] = "Baseline"
+
+    ws['G10'] = "Future Spectrum Availability"
+    data_val = DataValidation(type="list", formula1='=Options!E2:E4')
+    ws.add_data_validation(data_val)
+    data_val.add(ws["H10"])
+    ws['H10'] = "Baseline"
 
     set_border(ws, 'A16:E20', "thin", "000000")
 
@@ -385,11 +391,6 @@ def add_coverage_sheet(ws, cols):
     for r in dataframe_to_rows(coverage, index=False, header=True):
         ws.append(r)
 
-    # ws['D1'] = 'Towers'
-    # for i in range(2, 250): #Decile
-    #     cell = "D{}".format(i)
-    #     ws[cell] = 1000
-
     ws['E1'] = 'Population'
     for i in range(2, 250): #Decile
         cell = "E{}".format(i)
@@ -421,11 +422,6 @@ def add_towers_sheet(ws, cols):
         part1 = "=IFERROR(INDEX(Pop!$C$2:$C$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)) /".format(i)
         part2 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 #+ part3
-
-        # part1 = "=IFERROR( (INDEX(Pop!$C$2:$C$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)) /".format(i)
-        # part2 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)) ) /".format(i)
-        # part3 = "INDEX(Area!$C$2:$C$1611,MATCH(A{}, Area!$A$2:$A$1611,0)) ,0)".format(i)
-        # ws[cell] = part1 + part2 + part3
 
     for i in range(2, 250):
         cell = "D{}".format(i)
@@ -509,73 +505,51 @@ def add_lookups_sheet(ws):
     ws['A5'] = 'Low'
 
     ws['B2'] = 'Bandwidth (MHz)'
-    ws['B3'] = 20
-    ws['B4'] = 10
-    ws['B5'] = 5
+    ws['B3'] = 30
+    ws['B4'] = 20
+    ws['B5'] = 10
 
     set_border(ws, 'A1:B5', "thin", "000000")
-    ws.column_dimensions['A'].width = 15
-    ws.column_dimensions['B'].width = 18
+    ws.column_dimensions['A'].width = 12
+    ws.column_dimensions['B'].width = 12
+    ws.column_dimensions['C'].width = 12
 
-    ##Spectral Efficiency Box
-    ws.merge_cells('D1:G1')
-    ws['D1'] = "Spectral Effiency (b/s/Hz)"
+    ##Cost Information
+    set_border(ws, 'A7:C11', "thin", "000000")
+    ws.merge_cells('A7:C7')
+    ws['A7'] = "Equipment Costs"
 
-    ws['D2'] = 'Distance'
-    ws['D3'] = 5
-    ws['D4'] = 10
-    ws['D5'] = 15
-    ws['D6'] = 20
+    ws['A8'] = 'Asset'
+    ws['A9'] = 'RAN'
+    ws['A10'] = 'Fiber'
+    ws['A11'] = 'Towers'
 
-    ws['E2'] = '3G'
-    ws['E3'] = 2
-    ws['E4'] = 2
-    ws['E5'] = 2
-    ws['E6'] = 2
+    ws['B8'] = 'Cost ($)'
+    ws['B9'] = 30000
+    ws['B10'] = 10
+    ws['B11'] = 30000
 
-    ws['F2'] = '4G'
-    ws['F3'] = 4
-    ws['F4'] = 4
-    ws['F5'] = 4
-    ws['F6'] = 4
-
-    ws['G2'] = '5G'
-    ws['G3'] = 6
-    ws['G4'] = 6
-    ws['G5'] = 6
-    ws['G6'] = 6
-
-    set_border(ws, 'D1:G6', "thin", "000000")
-
-    ws['D8'] = "Tech"
-    ws['D9'] = "3G"
-    ws['D10'] = "4G"
-    ws['D11'] = "5G"
-    ws['E8'] = "Mean (b/s/Hz)"
-    ws['E9'] = "=AVERAGE(E3:E6)"
-    ws['E10'] = "=AVERAGE(F3:F6)"
-    ws['E11'] = "=AVERAGE(G3:G6)"
-
-    ws.column_dimensions['E'].width = 15
-
-    set_border(ws, 'D8:E11', "thin", "000000")
+    ws['C8'] = 'Unit'
+    ws['C9'] = "Per Tower"
+    ws['C10'] = "Per Meter"
+    ws['C11'] = "Per Tower"
 
     ##Density Lookup Table
-    ws.merge_cells('I1:L1')
-    ws['I1'] = "Density Lookup Table"
+    ws.merge_cells('E1:H1')
+    ws['E1'] = "Density Lookup Table"
 
     filename = 'capacity_lut_by_frequency.csv'
     path = os.path.join(DATA_INTERMEDIATE, 'luts', filename)
     lookup = pd.read_csv(path)
-    lookup = lookup[['environment', 'sites_per_km2', 'capacity_mbps_km2']]
+    lookup.loc[lookup['frequency_GHz'] == '0.8']
+    lookup = lookup[['sites_per_km2', 'capacity_mbps_km2']]
     lookup = lookup[lookup['capacity_mbps_km2'] != 0].reset_index()
     df_length = len(lookup)
     lookup = lookup.sort_values('sites_per_km2')
 
     my_list = [
-        ('I', 'environment'),
-        ('J', 'sites_per_km2'),
-        ('K', 'capacity_mbps_km2'),
+        ('E', 'sites_per_km2'),
+        ('F', 'capacity_mbps_km2'),
     ]
     for item in my_list:
         col = item[0]
@@ -590,28 +564,19 @@ def add_lookups_sheet(ws):
             ws[cell] = row[metric]
             ws.column_dimensions[col].width = 18
 
-    set_border(ws, 'I1:K{}'.format(df_length+2), "thin", "000000")
+    ws['G2'] = 'w_existing_spectrum'
+    for i in range(3,250):
+        col = 'G{}'.format(i)
+        ws[col] = '=F{}*(VLOOKUP(Settings!$H$9, Lookups!$A$3:$B$5, 2, 0)/10)'.format(i)
+    ws.column_dimensions['G'].width = 20
 
-    ##Cost Information
-    set_border(ws, 'A14:C18', "thin", "000000")
-    ws.merge_cells('A14:C14')
-    ws['A14'] = "Equipment Costs"
+    ws['H2'] = 'w_future_spectrum'
+    for i in range(3,250):
+        col = 'H{}'.format(i)
+        ws[col] = '=F{}*(VLOOKUP(Settings!$H$10, Lookups!$A$3:$B$5, 2, 0)/10)'.format(i)
+    ws.column_dimensions['H'].width = 20
 
-    ws['A15'] = 'Asset'
-    ws['A16'] = 'RAN'
-    ws['A17'] = 'Fiber'
-    ws['A18'] = 'Towers'
-
-    ws['B15'] = 'Cost ($)'
-    ws['B16'] = 30000
-    ws['B17'] = 10
-    ws['B18'] = 30000
-
-    ws['C15'] = 'Unit'
-    ws['C16'] = "Per Tower"
-    ws['C17'] = "Per Meter"
-    ws['C18'] = "Per Tower"
-
+    set_border(ws, 'E1:H{}'.format(df_length+2), "thin", "000000")
 
     return ws
 
@@ -620,7 +585,6 @@ def add_capacity_sheet(ws, cols):
     """
 
     """
-    # ##Color white
     # set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
 
     for col in cols:
@@ -635,11 +599,10 @@ def add_capacity_sheet(ws, cols):
     for col in cols[2:]:
         for i in range(2, 250): #Total Sites Density
             cell = "{}{}".format(col, i)
-            part1 = "=INDEX(Towers!${}$2:${}$1611,MATCH(A{}, Towers!$A$2:$A$1611,0))".format(col, col, i)
-            part2 = "/INDEX(Area!${}$2:${}$1611,MATCH(A{}, Area!$A$2:$A$1611,0))".format(col, col, i)
-            part3 = "*(Settings!$E$10/100)*VLOOKUP(Settings!$H$9, Lookups!$A$3:$B$5, 2)"
-            part4 = "*VLOOKUP(Settings!$H$8,Lookups!$D$9:$E$11, 2)"
-            ws[cell] = part1 + part2 + part3 + part4
+            part1 = '=MAX(IF(Lookups!$E$3:$E$250<Towers!{}/Area!{}'.format(cell, cell)
+            part2 = '*(Settings!$E$10/100),Lookups!$GL$3:$G$250))'
+            ws[cell] = part1 + part2
+            ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
 
     return ws
 
@@ -648,7 +611,6 @@ def add_sites_sheet(ws, cols):
     """
 
     """
-    # ##Color white
     # set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
 
     for col in cols:
@@ -663,18 +625,10 @@ def add_sites_sheet(ws, cols):
     for col in cols[2:]:
         for i in range(2, 250):
             cell = "{}{}".format(col, i)
-            # part1 = "=MIN(IF(Lookups!$L$3:$L$10>Data!{},Lookups!$K$3:$K$10))".format(cell)
-            part1 = "=MIN(IF('Lookups'!$K$3:$K$10>'Data'!{},'Lookups'!$J$3:$J$10))*Area!{}".format(cell,cell)
-            # part2 = "*VLOOKUP(Settings!$H$9, Capacity!$A$3:$B$5, 2)"#.format(i)
-            # part3 = "*VLOOKUP(Settings!$H$8,Capacity!$D$9:$E$11, 2)"#.format(i)
-            ws[cell] = part1 #+ part2 + part3
+            part1 = "=MIN(IF('Lookups'!$H$3:$H$250>'Data'!{}".format(cell)
+            part2 = ",'Lookups'!$E$3:$E$250))*Area!{}".format(cell)
+            ws[cell] = part1 + part2
             ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
-
-
-    # ws['L1'] = 'Required Sites'
-    # for i in range(2, 12): #Capacity
-    #     cell = "L{}".format(i)
-    #     ws[cell] = "=IF(I{}<K{},(K{}-I{})*Demand!C{},0)".format(i,i,i,i,i)
 
     return ws
 
@@ -700,8 +654,7 @@ def add_new_sites_sheet(ws, cols):
             cell = "{}{}".format(col, i)
             part1 = "=IF(Towers!{}*(Settings!$E$10/100)<'Total Sites'!{},".format(cell, cell)
             part2 = "('Total Sites'!{}-Towers!{}*(Settings!$E$10/100)),0)".format(cell, cell)
-            ws[cell] = part1 + part2 #+ part3
-            # ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
+            ws[cell] = part1 + part2
 
     return ws
 
@@ -727,15 +680,23 @@ def add_cost_sheet(ws, cols):
     for col in cols[2:]:
         for i in range(2, 250):
             cell = "{}{}".format(col, i)
-            part1 = "='New Sites'!{}*VLOOKUP('Lookups'!$A$16, 'Lookups'!$A$14:'Lookups'!$B$24, 2, FALSE)".format(cell)
-            part2 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$17, 'Lookups'!$A$17:'Lookups'!$B$24, 2, FALSE)".format(cell)
-            part3 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$18, 'Lookups'!$A$18:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            part1 = "='New Sites'!{}*VLOOKUP('Lookups'!$A$9, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            part2 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            part3 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$11, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
             ws[cell] = part1 + part2 + part3
 
     ws['M1'] = 'Total Cost ($)'
     for i in range(2,250):
         cell = "M{}".format(i)
         ws[cell] = "=SUM(C{}:L{})".format(i, i)
+
+    ws['N1'] = 'Cost Per User ($)'
+    for i in range(2,250):
+        cell = "N{}".format(i)
+        ws[cell] = "=M{}/Pop!M{}".format(i, i)
+
+    ws.column_dimensions['M'].width = 15
+    ws.column_dimensions['N'].width = 15
 
     return ws
 
@@ -767,6 +728,8 @@ def add_gdp_sheet(ws):
     for i in range(2,250):
         cell = 'L{}'.format(i)
         ws[cell] = "=SUM(B{}:K{})/10".format(i,i)
+
+    ws.column_dimensions['L'].width = 20
 
     return ws
 
