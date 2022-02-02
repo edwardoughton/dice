@@ -100,7 +100,7 @@ def add_settings(ws):
     ws.column_dimensions['B'].width = 15
     ws.column_dimensions['C'].width = 15
     ws.column_dimensions['D'].width = 30
-    ws.column_dimensions['E'].width = 15
+    ws.column_dimensions['E'].width = 25
     ws.column_dimensions['F'].width = 15
     ws.column_dimensions['G'].width = 30
     ws.column_dimensions['H'].width = 15
@@ -108,6 +108,7 @@ def add_settings(ws):
     ##Allocate title
     ws.title = "Settings"
     ws.sheet_properties.tabColor = "009900"
+
 
     ##Introductory note
     c = ws['A1'] #Set font for A1
@@ -117,6 +118,7 @@ def add_settings(ws):
     ws['A3'] = "Quick Start instructions are provided here."
     ws['A4'] = "For detailed instructions, please see the model documentation: www.github.com/edwardoughton/dice "
     ws['A5'] = ""
+
 
     ## Add parameters box
     set_border(ws, 'A6:B9', "thin", "000000")
@@ -182,9 +184,9 @@ def add_settings(ws):
     data_val.add(ws["H10"])
     ws['H10'] = "Baseline"
 
-    set_border(ws, 'A16:E20', "thin", "000000")
-
     #Cross Country Comparisons
+    ws.merge_cells('A15:E15')
+    ws['A15'] = "Cross-Country Comparisons"
     ws['A16'] = "Country"
     ws['B16'] = "ISO3"
     ws['C16'] = "Total Cost"
@@ -198,7 +200,7 @@ def add_settings(ws):
     ws['A17'] = "Afghanistan"
     ws['B17'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A17, Options!A2:A1611)), \"\")"
     ws['C17'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B17, Costs!A2:A1611)), \"\")"
-    ws['D17'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B17, GDP!A2:A1611))*1e9, \"\")"
+    ws['D17'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B17, GDP!A2:A1611)), \"\")"
     ws['E17'] = "=(C17/D17)*100"
 
     ### Country 2
@@ -208,7 +210,7 @@ def add_settings(ws):
     ws['A18'] = "Bhutan"
     ws['B18'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A18, Options!A2:A1611)), \"\")"
     ws['C18'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B18, Costs!A2:A1611)), \"\")"
-    ws['D18'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B18, GDP!A2:A1611))*1e9, \"\")"
+    ws['D18'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B18, GDP!A2:A1611)), \"\")"
     ws['E18'] = "=(C18/D18)*100"
 
     ### Country 3
@@ -218,7 +220,7 @@ def add_settings(ws):
     ws['A19'] = "Bangladesh"
     ws['B19'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A19, Options!A2:A1611)), \"\")"
     ws['C19'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B19, Costs!A2:A1611)), \"\")"
-    ws['D19'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B19, GDP!A2:A1611))*1e9, \"\")"
+    ws['D19'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B19, GDP!A2:A1611)), \"\")"
     ws['E19'] = "=(C19/D19)*100"
 
     ### Country 4
@@ -228,8 +230,93 @@ def add_settings(ws):
     ws['A20'] = "India"
     ws['B20'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(Settings!A20, Options!A2:A1611)), \"\")"
     ws['C20'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(Settings!B20, Costs!A2:A1611)), \"\")"
-    ws['D20'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B20, GDP!A2:A1611))*1e9, \"\")"
+    ws['D20'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(Settings!B20, GDP!A2:A1611)), \"\")"
     ws['E20'] = "=(C20/D20)*100"
+
+    set_border(ws, 'A15:E20', "thin", "000000")
+
+
+    ### Costs by Income Group
+    ws.merge_cells('A23:E23')
+    ws['A23'] = "Cost by Income Group"
+    ws.merge_cells('A24:B24')
+    ws['A24'] = "Income Group"
+    ws['C24'] = "Total Cost ($)"
+    ws['D24'] = "Mean Annual 10-Year GDP ($)"
+    ws['E24'] = "Cost as GDP Percentage"
+
+    ws.merge_cells('A25:B25')
+    ws['A25'] = 'Advanced Economies'
+    ws['C25'] = '=SUMIF(Costs!$O$2:$O$250,Settings!A25,Costs!$M$2:$M$250)'
+    ws['D25'] = '=SUMIF(GDP!$M$2:$M$250,Settings!A25,GDP!$L$2:$L$250)'
+    ws['E25'] = "=(C25/D25)*100"
+
+    ws.merge_cells('A26:B26')
+    ws['A26'] = 'Emerging Market Economies'
+    ws['C26'] = '=SUMIF(Costs!$O$2:$O$250,Settings!A26,Costs!$M$2:$M$250)'
+    ws['D26'] = '=SUMIF(GDP!$M$2:$M$250,Settings!A26,GDP!$L$2:$L$250)'
+    ws['E26'] = "=(C26/D26)*100"
+
+    ws.merge_cells('A27:B27')
+    ws['A27'] = 'Low Income Developing Countries'
+    ws['C27'] = '=SUMIF(Costs!$O$2:$O$250,Settings!A27,Costs!$M$2:$M$250)'
+    ws['D27'] = '=SUMIF(GDP!$M$2:$M$250,Settings!A27,GDP!$L$2:$L$250)'
+    ws['E27'] = "=(C27/D27)*100"
+
+    set_border(ws, 'A23:E27', "thin", "000000")
+
+    ### Costs by Income Group
+    ws.merge_cells('A30:E30')
+    ws['A30'] = "Cost by Region"
+    ws.merge_cells('A31:B31')
+    ws['A31'] = "Region"
+    ws['C31'] = "Total Cost ($)"
+    ws['D31'] = "Mean Annual 10-Year GDP ($)"
+    ws['E31'] = "Cost as GDP Percentage"
+
+    ws.merge_cells('A32:B32')
+    ws['A32'] = 'Advanced Economies'
+    ws['C32'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A32,Costs!$M$2:$M$250)'
+    ws['D32'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A32,GDP!$L$2:$L$250)'
+    ws['E32'] = "=(C32/D32)*100"
+
+    ws.merge_cells('A33:B33')
+    ws['A33'] = "Caucasus and Central Asia"
+    ws['C33'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A33,Costs!$M$2:$M$250)'
+    ws['D33'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A33,GDP!$L$2:$L$250)'
+    ws['E33'] = "=(C33/D33)*100"
+
+    ws.merge_cells('A34:B34')
+    ws['A34'] = "Emerging and Developing Asia"
+    ws['C34'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A34,Costs!$M$2:$M$250)'
+    ws['D34'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A34,GDP!$L$2:$L$250)'
+    ws['E34'] = "=(C34/D34)*100"
+
+    ws.merge_cells('A35:B35')
+    ws['A35'] = "Emerging and Developing Europe"
+    ws['C35'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A35,Costs!$M$2:$M$250)'
+    ws['D35'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A35,GDP!$L$2:$L$250)'
+    ws['E35'] = "=(C35/D35)*100"
+
+    ws.merge_cells('A36:B36')
+    ws['A36'] = "Latin America and the Caribbean"
+    ws['C36'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A36,Costs!$M$2:$M$250)'
+    ws['D36'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A36,GDP!$L$2:$L$250)'
+    ws['E36'] = "=(C36/D36)*100"
+
+    ws.merge_cells('A37:B37')
+    ws['A37'] = "Middle East, North Africa, Afghanistan, and Pakistan"
+    ws['C37'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A37,Costs!$M$2:$M$250)'
+    ws['D37'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A37,GDP!$L$2:$L$250)'
+    ws['E37'] = "=(C37/D37)*100"
+
+    ws.merge_cells('A38:B38')
+    ws['A38'] = "Sub-Sahara Africa"
+    ws['C38'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A38,Costs!$M$2:$M$250)'
+    ws['D38'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A38,GDP!$L$2:$L$250)'
+    ws['E38'] = "=(C38/D38)*100"
+
+    set_border(ws, 'A30:E38', "thin", "000000")
 
     return ws
 
@@ -248,7 +335,8 @@ def add_options(ws):
     """
     ws.sheet_properties.tabColor = "0099ff"
 
-    data = pd.read_csv(os.path.join(BASE_PATH, 'global_information.csv'), encoding = "ISO-8859-1")
+    path = os.path.join(BASE_PATH, 'global_information.csv')
+    data = pd.read_csv(path, encoding = "ISO-8859-1")
 
     data = data.rename({
         'country': 'Country',
@@ -271,20 +359,46 @@ def add_options(ws):
     ws['C4'] = "Low"
 
     ws['D1'] = "Strategy"
-    ws['D2'] = "4G (Wireless)"
-    ws['D3'] = "4G (Fiber)"
-    ws['D4'] = "5G (Wireless)"
-    ws['D5'] = "5G (Fiber)"
+    ws['D2'] = "4G" #"4G (Wireless)"
+    # ws['D3'] = "4G (Fiber)"
+    # ws['D4'] = "5G (Wireless)"
+    # ws['D5'] = "5G (Fiber)"
 
     ws['E1'] = "Spectrum"
     ws['E2'] = "High"
     ws['E3'] = "Baseline"
     ws['E4'] = "Low"
 
-    ws['F1'] = "Sites"
-    ws['F2'] = "High"
-    ws['F3'] = "Baseline"
-    ws['F4'] = "Low"
+    path = os.path.join(DATA_RAW, 'imf_gdp_2020_2030_real.csv')
+    country_info = pd.read_csv(path, encoding = "ISO-8859-1")
+    country_info.rename(columns={'isocode':'ISO3'}, inplace=True)
+
+    country_info = country_info[[
+        'ISO3',
+        'ifscode',
+        'region',
+        'income'
+    ]]
+
+    my_list = [
+        ('G', 'ISO3'),
+        ('H', 'ifscode'),
+        ('I', 'region'),
+        ('J', 'income'),
+    ]
+
+    for item in my_list:
+        col = item[0]
+        metric = item[1]
+        for idx, row in country_info.iterrows():
+
+            if idx == 0:
+                col_name_cell = '{}1'.format(col)
+                ws[col_name_cell] = metric
+
+            cell = '{}{}'.format(col, idx+2)
+            ws[cell] = row[metric]
+            ws.column_dimensions[col].width = 10
 
     return ws
 
@@ -688,15 +802,29 @@ def add_cost_sheet(ws, cols):
     ws['M1'] = 'Total Cost ($)'
     for i in range(2,250):
         cell = "M{}".format(i)
-        ws[cell] = "=SUM(C{}:L{})".format(i, i)
+        part1 = '=IFERROR(SUMIF(C{}:L{}, "<>n/a"), "-")'.format(i, i)
+        line = part1
+        ws[cell] = line
 
     ws['N1'] = 'Cost Per User ($)'
     for i in range(2,250):
         cell = "N{}".format(i)
         ws[cell] = "=M{}/Pop!M{}".format(i, i)
 
+    ws['O1'] = 'Income Group'
+    for i in range(2,250):
+        cell = "O{}".format(i)
+        ws[cell] = "=IFERROR(INDEX(Options!$J$2:$J$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
+    ws['P1'] = 'Region'
+    for i in range(2,250):
+        cell = "P{}".format(i)
+        ws[cell] = "=IFERROR(INDEX(Options!$I$2:$I$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
     ws.column_dimensions['M'].width = 15
     ws.column_dimensions['N'].width = 15
+    ws.column_dimensions['O'].width = 30
+    ws.column_dimensions['P'].width = 30
 
     return ws
 
@@ -727,9 +855,21 @@ def add_gdp_sheet(ws):
     ws['L1'] = 'Mean 10-Year GDP ($)'
     for i in range(2,250):
         cell = 'L{}'.format(i)
-        ws[cell] = "=SUM(B{}:K{})/10".format(i,i)
+        ws[cell] = "=(SUM(B{}:K{})*1e9)/10".format(i,i)
+
+    ws['M1'] = 'Income Group'
+    for i in range(2,250):
+        cell = "M{}".format(i)
+        ws[cell] = "=IFERROR(INDEX(Options!$J$2:$J$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
+    ws['N1'] = 'Region'
+    for i in range(2,250):
+        cell = "N{}".format(i)
+        ws[cell] = "=IFERROR(INDEX(Options!$I$2:$I$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
 
     ws.column_dimensions['L'].width = 20
+    ws.column_dimensions['M'].width = 30
+    ws.column_dimensions['N'].width = 30
 
     return ws
 
