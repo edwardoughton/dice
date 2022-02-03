@@ -102,7 +102,7 @@ def process_country_shapes(country):
 
     try:
         single_country['geometry'] = single_country.apply(
-            exclude_small_shapes, axis=1)
+            drop_small_polygons, axis=1)
     except:
         return 'All small shapes'
 
@@ -114,6 +114,52 @@ def process_country_shapes(country):
     single_country.to_file(shape_path, driver='ESRI Shapefile')
 
     return
+
+
+def drop_small_polygons(x):
+    """
+    Exclude any small geometries.
+
+    Parameters
+    ---------
+    x : polygon
+        Polygon feature to be simplified.
+
+    Returns
+    -------
+    MultiPolygon : MultiPolygon
+        Shapely MultiPolygon geometry without small  polygons.
+
+    """
+    # print(x)
+    if x.geometry.geom_type == 'Polygon':
+        # print('a')
+        return x.geometry
+
+    elif x.geometry.geom_type == 'MultiPolygon':
+
+        area1 = 0.01
+        area2 = 50
+
+        if x.geometry.area < area1:
+            return x.geometry
+        # print('b')
+        if x['GID_0'] in ['CHL','IDN']:
+            threshold = 0.01
+        elif x['GID_0'] in ['RUS','GRL','CAN','USA']:
+            threshold = 0.01
+        elif x.geometry.area > area2:
+            threshold = 0.1
+        else:
+            threshold = 0.001
+        # print('c')
+        new_geom = []
+        for y in x.geometry:
+            if y.area > threshold:
+                new_geom.append(y)
+        # print('d')
+        return MultiPolygon(new_geom)
+    # print('there')
 
 
 def process_regions(country):
@@ -132,7 +178,7 @@ def process_regions(country):
     iso3 = country['iso3']
     level = country['regional_level']
 
-    for regional_level in range(1, level + 1):
+    for regional_level in range(0, level + 1):
 
         filename = 'regions_{}_{}.shp'.format(regional_level, iso3)
         folder = os.path.join(DATA_INTERMEDIATE, iso3, 'regions')
@@ -150,8 +196,12 @@ def process_regions(country):
 
         regions = regions[regions.GID_0 == iso3]
 
+        if len(regions) == 0:
+            print('{} has no regions at level {}'.format(iso3, regional_level))
         try:
-            regions['geometry'] = regions.apply(exclude_small_shapes, axis=1)
+            # print('1')
+            regions['geometry'] = regions.apply(drop_small_polygons, axis=1)
+            # print('2')
         except:
             return 'All small shapes'
 
@@ -196,8 +246,8 @@ def process_settlement_layer(country):
     path_country = os.path.join(DATA_INTERMEDIATE, iso3)
     shape_path = os.path.join(path_country, 'settlements.tif')
 
-    # if os.path.exists(shape_path):
-    #     return print('Completed settlement layer processing')
+    if os.path.exists(shape_path):
+        return print('Completed settlement layer processing')
 
     geo = gpd.GeoDataFrame()
     minx, miny, maxx, maxy = country['geometry'].total_bounds
@@ -260,37 +310,43 @@ def get_pop_and_luminosity_data(country):
 
     for index, region in regions.iterrows():
 
-        with rasterio.open(path_settlements) as src:
+        # if region['GID_3'] in ['CAN.2.3.3_1', 'CAN.2.9.16_1']:
+        #     print('skipped one')
+        #     continue
+        try:
+            with rasterio.open(path_settlements) as src:
 
-            affine = src.transform
-            array = src.read(1)
-            array[array <= 0] = 0
+                affine = src.transform
+                array = src.read(1)
+                array[array <= 0] = 0
 
-            population_summation = [d['sum'] for d in zonal_stats(
-                region['geometry'],
-                array,
-                stats=['sum'],
-                affine=affine,
-                nodata=255
-                )][0]
+                population_summation = [d['sum'] for d in zonal_stats(
+                    region['geometry'],
+                    array,
+                    stats=['sum'],
+                    affine=affine,
+                    nodata=255
+                    )][0]
 
-        area_km2 = round(area_of_polygon(region['geometry']) / 1e6)
+            area_km2 = round(area_of_polygon(region['geometry']) / 1e6)
 
-        if area_km2 > 0:
-            population_km2 = (
-                population_summation / area_km2 if population_summation else 0)
-        else:
-            population_km2 = 0
+            if area_km2 > 0:
+                population_km2 = (
+                    population_summation / area_km2 if population_summation else 0)
+            else:
+                population_km2 = 0
 
-        results.append({
-            'GID_0': region['GID_0'],
-            'GID_id': region[gid_level],
-            'GID_level': gid_level,
-            # 'mean_luminosity_km2': mean_luminosity_km2,
-            'population': (population_summation if population_summation else 0),
-            'area_km2': area_km2,
-            'population_km2': population_km2,
-        })
+            results.append({
+                'GID_0': region['GID_0'],
+                'GID_id': region[gid_level],
+                'GID_level': gid_level,
+                # 'mean_luminosity_km2': mean_luminosity_km2,
+                'population': (population_summation if population_summation else 0),
+                'area_km2': area_km2,
+                'population_km2': population_km2,
+            })
+        except:
+            print('failed with {}'.format(region[gid_level]))
 
     results_df = pd.DataFrame(results)
 
@@ -416,33 +472,46 @@ if __name__ == '__main__':
 
     countries = find_country_list([])
 
-    # for country in countries:
+    for country in countries:
 
-    #     if not country['iso3'] == 'GBR':
-    #         continue
+        if not country['iso3'] in [
+            'ABW','BHR','BRB','BLZ','CPV',
+            'CAN', ##Canada needs special attention
+            'CYP','DMA', 'GRD','HKG',
+            'IDN',
+            'IRL','ISR','JAM','KIR','KSV',
+            'KWT','LSO','LBY',
+            # 'MDV',
+            'MUS','MDA','MNE','NRU',
+            'PLW','PRI','QAT','SMR','SAU','SYC','SGP','TON',
+            'TTO','TKM','TUV',
+        ]:
+            continue
 
-    #     # path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
+        path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
 
-    #     # if not os.path.exists(path):
-    #     #     print(country['country_name'], country['iso3'])
-    #     # print('--Working on {}'.format(country['iso3']))
+        if not os.path.exists(path):
+            print(country['country_name'], country['iso3'])
+        else:
+            continue
+        print('--Working on {}'.format(country['iso3']))
 
-    #     # try:
-    #     print('Processing country boundary')
-    #     process_country_shapes(country)
+        # print('Processing country boundary')
+        process_country_shapes(country)
 
-    #     print('Processing regions')
-    #     response = process_regions(country)
-    #     if response == 'All small shapes':
-    #         continue
+        # print('Processing regions')
+        response = process_regions(country)
+        if response == 'All small shapes':
+            # print(response)
+            continue
 
-    #     print('Processing settlement layer')
-    #     process_settlement_layer(country)
+        # print('Processing settlement layer')
+        process_settlement_layer(country)
 
-    #     print('Getting population and luminosity')
-    #     get_pop_and_luminosity_data(country)
+        # print('Getting population and luminosity')
+        get_pop_and_luminosity_data(country)
 
-    #     # except:
-    #     #     continue
+        # except:
+        #     continue
 
     collect_results(countries)
