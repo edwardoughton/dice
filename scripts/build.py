@@ -33,21 +33,21 @@ def generate_workbook():
     settings = add_settings(settings)
 
     population = wb.create_sheet("Pop", (2-1))
-    population = add_country_data(population, 'population')
+    population, lnth = add_country_data(population, 'population')
 
     area = wb.create_sheet("Area", (3-1))
-    area = add_country_data(area, 'area_km2')
+    area, lnth = add_country_data(area, 'area_km2')
 
     pop_density = wb.create_sheet("P_Density", (4-1))
-    pop_density = add_country_data(pop_density, 'population_km2')
+    pop_density, lnth = add_country_data(pop_density, 'population_km2')
 
     cols = ['A','B','C','D','E','F','G','H','I','J','K','L']
     users = wb.create_sheet("Users", (5-1))
-    users = add_users(users, cols)
+    users = add_users(users, cols, lnth)
     users.sheet_properties.tabColor = "66ff99"
 
     data_demand = wb.create_sheet("Data", (6-1))
-    data_demand = add_data_demand(data_demand, cols)
+    data_demand = add_data_demand(data_demand, cols, lnth)
     data_demand.sheet_properties.tabColor = "66ff99"
 
     lookups = wb.create_sheet("Lookups", (7-1))
@@ -59,23 +59,23 @@ def generate_workbook():
     coverage.sheet_properties.tabColor = "0000ff"
 
     towers = wb.create_sheet("Towers", (9-1))
-    towers = add_towers_sheet(towers, cols)
+    towers = add_towers_sheet(towers, cols, lnth)
     towers.sheet_properties.tabColor = "0000ff"
 
     capacity = wb.create_sheet("Capacity", (10-1))
-    capacity = add_capacity_sheet(capacity, cols)
+    capacity = add_capacity_sheet(capacity, cols, lnth)
     capacity.sheet_properties.tabColor = "0000ff"
 
     sites = wb.create_sheet("Total Sites", (11-1))
-    sites = add_sites_sheet(sites, cols)
+    sites = add_sites_sheet(sites, cols, lnth)
     sites.sheet_properties.tabColor = "0000ff"
 
     new = wb.create_sheet("New Sites", (12-1))
-    new = add_new_sites_sheet(new, cols)
+    new = add_new_sites_sheet(new, cols, lnth)
     new.sheet_properties.tabColor = "0000ff"
 
     costs = wb.create_sheet("Costs", (13-1))
-    costs = add_cost_sheet(costs, cols)
+    costs = add_cost_sheet(costs, cols, lnth)
 
     gdp = wb.create_sheet("GDP", (14-1))
     gdp = add_gdp_sheet(gdp)
@@ -418,25 +418,27 @@ def add_country_data(ws, metric):
         'GID_0': 'ISO3',
         }, axis='columns')
 
+    lnth = len(data)+2
+
     for r in dataframe_to_rows(data, index=False, header=True):
         ws.append(r)
 
     if metric == 'population':
         ws['M1'] = 'pop_sum'
-        for i in range(2,250):
+        for i in range(2, lnth):
             cell = 'M{}'.format(i)
             ws[cell] = "=SUM(C{}:L{})".format(i,i)
 
     if metric == 'area_km2':
         ws['M1'] = 'area_km2_sum'
-        for i in range(2,250):
+        for i in range(2, lnth):
             cell = 'M{}'.format(i)
             ws[cell] = "=SUM(C{}:L{})".format(i,i)
 
-    return ws
+    return ws, lnth
 
 
-def add_users(ws, cols):
+def add_users(ws, cols, lnth):
     """
     Calculate the total number of users.
 
@@ -446,12 +448,12 @@ def add_users(ws, cols):
             ws[cell] = "='P_Density'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='P_Density'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, 250): #Decile
+        for i in range(2, lnth): #Decile
             cell = "{}{}".format(col, i)
             part1 = "='P_Density'!{}".format(cell) #
             part2 = "*(POWER(1+(Settings!$E$8/100), Settings!$B$11-Settings!$B$10))"
@@ -461,7 +463,7 @@ def add_users(ws, cols):
     return ws
 
 
-def add_data_demand(ws, cols):
+def add_data_demand(ws, cols, lnth):
     """
     Calculate the total data demand.
 
@@ -471,12 +473,12 @@ def add_data_demand(ws, cols):
             ws[cell] = "='Users'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='Users'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, 250): #Decile
+        for i in range(2, lnth): #Decile
             cell = "{}{}".format(col, i)
             part1 = "=(Users!{}*MAX(Settings!$E$12,".format(cell)
             part2 = "(Settings!$E$13*1024*8*(1/30)*(15/100)*(1/3600))))"
@@ -505,20 +507,22 @@ def add_coverage_sheet(ws, cols):
     for r in dataframe_to_rows(coverage, index=False, header=True):
         ws.append(r)
 
+    lnth = len(coverage)+2
+
     ws['E1'] = 'Population'
-    for i in range(2, 250): #Decile
+    for i in range(2, lnth):
         cell = "E{}".format(i)
         ws[cell] = "=IFERROR(INDEX(Pop!$M$2:$M$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)),"")".format(i)
 
     ws['F1'] = 'Sites per covered population'
-    for i in range(2, 250): #Decile
+    for i in range(2, lnth):
         cell = "F{}".format(i)
-        ws[cell] = "=(E{}*(C{}/100)/D{})".format(i,i,i)
+        ws[cell] = '=IFERROR(E{}*(C{}/100)/D{}, "-")'.format(i,i,i)
 
-    return ws
+    return ws#, lnth
 
 
-def add_towers_sheet(ws, cols):
+def add_towers_sheet(ws, cols, lnth):
     """
 
     """
@@ -527,73 +531,73 @@ def add_towers_sheet(ws, cols):
         ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(1, 250):
+        for i in range(1, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='Data'!{}".format(cell)
 
-    for i in range(2, 250): #Decile
+    for i in range(2, lnth): #Decile
         cell = "C{}".format(i)
         part1 = "=IFERROR(INDEX(Pop!$C$2:$C$1611,MATCH(A{}, Pop!$A$2:$A$1611,0)) /".format(i)
         part2 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 #+ part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "D{}".format(i)
         part1 = "=IF(SUM(C{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i)
         part2 = "INDEX(Pop!$D$2:$D$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "E{}".format(i)
         part1 = "=IF(SUM(C{}:D{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$E$2:$E$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "F{}".format(i)
         part1 = "=IF(SUM(C{}:E{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$F$2:$F$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "G{}".format(i)
         part1 = "=IF(SUM(C{}:F{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$G$2:$G$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "H{}".format(i)
         part1 = "=IF(SUM(C{}:G{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$H$2:$H$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "I{}".format(i)
         part1 = "=IF(SUM(C{}:H{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$I$2:$I$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "J{}".format(i)
         part1 = "=IF(SUM(C{}:I{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$J$2:$J$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "K{}".format(i)
         part1 = "=IF(SUM(C{}:J{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$K$2:$K$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
         part3 = "INDEX(Coverage!$F$2:$F$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),0)".format(i)
         ws[cell] = part1 + part2 + part3
 
-    for i in range(2, 250):
+    for i in range(2, lnth):
         cell = "L{}".format(i)
         part1 = "=IF(SUM(C{}:K{})<INDEX(Coverage!$D$2:$D$1611,MATCH(A{}, Coverage!$A$2:$A$1611,0)),".format(i,i,i)
         part2 = "INDEX(Pop!$L$2:$L$1611,MATCH(A{}, Pop!$A$2:$A$1611,0))/".format(i)
@@ -695,7 +699,7 @@ def add_lookups_sheet(ws):
     return ws
 
 
-def add_capacity_sheet(ws, cols):
+def add_capacity_sheet(ws, cols, lnth):
     """
 
     """
@@ -706,22 +710,22 @@ def add_capacity_sheet(ws, cols):
             ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, 250): #Total Sites Density
+        for i in range(2, lnth): #Total Sites Density
             cell = "{}{}".format(col, i)
-            part1 = '=MAX(IF(Lookups!$E$3:$E$250<Towers!{}/Area!{}'.format(cell, cell)
-            part2 = '*(Settings!$E$10/100),Lookups!$GL$3:$G$250))'
+            part1 = '=IFERROR(MAX(IF(Lookups!$E$3:$E$250<Towers!{}/Area!{}'.format(cell, cell)
+            part2 = '*(Settings!$E$10/100),Lookups!$GL$3:$G$250)),"-")'
             ws[cell] = part1 + part2
             ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
 
     return ws
 
 
-def add_sites_sheet(ws, cols):
+def add_sites_sheet(ws, cols, lnth):
     """
 
     """
@@ -732,12 +736,12 @@ def add_sites_sheet(ws, cols):
             ws[cell] = "='Capacity'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='Capacity'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             part1 = "=MIN(IF('Lookups'!$H$3:$H$250>'Data'!{}".format(cell)
             part2 = ",'Lookups'!$E$3:$E$250))*Area!{}".format(cell)
@@ -747,7 +751,7 @@ def add_sites_sheet(ws, cols):
     return ws
 
 
-def add_new_sites_sheet(ws, cols):
+def add_new_sites_sheet(ws, cols, lnth):
     """
 
     """
@@ -759,12 +763,12 @@ def add_new_sites_sheet(ws, cols):
             ws[cell] = "='Total Sites'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='Total Sites'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             part1 = "=IF(Towers!{}*(Settings!$E$10/100)<'Total Sites'!{},".format(cell, cell)
             part2 = "('Total Sites'!{}-Towers!{}*(Settings!$E$10/100)),0)".format(cell, cell)
@@ -773,7 +777,7 @@ def add_new_sites_sheet(ws, cols):
     return ws
 
 
-def add_cost_sheet(ws, cols):
+def add_cost_sheet(ws, cols, lnth):
     """
 
     """
@@ -787,12 +791,12 @@ def add_cost_sheet(ws, cols):
             ws[cell] = "='New Sites'!{}".format(cell)
 
     for col in cols[:2]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             ws[cell] = "='New Sites'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, 250):
+        for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             part1 = "='New Sites'!{}*VLOOKUP('Lookups'!$A$9, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
             part2 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
@@ -800,24 +804,24 @@ def add_cost_sheet(ws, cols):
             ws[cell] = part1 + part2 + part3
 
     ws['M1'] = 'Total Cost ($)'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = "M{}".format(i)
         part1 = '=IFERROR(SUMIF(C{}:L{}, "<>n/a"), "-")'.format(i, i)
         line = part1
         ws[cell] = line
 
     ws['N1'] = 'Cost Per User ($)'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = "N{}".format(i)
         ws[cell] = "=M{}/Pop!M{}".format(i, i)
 
     ws['O1'] = 'Income Group'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = "O{}".format(i)
         ws[cell] = "=IFERROR(INDEX(Options!$J$2:$J$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
 
     ws['P1'] = 'Region'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = "P{}".format(i)
         ws[cell] = "=IFERROR(INDEX(Options!$I$2:$I$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
 
@@ -849,21 +853,23 @@ def add_gdp_sheet(ws):
 
     gdp = gdp.sort_values('ISO3')
 
+    lnth = len(gdp)+2
+
     for r in dataframe_to_rows(gdp, index=False, header=True):
         ws.append(r)
 
     ws['L1'] = 'Mean 10-Year GDP ($)'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = 'L{}'.format(i)
         ws[cell] = "=(SUM(B{}:K{})*1e9)/10".format(i,i)
 
     ws['M1'] = 'Income Group'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = "M{}".format(i)
         ws[cell] = "=IFERROR(INDEX(Options!$J$2:$J$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
 
     ws['N1'] = 'Region'
-    for i in range(2,250):
+    for i in range(2,lnth):
         cell = "N{}".format(i)
         ws[cell] = "=IFERROR(INDEX(Options!$I$2:$I$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
 
