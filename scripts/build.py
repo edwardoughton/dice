@@ -424,7 +424,7 @@ def add_estimates(ws):
     ws['D8'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C8, Costs!A2:A1611)), \"\")"
     ws['E8'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C8, GDP!A2:A1611)), \"\")"
     ws['F8'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C8, GDP!A2:A1611)), )"
-    ws['G8'] = "=IF(F8=0,D8/Settings!C10,(D8*(1-(1+F8)/(1-Settings!C11)))/((1-Settings!C11)^Settings!B10*(1-((1+F8)/(1-Settings!C11))^(Settings!B10+1))))"
+    ws['G8'] = "=IF(F8=0,D8/Settings!C10,(D8*(1-(1+F8)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F8)/(1-Settings!C11))^(Settings!C10+1))))"
     ws['H8'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C8, GDP!A2:A1611)), \"\")"
     ws['I8'] = "=IFERROR(G8/H8, \"\")"
 
@@ -434,7 +434,7 @@ def add_estimates(ws):
     ws['D9'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C9, Costs!A2:A1611)), \"\")"
     ws['E9'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C9, GDP!A2:A1611)), \"\")"
     ws['F9'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C9, GDP!A2:A1611)), )"
-    ws['G9'] = "=IF(F8=0,D9/Settings!C10,(D9*(1-(1+F9)/(1-Settings!C11)))/((1-Settings!C11)^Settings!B10*(1-((1+F9)/(1-Settings!C11))^(Settings!B10+1))))"
+    ws['G9'] = "=IF(F8=0,D9/Settings!C10,(D9*(1-(1+F9)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F9)/(1-Settings!C11))^(Settings!C10+1))))"
     ws['H9'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C9, GDP!A2:A1611)), \"\")"
     ws['I9'] = "=IFERROR(G9/H9, \"\")"
 
@@ -444,7 +444,7 @@ def add_estimates(ws):
     ws['D10'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C10, Costs!A2:A1611)), \"\")"
     ws['E10'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C10, GDP!A2:A1611)), \"\")"
     ws['F10'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C10, GDP!A2:A1611)), )"
-    ws['G10'] = "=IF(F8=0,D10/Settings!C10,(D10*(1-(1+F10)/(1-Settings!C11)))/((1-Settings!C11)^Settings!B10*(1-((1+F10)/(1-Settings!C11))^(Settings!B10+1))))"
+    ws['G10'] = "=IF(F8=0,D10/Settings!C10,(D10*(1-(1+F10)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F10)/(1-Settings!C11))^(Settings!C10+1))))"
     ws['H10'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C10, GDP!A2:A1611)), \"\")"
     ws['I10'] = "=IFERROR(G10/H10, \"\")"
 
@@ -454,7 +454,7 @@ def add_estimates(ws):
     ws['D11'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C11, Costs!A2:A1611)), \"\")"
     ws['E11'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C11, GDP!A2:A1611)), \"\")"
     ws['F11'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C11, GDP!A2:A1611)), )"
-    ws['G11'] = "=IF(F8=0,D11/Settings!C10,(D11*(1-(1+F11)/(1-Settings!C11)))/((1-Settings!C11)^Settings!B10*(1-((1+F11)/(1-Settings!C11))^(Settings!B10+1))))"
+    ws['G11'] = "=IF(F8=0,D11/Settings!C10,(D11*(1-(1+F11)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F11)/(1-Settings!C11))^(Settings!C10+1))))"
     ws['H11'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C11, GDP!A2:A1611)), \"\")"
     ws['I11'] = "=IFERROR(G11/H11, \"\")"
 
@@ -470,95 +470,132 @@ def add_estimates(ws):
     ws.column_dimensions['I'].width = 30
 
     ws = format_numbers(ws, ['D', 'E', 'G', 'H'], (8,11), 'Comma [0]', 1)
-    ws = format_numbers(ws, ['F', 'I'], (8,11), 'Percent', 1)
-    # ws = format_numbers(ws, ['C','D'], (25,27), 'Comma [0]', 1)
-    # ws = format_numbers(ws, ['E'], (25,27), 'Percent', 1)
-    # ws = format_numbers(ws, ['C','D'], (32,38), 'Comma [0]', 1)
-    # ws = format_numbers(ws, ['E'], (32,38), 'Percent', 1)
+    ws = format_numbers(ws, ['D', 'E', 'G', 'H'], (17,19), 'Comma [0]', 1)
+    ws = format_numbers(ws, ['D', 'E', 'G', 'H'], (24,30), 'Comma [0]', 1)
+    ws = format_numbers(ws, ['F'], (8,11), 'Percent', 1)
+    ws = format_numbers(ws, ['F'], (17,19), 'Percent', 1)
+    ws = format_numbers(ws, ['F'], (24,30), 'Percent', 1)
+    ws = format_numbers(ws, ['I'], (8,11), 'Percent', 2)
+    ws = format_numbers(ws, ['I'], (17,19), 'Percent', 2)
+    ws = format_numbers(ws, ['I'], (24,30), 'Percent', 2)
 
     # ### Costs by Income Group
-    # ws.merge_cells('A23:E23')
-    # ws['A23'] = "Cost by Income Group"
-    # ws.merge_cells('A24:B24')
-    # ws['A24'] = "Income Group"
-    # ws['C24'] = "Total Cost ($Bn)"
-    # ws['D24'] = "Mean Annual 10-Year GDP ($Bn)"
-    # ws['E24'] = "GDP Percentage"
+    ws.merge_cells('B15:I15')
+    ws['B15'] = "Cost by Income Group"
+    ws.merge_cells('B16:C16')
+    ws['B16'] = "Income Group"
+    ws['D16'] = "Total Cost ($Bn)"
+    ws['E16'] = "Mean Annual 10-Year GDP ($Bn)"
+    ws['F16'] = "GDP Growth Rate (%)(2022-2030)"
+    ws['G16'] = "Initial Investment ($Bn)"
+    ws['H16'] = "2022 GDP ($Bn)"
+    ws['I16'] = "Annual GDP Share (%)"
 
-    # ws.merge_cells('A25:B25')
-    # ws['A25'] = 'Advanced Economies'
-    # ws['C25'] = '=SUMIF(Costs!$O$2:$O$250,Settings!A25,Costs!$M$2:$M$250)'
-    # ws['D25'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A25,GDP!$L$2:$L$250)'
-    # ws['E25'] = "=(C25/D25)"
+    ws.merge_cells('B17:C17')
+    ws['B17'] = 'Advanced Economies'
+    ws['D17'] = '=SUMIF(Costs!$O$2:$O$250,B17,Costs!$M$2:$M$250)'
+    ws['E17'] = '=SUMIF(GDP!$N$2:$N$250,B17,GDP!$L$2:$L$250)'
+    ws['F17'] = '=AVERAGEIF(GDP!$N$2:$N$250,B17,GDP!$M$2:$M$250)'
+    ws['G17'] = "=IF(F17=0,D17/Settings!C10,(D17*(1-(1+F17)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F17)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H17'] = "=SUMIF(GDP!$N$2:$N$250,B17,GDP!$C$2:$C$250)"
+    ws['I17'] = "=IFERROR(G17/H17, \"\")"
 
-    # ws.merge_cells('A26:B26')
-    # ws['A26'] = 'Emerging Market Economies'
-    # ws['C26'] = '=SUMIF(Costs!$O$2:$O$250,Settings!A26,Costs!$M$2:$M$250)'
-    # ws['D26'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A26,GDP!$L$2:$L$250)'
-    # ws['E26'] = "=(C26/D26)"
+    ws.merge_cells('B18:C18')
+    ws['B18'] = 'Emerging Market Economies'
+    ws['D18'] = '=SUMIF(Costs!$O$2:$O$250,B18,Costs!$M$2:$M$250)'
+    ws['E18'] = '=SUMIF(GDP!$N$2:$N$250,B18,GDP!$L$2:$L$250)'
+    ws['F18'] = '=AVERAGEIF(GDP!$N$2:$N$250,B18,GDP!$M$2:$M$250)'
+    ws['G18'] = "=IF(F18=0,D18/Settings!C10,(D18*(1-(1+F18)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F17)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H18'] = "=SUMIF(GDP!$N$2:$N$250,B18,GDP!$C$2:$C$250)"
+    ws['I18'] = "=IFERROR(G18/H18, \"\")"
 
-    # ws.merge_cells('A27:B27')
-    # ws['A27'] = 'Low Income Developing Countries'
-    # ws['C27'] = '=SUMIF(Costs!$O$2:$O$250,Settings!A27,Costs!$M$2:$M$250)'
-    # ws['D27'] = '=SUMIF(GDP!$N$2:$N$250,Settings!A27,GDP!$L$2:$L$250)'
-    # ws['E27'] = "=(C27/D27)"
+    ws.merge_cells('B19:C19')
+    ws['B19'] = 'Low Income Developing Countries'
+    ws['D19'] = '=SUMIF(Costs!$O$2:$O$250,B19,Costs!$M$2:$M$250)'
+    ws['E19'] = '=SUMIF(GDP!$N$2:$N$250,B19,GDP!$L$2:$L$250)'
+    ws['F19'] = '=AVERAGEIF(GDP!$N$2:$N$250,B19,GDP!$M$2:$M$250)'
+    ws['G19'] = "=IF(F19=0,D19/Settings!C10,(D19*(1-(1+F19)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F17)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H19'] = "=SUMIF(GDP!$N$2:$N$250,B19,GDP!$C$2:$C$250)"
+    ws['I19'] = "=IFERROR(G19/H19, \"\")"
 
-    # set_border(ws, 'A23:E27', "thin", "000000")
+    # ### Costs by Region
+    ws.merge_cells('B22:I22')
+    ws['B22'] = "Cost by Region"
+    ws.merge_cells('B23:C23')
+    ws['B23'] = "Region"
+    ws['D23'] = "Total Cost ($Bn)"
+    ws['E23'] = "Mean Annual 10-Year GDP ($Bn)"
+    ws['F23'] = "GDP Growth Rate (%)(2022-2030)"
+    ws['G23'] = "Initial Investment ($Bn)"
+    ws['H23'] = "2022 GDP ($Bn)"
+    ws['I23'] = "Annual GDP Share (%)"
 
-    # ### Costs by Income Group
-    # ws.merge_cells('A30:E30')
-    # ws['A30'] = "Cost by Region"
-    # ws.merge_cells('A31:B31')
-    # ws['A31'] = "Region"
-    # ws['C31'] = "Total Cost ($Bn)"
-    # ws['D31'] = "Mean Annual 10-Year GDP ($Bn)"
-    # ws['E31'] = "GDP Percentage"
+    ws.merge_cells('B24:C24')
+    ws['B24'] = 'Advanced Economies'
+    ws['D24'] = '=SUMIF(Costs!$P$2:$P$250,B24,Costs!$M$2:$M$250)'
+    ws['E24'] = '=SUMIF(GDP!$O$2:$O$250,B24,GDP!$L$2:$L$250)'
+    ws['F24'] = '=AVERAGEIF(GDP!$O$2:$O$250,B24,GDP!$M$2:$M$250)'
+    ws['G24'] = "=IF(F24=0,D24/Settings!C17,(D24*(1-(1+F24)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F24)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H24'] = "=SUMIF(GDP!$O$2:$O$250,B24,GDP!$C$2:$C$250)"
+    ws['I24'] = "=IFERROR(G24/H24, "")"
 
-    # ws.merge_cells('A32:B32')
-    # ws['A32'] = 'Advanced Economies'
-    # ws['C32'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A32,Costs!$M$2:$M$250)'
-    # ws['D32'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A32,GDP!$L$2:$L$250)'
-    # ws['E32'] = "=(C32/D32)"
+    ws.merge_cells('B25:C25')
+    ws['B25'] = "Caucasus and Central Asia"
+    ws['D25'] = '=SUMIF(Costs!$P$2:$P$250,B25,Costs!$M$2:$M$250)'
+    ws['E25'] = '=SUMIF(GDP!$O$2:$O$250,B25,GDP!$L$2:$L$250)'
+    ws['F25'] = '=AVERAGEIF(GDP!$O$2:$O$250,B25,GDP!$M$2:$M$250)'
+    ws['G25'] = "=IF(F25=0,D25/Settings!C17,(D25*(1-(1+F25)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F25)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H25'] = "=SUMIF(GDP!$O$2:$O$250,B25,GDP!$C$2:$C$250)"
+    ws['I25'] = "=IFERROR(G25/H25, "")"
 
-    # ws.merge_cells('A33:B33')
-    # ws['A33'] = "Caucasus and Central Asia"
-    # ws['C33'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A33,Costs!$M$2:$M$250)'
-    # ws['D33'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A33,GDP!$L$2:$L$250)'
-    # ws['E33'] = "=(C33/D33)"
+    ws.merge_cells('B26:C26')
+    ws['B26'] = "Emerging and Developing Asia"
+    ws['D26'] = '=SUMIF(Costs!$P$2:$P$250,B26,Costs!$M$2:$M$250)'
+    ws['E26'] = '=SUMIF(GDP!$O$2:$O$250,B26,GDP!$L$2:$L$250)'
+    ws['F26'] = '=AVERAGEIF(GDP!$O$2:$O$250,B26,GDP!$M$2:$M$250)'
+    ws['G26'] = "=IF(F26=0,D26/Settings!C17,(D26*(1-(1+F26)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F26)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H26'] = "=SUMIF(GDP!$O$2:$O$250,B26,GDP!$C$2:$C$250)"
+    ws['I26'] = "=IFERROR(G26/H26, "")"
 
-    # ws.merge_cells('A34:B34')
-    # ws['A34'] = "Emerging and Developing Asia"
-    # ws['C34'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A34,Costs!$M$2:$M$250)'
-    # ws['D34'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A34,GDP!$L$2:$L$250)'
-    # ws['E34'] = "=(C34/D34)"
+    ws.merge_cells('B27:C27')
+    ws['B27'] = "Emerging and Developing Europe"
+    ws['D27'] = '=SUMIF(Costs!$P$2:$P$250,B27,Costs!$M$2:$M$250)'
+    ws['E27'] = '=SUMIF(GDP!$O$2:$O$250,B27,GDP!$L$2:$L$250)'
+    ws['F27'] = '=AVERAGEIF(GDP!$O$2:$O$250,B27,GDP!$M$2:$M$250)'
+    ws['G27'] = "=IF(F27=0,D27/Settings!C17,(D27*(1-(1+F27)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F27)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H27'] = "=SUMIF(GDP!$O$2:$O$250,B27,GDP!$C$2:$C$250)"
+    ws['I27'] = "=IFERROR(G27/H27, "")"
 
-    # ws.merge_cells('A35:B35')
-    # ws['A35'] = "Emerging and Developing Europe"
-    # ws['C35'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A35,Costs!$M$2:$M$250)'
-    # ws['D35'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A35,GDP!$L$2:$L$250)'
-    # ws['E35'] = "=(C35/D35)"
+    ws.merge_cells('B28:C28')
+    ws['B28'] = "Latin America and the Caribbean"
+    ws['D28'] = '=SUMIF(Costs!$P$2:$P$250,B28,Costs!$M$2:$M$250)'
+    ws['E28'] = '=SUMIF(GDP!$O$2:$O$250,B28,GDP!$L$2:$L$250)'
+    ws['F28'] = '=AVERAGEIF(GDP!$O$2:$O$250,B28,GDP!$M$2:$M$250)'
+    ws['G28'] = "=IF(F28=0,D28/Settings!C17,(D28*(1-(1+F28)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F28)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H28'] = "=SUMIF(GDP!$O$2:$O$250,B28,GDP!$C$2:$C$250)"
+    ws['I28'] = "=IFERROR(G28/H28, "")"
 
-    # ws.merge_cells('A36:B36')
-    # ws['A36'] = "Latin America and the Caribbean"
-    # ws['C36'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A36,Costs!$M$2:$M$250)'
-    # ws['D36'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A36,GDP!$L$2:$L$250)'
-    # ws['E36'] = "=(C36/D36)"
+    ws.merge_cells('B29:C29')
+    ws['B29'] = "Middle East, North Africa, Afghanistan, and Pakistan"
+    ws['D29'] = '=SUMIF(Costs!$P$2:$P$250,B29,Costs!$M$2:$M$250)'
+    ws['E29'] = '=SUMIF(GDP!$O$2:$O$250,B29,GDP!$L$2:$L$250)'
+    ws['F29'] = '=AVERAGEIF(GDP!$O$2:$O$250,B29,GDP!$M$2:$M$250)'
+    ws['G29'] = "=IF(F29=0,D29/Settings!C17,(D29*(1-(1+F29)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F29)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H29'] = "=SUMIF(GDP!$O$2:$O$250,B29,GDP!$C$2:$C$250)"
+    ws['I29'] = "=IFERROR(G29/H29, "")"
 
-    # ws.merge_cells('A37:B37')
-    # ws['A37'] = "Middle East, North Africa, Afghanistan, and Pakistan"
-    # ws['C37'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A37,Costs!$M$2:$M$250)'
-    # ws['D37'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A37,GDP!$L$2:$L$250)'
-    # ws['E37'] = "=(C37/D37)"
-
-    # ws.merge_cells('A38:B38')
-    # ws['A38'] = "Sub-Sahara Africa"
-    # ws['C38'] = '=SUMIF(Costs!$P$2:$P$250,Settings!A38,Costs!$M$2:$M$250)'
-    # ws['D38'] = '=SUMIF(GDP!$O$2:$O$250,Settings!A38,GDP!$L$2:$L$250)'
-    # ws['E38'] = "=(C38/D38)"
-
-    # set_border(ws, 'A30:E38', "thin", "000000")
+    ws.merge_cells('B30:C30')
+    ws['B30'] = "Sub-Sahara Africa"
+    ws['D30'] = '=SUMIF(Costs!$P$2:$P$250,B30,Costs!$M$2:$M$250)'
+    ws['E30'] = '=SUMIF(GDP!$O$2:$O$250,B30,GDP!$L$2:$L$250)'
+    ws['F30'] = '=AVERAGEIF(GDP!$O$2:$O$250,B30,GDP!$M$2:$M$250)'
+    ws['G30'] = "=IF(F30=0,D30/Settings!C17,(D30*(1-(1+F30)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F30)/(1-Settings!C11))^(Settings!C10+1))))"
+    ws['H30'] = "=SUMIF(GDP!$O$2:$O$250,B30,GDP!$C$2:$C$250)"
+    ws['I30'] = "=IFERROR(G30/H30, "")"
 
     set_border(ws, 'B6:I11', "thin", "000000")
+    set_border(ws, 'B15:I19', "thin", "000000")
+    set_border(ws, 'B22:I30', "thin", "000000")
 
     return ws
 
@@ -573,12 +610,16 @@ def format_numbers(ws, columns, set_range, format_type, number_format):
 
             ws[cell].style = format_type
 
-            if format_type == 'Percent':
+            if format_type == 'Percent' and number_format == 1:
                 ws[cell].number_format = '0.0%'
+            elif format_type == 'Percent' and number_format == 2:
+                ws[cell].number_format = '0.00%'
             elif number_format == 0:
                 ws[cell].number_format = '0'
             elif number_format == 1:
                 ws[cell].number_format = '0.0'
+            elif number_format == 2:
+                ws[cell].number_format = '0.00'
 
             ws[cell].font = Font(size=11)
 
@@ -1274,7 +1315,7 @@ def add_gdp_sheet(ws):
     ws['M1'] = 'GDP Growth Rate (%)'
     for i in range(2,lnth):
         cell = 'M{}'.format(i)
-        ws[cell] = "=(K{}-B{})/B{}".format(i,i,i)
+        ws[cell] = "=IFERROR((K{}-B{})/B{},"")".format(i,i,i)
     ws = format_numbers(ws, ['M'], (2,len(gdp)+1), 'Percent', 1)
 
     ws['N1'] = 'Income Group'
