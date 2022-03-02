@@ -14,6 +14,8 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.styles import Border, Side, Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 from openpyxl.drawing.image import Image
+from openpyxl.chart import BarChart, Reference  #, Series
+from openpyxl.chart.label import DataLabelList
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), 'script_config.ini'))
@@ -101,23 +103,24 @@ def generate_workbook():
     options = add_options(options)
 
     context = wb.create_sheet("Context", (21-1))
-    add_context(context)
+    add_context(context, estimates)
 
-    # population.sheet_state  = 'hidden'
-    # area.sheet_state = 'hidden'
-    # pop_density.sheet_state = 'hidden'
-    # pop_growth.sheet_state = 'hidden'
-    # users.sheet_state = 'hidden'
-    # data_demand.sheet_state = 'hidden'
-    # lookups.sheet_state = 'hidden'
-    # coverage.sheet_state = 'hidden'
-    # towers.sheet_state = 'hidden'
-    # capacity.sheet_state = 'hidden'
-    # sites.sheet_state = 'hidden'
-    # new.sheet_state = 'hidden'
-    # costs.sheet_state = 'hidden'
-    # gdp.sheet_state = 'hidden'
-    # options.sheet_state = 'hidden'
+    # estimates.state = 'hidden'
+    population.sheet_state  = 'hidden'
+    area.sheet_state = 'hidden'
+    pop_density.sheet_state = 'hidden'
+    pop_growth.sheet_state = 'hidden'
+    users.sheet_state = 'hidden'
+    data_demand.sheet_state = 'hidden'
+    lookups.sheet_state = 'hidden'
+    coverage.sheet_state = 'hidden'
+    towers.sheet_state = 'hidden'
+    capacity.sheet_state = 'hidden'
+    sites.sheet_state = 'hidden'
+    new.sheet_state = 'hidden'
+    costs.sheet_state = 'hidden'
+    gdp.sheet_state = 'hidden'
+    options.sheet_state = 'hidden'
 
     wb.save('Oughton et al. (2022) DICE.xlsx')
 
@@ -597,6 +600,76 @@ def add_estimates(ws):
     set_border(ws, 'B15:I19', "thin", "000000")
     set_border(ws, 'B22:I30', "thin", "000000")
 
+    ws = relocate(ws, 'B', 7, 11, 'B', 34)
+    ws = relocate(ws, 'D', 7, 11, 'C', 34)
+    ws = format_numbers(ws, ['C'], (34,40), 'Comma [0]', 1)
+
+    ws = relocate(ws, 'B', 7, 11, 'E', 34)
+    ws = relocate(ws, 'E', 7, 11, 'F', 34)
+    ws = format_numbers(ws, ['F'], (34,40), 'Comma [0]', 1)
+
+    ws = relocate(ws, 'B', 7, 11, 'H', 34)
+    ws = relocate(ws, 'G', 7, 11, 'I', 34)
+    ws = format_numbers(ws, ['I'], (34,40), 'Comma [0]', 1)
+
+    ws = relocate(ws, 'B', 7, 11, 'B', 42)
+    ws = relocate(ws, 'I', 7, 11, 'C', 42)
+    ws = format_numbers(ws, ['C'], (42,48), 'Percent', 2)
+
+    # ### by country
+    # ws['B34'] = "=B7"
+    # ws['C34'] = "=B8"
+    # ws['D34'] = "=B9"
+    # ws['E34'] = "=B10"
+    # ws['F34'] = "=B11"
+    # ws['B35'] = "=TRANSPOSE(D7:D11)"
+    # ws.formula_attributes["B35"] = {"t": "array", "ref": "B35:F35"}
+
+    # ### by income group
+    # ws['AA15'] = "=B16"
+    # ws['AB15'] = "=B17"
+    # ws['AC15'] = "=B18"
+    # ws['AD15'] = "=B19"
+    # ws['AA16'] = "=TRANSPOSE(D16:I19)"
+    # ws.formula_attributes["AA16"] = {"t": "array", "ref": "AA16:AD21"}
+
+    # ### by regional group
+    # ws['AA24'] = "=B23"
+    # ws['AB24'] = "=B24"
+    # ws['AC24'] = "=B25"
+    # ws['AD24'] = "=B26"
+    # ws['AE24'] = "=B27"
+    # ws['AF24'] = "=B28"
+    # ws['AG24'] = "=B29"
+    # ws['AH24'] = "=B30"
+    # ws['AA25'] = "=TRANSPOSE(D23:I30)"
+    # ws.formula_attributes["AA25"] = {"t": "array", "ref": "AA25:AH30"}
+
+    # set_border(ws, 'AA6:AE11', "thin", "000000")
+    # set_border(ws, 'AA15:AD21', "thin", "000000")
+    # set_border(ws, 'AA24:AH30', "thin", "000000")
+
+    return ws
+
+
+
+def relocate(ws, col, min_row, max_row, end_col, end_min_row):
+    """
+    ws, col, min_row, max_row, end_col, end_min_row
+    worksheet
+    starting_column
+    starting_minimum_row
+    starting_maximum_row
+    ending_column
+    ending_minimum_row
+
+    """
+    for i in range(min_row, max_row+1):
+        starting_loc = '={}{}'.format(col, i)
+        difference = end_min_row - min_row
+        ending_loc = '{}{}'.format(end_col, i+difference)
+        ws[ending_loc] = starting_loc
+
     return ws
 
 
@@ -836,25 +909,34 @@ def add_pop_growth(ws):
     return ws, lnth
 
 
-def add_context(ws):
+def add_context(ws, data_sheet):
     """
 
     """
-    # chart1 = BarChart()
-    # chart1.type = "col"
-    # chart1.style = 10
-    # chart1.title = "Bar Chart"
-    # chart1.y_axis.title = 'Test number'
-    # chart1.x_axis.title = 'Sample length (mm)'
-
-    # data = Reference(ws, min_col=2, min_row=1, max_row=7, max_col=3)
-    # cats = Reference(ws, min_col=1, min_row=2, max_row=7)
-    # chart1.add_data(data, titles_from_data=True)
-    # chart1.set_categories(cats)
-    # chart1.shape = 4
-    # ws.add_chart(chart1, "A10")
+    ws = bar_chart(ws, "Estimates!$C$34:$C$38", "Estimates!$B$35:$B$38", "Total Cost", 'Cost ($Bn)', "B10")
+    ws = bar_chart(ws, "Estimates!$F$34:$F$38", "Estimates!$E$35:$E$38", "Mean Annual 10-Year GDP",'GDP ($Bn)', "L10")
+    ws = bar_chart(ws, "Estimates!$I$34:$I$38", "Estimates!$H$35:$H$38", "Initial Investment",'Cost ($Bn)', "B26")
+    ws = bar_chart(ws, "Estimates!$C$42:$C$46", "Estimates!$B$43:$B$46", "GDP Share",'Percent of GDP (%)', "L26")
 
     return
+
+
+def bar_chart(ws, data, categories, title, y_axis, loc):
+
+    chart1 = BarChart()
+    chart1.type = "bar"
+    chart1.title = title
+    chart1.style = 10
+    chart1.y_axis.title = y_axis
+    chart1.add_data(data, titles_from_data=True)
+    chart1.set_categories(categories)
+    chart1.shape = 4
+    chart1.dataLabels = DataLabelList()
+    chart1.dataLabels.showVal = True
+    chart1.legend = None
+    ws.add_chart(chart1, loc)
+
+    return ws
 
 
 def add_users(ws, cols, lnth):
