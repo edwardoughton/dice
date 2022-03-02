@@ -102,8 +102,18 @@ def generate_workbook():
     options = wb.create_sheet("Options", (20-1))
     options = add_options(options)
 
-    context = wb.create_sheet("Context", (21-1))
-    add_context(context, estimates)
+    ################
+    ###create graphs
+    estimates = relocate_data(estimates)
+
+    context = wb.create_sheet("Country Costs", (21-1))
+    add_country_costs(context, estimates)
+
+    context = wb.create_sheet("Income Group Costs", (22-1))
+    add_income_group_costs(context, estimates)
+
+    context = wb.create_sheet("Regional Costs", (23-1))
+    add_regional_group_costs(context, estimates)
 
     # estimates.state = 'hidden'
     population.sheet_state  = 'hidden'
@@ -600,6 +610,15 @@ def add_estimates(ws):
     set_border(ws, 'B15:I19', "thin", "000000")
     set_border(ws, 'B22:I30', "thin", "000000")
 
+
+    return ws
+
+
+def relocate_data(ws):
+    """
+
+    """
+    ### Country group
     ws = relocate(ws, 'B', 7, 11, 'B', 34)
     ws = relocate(ws, 'D', 7, 11, 'C', 34)
     ws = format_numbers(ws, ['C'], (34,40), 'Comma [0]', 1)
@@ -616,41 +635,41 @@ def add_estimates(ws):
     ws = relocate(ws, 'I', 7, 11, 'C', 42)
     ws = format_numbers(ws, ['C'], (42,48), 'Percent', 2)
 
-    # ### by country
-    # ws['B34'] = "=B7"
-    # ws['C34'] = "=B8"
-    # ws['D34'] = "=B9"
-    # ws['E34'] = "=B10"
-    # ws['F34'] = "=B11"
-    # ws['B35'] = "=TRANSPOSE(D7:D11)"
-    # ws.formula_attributes["B35"] = {"t": "array", "ref": "B35:F35"}
+    ### Income group
+    ws = relocate(ws, 'B', 16, 19, 'B', 50)
+    ws = relocate(ws, 'D', 16, 19, 'C', 50)
+    ws = format_numbers(ws, ['C'], (51,53), 'Comma [0]', 0)
 
-    # ### by income group
-    # ws['AA15'] = "=B16"
-    # ws['AB15'] = "=B17"
-    # ws['AC15'] = "=B18"
-    # ws['AD15'] = "=B19"
-    # ws['AA16'] = "=TRANSPOSE(D16:I19)"
-    # ws.formula_attributes["AA16"] = {"t": "array", "ref": "AA16:AD21"}
+    ws = relocate(ws, 'B', 16, 19, 'E', 50)
+    ws = relocate(ws, 'E', 16, 19, 'F', 50)
+    ws = format_numbers(ws, ['F'], (51,53), 'Comma [0]', 0)
 
-    # ### by regional group
-    # ws['AA24'] = "=B23"
-    # ws['AB24'] = "=B24"
-    # ws['AC24'] = "=B25"
-    # ws['AD24'] = "=B26"
-    # ws['AE24'] = "=B27"
-    # ws['AF24'] = "=B28"
-    # ws['AG24'] = "=B29"
-    # ws['AH24'] = "=B30"
-    # ws['AA25'] = "=TRANSPOSE(D23:I30)"
-    # ws.formula_attributes["AA25"] = {"t": "array", "ref": "AA25:AH30"}
+    ws = relocate(ws, 'B', 16, 19, 'H', 50)
+    ws = relocate(ws, 'G', 16, 19, 'I', 50)
+    ws = format_numbers(ws, ['I'], (51,53), 'Comma [0]', 1)
 
-    # set_border(ws, 'AA6:AE11', "thin", "000000")
-    # set_border(ws, 'AA15:AD21', "thin", "000000")
-    # set_border(ws, 'AA24:AH30', "thin", "000000")
+    ws = relocate(ws, 'B', 16, 19, 'B', 57)
+    ws = relocate(ws, 'I', 16, 19, 'C', 57)
+    ws = format_numbers(ws, ['C'], (58,60), 'Percent', 2)
+
+    ### Region group
+    ws = relocate(ws, 'B', 23, 30, 'B', 64)
+    ws = relocate(ws, 'D', 23, 30, 'C', 64)
+    ws = format_numbers(ws, ['C'], (65,72), 'Comma [0]', 0)
+
+    ws = relocate(ws, 'B', 23, 30, 'E', 64)
+    ws = relocate(ws, 'E', 23, 30, 'F', 64)
+    ws = format_numbers(ws, ['F'], (65,72), 'Comma [0]', 0)
+
+    ws = relocate(ws, 'B', 23, 30, 'H', 64)
+    ws = relocate(ws, 'G', 23, 30, 'I', 64)
+    ws = format_numbers(ws, ['I'], (65,72), 'Comma [0]', 1)
+
+    ws = relocate(ws, 'B', 23, 30, 'B', 75)
+    ws = relocate(ws, 'I', 23, 30, 'C', 75)
+    ws = format_numbers(ws, ['C'], (76,83), 'Percent', 2)
 
     return ws
-
 
 
 def relocate(ws, col, min_row, max_row, end_col, end_min_row):
@@ -909,16 +928,67 @@ def add_pop_growth(ws):
     return ws, lnth
 
 
-def add_context(ws, data_sheet):
+def add_country_costs(ws, data_sheet):
     """
 
     """
-    ws = bar_chart(ws, "Estimates!$C$34:$C$38", "Estimates!$B$35:$B$38", "Total Cost", 'Cost ($Bn)', "B10")
-    ws = bar_chart(ws, "Estimates!$F$34:$F$38", "Estimates!$E$35:$E$38", "Mean Annual 10-Year GDP",'GDP ($Bn)', "L10")
-    ws = bar_chart(ws, "Estimates!$I$34:$I$38", "Estimates!$H$35:$H$38", "Initial Investment",'Cost ($Bn)', "B26")
-    ws = bar_chart(ws, "Estimates!$C$42:$C$46", "Estimates!$B$43:$B$46", "GDP Share",'Percent of GDP (%)', "L26")
+    ws.sheet_properties.tabColor = "92D050"
+
+    ##Color white
+    ws.sheet_view.showGridLines = False
+
+    #Set blue and red border strips
+    set_cell_color(ws, 'A1:AZ1', "004C97")
+    set_cell_color(ws, 'A2:AZ2', "C00000")
+
+    ws = bar_chart(ws, "Estimates!$C$34:$C$38", "Estimates!$B$35:$B$38", "Total Cost by Country", 'Cost ($Bn)', "B4")
+    ws = bar_chart(ws, "Estimates!$F$34:$F$38", "Estimates!$E$35:$E$38", "Mean Annual 10-Year GDP by Country",'GDP ($Bn)', "L4")
+    ws = bar_chart(ws, "Estimates!$I$34:$I$38", "Estimates!$H$35:$H$38", "Initial Investment by Country",'Cost ($Bn)', "B20")
+    ws = bar_chart(ws, "Estimates!$C$42:$C$46", "Estimates!$B$43:$B$46", "GDP Share by Country",'Percent of GDP (%)', "L20")
 
     return
+
+
+def add_income_group_costs(ws, data_sheet):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "92D050"
+
+    ##Color white
+    ws.sheet_view.showGridLines = False
+
+    #Set blue and red border strips
+    set_cell_color(ws, 'A1:AZ1', "004C97")
+    set_cell_color(ws, 'A2:AZ2', "C00000")
+
+    ws = bar_chart(ws, "Estimates!$C$50:$C$53", "Estimates!$B$51:$B$53", "Total Cost by Income Group", 'Cost ($Bn)', "B4")
+    ws = bar_chart(ws, "Estimates!$F$50:$F$53", "Estimates!$E$51:$E$53", "Mean Annual 10-Year GDP by Income Group",'GDP ($Bn)', "L4")
+    ws = bar_chart(ws, "Estimates!$I$50:$I$53", "Estimates!$H$51:$H$53", "Initial Investment by Income Group",'Cost ($Bn)', "B20")
+    ws = bar_chart(ws, "Estimates!$C$57:$C$60", "Estimates!$B$58:$B$60", "GDP Share by Income Group",'Percent of GDP (%)', "L20")
+
+    return ws
+
+
+def add_regional_group_costs(ws, data_sheet):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "92D050"
+
+    ##Color white
+    ws.sheet_view.showGridLines = False
+
+    #Set blue and red border strips
+    set_cell_color(ws, 'A1:AZ1', "004C97")
+    set_cell_color(ws, 'A2:AZ2', "C00000")
+
+    ws = bar_chart(ws, "Estimates!$C$64:$C$71", "Estimates!$B$65:$B$71", "Total Cost by Region", 'Cost ($Bn)', "B4")
+    ws = bar_chart(ws, "Estimates!$F$64:$F$71", "Estimates!$E$65:$E$71", "Mean Annual 10-Year GDP by Region",'GDP ($Bn)', "L4")
+    ws = bar_chart(ws, "Estimates!$I$64:$I$71", "Estimates!$H$65:$H$71", "Initial Investment by Region",'Cost ($Bn)', "B20")
+    ws = bar_chart(ws, "Estimates!$C$75:$C$82", "Estimates!$B$76:$B$82", "GDP Share by Region",'Percent of GDP (%)', "L20")
+
+    return ws
 
 
 def bar_chart(ws, data, categories, title, y_axis, loc):
