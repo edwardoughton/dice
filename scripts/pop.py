@@ -26,6 +26,7 @@ from rtree import index
 import numpy as np
 import random
 import math
+from tqdm import tqdm
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), 'script_config.ini'))
@@ -304,7 +305,7 @@ def get_pop_and_luminosity_data(country):
     folder = os.path.join(DATA_INTERMEDIATE, iso3, 'regions')
     path = os.path.join(folder, filename)
 
-    regions = gpd.read_file(path)
+    regions = gpd.read_file(path)#[:1]
 
     results = []
 
@@ -409,43 +410,49 @@ def collect_results(countries):
                         labels=deciles,
                         duplicates='drop'
                         ) #[0,10,20,30,40,50,60,70,80,90,100]
+
+                    if metric[0] == 'population_km2':
+                        filename = 'regional_data_deciles.csv'
+                        path = os.path.join(DATA_INTERMEDIATE, country['iso3'], filename)
+                        data.to_csv(path, index=False)
+
                 except:
                     continue
 
-                data = data[['GID_0', 'decile', 'population', 'area_km2']]
+            #     data = data[['GID_0', 'decile', 'population', 'area_km2']]
 
-                data = data.groupby(['GID_0','decile'])[
-                    ['population', 'area_km2']
-                    ].sum().reset_index()
+            #     data = data.groupby(['GID_0','decile'])[
+            #         ['population', 'area_km2']
+            #         ].sum().reset_index()
 
-                data['population_km2'] = data['population'] / data['area_km2']
+            #     data['population_km2'] = data['population'] / data['area_km2']
 
-                data = data[['GID_0', 'decile', metric[0]]]
+            #     data = data[['GID_0', 'decile', metric[0]]]
 
-                if metric[0] == 'population_km2':
-                    data[metric[0]] = round(data[metric[0]], metric[1]).astype(float)
-                else:
-                    data[metric[0]] = round(data[metric[0]], metric[1]).astype(int)
+            #     if metric[0] == 'population_km2':
+            #         data[metric[0]] = round(data[metric[0]], metric[1]).astype(float)
+            #     else:
+            #         data[metric[0]] = round(data[metric[0]], metric[1]).astype(int)
 
-                data = data.to_dict('records')
+            #     data = data.to_dict('records')
 
-                wide_dict = {}
-                wide_dict['GID_0'] = country['iso3']
-                wide_dict['country_name'] = country['country_name']
-                for decile in reversed(deciles):
-                    for item in data:
-                        if decile == item['decile']:
-                            wide_dict[decile] = item[metric[0]]
+            #     wide_dict = {}
+            #     wide_dict['GID_0'] = country['iso3']
+            #     wide_dict['country_name'] = country['country_name']
+            #     for decile in reversed(deciles):
+            #         for item in data:
+            #             if decile == item['decile']:
+            #                 wide_dict[decile] = item[metric[0]]
 
-                output.append(wide_dict)
+            #     output.append(wide_dict)
 
-            else:
-                missing_data.add(country['country_name'])
+            # else:
+            #     missing_data.add(country['country_name'])
 
-        output = pd.DataFrame(output)
-        filename = 'all_pop_data_{}.csv'.format(metric[0])
-        path = os.path.join(DATA_INTERMEDIATE, filename)
-        output.to_csv(path, index=False)
+        # output = pd.DataFrame(output)
+        # filename = 'all_pop_data_{}.csv'.format(metric[0])
+        # path = os.path.join(DATA_INTERMEDIATE, filename)
+        # output.to_csv(path, index=False)
 
     print('The following countries had missing data: {}'.format(missing_data))
 
@@ -472,46 +479,55 @@ if __name__ == '__main__':
 
     countries = find_country_list([])
 
-    for country in countries:
+    for country in tqdm(countries):
 
-        if not country['iso3'] in [
-            'ABW','BHR','BRB','BLZ','CPV',
-            'CAN', ##Canada needs special attention
-            'CYP','DMA', 'GRD','HKG',
-            'IDN',
-            'IRL','ISR','JAM','KIR','KSV',
-            'KWT','LSO','LBY',
-            # 'MDV',
-            'MUS','MDA','MNE','NRU',
-            'PLW','PRI','QAT','SMR','SAU','SYC','SGP','TON',
-            'TTO','TKM','TUV',
-        ]:
+        if not country['iso3'] == 'ZWE':
             continue
+
+        # if not country['iso3'] in [
+        #     'ABW','BHR','BRB','BLZ','CPV',
+        #     'CAN', ##Canada needs special attention
+        #     'CYP','DMA', 'GRD','HKG',
+        #     'IDN',
+        #     'IRL','ISR','JAM','KIR','KSV',
+        #     'KWT','LSO','LBY',
+        #     # 'MDV',
+        #     'MUS','MDA','MNE','NRU',
+        #     'PLW','PRI','QAT','SMR','SAU','SYC','SGP','TON',
+        #     'TTO','TKM','TUV',
+        # ]:
+        #     continue
 
         path = os.path.join(DATA_INTERMEDIATE, country['iso3'], 'regional_data.csv')
 
-        if not os.path.exists(path):
-            print(country['country_name'], country['iso3'])
-        else:
-            continue
+        # if os.path.exists(path):
+        #     continue
+            # print(country['country_name'], country['iso3'])
+        # else:
+        #     os.remove(path)
+        #     continue
         print('--Working on {}'.format(country['iso3']))
 
-        # print('Processing country boundary')
-        process_country_shapes(country)
+        # # print('Processing country boundary')
+        # process_country_shapes(country)
 
-        # print('Processing regions')
-        response = process_regions(country)
-        if response == 'All small shapes':
-            # print(response)
-            continue
-
-        # print('Processing settlement layer')
-        process_settlement_layer(country)
-
-        # print('Getting population and luminosity')
-        get_pop_and_luminosity_data(country)
-
-        # except:
+        # # print('Processing regions')
+        # response = process_regions(country)
+        # if response == 'All small shapes':
+        #     # print(response)
         #     continue
+
+        # # print('Processing settlement layer')
+        # process_settlement_layer(country)
+
+
+
+        try:
+            # print('Getting population and luminosity')
+            get_pop_and_luminosity_data(country)
+
+        except:
+            print('--  {} failed'.format(country['country_name']))
+            continue
 
     collect_results(countries)

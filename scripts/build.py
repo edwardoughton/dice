@@ -39,11 +39,11 @@ def generate_workbook():
     readme = wb.create_sheet("Read_Me", (2-1))
     readme = add_readme(readme)
 
-    settings = wb.create_sheet("Settings", (3-1))
-    settings = add_settings(settings)
-
-    countries = wb.create_sheet("Countries", (4-1))
+    countries = wb.create_sheet("Countries", (3-1))
     countries = add_country_selection(countries)
+
+    settings = wb.create_sheet("Settings", (4-1))
+    settings = add_settings(settings)
 
     estimates = wb.create_sheet("Estimates", (5-1))
     estimates = add_estimates(estimates)
@@ -104,33 +104,43 @@ def generate_workbook():
 
     ################
     ###create graphs
-    estimates = relocate_data(estimates)
 
-    context = wb.create_sheet("Country Costs", (21-1))
+    # estimates = relocate_context_data(estimates)
+
+    context_data = wb.create_sheet("Context_Data", (21-1))
+    add_context_data(context_data, population, area, pop_density,
+        pop_growth, users, data_demand)
+
+    estimates = relocate_estimates_data(estimates)
+
+    context = wb.create_sheet("Country Context", (22-1))
+    add_country_context(context, context_data)
+
+    context = wb.create_sheet("Country Costs", (23-1))
     add_country_costs(context, estimates)
 
-    context = wb.create_sheet("Income Group Costs", (22-1))
+    context = wb.create_sheet("Income Group Costs", (24-1))
     add_income_group_costs(context, estimates)
 
-    context = wb.create_sheet("Regional Costs", (23-1))
+    context = wb.create_sheet("Regional Costs", (25-1))
     add_regional_group_costs(context, estimates)
 
     # estimates.state = 'hidden'
-    population.sheet_state  = 'hidden'
-    area.sheet_state = 'hidden'
-    pop_density.sheet_state = 'hidden'
-    pop_growth.sheet_state = 'hidden'
-    users.sheet_state = 'hidden'
-    data_demand.sheet_state = 'hidden'
-    lookups.sheet_state = 'hidden'
-    coverage.sheet_state = 'hidden'
-    towers.sheet_state = 'hidden'
-    capacity.sheet_state = 'hidden'
-    sites.sheet_state = 'hidden'
-    new.sheet_state = 'hidden'
-    costs.sheet_state = 'hidden'
-    gdp.sheet_state = 'hidden'
-    options.sheet_state = 'hidden'
+    # population.sheet_state  = 'hidden'
+    # area.sheet_state = 'hidden'
+    # pop_density.sheet_state = 'hidden'
+    # pop_growth.sheet_state = 'hidden'
+    # users.sheet_state = 'hidden'
+    # data_demand.sheet_state = 'hidden'
+    # lookups.sheet_state = 'hidden'
+    # coverage.sheet_state = 'hidden'
+    # towers.sheet_state = 'hidden'
+    # capacity.sheet_state = 'hidden'
+    # sites.sheet_state = 'hidden'
+    # new.sheet_state = 'hidden'
+    # costs.sheet_state = 'hidden'
+    # gdp.sheet_state = 'hidden'
+    # options.sheet_state = 'hidden'
 
     wb.save('Oughton et al. (2022) DICE.xlsx')
 
@@ -289,10 +299,10 @@ def add_settings(ws):
     ws['C17'] = 5
 
     ws['B18'] = "Minimum capacity per user (Mbps)"
-    ws['C18'] = 10
+    ws['C18'] = 0#10
 
     ws['B19'] = "Data demand per month (GB) "
-    ws['C19'] = 2
+    ws['C19'] = 5
 
     set_border(ws, 'B21:C26', "thin", "000000")
     ws.merge_cells('B21:C21')
@@ -358,6 +368,12 @@ def add_country_selection(ws):
     ws.column_dimensions['B'].width = 40
     ws.column_dimensions['C'].width = 40
 
+    yellow_fill = PatternFill(start_color='FFFF00',end_color='FFFF00',fill_type='solid')
+    ws['B8'].fill = yellow_fill
+    ws['B9'].fill = yellow_fill
+    ws['B10'].fill = yellow_fill
+    ws['B11'].fill = yellow_fill
+
     ## Add parameters box
     format_numbers(ws, ['C'], (11,11), 'Percent', 0)
     set_border(ws, 'B6:C11', "thin", "000000")
@@ -394,6 +410,11 @@ def add_country_selection(ws):
     ws['B11'] = "India"
     ws['C11'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B11, Options!A2:A1611)), \"\")"
 
+    ws.merge_cells('B13:C13')
+    ws.merge_cells('B14:C14')
+    ws['B13'] = 'Select the yellow cells to access the drop-down list of countries.'
+    ws['B14'] = 'Up to four countries can then be selected for comparison.'
+
     #Center text
     ws = center_text(ws, 'A2:AZ1000')
     # set_border(ws, 'A1:AZ1000', "thin", "00FFFFFF")
@@ -401,6 +422,8 @@ def add_country_selection(ws):
     ws = set_bold(ws, 'B6', 'Segoe UI')
     ws = set_bold(ws, 'B7', 'Segoe UI')
     ws = set_bold(ws, 'C7', 'Segoe UI')
+    ws = set_bold(ws, 'B13', 'Segoe UI')
+    ws = set_bold(ws, 'B14', 'Segoe UI')
 
     return ws
 
@@ -614,7 +637,7 @@ def add_estimates(ws):
     return ws
 
 
-def relocate_data(ws):
+def relocate_estimates_data(ws):
     """
 
     """
@@ -926,6 +949,121 @@ def add_pop_growth(ws):
     set_border(ws, 'A1:N{}'.format(len(p_growth)+1), "thin", "000000")
 
     return ws, lnth
+
+
+def add_context_data(ws, population, area, pop_density,
+        pop_growth, users, data_demand):
+
+    cols = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+    for col in cols:
+        for i in range(1,5+1):
+            cell = '{}{}'.format(col, i)
+            if i == 1:
+                ws[cell] = '=Pop!{}'.format(cell)
+            else:
+                if col == 'B':
+                    ws[cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[cell] = "=INDEX(Pop!{}2:{}1611,MATCH(B{}, Pop!A2:A1611,FALSE))/1e6".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 6)
+                ws[new_cell] = '=Area!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 6)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(Area!{}2:{}1611,MATCH(B{}, Area!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 12)
+                ws[new_cell] = '=P_Density!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 12)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(P_Density!{}2:{}1611,MATCH(B{}, P_Density!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 18)
+                ws[new_cell] = '=P_Growth!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 18)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(P_Growth!{}2:{}1611,MATCH(B{}, P_Growth!A2:A1611,FALSE))".format(col, col, i)
+
+    ws['A31'] = "=TRANSPOSE(A1:L5)"
+    ws['A44'] = "=TRANSPOSE(A7:L11)"
+    ws['A57'] = "=TRANSPOSE(A13:L17)"
+    ws['A70'] = "=TRANSPOSE(A19:L25)"
+
+    ws.formula_attributes['A31'] = {'t': 'array', 'ref': "A31:E42"}
+    ws.formula_attributes['A44'] = {'t': 'array', 'ref': "A44:E55"}
+    ws.formula_attributes['A57'] = {'t': 'array', 'ref': "A57:E68"}
+    ws.formula_attributes['A70'] = {'t': 'array', 'ref': "A70:E81"}
+
+    return ws
+
+
+def add_country_context(ws, data_sheet):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "92D050"
+
+    ##Color white
+    ws.sheet_view.showGridLines = False
+
+    #Set blue and red border strips
+    set_cell_color(ws, 'A1:AZ1', "004C97")
+    set_cell_color(ws, 'A2:AZ2', "C00000")
+
+    ws = decile_bar_chart(ws, "Context_Data!$B$32:$E$42", "Context_Data!$A$33:$A$42", "Population by Density Decile", 'Population Density Decile\n(10 represents the first 10 percent of the densest statistical areas)', 'Population (Millions)', "B4")
+    ws = decile_bar_chart(ws, "Context_Data!$B$45:$E$55", "Context_Data!$A$46:$A$55", "Area by Density Decile", 'Population Density Decile\n(10 represents the first 10 percent of the densest statistical areas)', 'Area (Km^2)', "L4")
+    ws = decile_bar_chart(ws, "Context_Data!$B$58:$E$68", "Context_Data!$A$59:$A$68", "Population Density by Density Decile", 'Population Density Decile\n(10 represents the first 10 percent of the densest statistical areas)', 'Population Density (Km^2)', "B20")
+    ws = decile_bar_chart(ws, "Context_Data!$B$71:$E$81", "Context_Data!$A$72:$A$81", "Population Growth Forecast", 'Year','Growth Rate (%)', "L20")
+
+    return ws
+
+
+def decile_bar_chart(ws, data, categories, title, x_axis, y_axis, loc):
+
+    chart1 = BarChart()
+    chart1.type = "col"
+    chart1.style = 10
+    chart1.title = title
+    chart1.y_axis.title = y_axis
+    chart1.x_axis.title = x_axis
+
+    chart1.add_data(data, titles_from_data=True)
+    chart1.set_categories(categories)
+    chart1.shape = 4
+    # chart1.dataLabels = DataLabelList()
+    # chart1.dataLabels.showVal = True
+    ws.add_chart(chart1, loc)
+
+    return ws
 
 
 def add_country_costs(ws, data_sheet):
