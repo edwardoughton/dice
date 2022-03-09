@@ -17,6 +17,8 @@ from openpyxl.drawing.image import Image
 from openpyxl.chart import BarChart, Reference  #, Series
 from openpyxl.chart.label import DataLabelList
 
+from extract import extract_data
+
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), 'script_config.ini'))
 BASE_PATH = CONFIG['file_locations']['base_path']
@@ -85,21 +87,39 @@ def generate_workbook():
     capacity = add_capacity_sheet(capacity, cols, lnth)
     capacity.sheet_properties.tabColor = "0000ff"
 
-    sites = wb.create_sheet("Total Sites", (16-1))
+    sites = wb.create_sheet("Total_Sites", (16-1))
     sites = add_sites_sheet(sites, cols, lnth)
     sites.sheet_properties.tabColor = "0000ff"
 
-    new = wb.create_sheet("New Sites", (17-1))
+    new = wb.create_sheet("New_Sites", (17-1))
     new = add_new_sites_sheet(new, cols, lnth)
     new.sheet_properties.tabColor = "0000ff"
 
-    costs = wb.create_sheet("Costs", (18-1))
-    costs = add_cost_sheet(costs, cols, lnth)
+    site_costs = wb.create_sheet("RAN_Costs", (18-1))
+    site_costs = add_site_costs(site_costs, cols, lnth)
 
-    gdp = wb.create_sheet("GDP", (19-1))
+    bh_costs = wb.create_sheet("BH_Costs", (19-1))
+    bh_costs = add_bh_costs(bh_costs, cols, lnth)
+
+    tower_costs = wb.create_sheet("Tower_Costs", (20-1))
+    tower_costs = add_tower_costs(tower_costs, cols, lnth)
+
+    labor_costs = wb.create_sheet("Labor_Costs", (21-1))
+    labor_costs = add_labor_costs(labor_costs, cols, lnth)
+
+    power_cost = wb.create_sheet("Power_Costs", (22-1))
+    power_cost = add_power_costs(power_cost, cols, lnth)
+
+    mno_cost = wb.create_sheet("MNO_Costs", (23-1))
+    mno_cost = add_mno_costs(mno_cost, cols, lnth)
+
+    total_cost = wb.create_sheet("Total_Costs", (24-1))
+    total_cost = add_total_costs(total_cost, cols, lnth)
+
+    gdp = wb.create_sheet("GDP", (25-1))
     gdp = add_gdp_sheet(gdp)
 
-    options = wb.create_sheet("Options", (20-1))
+    options = wb.create_sheet("Options", (26-1))
     options = add_options(options)
 
     ################
@@ -107,36 +127,36 @@ def generate_workbook():
 
     # estimates = relocate_context_data(estimates)
 
-    context_data = wb.create_sheet("Context_Data", (21-1))
+    context_data = wb.create_sheet("Context_Data", (27-1))
     add_context_data(context_data, population, area, pop_density,
         pop_growth, users, data_demand)
 
     estimates = relocate_estimates_data(estimates)
 
-    context = wb.create_sheet("Country Context", (22-1))
+    context = wb.create_sheet("Country_Context", (28-1))
     add_country_context(context, context_data)
 
-    context = wb.create_sheet("Country Costs", (23-1))
+    context = wb.create_sheet("Country_Costs", (29-1))
     add_country_costs(context, estimates)
 
-    context = wb.create_sheet("Income Group Costs", (24-1))
+    context = wb.create_sheet("Income_Group_Costs", (30-1))
     add_income_group_costs(context, estimates)
 
-    context = wb.create_sheet("Regional Costs", (25-1))
+    context = wb.create_sheet("Regional_Costs", (31-1))
     add_regional_group_costs(context, estimates)
 
     # estimates.state = 'hidden'
-    # population.sheet_state  = 'hidden'
-    # area.sheet_state = 'hidden'
-    # pop_density.sheet_state = 'hidden'
-    # pop_growth.sheet_state = 'hidden'
-    # users.sheet_state = 'hidden'
-    # data_demand.sheet_state = 'hidden'
+    population.sheet_state  = 'hidden'
+    area.sheet_state = 'hidden'
+    pop_density.sheet_state = 'hidden'
+    pop_growth.sheet_state = 'hidden'
+    users.sheet_state = 'hidden'
+    data_demand.sheet_state = 'hidden'
     # lookups.sheet_state = 'hidden'
-    # coverage.sheet_state = 'hidden'
-    # towers.sheet_state = 'hidden'
-    # capacity.sheet_state = 'hidden'
-    # sites.sheet_state = 'hidden'
+    coverage.sheet_state = 'hidden'
+    towers.sheet_state = 'hidden'
+    capacity.sheet_state = 'hidden'
+    sites.sheet_state = 'hidden'
     # new.sheet_state = 'hidden'
     # costs.sheet_state = 'hidden'
     # gdp.sheet_state = 'hidden'
@@ -299,7 +319,7 @@ def add_settings(ws):
     ws['C17'] = 5
 
     ws['B18'] = "Minimum capacity per user (Mbps)"
-    ws['C18'] = 0#10
+    ws['C18'] = 0 #10
 
     ws['B19'] = "Data demand per month (GB) "
     ws['C19'] = 5
@@ -330,7 +350,7 @@ def add_settings(ws):
     ws['C25'] = "Baseline"
 
     ws['B26'] = "Minimum Pop.Density to Serve (km^2)"
-    ws['C26'] = 5
+    ws['C26'] = 0 #5
 
     #Center text
     ws = center_text(ws, 'A2:AZ1000')
@@ -457,7 +477,7 @@ def add_estimates(ws):
     # ### Country 1
     ws['B8'] = "=IFERROR(Countries!B8, \"\")"
     ws['C8'] = "=IFERROR(Countries!C8, \"\")"
-    ws['D8'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C8, Costs!A2:A1611)), \"\")"
+    ws['D8'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C8, Total_Costs!A2:A1611))/1e9, \"\")"
     ws['E8'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C8, GDP!A2:A1611)), \"\")"
     ws['F8'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C8, GDP!A2:A1611)), )"
     ws['G8'] = "=IF(F8=0,D8/Settings!C10,(D8*(1-(1+F8)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F8)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -467,7 +487,7 @@ def add_estimates(ws):
     # ### Country 2
     ws['B9'] = "=IFERROR(Countries!B9, \"\")"
     ws['C9'] = "=IFERROR(Countries!C9, \"\")"
-    ws['D9'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C9, Costs!A2:A1611)), \"\")"
+    ws['D9'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C9, Total_Costs!A2:A1611))/1e9, \"\")"
     ws['E9'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C9, GDP!A2:A1611)), \"\")"
     ws['F9'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C9, GDP!A2:A1611)), )"
     ws['G9'] = "=IF(F8=0,D9/Settings!C10,(D9*(1-(1+F9)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F9)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -477,7 +497,7 @@ def add_estimates(ws):
     # ### Country 3
     ws['B10'] = "=IFERROR(Countries!B10, \"\")"
     ws['C10'] = "=IFERROR(Countries!C10, \"\")"
-    ws['D10'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C10, Costs!A2:A1611)), \"\")"
+    ws['D10'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C10, Total_Costs!A2:A1611))/1e9, \"\")"
     ws['E10'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C10, GDP!A2:A1611)), \"\")"
     ws['F10'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C10, GDP!A2:A1611)), )"
     ws['G10'] = "=IF(F8=0,D10/Settings!C10,(D10*(1-(1+F10)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F10)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -487,7 +507,7 @@ def add_estimates(ws):
     # ### Country 4
     ws['B11'] = "=IFERROR(Countries!B11, \"\")"
     ws['C11'] = "=IFERROR(Countries!C11, \"\")"
-    ws['D11'] = "=IFERROR(INDEX(Costs!M2:M1611,MATCH(C11, Costs!A2:A1611)), \"\")"
+    ws['D11'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C11, Total_Costs!A2:A1611))/1e9, \"\")"
     ws['E11'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C11, GDP!A2:A1611)), \"\")"
     ws['F11'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C11, GDP!A2:A1611)), )"
     ws['G11'] = "=IF(F8=0,D11/Settings!C10,(D11*(1-(1+F11)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F11)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -529,7 +549,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B17:C17')
     ws['B17'] = 'Advanced Economies'
-    ws['D17'] = '=SUMIF(Costs!$O$2:$O$250,B17,Costs!$M$2:$M$250)'
+    ws['D17'] = '=SUMIF(Total_Costs!$O$2:$O$250,B17,Total_Costs!$M$2:$M$250)/1e9'
     ws['E17'] = '=SUMIF(GDP!$N$2:$N$250,B17,GDP!$L$2:$L$250)'
     ws['F17'] = '=AVERAGEIF(GDP!$N$2:$N$250,B17,GDP!$M$2:$M$250)'
     ws['G17'] = "=IF(F17=0,D17/Settings!C10,(D17*(1-(1+F17)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F17)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -538,7 +558,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B18:C18')
     ws['B18'] = 'Emerging Market Economies'
-    ws['D18'] = '=SUMIF(Costs!$O$2:$O$250,B18,Costs!$M$2:$M$250)'
+    ws['D18'] = '=SUMIF(Total_Costs!$O$2:$O$250,B18,Total_Costs!$M$2:$M$250)/1e9'
     ws['E18'] = '=SUMIF(GDP!$N$2:$N$250,B18,GDP!$L$2:$L$250)'
     ws['F18'] = '=AVERAGEIF(GDP!$N$2:$N$250,B18,GDP!$M$2:$M$250)'
     ws['G18'] = "=IF(F18=0,D18/Settings!C10,(D18*(1-(1+F18)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F17)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -547,7 +567,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B19:C19')
     ws['B19'] = 'Low Income Developing Countries'
-    ws['D19'] = '=SUMIF(Costs!$O$2:$O$250,B19,Costs!$M$2:$M$250)'
+    ws['D19'] = '=SUMIF(Total_Costs!$O$2:$O$250,B19,Total_Costs!$M$2:$M$250)/1e9'
     ws['E19'] = '=SUMIF(GDP!$N$2:$N$250,B19,GDP!$L$2:$L$250)'
     ws['F19'] = '=AVERAGEIF(GDP!$N$2:$N$250,B19,GDP!$M$2:$M$250)'
     ws['G19'] = "=IF(F19=0,D19/Settings!C10,(D19*(1-(1+F19)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F17)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -568,7 +588,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B24:C24')
     ws['B24'] = 'Advanced Economies'
-    ws['D24'] = '=SUMIF(Costs!$P$2:$P$250,B24,Costs!$M$2:$M$250)'
+    ws['D24'] = '=SUMIF(Total_Costs!$P$2:$P$250,B24,Total_Costs!$M$2:$M$250)/1e9'
     ws['E24'] = '=SUMIF(GDP!$O$2:$O$250,B24,GDP!$L$2:$L$250)'
     ws['F24'] = '=AVERAGEIF(GDP!$O$2:$O$250,B24,GDP!$M$2:$M$250)'
     ws['G24'] = "=IF(F24=0,D24/Settings!C17,(D24*(1-(1+F24)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F24)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -577,7 +597,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B25:C25')
     ws['B25'] = "Caucasus and Central Asia"
-    ws['D25'] = '=SUMIF(Costs!$P$2:$P$250,B25,Costs!$M$2:$M$250)'
+    ws['D25'] = '=SUMIF(Total_Costs!$P$2:$P$250,B25,Total_Costs!$M$2:$M$250)/1e9'
     ws['E25'] = '=SUMIF(GDP!$O$2:$O$250,B25,GDP!$L$2:$L$250)'
     ws['F25'] = '=AVERAGEIF(GDP!$O$2:$O$250,B25,GDP!$M$2:$M$250)'
     ws['G25'] = "=IF(F25=0,D25/Settings!C17,(D25*(1-(1+F25)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F25)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -586,7 +606,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B26:C26')
     ws['B26'] = "Emerging and Developing Asia"
-    ws['D26'] = '=SUMIF(Costs!$P$2:$P$250,B26,Costs!$M$2:$M$250)'
+    ws['D26'] = '=SUMIF(Total_Costs!$P$2:$P$250,B26,Total_Costs!$M$2:$M$250)/1e9'
     ws['E26'] = '=SUMIF(GDP!$O$2:$O$250,B26,GDP!$L$2:$L$250)'
     ws['F26'] = '=AVERAGEIF(GDP!$O$2:$O$250,B26,GDP!$M$2:$M$250)'
     ws['G26'] = "=IF(F26=0,D26/Settings!C17,(D26*(1-(1+F26)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F26)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -595,7 +615,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B27:C27')
     ws['B27'] = "Emerging and Developing Europe"
-    ws['D27'] = '=SUMIF(Costs!$P$2:$P$250,B27,Costs!$M$2:$M$250)'
+    ws['D27'] = '=SUMIF(Total_Costs!$P$2:$P$250,B27,Total_Costs!$M$2:$M$250)/1e9'
     ws['E27'] = '=SUMIF(GDP!$O$2:$O$250,B27,GDP!$L$2:$L$250)'
     ws['F27'] = '=AVERAGEIF(GDP!$O$2:$O$250,B27,GDP!$M$2:$M$250)'
     ws['G27'] = "=IF(F27=0,D27/Settings!C17,(D27*(1-(1+F27)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F27)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -604,7 +624,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B28:C28')
     ws['B28'] = "Latin America and the Caribbean"
-    ws['D28'] = '=SUMIF(Costs!$P$2:$P$250,B28,Costs!$M$2:$M$250)'
+    ws['D28'] = '=SUMIF(Total_Costs!$P$2:$P$250,B28,Total_Costs!$M$2:$M$250)/1e9'
     ws['E28'] = '=SUMIF(GDP!$O$2:$O$250,B28,GDP!$L$2:$L$250)'
     ws['F28'] = '=AVERAGEIF(GDP!$O$2:$O$250,B28,GDP!$M$2:$M$250)'
     ws['G28'] = "=IF(F28=0,D28/Settings!C17,(D28*(1-(1+F28)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F28)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -613,7 +633,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B29:C29')
     ws['B29'] = "Middle East, North Africa, Afghanistan, and Pakistan"
-    ws['D29'] = '=SUMIF(Costs!$P$2:$P$250,B29,Costs!$M$2:$M$250)'
+    ws['D29'] = '=SUMIF(Total_Costs!$P$2:$P$250,B29,Total_Costs!$M$2:$M$250)/1e9'
     ws['E29'] = '=SUMIF(GDP!$O$2:$O$250,B29,GDP!$L$2:$L$250)'
     ws['F29'] = '=AVERAGEIF(GDP!$O$2:$O$250,B29,GDP!$M$2:$M$250)'
     ws['G29'] = "=IF(F29=0,D29/Settings!C17,(D29*(1-(1+F29)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F29)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -622,7 +642,7 @@ def add_estimates(ws):
 
     ws.merge_cells('B30:C30')
     ws['B30'] = "Sub-Sahara Africa"
-    ws['D30'] = '=SUMIF(Costs!$P$2:$P$250,B30,Costs!$M$2:$M$250)'
+    ws['D30'] = '=SUMIF(Total_Costs!$P$2:$P$250,B30,Total_Costs!$M$2:$M$250)/1e9'
     ws['E30'] = '=SUMIF(GDP!$O$2:$O$250,B30,GDP!$L$2:$L$250)'
     ws['F30'] = '=AVERAGEIF(GDP!$O$2:$O$250,B30,GDP!$M$2:$M$250)'
     ws['G30'] = "=IF(F30=0,D30/Settings!C17,(D30*(1-(1+F30)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C17*(1-((1+F30)/(1-Settings!C11))^(Settings!C10+1))))"
@@ -1228,7 +1248,7 @@ def add_lookups_sheet(ws):
     ws.column_dimensions['C'].width = 12
 
     ##Cost Information
-    set_border(ws, 'A7:C11', "thin", "000000")
+    set_border(ws, 'A7:C12', "thin", "000000")
     ws.merge_cells('A7:C7')
     ws['A7'] = "Equipment Costs"
 
@@ -1236,16 +1256,22 @@ def add_lookups_sheet(ws):
     ws['A9'] = 'RAN'
     ws['A10'] = 'Fiber'
     ws['A11'] = 'Towers'
+    ws['A12'] = 'Labor'
+    ws['A13'] = 'Power System'
 
     ws['B8'] = 'Cost ($)'
     ws['B9'] = 30000
     ws['B10'] = 10
     ws['B11'] = 30000
+    ws['B12'] = 30000
+    ws['B13'] = 10000
 
     ws['C8'] = 'Unit'
     ws['C9'] = "Per Tower"
     ws['C10'] = "Per Meter"
     ws['C11'] = "Per Tower"
+    ws['C12'] = "Per Tower"
+    ws['C13'] = "Per Tower"
 
     ##Density Lookup Table
     ws.merge_cells('E1:H1')
@@ -1438,7 +1464,7 @@ def add_capacity_sheet(ws, cols, lnth):
             ws[cell] = "='Data'!{}".format(cell)
 
     for col in cols[2:]:
-        for i in range(2, lnth): #Total Sites Density
+        for i in range(2, lnth): #Total_Sites Density
             cell = "{}{}".format(col, i)
             part1 = '=IFERROR(MAX(IF(Lookups!$E$3:$E$250<Towers!{}/Area!{}'.format(cell, cell)
             part2 = '*(Settings!$C$16/100),Lookups!$GL$3:$G$250)),"-")'
@@ -1485,19 +1511,19 @@ def add_new_sites_sheet(ws, cols, lnth):
     """
     for col in cols:
             cell = "{}1".format(col)
-            ws[cell] = "='Total Sites'!{}".format(cell)
+            ws[cell] = "='Total_Sites'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Total Sites'!{}".format(cell)
+            ws[cell] = "='Total_Sites'!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
             part1 = "=IF(P_Density!{}>Settings!$C$26,".format(cell)
-            part2 = "IF(Towers!{}*(Settings!$C$16/100)<'Total Sites'!{},".format(cell, cell)
-            part3 = "('Total Sites'!{}-Towers!{}*(Settings!$C$16/100)),0),".format(cell, cell)
+            part2 = "IF(Towers!{}*(Settings!$C$16/100)<'Total_Sites'!{},".format(cell, cell)
+            part3 = "('Total_Sites'!{}-Towers!{}*(Settings!$C$16/100)),0),".format(cell, cell)
             part4 = '"-")'
             ws[cell] = part1 + part2 + part3 + part4
 
@@ -1509,7 +1535,7 @@ def add_new_sites_sheet(ws, cols, lnth):
     return ws
 
 
-def add_cost_sheet(ws, cols, lnth):
+def add_site_costs(ws, cols, lnth):
     """
 
     """
@@ -1520,34 +1546,314 @@ def add_cost_sheet(ws, cols, lnth):
 
     for col in cols:
             cell = "{}1".format(col)
-            ws[cell] = "='New Sites'!{}".format(cell)
+            ws[cell] = "='New_Sites'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='New Sites'!{}".format(cell)
+            ws[cell] = "='New_Sites'!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            part1 = "=IFERROR('New Sites'!{}*VLOOKUP('Lookups'!$A$9, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
-            part2 = "+((SQRT((1/('Total Sites'!{}/Area!{}))/2)*1000)*'New Sites'!{}".format(cell, cell, cell)
-            part3 = "*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE))"
-            part4 = "+'New Sites'!{}*VLOOKUP('Lookups'!$A$11, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
-            part5 = ',"-")'
-            ws[cell] = part1 + part2 + part3 + part4 + part5
+            # =IFERROR('New_Sites'!K2*VLOOKUP(Lookups!$A$9, Lookups!$A$9:Lookups!$B$24, 2, FALSE),"-")
+            part1 = '=IFERROR(New_Sites!{}*VLOOKUP(Lookups!$A$9, Lookups!$A$9:Lookups!$B$24, 2, FALSE),"-")'.format(cell)
+            # part2 = "+((SQRT((1/('Total_Sites'!{}/Area!{}))/2)*1000)*'New_Sites'!{}".format(cell, cell, cell)
+            # part3 = "*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE))"
+            # part4 = "+'New_Sites'!{}*VLOOKUP('Lookups'!$A$11, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            # part5 = ',"-")'
+            ws[cell] = part1 #+ part2 + part3 + part4 + part5
 
-    ws['M1'] = 'Total Cost ($Bn)'
+    # ws['M1'] = 'Total Cost ($Bn)'
+    # for i in range(2,lnth):
+    #     cell = "M{}".format(i)
+    #     part1 = '=IFERROR(SUMIF((C{}:L{}), "<>n/a"), "-")'.format(i, i)
+    #     line = part1
+    #     ws[cell] = line
+
+    # ws['N1'] = 'Cost Per Pop ($)'
+    # for i in range(2,lnth):
+    #     cell = "N{}".format(i)
+    #     ws[cell] = "=(M{})/Pop!M{}".format(i, i)
+
+    # ws['O1'] = 'Income Group'
+    # for i in range(2,lnth):
+    #     cell = "O{}".format(i)
+    #     ws[cell] = "=IFERROR(INDEX(Options!$J$2:$J$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
+    # ws['P1'] = 'Region'
+    # for i in range(2,lnth):
+    #     cell = "P{}".format(i)
+    #     ws[cell] = "=IFERROR(INDEX(Options!$I$2:$I$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
+    ws.column_dimensions['M'].width = 20
+    ws.column_dimensions['N'].width = 20
+    ws.column_dimensions['O'].width = 35
+    ws.column_dimensions['P'].width = 45
+
+    ws = format_numbers(ws, ['N'], (1,200), 'Comma [0]', 0)
+    ws = format_numbers(ws, ['M'], (1,200), 'Comma [0]', 1)
+
+    set_border(ws, 'A1:P{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
+def add_bh_costs(ws, cols, lnth):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    #Deciles
+    # set_border(ws, 'A1:J11', "thin", "000000")
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            # part1 = "=IFERROR('New_Sites'!{}*VLOOKUP(Lookups!$A$9, Lookups!$A$9:Lookups!$B$24, 2, FALSE),0)".format(cell)
+            part1 = '=IFERROR(New_Sites!{}*(SQRT((1/(Total_Sites!{}/Area!{}))/2)*1000)*VLOOKUP(Lookups!$A$10, Lookups!$A$9:Lookups!$B$24, 2, FALSE),"-")'.format(cell, cell, cell)
+            # part3 = "*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE))"
+            # part4 = "+'New_Sites'!{}*VLOOKUP('Lookups'!$A$11, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE)".format(cell)
+            # part5 = ',"-")'
+            ws[cell] = part1 #+ part2 + part3 + part4 + part5
+
+    # ws['M1'] = 'Total Cost ($Bn)'
+    # for i in range(2,lnth):
+    #     cell = "M{}".format(i)
+    #     part1 = '=IFERROR(SUMIF((C{}:L{}), "<>n/a"), "-")'.format(i, i)
+    #     line = part1
+    #     ws[cell] = line
+
+    # ws['N1'] = 'Cost Per Pop ($)'
+    # for i in range(2,lnth):
+    #     cell = "N{}".format(i)
+    #     ws[cell] = "=(M{})/Pop!M{}".format(i, i)
+
+    # ws['O1'] = 'Income Group'
+    # for i in range(2,lnth):
+    #     cell = "O{}".format(i)
+    #     ws[cell] = "=IFERROR(INDEX(Options!$J$2:$J$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
+    # ws['P1'] = 'Region'
+    # for i in range(2,lnth):
+    #     cell = "P{}".format(i)
+    #     ws[cell] = "=IFERROR(INDEX(Options!$I$2:$I$1611,MATCH(A{}, Options!$G$2:$G$1611,0)), "")".format(i)
+
+    ws.column_dimensions['M'].width = 20
+    ws.column_dimensions['N'].width = 20
+    ws.column_dimensions['O'].width = 35
+    ws.column_dimensions['P'].width = 45
+
+    ws = format_numbers(ws, ['N'], (1,200), 'Comma [0]', 0)
+    ws = format_numbers(ws, ['M'], (1,200), 'Comma [0]', 1)
+
+    set_border(ws, 'A1:P{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
+def add_tower_costs(ws, cols, lnth):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    #Deciles
+    # set_border(ws, 'A1:J11', "thin", "000000")
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            # part1 = "=IFERROR('New_Sites'!{}*VLOOKUP(Lookups!$A$9, Lookups!$A$9:Lookups!$B$24, 2, FALSE),0)".format(cell)
+            # part1 = '=IFERROR(New_Sites!{}*(SQRT((1/(Total_Sites!{}/Area!{}))/2)*1000),"-")'.format(cell, cell, cell)
+            # part1 = "*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE))"
+            part1 = '=IFERROR(New_Sites!{}*VLOOKUP(Lookups!$A$11, Lookups!$A$9:Lookups!$B$24, 2, FALSE), "-")'.format(cell)
+            # part5 = ',"-")'
+            ws[cell] = part1 #+ part2 + part3 + part4 + part5
+
+
+    ws.column_dimensions['M'].width = 20
+    ws.column_dimensions['N'].width = 20
+    ws.column_dimensions['O'].width = 35
+    ws.column_dimensions['P'].width = 45
+
+    ws = format_numbers(ws, ['N'], (1,200), 'Comma [0]', 0)
+    ws = format_numbers(ws, ['M'], (1,200), 'Comma [0]', 1)
+
+    set_border(ws, 'A1:P{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
+def add_labor_costs(ws, cols, lnth):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            # part1 = "=IFERROR('New_Sites'!{}*VLOOKUP(Lookups!$A$9, Lookups!$A$9:Lookups!$B$24, 2, FALSE),0)".format(cell)
+            # part1 = '=IFERROR(New_Sites!{}*(SQRT((1/(Total_Sites!{}/Area!{}))/2)*1000),"-")'.format(cell, cell, cell)
+            # part1 = "*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE))"
+            part1 = '=IFERROR(New_Sites!{}*VLOOKUP(Lookups!$A$12, Lookups!$A$9:Lookups!$B$24, 2, FALSE), "-")'.format(cell)
+            # part5 = ',"-")'
+            ws[cell] = part1 #+ part2 + part3 + part4 + part5
+
+    ws.column_dimensions['M'].width = 20
+    ws.column_dimensions['N'].width = 20
+    ws.column_dimensions['O'].width = 35
+    ws.column_dimensions['P'].width = 45
+
+    ws = format_numbers(ws, ['N'], (1,200), 'Comma [0]', 0)
+    ws = format_numbers(ws, ['M'], (1,200), 'Comma [0]', 1)
+
+    set_border(ws, 'A1:P{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
+def add_power_costs(ws, cols, lnth):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            # part1 = "=IFERROR('New_Sites'!{}*VLOOKUP(Lookups!$A$9, Lookups!$A$9:Lookups!$B$24, 2, FALSE),0)".format(cell)
+            # part1 = '=IFERROR(New_Sites!{}*(SQRT((1/(Total_Sites!{}/Area!{}))/2)*1000),"-")'.format(cell, cell, cell)
+            # part1 = "*VLOOKUP('Lookups'!$A$10, 'Lookups'!$A$9:'Lookups'!$B$24, 2, FALSE))"
+            part1 = '=IFERROR(New_Sites!{}*VLOOKUP(Lookups!$A$13, Lookups!$A$9:Lookups!$B$24, 2, FALSE), "-")'.format(cell)
+            # part5 = ',"-")'
+            ws[cell] = part1 #+ part2 + part3 + part4 + part5
+
+    ws.column_dimensions['M'].width = 20
+    ws.column_dimensions['N'].width = 20
+    ws.column_dimensions['O'].width = 35
+    ws.column_dimensions['P'].width = 45
+
+    ws = format_numbers(ws, ['N'], (1,200), 'Comma [0]', 0)
+    ws = format_numbers(ws, ['M'], (1,200), 'Comma [0]', 1)
+
+    set_border(ws, 'A1:P{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
+def add_mno_costs(ws, cols, lnth):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            part1 = '=IFERROR(RAN_Costs!{}+BH_Costs!{}+Tower_Costs!{}+Labor_Costs!{}+Power_Costs!{}, "-")'.format(cell,cell,cell,cell,cell)
+            ws[cell] = part1
+
+    ws['M1'] = 'MNO Cost ($)'
     for i in range(2,lnth):
         cell = "M{}".format(i)
-        part1 = '=IFERROR(SUMIF((C{}:L{}), "<>n/a")/1e9, "-")'.format(i, i)
+        part1 = '=IFERROR(SUMIF((C{}:L{}), "<>n/a"), "-")'.format(i, i)
         line = part1
         ws[cell] = line
 
-    ws['N1'] = 'Cost Per User ($)'
+
+    ws.column_dimensions['M'].width = 20
+    ws.column_dimensions['N'].width = 20
+    ws.column_dimensions['O'].width = 35
+    ws.column_dimensions['P'].width = 45
+
+    ws = format_numbers(ws, ['N'], (1,200), 'Comma [0]', 0)
+    ws = format_numbers(ws, ['M'], (1,200), 'Comma [0]', 1)
+
+    set_border(ws, 'A1:P{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
+def add_total_costs(ws, cols, lnth):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "9966ff"
+
+    for col in cols:
+            cell = "{}1".format(col)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "='New_Sites'!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            part1 = '=IFERROR(MNO_Costs!{}*(100/Settings!C16), "-")'.format(cell)
+            ws[cell] = part1
+
+    ws['M1'] = 'Total Cost ($)'
+    for i in range(2,lnth):
+        cell = "M{}".format(i)
+        part1 = '=IFERROR(SUMIF((C{}:L{}), "<>n/a"), "-")'.format(i, i)
+        line = part1
+        ws[cell] = line
+
+    ws['N1'] = 'Cost Per Pop ($)'
     for i in range(2,lnth):
         cell = "N{}".format(i)
-        ws[cell] = "=(M{}*1e9)/Pop!M{}".format(i, i)
+        ws[cell] = "=(M{})/Pop!M{}".format(i, i)
 
     ws['O1'] = 'Income Group'
     for i in range(2,lnth):
@@ -1633,3 +1939,5 @@ def add_gdp_sheet(ws):
 if __name__ == "__main__":
 
     generate_workbook()
+
+    extract_data()
