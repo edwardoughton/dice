@@ -419,40 +419,40 @@ def collect_results(countries):
                 except:
                     continue
 
-            #     data = data[['GID_0', 'decile', 'population', 'area_km2']]
+                data = data[['GID_0', 'decile', 'population', 'area_km2']]
 
-            #     data = data.groupby(['GID_0','decile'])[
-            #         ['population', 'area_km2']
-            #         ].sum().reset_index()
+                data = data.groupby(['GID_0','decile'])[
+                    ['population', 'area_km2']
+                    ].sum().reset_index()
 
-            #     data['population_km2'] = data['population'] / data['area_km2']
+                data['population_km2'] = data['population'] / data['area_km2']
 
-            #     data = data[['GID_0', 'decile', metric[0]]]
+                data = data[['GID_0', 'decile', metric[0]]]
 
-            #     if metric[0] == 'population_km2':
-            #         data[metric[0]] = round(data[metric[0]], metric[1]).astype(float)
-            #     else:
-            #         data[metric[0]] = round(data[metric[0]], metric[1]).astype(int)
+                if metric[0] == 'population_km2':
+                    data[metric[0]] = round(data[metric[0]], metric[1]).astype(float)
+                else:
+                    data[metric[0]] = round(data[metric[0]], metric[1]).astype(int)
 
-            #     data = data.to_dict('records')
+                data = data.to_dict('records')
 
-            #     wide_dict = {}
-            #     wide_dict['GID_0'] = country['iso3']
-            #     wide_dict['country_name'] = country['country_name']
-            #     for decile in reversed(deciles):
-            #         for item in data:
-            #             if decile == item['decile']:
-            #                 wide_dict[decile] = item[metric[0]]
+                wide_dict = {}
+                wide_dict['GID_0'] = country['iso3']
+                wide_dict['country_name'] = country['country_name']
+                for decile in reversed(deciles):
+                    for item in data:
+                        if decile == item['decile']:
+                            wide_dict[decile] = item[metric[0]]
 
-            #     output.append(wide_dict)
+                output.append(wide_dict)
 
-            # else:
-            #     missing_data.add(country['country_name'])
+            else:
+                missing_data.add(country['country_name'])
 
-        # output = pd.DataFrame(output)
-        # filename = 'all_pop_data_{}.csv'.format(metric[0])
-        # path = os.path.join(DATA_INTERMEDIATE, filename)
-        # output.to_csv(path, index=False)
+        output = pd.DataFrame(output)
+        filename = 'all_pop_data_{}.csv'.format(metric[0])
+        path = os.path.join(DATA_INTERMEDIATE, filename)
+        output.to_csv(path, index=False)
 
     print('The following countries had missing data: {}'.format(missing_data))
 
@@ -481,8 +481,8 @@ if __name__ == '__main__':
 
     for country in tqdm(countries):
 
-        if not country['iso3'] == 'ZWE':
-            continue
+        # if not country['iso3'] == 'ZWE':
+        #     continue
 
         # if not country['iso3'] in [
         #     'ABW','BHR','BRB','BLZ','CPV',
@@ -522,12 +522,12 @@ if __name__ == '__main__':
 
 
 
-        try:
-            # print('Getting population and luminosity')
-            get_pop_and_luminosity_data(country)
+        # try:
+        #     # print('Getting population and luminosity')
+        #     get_pop_and_luminosity_data(country)
 
-        except:
-            print('--  {} failed'.format(country['country_name']))
-            continue
+        # except:
+        #     print('--  {} failed'.format(country['country_name']))
+        #     continue
 
     collect_results(countries)

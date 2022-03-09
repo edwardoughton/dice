@@ -634,8 +634,8 @@ if __name__ == '__main__':
 
     CONFIDENCE_INTERVALS = [
         # 5,
-        50,
-        # 95,
+        # 50,
+        95,
     ]
 
     def generate_site_radii(min, max, increment):
