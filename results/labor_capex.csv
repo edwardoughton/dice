@@ -1,0 +1,1881 @@
+iso3,decile,capex,income,region
+AFG,10,21214906.069018148,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,20,8776980.908594817,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,30,9109114.17305137,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,40,7964727.385430006,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,50,8485302.989144105,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,60,7649694.340004143,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,70,7706953.517243329,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,80,6855995.470093208,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,90,5791504.666136828,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+AFG,100,3140785.4643913433,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+ALB,10,2375245.274246585,Emerging Market Economies,Emerging and Developing Europe
+ALB,20,633320.3144184473,Emerging Market Economies,Emerging and Developing Europe
+ALB,30,221273.5890142742,Emerging Market Economies,Emerging and Developing Europe
+ALB,40,529446.6837169502,Emerging Market Economies,Emerging and Developing Europe
+ALB,50,459558.46200067725,Emerging Market Economies,Emerging and Developing Europe
+ALB,60,225926.60801544497,Emerging Market Economies,Emerging and Developing Europe
+ALB,70,177050.98003455994,Emerging Market Economies,Emerging and Developing Europe
+ALB,80,140614.98915454917,Emerging Market Economies,Emerging and Developing Europe
+ALB,90,187050.7955457847,Emerging Market Economies,Emerging and Developing Europe
+ALB,100,122483.87307237377,Emerging Market Economies,Emerging and Developing Europe
+DZA,10,39553339.209287606,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,20,9298037.620680751,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,30,6437416.577135377,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,40,4654519.441510547,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,50,8175279.811725078,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,60,6541781.072998946,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,70,6677175.811294846,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,80,5485669.52644401,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,90,5309143.5487959245,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+DZA,100,9183498.101012351,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+AGO,10,68790750.18218909,Emerging Market Economies,Sub-Sahara Africa
+AGO,20,10820663.560370948,Emerging Market Economies,Sub-Sahara Africa
+AGO,30,8446579.131887697,Emerging Market Economies,Sub-Sahara Africa
+AGO,40,6194198.588045676,Emerging Market Economies,Sub-Sahara Africa
+AGO,50,4888199.05450325,Emerging Market Economies,Sub-Sahara Africa
+AGO,60,3876045.6685760855,Emerging Market Economies,Sub-Sahara Africa
+AGO,70,2911922.050285835,Emerging Market Economies,Sub-Sahara Africa
+AGO,80,2277991.424137862,Emerging Market Economies,Sub-Sahara Africa
+AGO,90,1712416.5269161167,Emerging Market Economies,Sub-Sahara Africa
+AGO,100,1518869.6455427625,Emerging Market Economies,Sub-Sahara Africa
+ARG,10,49839688.90501368,Emerging Market Economies,Latin America and the Caribbean
+ARG,20,10390097.850300176,Emerging Market Economies,Latin America and the Caribbean
+ARG,30,5776640.339186432,Emerging Market Economies,Latin America and the Caribbean
+ARG,40,6017455.889577725,Emerging Market Economies,Latin America and the Caribbean
+ARG,50,3447739.811557057,Emerging Market Economies,Latin America and the Caribbean
+ARG,60,2782116.2346479176,Emerging Market Economies,Latin America and the Caribbean
+ARG,70,1586177.4981679732,Emerging Market Economies,Latin America and the Caribbean
+ARG,80,3609205.8904952705,Emerging Market Economies,Latin America and the Caribbean
+ARG,90,1788112.4084177138,Emerging Market Economies,Latin America and the Caribbean
+ARG,100,3373114.7936491533,Emerging Market Economies,Latin America and the Caribbean
+ARM,10,154689.11550591484,Emerging Market Economies,Caucasus and Central Asia
+ARM,20,92848.25750885307,Emerging Market Economies,Caucasus and Central Asia
+ARM,30,69557.90681231758,Emerging Market Economies,Caucasus and Central Asia
+ARM,40,15397.225036593802,Emerging Market Economies,Caucasus and Central Asia
+ARM,50,17796.457506649935,Emerging Market Economies,Caucasus and Central Asia
+ARM,60,19462.914676506563,Emerging Market Economies,Caucasus and Central Asia
+ARM,70,7387.50863417172,Emerging Market Economies,Caucasus and Central Asia
+ARM,80,7858.360293995705,Emerging Market Economies,Caucasus and Central Asia
+ARM,90,14192.062006424563,Emerging Market Economies,Caucasus and Central Asia
+ARM,100,475495.7319040151,Emerging Market Economies,Caucasus and Central Asia
+AUS,10,6721065.153436751,Advanced Economies,Advanced Economies
+AUS,20,2295409.875107994,Advanced Economies,Advanced Economies
+AUS,30,2678729.169500217,Advanced Economies,Advanced Economies
+AUS,40,815570.0289647115,Advanced Economies,Advanced Economies
+AUS,50,407967.0649630208,Advanced Economies,Advanced Economies
+AUS,60,223565.6266206032,Advanced Economies,Advanced Economies
+AUS,70,783791.4602183162,Advanced Economies,Advanced Economies
+AUS,80,1814641.4407656882,Advanced Economies,Advanced Economies
+AUS,90,4299271.61280801,Advanced Economies,Advanced Economies
+AUS,100,22861496.7134911,Advanced Economies,Advanced Economies
+AUT,10,16210371.990608094,Advanced Economies,Advanced Economies
+AUT,20,2961728.092968159,Advanced Economies,Advanced Economies
+AUT,30,2368947.7291307347,Advanced Economies,Advanced Economies
+AUT,40,1570901.9231362536,Advanced Economies,Advanced Economies
+AUT,50,1696570.732230081,Advanced Economies,Advanced Economies
+AUT,60,1372807.8798016298,Advanced Economies,Advanced Economies
+AUT,70,1069587.3837665524,Advanced Economies,Advanced Economies
+AUT,80,1182448.7644741135,Advanced Economies,Advanced Economies
+AUT,90,998986.844021561,Advanced Economies,Advanced Economies
+AUT,100,698459.2663643478,Advanced Economies,Advanced Economies
+AZE,10,10241006.72243923,Emerging Market Economies,Caucasus and Central Asia
+AZE,20,3099521.945467004,Emerging Market Economies,Caucasus and Central Asia
+AZE,30,3445103.6931432043,Emerging Market Economies,Caucasus and Central Asia
+AZE,40,2219887.4678648235,Emerging Market Economies,Caucasus and Central Asia
+AZE,50,1882092.85950133,Emerging Market Economies,Caucasus and Central Asia
+AZE,60,2111889.7065825183,Emerging Market Economies,Caucasus and Central Asia
+AZE,70,2217807.336314017,Emerging Market Economies,Caucasus and Central Asia
+AZE,80,1802846.2765103478,Emerging Market Economies,Caucasus and Central Asia
+AZE,90,1544527.4401360853,Emerging Market Economies,Caucasus and Central Asia
+AZE,100,1040535.9641582542,Emerging Market Economies,Caucasus and Central Asia
+BHR,10,647538.5212819341,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,20,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,30,294250.54005379305,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,40,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,60,828079.5422916902,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,70,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,80,534105.6070366406,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,90,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BHR,100,771724.8598167995,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+BGD,10,154901612.8286871,Low Income Developing Countries,Emerging and Developing Asia
+BGD,20,79924850.37314163,Low Income Developing Countries,Emerging and Developing Asia
+BGD,30,55476481.36780917,Low Income Developing Countries,Emerging and Developing Asia
+BGD,40,46011672.93627632,Low Income Developing Countries,Emerging and Developing Asia
+BGD,50,49155208.50494158,Low Income Developing Countries,Emerging and Developing Asia
+BGD,60,42290240.15098993,Low Income Developing Countries,Emerging and Developing Asia
+BGD,70,38313683.21997445,Low Income Developing Countries,Emerging and Developing Asia
+BGD,80,34680375.28603396,Low Income Developing Countries,Emerging and Developing Asia
+BGD,90,28703667.474882804,Low Income Developing Countries,Emerging and Developing Asia
+BGD,100,22908403.347712204,Low Income Developing Countries,Emerging and Developing Asia
+BRB,10,315618.14715699543,Emerging Market Economies,Latin America and the Caribbean
+BRB,20,166276.87752661217,Emerging Market Economies,Latin America and the Caribbean
+BRB,30,91452.2826396367,Emerging Market Economies,Latin America and the Caribbean
+BRB,40,119319.05563252262,Emerging Market Economies,Latin America and the Caribbean
+BRB,50,55753.58812529403,Emerging Market Economies,Latin America and the Caribbean
+BRB,60,70511.89086434247,Emerging Market Economies,Latin America and the Caribbean
+BRB,70,32603.309318943553,Emerging Market Economies,Latin America and the Caribbean
+BRB,80,29936.680624647248,Emerging Market Economies,Latin America and the Caribbean
+BRB,90,30792.014356780026,Emerging Market Economies,Latin America and the Caribbean
+BRB,100,33209.569202973435,Emerging Market Economies,Latin America and the Caribbean
+BLR,10,16449632.92964312,Emerging Market Economies,Emerging and Developing Europe
+BLR,20,3962223.3536333446,Emerging Market Economies,Emerging and Developing Europe
+BLR,30,1915377.3374893153,Emerging Market Economies,Emerging and Developing Europe
+BLR,40,1267311.854316233,Emerging Market Economies,Emerging and Developing Europe
+BLR,50,1127203.9597982003,Emerging Market Economies,Emerging and Developing Europe
+BLR,60,902384.1562738837,Emerging Market Economies,Emerging and Developing Europe
+BLR,70,643362.5962201102,Emerging Market Economies,Emerging and Developing Europe
+BLR,80,676568.9821170052,Emerging Market Economies,Emerging and Developing Europe
+BLR,90,596551.506965642,Emerging Market Economies,Emerging and Developing Europe
+BLR,100,558195.6004240123,Emerging Market Economies,Emerging and Developing Europe
+BEL,10,0.0,Advanced Economies,Advanced Economies
+BEL,20,0.0,Advanced Economies,Advanced Economies
+BEL,30,0.0,Advanced Economies,Advanced Economies
+BEL,40,0.0,Advanced Economies,Advanced Economies
+BEL,50,0.0,Advanced Economies,Advanced Economies
+BEL,60,0.0,Advanced Economies,Advanced Economies
+BEL,70,0.0,Advanced Economies,Advanced Economies
+BEL,80,0.0,Advanced Economies,Advanced Economies
+BEL,90,0.0,Advanced Economies,Advanced Economies
+BEL,100,1039276.0348584173,Advanced Economies,Advanced Economies
+BLZ,10,393921.27741583827,Emerging Market Economies,Latin America and the Caribbean
+BLZ,20,0.0,Emerging Market Economies,Latin America and the Caribbean
+BLZ,30,164102.03132828278,Emerging Market Economies,Latin America and the Caribbean
+BLZ,40,0.0,Emerging Market Economies,Latin America and the Caribbean
+BLZ,50,142360.76319015532,Emerging Market Economies,Latin America and the Caribbean
+BLZ,60,0.0,Emerging Market Economies,Latin America and the Caribbean
+BLZ,70,308094.7674677396,Emerging Market Economies,Latin America and the Caribbean
+BLZ,80,0.0,Emerging Market Economies,Latin America and the Caribbean
+BLZ,90,141404.43601293108,Emerging Market Economies,Latin America and the Caribbean
+BLZ,100,112711.4127588046,Emerging Market Economies,Latin America and the Caribbean
+BEN,10,12747893.943706937,Low Income Developing Countries,Sub-Sahara Africa
+BEN,20,4373081.8789499,Low Income Developing Countries,Sub-Sahara Africa
+BEN,30,3281262.642315099,Low Income Developing Countries,Sub-Sahara Africa
+BEN,40,3240017.5419085305,Low Income Developing Countries,Sub-Sahara Africa
+BEN,50,2825785.7164148623,Low Income Developing Countries,Sub-Sahara Africa
+BEN,60,2242032.1577737667,Low Income Developing Countries,Sub-Sahara Africa
+BEN,70,4181860.924999699,Low Income Developing Countries,Sub-Sahara Africa
+BEN,80,4324353.516230272,Low Income Developing Countries,Sub-Sahara Africa
+BEN,90,3930380.689683274,Low Income Developing Countries,Sub-Sahara Africa
+BEN,100,3377848.3478146675,Low Income Developing Countries,Sub-Sahara Africa
+BTN,10,708704.1084610404,Low Income Developing Countries,Emerging and Developing Asia
+BTN,20,261866.58490281284,Low Income Developing Countries,Emerging and Developing Asia
+BTN,30,277214.3323635289,Low Income Developing Countries,Emerging and Developing Asia
+BTN,40,195762.40014410755,Low Income Developing Countries,Emerging and Developing Asia
+BTN,50,157902.5845732785,Low Income Developing Countries,Emerging and Developing Asia
+BTN,60,185260.95777167592,Low Income Developing Countries,Emerging and Developing Asia
+BTN,70,177008.63979121504,Low Income Developing Countries,Emerging and Developing Asia
+BTN,80,149980.38862461457,Low Income Developing Countries,Emerging and Developing Asia
+BTN,90,162106.85879594446,Low Income Developing Countries,Emerging and Developing Asia
+BTN,100,86110.63794909418,Low Income Developing Countries,Emerging and Developing Asia
+BOL,10,12512271.380119838,Emerging Market Economies,Latin America and the Caribbean
+BOL,20,1358180.02755458,Emerging Market Economies,Latin America and the Caribbean
+BOL,30,1326582.2547221077,Emerging Market Economies,Latin America and the Caribbean
+BOL,40,1539935.8532926608,Emerging Market Economies,Latin America and the Caribbean
+BOL,50,1823502.357937044,Emerging Market Economies,Latin America and the Caribbean
+BOL,60,2251612.635120652,Emerging Market Economies,Latin America and the Caribbean
+BOL,70,1418949.2301611686,Emerging Market Economies,Latin America and the Caribbean
+BOL,80,1332826.1830302428,Emerging Market Economies,Latin America and the Caribbean
+BOL,90,1085034.0635666335,Emerging Market Economies,Latin America and the Caribbean
+BOL,100,2022450.7345720313,Emerging Market Economies,Latin America and the Caribbean
+BIH,10,1696331.0054473863,Emerging Market Economies,Emerging and Developing Europe
+BIH,20,1440488.921628116,Emerging Market Economies,Emerging and Developing Europe
+BIH,30,1528982.7818539008,Emerging Market Economies,Emerging and Developing Europe
+BIH,40,767616.1502886537,Emerging Market Economies,Emerging and Developing Europe
+BIH,50,777284.5290756584,Emerging Market Economies,Emerging and Developing Europe
+BIH,60,1165128.028005605,Emerging Market Economies,Emerging and Developing Europe
+BIH,70,1601935.7712929687,Emerging Market Economies,Emerging and Developing Europe
+BIH,80,742464.5910721542,Emerging Market Economies,Emerging and Developing Europe
+BIH,90,466333.6058578356,Emerging Market Economies,Emerging and Developing Europe
+BIH,100,310253.8437425653,Emerging Market Economies,Emerging and Developing Europe
+BWA,10,288506.5399961291,Emerging Market Economies,Sub-Sahara Africa
+BWA,20,675989.7005040215,Emerging Market Economies,Sub-Sahara Africa
+BWA,30,595550.2375684176,Emerging Market Economies,Sub-Sahara Africa
+BWA,40,427466.4508340278,Emerging Market Economies,Sub-Sahara Africa
+BWA,50,316913.96582621324,Emerging Market Economies,Sub-Sahara Africa
+BWA,60,284158.10861438484,Emerging Market Economies,Sub-Sahara Africa
+BWA,70,1165278.3054920686,Emerging Market Economies,Sub-Sahara Africa
+BWA,80,614954.5815054011,Emerging Market Economies,Sub-Sahara Africa
+BWA,90,626253.5186293521,Emerging Market Economies,Sub-Sahara Africa
+BWA,100,658672.726585206,Emerging Market Economies,Sub-Sahara Africa
+BRA,10,229407486.93598035,Emerging Market Economies,Latin America and the Caribbean
+BRA,20,54578769.67566688,Emerging Market Economies,Latin America and the Caribbean
+BRA,30,30450027.169911344,Emerging Market Economies,Latin America and the Caribbean
+BRA,40,22056944.419090103,Emerging Market Economies,Latin America and the Caribbean
+BRA,50,17855046.381469704,Emerging Market Economies,Latin America and the Caribbean
+BRA,60,24917738.405094907,Emerging Market Economies,Latin America and the Caribbean
+BRA,70,20704905.25860196,Emerging Market Economies,Latin America and the Caribbean
+BRA,80,17969275.177074157,Emerging Market Economies,Latin America and the Caribbean
+BRA,90,17788766.182442665,Emerging Market Economies,Latin America and the Caribbean
+BRA,100,20777868.748605292,Emerging Market Economies,Latin America and the Caribbean
+BRN,10,0.0,Emerging Market Economies,Emerging and Developing Asia
+BRN,20,0.0,Emerging Market Economies,Emerging and Developing Asia
+BRN,30,0.0,Emerging Market Economies,Emerging and Developing Asia
+BRN,40,0.0,Emerging Market Economies,Emerging and Developing Asia
+BRN,50,0.0,Emerging Market Economies,Emerging and Developing Asia
+BRN,60,63874.343831006176,Emerging Market Economies,Emerging and Developing Asia
+BRN,70,31218.496550087042,Emerging Market Economies,Emerging and Developing Asia
+BRN,80,16316.129183791905,Emerging Market Economies,Emerging and Developing Asia
+BRN,90,9357.87228554585,Emerging Market Economies,Emerging and Developing Asia
+BRN,100,9570.866072997684,Emerging Market Economies,Emerging and Developing Asia
+BGR,10,11509927.110449396,Emerging Market Economies,Emerging and Developing Europe
+BGR,20,2709191.1662748517,Emerging Market Economies,Emerging and Developing Europe
+BGR,30,2144600.9591041,Emerging Market Economies,Emerging and Developing Europe
+BGR,40,1275462.9696847477,Emerging Market Economies,Emerging and Developing Europe
+BGR,50,1103875.6275336659,Emerging Market Economies,Emerging and Developing Europe
+BGR,60,979970.7837812841,Emerging Market Economies,Emerging and Developing Europe
+BGR,70,701111.0969243342,Emerging Market Economies,Emerging and Developing Europe
+BGR,80,571392.9570242728,Emerging Market Economies,Emerging and Developing Europe
+BGR,90,468866.5143949831,Emerging Market Economies,Emerging and Developing Europe
+BGR,100,297346.544896692,Emerging Market Economies,Emerging and Developing Europe
+BFA,10,19310796.84642299,Low Income Developing Countries,Sub-Sahara Africa
+BFA,20,4659923.631873565,Low Income Developing Countries,Sub-Sahara Africa
+BFA,30,7728487.683408188,Low Income Developing Countries,Sub-Sahara Africa
+BFA,40,4674020.013172355,Low Income Developing Countries,Sub-Sahara Africa
+BFA,50,4704335.526730257,Low Income Developing Countries,Sub-Sahara Africa
+BFA,60,6225595.140911518,Low Income Developing Countries,Sub-Sahara Africa
+BFA,70,4428948.431861572,Low Income Developing Countries,Sub-Sahara Africa
+BFA,80,5412653.621806189,Low Income Developing Countries,Sub-Sahara Africa
+BFA,90,4465389.495321666,Low Income Developing Countries,Sub-Sahara Africa
+BFA,100,4625727.693078209,Low Income Developing Countries,Sub-Sahara Africa
+BDI,10,5196152.422706634,Low Income Developing Countries,Sub-Sahara Africa
+BDI,20,6911096.555632854,Low Income Developing Countries,Sub-Sahara Africa
+BDI,30,3371725.572067413,Low Income Developing Countries,Sub-Sahara Africa
+BDI,40,4078210.9902237137,Low Income Developing Countries,Sub-Sahara Africa
+BDI,50,4227617.8894946445,Low Income Developing Countries,Sub-Sahara Africa
+BDI,60,2942484.891933898,Low Income Developing Countries,Sub-Sahara Africa
+BDI,70,3705506.196442666,Low Income Developing Countries,Sub-Sahara Africa
+BDI,80,2799089.997117536,Low Income Developing Countries,Sub-Sahara Africa
+BDI,90,2644616.080697963,Low Income Developing Countries,Sub-Sahara Africa
+BDI,100,1843043.4511559408,Low Income Developing Countries,Sub-Sahara Africa
+CPV,10,689992.4849743771,Emerging Market Economies,Sub-Sahara Africa
+CPV,20,205690.65590329046,Emerging Market Economies,Sub-Sahara Africa
+CPV,30,374621.9586010467,Emerging Market Economies,Sub-Sahara Africa
+CPV,40,119275.946812423,Emerging Market Economies,Sub-Sahara Africa
+CPV,50,125547.9396306759,Emerging Market Economies,Sub-Sahara Africa
+CPV,60,49623.494211339465,Emerging Market Economies,Sub-Sahara Africa
+CPV,70,45118.85437000383,Emerging Market Economies,Sub-Sahara Africa
+CPV,80,32147.52242483574,Emerging Market Economies,Sub-Sahara Africa
+CPV,90,82112.03828474588,Emerging Market Economies,Sub-Sahara Africa
+CPV,100,71199.87402739722,Emerging Market Economies,Sub-Sahara Africa
+KHM,10,8478134.234405689,Low Income Developing Countries,Emerging and Developing Asia
+KHM,20,4642066.638252386,Low Income Developing Countries,Emerging and Developing Asia
+KHM,30,1950356.3810951523,Low Income Developing Countries,Emerging and Developing Asia
+KHM,40,2390350.829916081,Low Income Developing Countries,Emerging and Developing Asia
+KHM,50,1668634.6237509039,Low Income Developing Countries,Emerging and Developing Asia
+KHM,60,1992113.6955761327,Low Income Developing Countries,Emerging and Developing Asia
+KHM,70,2206772.3154527694,Low Income Developing Countries,Emerging and Developing Asia
+KHM,80,4356067.924508247,Low Income Developing Countries,Emerging and Developing Asia
+KHM,90,3036299.4822623082,Low Income Developing Countries,Emerging and Developing Asia
+KHM,100,1314169.301531578,Low Income Developing Countries,Emerging and Developing Asia
+CMR,10,23410947.390921652,Low Income Developing Countries,Sub-Sahara Africa
+CMR,20,10467920.138286624,Low Income Developing Countries,Sub-Sahara Africa
+CMR,30,8870963.028649438,Low Income Developing Countries,Sub-Sahara Africa
+CMR,40,6333771.5921749305,Low Income Developing Countries,Sub-Sahara Africa
+CMR,50,9462078.091694897,Low Income Developing Countries,Sub-Sahara Africa
+CMR,60,6427675.894863756,Low Income Developing Countries,Sub-Sahara Africa
+CMR,70,4351747.954928835,Low Income Developing Countries,Sub-Sahara Africa
+CMR,80,5262548.386918156,Low Income Developing Countries,Sub-Sahara Africa
+CMR,90,4521036.441728717,Low Income Developing Countries,Sub-Sahara Africa
+CMR,100,2760777.369024214,Low Income Developing Countries,Sub-Sahara Africa
+CAN,10,60649552.27785548,Advanced Economies,Advanced Economies
+CAN,20,5264783.638275378,Advanced Economies,Advanced Economies
+CAN,30,4450704.530697086,Advanced Economies,Advanced Economies
+CAN,40,3281935.72595211,Advanced Economies,Advanced Economies
+CAN,50,2749816.7498153723,Advanced Economies,Advanced Economies
+CAN,60,1473130.9737861122,Advanced Economies,Advanced Economies
+CAN,70,1346075.5431300951,Advanced Economies,Advanced Economies
+CAN,80,1421626.1005173412,Advanced Economies,Advanced Economies
+CAN,90,9225188.37572425,Advanced Economies,Advanced Economies
+CAN,100,31622491.271054126,Advanced Economies,Advanced Economies
+CAF,10,4957331.243579759,Low Income Developing Countries,Sub-Sahara Africa
+CAF,20,2872717.108395264,Low Income Developing Countries,Sub-Sahara Africa
+CAF,30,2454887.186191364,Low Income Developing Countries,Sub-Sahara Africa
+CAF,40,1401602.8665856195,Low Income Developing Countries,Sub-Sahara Africa
+CAF,50,1095612.3467668754,Low Income Developing Countries,Sub-Sahara Africa
+CAF,60,1669926.1989067665,Low Income Developing Countries,Sub-Sahara Africa
+CAF,70,884427.0023868755,Low Income Developing Countries,Sub-Sahara Africa
+CAF,80,815569.6090593516,Low Income Developing Countries,Sub-Sahara Africa
+CAF,90,525504.2150162465,Low Income Developing Countries,Sub-Sahara Africa
+CAF,100,733695.2344454954,Low Income Developing Countries,Sub-Sahara Africa
+TCD,10,8525846.89517703,Low Income Developing Countries,Sub-Sahara Africa
+TCD,20,5234852.932938248,Low Income Developing Countries,Sub-Sahara Africa
+TCD,30,6373582.569316672,Low Income Developing Countries,Sub-Sahara Africa
+TCD,40,4846254.103316501,Low Income Developing Countries,Sub-Sahara Africa
+TCD,50,5260896.222918288,Low Income Developing Countries,Sub-Sahara Africa
+TCD,60,5996587.784131433,Low Income Developing Countries,Sub-Sahara Africa
+TCD,70,4689367.1864179,Low Income Developing Countries,Sub-Sahara Africa
+TCD,80,4351885.012537901,Low Income Developing Countries,Sub-Sahara Africa
+TCD,90,3777306.4084031004,Low Income Developing Countries,Sub-Sahara Africa
+TCD,100,2811086.465055926,Low Income Developing Countries,Sub-Sahara Africa
+CHL,10,15312454.146970013,Emerging Market Economies,Latin America and the Caribbean
+CHL,20,2258284.5974336076,Emerging Market Economies,Latin America and the Caribbean
+CHL,30,3158730.535876706,Emerging Market Economies,Latin America and the Caribbean
+CHL,40,2532115.845406045,Emerging Market Economies,Latin America and the Caribbean
+CHL,50,2128848.478869669,Emerging Market Economies,Latin America and the Caribbean
+CHL,60,1344973.3229519362,Emerging Market Economies,Latin America and the Caribbean
+CHL,70,3150290.132375653,Emerging Market Economies,Latin America and the Caribbean
+CHL,80,3427676.915227712,Emerging Market Economies,Latin America and the Caribbean
+CHL,90,561446.8996148964,Emerging Market Economies,Latin America and the Caribbean
+CHL,100,673371.9779436401,Emerging Market Economies,Latin America and the Caribbean
+CHN,10,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,20,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,30,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,40,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,50,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,60,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,70,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,80,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,90,0.0,Emerging Market Economies,Emerging and Developing Asia
+CHN,100,70564181.36870377,Emerging Market Economies,Emerging and Developing Asia
+COL,10,93888734.56651004,Emerging Market Economies,Latin America and the Caribbean
+COL,20,12886516.46467241,Emerging Market Economies,Latin America and the Caribbean
+COL,30,9194199.071248002,Emerging Market Economies,Latin America and the Caribbean
+COL,40,6615956.602665539,Emerging Market Economies,Latin America and the Caribbean
+COL,50,7171552.173109892,Emerging Market Economies,Latin America and the Caribbean
+COL,60,4355573.849039317,Emerging Market Economies,Latin America and the Caribbean
+COL,70,4914784.388932622,Emerging Market Economies,Latin America and the Caribbean
+COL,80,3811379.687492904,Emerging Market Economies,Latin America and the Caribbean
+COL,90,3212816.684731881,Emerging Market Economies,Latin America and the Caribbean
+COL,100,5354152.860254358,Emerging Market Economies,Latin America and the Caribbean
+COD,10,67503881.59639518,Low Income Developing Countries,Sub-Sahara Africa
+COD,20,30881178.328777675,Low Income Developing Countries,Sub-Sahara Africa
+COD,30,10656257.608790003,Low Income Developing Countries,Sub-Sahara Africa
+COD,40,36168477.72500377,Low Income Developing Countries,Sub-Sahara Africa
+COD,50,64957383.58959742,Low Income Developing Countries,Sub-Sahara Africa
+COD,60,53045268.417362094,Low Income Developing Countries,Sub-Sahara Africa
+COD,70,44090612.12743154,Low Income Developing Countries,Sub-Sahara Africa
+COD,80,29001920.602148216,Low Income Developing Countries,Sub-Sahara Africa
+COD,90,20044913.643726967,Low Income Developing Countries,Sub-Sahara Africa
+COD,100,11431017.854274917,Low Income Developing Countries,Sub-Sahara Africa
+COG,10,0.0,Low Income Developing Countries,Sub-Sahara Africa
+COG,20,1166116.6253346484,Low Income Developing Countries,Sub-Sahara Africa
+COG,30,3250929.8218405447,Low Income Developing Countries,Sub-Sahara Africa
+COG,40,647536.6593365703,Low Income Developing Countries,Sub-Sahara Africa
+COG,50,466358.30844124506,Low Income Developing Countries,Sub-Sahara Africa
+COG,60,474757.8326839791,Low Income Developing Countries,Sub-Sahara Africa
+COG,70,344168.5028685735,Low Income Developing Countries,Sub-Sahara Africa
+COG,80,508351.2418155182,Low Income Developing Countries,Sub-Sahara Africa
+COG,90,371615.0793812007,Low Income Developing Countries,Sub-Sahara Africa
+COG,100,120641.97058981749,Low Income Developing Countries,Sub-Sahara Africa
+CRI,10,1248204.411793913,Emerging Market Economies,Latin America and the Caribbean
+CRI,20,287779.03393652884,Emerging Market Economies,Latin America and the Caribbean
+CRI,30,734951.2726810646,Emerging Market Economies,Latin America and the Caribbean
+CRI,40,241499.04308386298,Emerging Market Economies,Latin America and the Caribbean
+CRI,50,177693.42185449612,Emerging Market Economies,Latin America and the Caribbean
+CRI,60,219979.74954773972,Emerging Market Economies,Latin America and the Caribbean
+CRI,70,249263.82504465737,Emerging Market Economies,Latin America and the Caribbean
+CRI,80,177085.44034004517,Emerging Market Economies,Latin America and the Caribbean
+CRI,90,788617.7010264136,Emerging Market Economies,Latin America and the Caribbean
+CRI,100,707471.1158136479,Emerging Market Economies,Latin America and the Caribbean
+CIV,10,19245806.413951565,Low Income Developing Countries,Sub-Sahara Africa
+CIV,20,8145214.519991983,Low Income Developing Countries,Sub-Sahara Africa
+CIV,30,7852710.155977918,Low Income Developing Countries,Sub-Sahara Africa
+CIV,40,5804118.477242662,Low Income Developing Countries,Sub-Sahara Africa
+CIV,50,6849060.118994822,Low Income Developing Countries,Sub-Sahara Africa
+CIV,60,7309622.02688757,Low Income Developing Countries,Sub-Sahara Africa
+CIV,70,4863756.0416586,Low Income Developing Countries,Sub-Sahara Africa
+CIV,80,4168965.037113731,Low Income Developing Countries,Sub-Sahara Africa
+CIV,90,4382930.2339548515,Low Income Developing Countries,Sub-Sahara Africa
+CIV,100,2698215.985009108,Low Income Developing Countries,Sub-Sahara Africa
+HRV,10,6339305.955702089,Emerging Market Economies,Emerging and Developing Europe
+HRV,20,1531583.862030132,Emerging Market Economies,Emerging and Developing Europe
+HRV,30,991432.370684169,Emerging Market Economies,Emerging and Developing Europe
+HRV,40,957546.1131226405,Emerging Market Economies,Emerging and Developing Europe
+HRV,50,647732.016290836,Emerging Market Economies,Emerging and Developing Europe
+HRV,60,551008.6631578489,Emerging Market Economies,Emerging and Developing Europe
+HRV,70,524129.5036346916,Emerging Market Economies,Emerging and Developing Europe
+HRV,80,476543.07933111646,Emerging Market Economies,Emerging and Developing Europe
+HRV,90,470292.5766146821,Emerging Market Economies,Emerging and Developing Europe
+HRV,100,260520.5012337239,Emerging Market Economies,Emerging and Developing Europe
+CUB,10,8477858.483414682,0.0,0.0
+CUB,20,9155776.393449206,0.0,0.0
+CUB,30,4021240.006103584,0.0,0.0
+CUB,40,2395926.637101044,0.0,0.0
+CUB,50,2492799.9982057693,0.0,0.0
+CUB,60,2428078.6320919124,0.0,0.0
+CUB,70,1757165.5442786238,0.0,0.0
+CUB,80,1888078.5249449024,0.0,0.0
+CUB,90,1822512.7697800864,0.0,0.0
+CUB,100,1194687.3903564436,0.0,0.0
+CYP,10,156604.26138240474,Advanced Economies,Advanced Economies
+CYP,20,0.0,Advanced Economies,Advanced Economies
+CYP,30,875724.8883068232,Advanced Economies,Advanced Economies
+CYP,40,0.0,Advanced Economies,Advanced Economies
+CYP,50,0.0,Advanced Economies,Advanced Economies
+CYP,60,1129125.3529010967,Advanced Economies,Advanced Economies
+CYP,70,0.0,Advanced Economies,Advanced Economies
+CYP,80,522764.42555715074,Advanced Economies,Advanced Economies
+CYP,90,0.0,Advanced Economies,Advanced Economies
+CYP,100,369955.22717916477,Advanced Economies,Advanced Economies
+CZE,10,194403.21035578422,Advanced Economies,Advanced Economies
+CZE,20,0.0,Advanced Economies,Advanced Economies
+CZE,30,0.0,Advanced Economies,Advanced Economies
+CZE,40,0.0,Advanced Economies,Advanced Economies
+CZE,50,0.0,Advanced Economies,Advanced Economies
+CZE,60,0.0,Advanced Economies,Advanced Economies
+CZE,70,0.0,Advanced Economies,Advanced Economies
+CZE,80,0.0,Advanced Economies,Advanced Economies
+CZE,90,3125326.616367546,Advanced Economies,Advanced Economies
+CZE,100,2020630.5123671147,Advanced Economies,Advanced Economies
+DNK,10,1501440.617484831,Advanced Economies,Advanced Economies
+DNK,20,516005.03992969886,Advanced Economies,Advanced Economies
+DNK,30,431223.5799258773,Advanced Economies,Advanced Economies
+DNK,40,315733.3023541699,Advanced Economies,Advanced Economies
+DNK,50,265265.78682652174,Advanced Economies,Advanced Economies
+DNK,60,306432.73228701943,Advanced Economies,Advanced Economies
+DNK,70,272507.38533867564,Advanced Economies,Advanced Economies
+DNK,80,198312.66298698453,Advanced Economies,Advanced Economies
+DNK,90,160751.13353942544,Advanced Economies,Advanced Economies
+DNK,100,826332.5727776516,Advanced Economies,Advanced Economies
+DJI,10,2150514.2826775177,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,20,424902.8073147763,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,30,178557.24301564673,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,40,152403.99495849555,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,50,146307.83516015572,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,60,113839.2226030557,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,70,100953.8184983002,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,80,161526.1095972803,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,90,88067.69538255749,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DJI,100,212724.8554255527,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+DMA,10,68974.11215918722,Emerging Market Economies,Latin America and the Caribbean
+DMA,20,4190.973598654368,Emerging Market Economies,Latin America and the Caribbean
+DMA,30,35623.27558856213,Emerging Market Economies,Latin America and the Caribbean
+DMA,40,5292.377467571568,Emerging Market Economies,Latin America and the Caribbean
+DMA,50,20855.305642155832,Emerging Market Economies,Latin America and the Caribbean
+DMA,60,21096.25897108105,Emerging Market Economies,Latin America and the Caribbean
+DMA,70,25044.17167684774,Emerging Market Economies,Latin America and the Caribbean
+DMA,80,16370.990619743627,Emerging Market Economies,Latin America and the Caribbean
+DMA,90,16109.054769827728,Emerging Market Economies,Latin America and the Caribbean
+DMA,100,4089.564406759848,Emerging Market Economies,Latin America and the Caribbean
+DOM,10,23777593.486305546,Emerging Market Economies,Latin America and the Caribbean
+DOM,20,5001424.817121965,Emerging Market Economies,Latin America and the Caribbean
+DOM,30,4704465.75055109,Emerging Market Economies,Latin America and the Caribbean
+DOM,40,2483470.219142745,Emerging Market Economies,Latin America and the Caribbean
+DOM,50,1706665.8709331455,Emerging Market Economies,Latin America and the Caribbean
+DOM,60,1540845.5792993188,Emerging Market Economies,Latin America and the Caribbean
+DOM,70,1600438.9192151944,Emerging Market Economies,Latin America and the Caribbean
+DOM,80,901359.2402588426,Emerging Market Economies,Latin America and the Caribbean
+DOM,90,631396.3662222723,Emerging Market Economies,Latin America and the Caribbean
+DOM,100,765620.8334250854,Emerging Market Economies,Latin America and the Caribbean
+ECU,10,28735332.36049776,Emerging Market Economies,Latin America and the Caribbean
+ECU,20,8457937.732175644,Emerging Market Economies,Latin America and the Caribbean
+ECU,30,3313640.4091395466,Emerging Market Economies,Latin America and the Caribbean
+ECU,40,2863963.7042152626,Emerging Market Economies,Latin America and the Caribbean
+ECU,50,3125321.420774776,Emerging Market Economies,Latin America and the Caribbean
+ECU,60,3399941.2747300128,Emerging Market Economies,Latin America and the Caribbean
+ECU,70,1934076.1285342735,Emerging Market Economies,Latin America and the Caribbean
+ECU,80,1538392.5388290267,Emerging Market Economies,Latin America and the Caribbean
+ECU,90,1739766.079552556,Emerging Market Economies,Latin America and the Caribbean
+ECU,100,875492.1530541584,Emerging Market Economies,Latin America and the Caribbean
+EGY,10,46217729.114829645,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,20,47952047.02938733,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,30,26821597.314254962,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,40,38622644.04064234,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,50,37875221.10768357,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,60,33147124.46527668,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,70,25995980.376574,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,80,17295258.623916194,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,90,6532352.677089952,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+EGY,100,3367827.4238774544,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SLV,10,7551946.315030075,Emerging Market Economies,Latin America and the Caribbean
+SLV,20,2267752.871368,Emerging Market Economies,Latin America and the Caribbean
+SLV,30,2113494.9743870646,Emerging Market Economies,Latin America and the Caribbean
+SLV,40,1384681.725192779,Emerging Market Economies,Latin America and the Caribbean
+SLV,50,1607496.6830135076,Emerging Market Economies,Latin America and the Caribbean
+SLV,60,1268128.2647343269,Emerging Market Economies,Latin America and the Caribbean
+SLV,70,936914.7792366165,Emerging Market Economies,Latin America and the Caribbean
+SLV,80,1077406.298259169,Emerging Market Economies,Latin America and the Caribbean
+SLV,90,626926.6939695704,Emerging Market Economies,Latin America and the Caribbean
+SLV,100,440114.1102032511,Emerging Market Economies,Latin America and the Caribbean
+GNQ,10,988806.2835162443,Emerging Market Economies,Sub-Sahara Africa
+GNQ,20,215038.00337567844,Emerging Market Economies,Sub-Sahara Africa
+GNQ,30,660578.2692135221,Emerging Market Economies,Sub-Sahara Africa
+GNQ,40,608494.8988208653,Emerging Market Economies,Sub-Sahara Africa
+GNQ,50,260523.34460953166,Emerging Market Economies,Sub-Sahara Africa
+GNQ,60,279386.3031928203,Emerging Market Economies,Sub-Sahara Africa
+GNQ,70,179637.84154162984,Emerging Market Economies,Sub-Sahara Africa
+GNQ,80,187993.35080981377,Emerging Market Economies,Sub-Sahara Africa
+GNQ,90,244541.78311232303,Emerging Market Economies,Sub-Sahara Africa
+GNQ,100,344574.95745810395,Emerging Market Economies,Sub-Sahara Africa
+ERI,10,2208825.976610914,Low Income Developing Countries,Sub-Sahara Africa
+ERI,20,1411358.1364458825,Low Income Developing Countries,Sub-Sahara Africa
+ERI,30,1739217.9143588122,Low Income Developing Countries,Sub-Sahara Africa
+ERI,40,1020556.8117722241,Low Income Developing Countries,Sub-Sahara Africa
+ERI,50,1088876.7034522067,Low Income Developing Countries,Sub-Sahara Africa
+ERI,60,1480844.527178613,Low Income Developing Countries,Sub-Sahara Africa
+ERI,70,1502465.7056268237,Low Income Developing Countries,Sub-Sahara Africa
+ERI,80,1267073.599104291,Low Income Developing Countries,Sub-Sahara Africa
+ERI,90,913443.6903604831,Low Income Developing Countries,Sub-Sahara Africa
+ERI,100,573311.0724399263,Low Income Developing Countries,Sub-Sahara Africa
+EST,10,1133991.4723382308,Advanced Economies,Advanced Economies
+EST,20,548880.6032034833,Advanced Economies,Advanced Economies
+EST,30,142524.60312353715,Advanced Economies,Advanced Economies
+EST,40,113621.4495142379,Advanced Economies,Advanced Economies
+EST,50,89954.48352052669,Advanced Economies,Advanced Economies
+EST,60,70358.21728052308,Advanced Economies,Advanced Economies
+EST,70,35483.233234255895,Advanced Economies,Advanced Economies
+EST,80,73750.01642676748,Advanced Economies,Advanced Economies
+EST,90,58705.69705903502,Advanced Economies,Advanced Economies
+EST,100,33309.52107892359,Advanced Economies,Advanced Economies
+SWZ,10,659610.7538245771,Emerging Market Economies,Sub-Sahara Africa
+SWZ,20,364211.79481378885,Emerging Market Economies,Sub-Sahara Africa
+SWZ,30,449563.4096089866,Emerging Market Economies,Sub-Sahara Africa
+SWZ,40,285498.52984841424,Emerging Market Economies,Sub-Sahara Africa
+SWZ,50,325240.65164348733,Emerging Market Economies,Sub-Sahara Africa
+SWZ,60,255441.50968134747,Emerging Market Economies,Sub-Sahara Africa
+SWZ,70,428260.36294174613,Emerging Market Economies,Sub-Sahara Africa
+SWZ,80,352303.9455117528,Emerging Market Economies,Sub-Sahara Africa
+SWZ,90,191144.17840670625,Emerging Market Economies,Sub-Sahara Africa
+SWZ,100,199456.47580910125,Emerging Market Economies,Sub-Sahara Africa
+ETH,10,48649534.87633773,Low Income Developing Countries,Sub-Sahara Africa
+ETH,20,44479448.572342716,Low Income Developing Countries,Sub-Sahara Africa
+ETH,30,66398265.89697408,Low Income Developing Countries,Sub-Sahara Africa
+ETH,40,41604318.78554175,Low Income Developing Countries,Sub-Sahara Africa
+ETH,50,29024360.282611128,Low Income Developing Countries,Sub-Sahara Africa
+ETH,60,28272391.256079484,Low Income Developing Countries,Sub-Sahara Africa
+ETH,70,27657444.970208634,Low Income Developing Countries,Sub-Sahara Africa
+ETH,80,17173413.131596394,Low Income Developing Countries,Sub-Sahara Africa
+ETH,90,16924575.83666344,Low Income Developing Countries,Sub-Sahara Africa
+ETH,100,10407973.506514665,Low Income Developing Countries,Sub-Sahara Africa
+FRO,10,77412.06670562927,0.0,0.0
+FRO,20,10682.943756433873,0.0,0.0
+FRO,30,28599.622934577263,0.0,0.0
+FRO,40,9797.459113520694,0.0,0.0
+FRO,50,9210.61349824789,0.0,0.0
+FRO,60,5150.915396327118,0.0,0.0
+FRO,70,8836.993916167725,0.0,0.0
+FRO,80,1819.084596450783,0.0,0.0
+FRO,90,1397.8881986209756,0.0,0.0
+FRO,100,328.47777432310204,0.0,0.0
+FJI,10,1694724.9489558602,Emerging Market Economies,Emerging and Developing Asia
+FJI,20,130421.28747560599,Emerging Market Economies,Emerging and Developing Asia
+FJI,30,237826.32179563548,Emerging Market Economies,Emerging and Developing Asia
+FJI,40,174755.09500715535,Emerging Market Economies,Emerging and Developing Asia
+FJI,50,107576.59312634701,Emerging Market Economies,Emerging and Developing Asia
+FJI,60,55556.81075543965,Emerging Market Economies,Emerging and Developing Asia
+FJI,70,81815.14558433514,Emerging Market Economies,Emerging and Developing Asia
+FJI,80,64307.63032945893,Emerging Market Economies,Emerging and Developing Asia
+FJI,90,155022.08207498086,Emerging Market Economies,Emerging and Developing Asia
+FJI,100,56291.65124598849,Emerging Market Economies,Emerging and Developing Asia
+FIN,10,0.0,Advanced Economies,Advanced Economies
+FIN,20,0.0,Advanced Economies,Advanced Economies
+FIN,30,0.0,Advanced Economies,Advanced Economies
+FIN,40,0.0,Advanced Economies,Advanced Economies
+FIN,50,0.0,Advanced Economies,Advanced Economies
+FIN,60,0.0,Advanced Economies,Advanced Economies
+FIN,70,0.0,Advanced Economies,Advanced Economies
+FIN,80,0.0,Advanced Economies,Advanced Economies
+FIN,90,0.0,Advanced Economies,Advanced Economies
+FIN,100,1220424.3823562928,Advanced Economies,Advanced Economies
+FRA,10,4713053.577125131,Advanced Economies,Advanced Economies
+FRA,20,4409031.60420653,Advanced Economies,Advanced Economies
+FRA,30,1889255.1046818243,Advanced Economies,Advanced Economies
+FRA,40,912648.7226902429,Advanced Economies,Advanced Economies
+FRA,50,1646121.053019192,Advanced Economies,Advanced Economies
+FRA,60,1169930.0681048247,Advanced Economies,Advanced Economies
+FRA,70,929393.0442102072,Advanced Economies,Advanced Economies
+FRA,80,509730.898526887,Advanced Economies,Advanced Economies
+FRA,90,542697.8910569332,Advanced Economies,Advanced Economies
+FRA,100,5633406.881678553,Advanced Economies,Advanced Economies
+GUF,10,425314.69830302417,0.0,0.0
+GUF,20,291820.8394934487,0.0,0.0
+GUF,30,111416.07561639407,0.0,0.0
+GUF,40,53424.14490901052,0.0,0.0
+GUF,50,53820.12878952707,0.0,0.0
+GUF,60,39910.28628983332,0.0,0.0
+GUF,70,55050.22937087071,0.0,0.0
+GUF,80,99978.52978959613,0.0,0.0
+GUF,90,73532.59610331585,0.0,0.0
+GUF,100,77152.89997620581,0.0,0.0
+GAB,10,2774556.685376505,Emerging Market Economies,Sub-Sahara Africa
+GAB,20,565168.3507279119,Emerging Market Economies,Sub-Sahara Africa
+GAB,30,497258.08913761115,Emerging Market Economies,Sub-Sahara Africa
+GAB,40,434932.7336254877,Emerging Market Economies,Sub-Sahara Africa
+GAB,50,233061.33533153427,Emerging Market Economies,Sub-Sahara Africa
+GAB,60,471020.1298839487,Emerging Market Economies,Sub-Sahara Africa
+GAB,70,250594.58492484587,Emerging Market Economies,Sub-Sahara Africa
+GAB,80,240231.50616908254,Emerging Market Economies,Sub-Sahara Africa
+GAB,90,194209.6334073848,Emerging Market Economies,Sub-Sahara Africa
+GAB,100,131525.49737371874,Emerging Market Economies,Sub-Sahara Africa
+GMB,10,0.0,Low Income Developing Countries,Sub-Sahara Africa
+GMB,20,1271881.2596814416,Low Income Developing Countries,Sub-Sahara Africa
+GMB,30,383474.08427687467,Low Income Developing Countries,Sub-Sahara Africa
+GMB,40,712778.1101106468,Low Income Developing Countries,Sub-Sahara Africa
+GMB,50,205292.3002359871,Low Income Developing Countries,Sub-Sahara Africa
+GMB,60,327016.9599638882,Low Income Developing Countries,Sub-Sahara Africa
+GMB,70,371037.7589338953,Low Income Developing Countries,Sub-Sahara Africa
+GMB,80,193702.01418901692,Low Income Developing Countries,Sub-Sahara Africa
+GMB,90,205351.1760774168,Low Income Developing Countries,Sub-Sahara Africa
+GMB,100,114991.77550841778,Low Income Developing Countries,Sub-Sahara Africa
+GEO,10,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,20,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,30,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,40,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,50,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,60,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,70,0.0,Emerging Market Economies,Caucasus and Central Asia
+GEO,80,444684.29965910927,Emerging Market Economies,Caucasus and Central Asia
+GEO,90,322604.3574501174,Emerging Market Economies,Caucasus and Central Asia
+GEO,100,127652.3205136889,Emerging Market Economies,Caucasus and Central Asia
+DEU,10,0.0,Advanced Economies,Advanced Economies
+DEU,20,0.0,Advanced Economies,Advanced Economies
+DEU,30,0.0,Advanced Economies,Advanced Economies
+DEU,40,0.0,Advanced Economies,Advanced Economies
+DEU,50,0.0,Advanced Economies,Advanced Economies
+DEU,60,0.0,Advanced Economies,Advanced Economies
+DEU,70,0.0,Advanced Economies,Advanced Economies
+DEU,80,0.0,Advanced Economies,Advanced Economies
+DEU,90,0.0,Advanced Economies,Advanced Economies
+DEU,100,14028572.310823346,Advanced Economies,Advanced Economies
+GHA,10,33764287.24207188,Low Income Developing Countries,Sub-Sahara Africa
+GHA,20,8439032.011166995,Low Income Developing Countries,Sub-Sahara Africa
+GHA,30,5261006.800470653,Low Income Developing Countries,Sub-Sahara Africa
+GHA,40,5655362.3874664,Low Income Developing Countries,Sub-Sahara Africa
+GHA,50,4400258.820663931,Low Income Developing Countries,Sub-Sahara Africa
+GHA,60,7652005.641822512,Low Income Developing Countries,Sub-Sahara Africa
+GHA,70,6443733.659958626,Low Income Developing Countries,Sub-Sahara Africa
+GHA,80,6586283.570855393,Low Income Developing Countries,Sub-Sahara Africa
+GHA,90,7224037.508208265,Low Income Developing Countries,Sub-Sahara Africa
+GHA,100,5539329.422712866,Low Income Developing Countries,Sub-Sahara Africa
+GRC,10,0.0,Advanced Economies,Advanced Economies
+GRC,20,0.0,Advanced Economies,Advanced Economies
+GRC,30,0.0,Advanced Economies,Advanced Economies
+GRC,40,0.0,Advanced Economies,Advanced Economies
+GRC,50,0.0,Advanced Economies,Advanced Economies
+GRC,60,0.0,Advanced Economies,Advanced Economies
+GRC,70,0.0,Advanced Economies,Advanced Economies
+GRC,80,0.0,Advanced Economies,Advanced Economies
+GRC,90,0.0,Advanced Economies,Advanced Economies
+GRC,100,871150.8602558068,Advanced Economies,Advanced Economies
+GRD,10,104630.00796742598,Emerging Market Economies,Latin America and the Caribbean
+GRD,20,43301.27018922193,Emerging Market Economies,Latin America and the Caribbean
+GRD,30,0.0,Emerging Market Economies,Latin America and the Caribbean
+GRD,40,81256.70455261396,Emerging Market Economies,Latin America and the Caribbean
+GRD,50,0.0,Emerging Market Economies,Latin America and the Caribbean
+GRD,60,33305.64818182325,Emerging Market Economies,Latin America and the Caribbean
+GRD,70,21757.993615741216,Emerging Market Economies,Latin America and the Caribbean
+GRD,80,0.0,Emerging Market Economies,Latin America and the Caribbean
+GRD,90,12572.920795963106,Emerging Market Economies,Latin America and the Caribbean
+GRD,100,11862.797445418195,Emerging Market Economies,Latin America and the Caribbean
+GLP,10,354724.005390106,0.0,0.0
+GLP,20,212087.85398802563,0.0,0.0
+GLP,30,155345.1796961428,0.0,0.0
+GLP,40,157381.40671243126,0.0,0.0
+GLP,50,63739.469718534594,0.0,0.0
+GLP,60,204410.62423209508,0.0,0.0
+GLP,70,53208.60080851584,0.0,0.0
+GLP,80,64256.81949601522,0.0,0.0
+GLP,90,37779.9163904003,0.0,0.0
+GLP,100,10965.086328632566,0.0,0.0
+GTM,10,12072394.128755078,Emerging Market Economies,Latin America and the Caribbean
+GTM,20,6021549.474214763,Emerging Market Economies,Latin America and the Caribbean
+GTM,30,6075649.33277216,Emerging Market Economies,Latin America and the Caribbean
+GTM,40,5703749.353251303,Emerging Market Economies,Latin America and the Caribbean
+GTM,50,6535045.676723538,Emerging Market Economies,Latin America and the Caribbean
+GTM,60,4925259.676402853,Emerging Market Economies,Latin America and the Caribbean
+GTM,70,5133741.335756204,Emerging Market Economies,Latin America and the Caribbean
+GTM,80,4669054.720947265,Emerging Market Economies,Latin America and the Caribbean
+GTM,90,4593860.621887994,Emerging Market Economies,Latin America and the Caribbean
+GTM,100,4862952.415500187,Emerging Market Economies,Latin America and the Caribbean
+GIN,10,11103506.115786435,Low Income Developing Countries,Sub-Sahara Africa
+GIN,20,2086861.8583173074,Low Income Developing Countries,Sub-Sahara Africa
+GIN,30,3025187.465895627,Low Income Developing Countries,Sub-Sahara Africa
+GIN,40,6043247.021746202,Low Income Developing Countries,Sub-Sahara Africa
+GIN,50,1748302.1484793983,Low Income Developing Countries,Sub-Sahara Africa
+GIN,60,2661258.0375524457,Low Income Developing Countries,Sub-Sahara Africa
+GIN,70,3666072.595706741,Low Income Developing Countries,Sub-Sahara Africa
+GIN,80,3415112.2491011564,Low Income Developing Countries,Sub-Sahara Africa
+GIN,90,2269583.8168143523,Low Income Developing Countries,Sub-Sahara Africa
+GIN,100,2742759.7515230794,Low Income Developing Countries,Sub-Sahara Africa
+GNB,10,2340702.05003027,Low Income Developing Countries,Sub-Sahara Africa
+GNB,20,540724.6114879088,Low Income Developing Countries,Sub-Sahara Africa
+GNB,30,466934.0293423879,Low Income Developing Countries,Sub-Sahara Africa
+GNB,40,609711.8602652362,Low Income Developing Countries,Sub-Sahara Africa
+GNB,50,604312.4483519602,Low Income Developing Countries,Sub-Sahara Africa
+GNB,60,457926.5207082894,Low Income Developing Countries,Sub-Sahara Africa
+GNB,70,404561.26234573434,Low Income Developing Countries,Sub-Sahara Africa
+GNB,80,188909.00807884286,Low Income Developing Countries,Sub-Sahara Africa
+GNB,90,227444.04203196336,Low Income Developing Countries,Sub-Sahara Africa
+GNB,100,151922.79295121733,Low Income Developing Countries,Sub-Sahara Africa
+GUY,10,827054.260614139,Emerging Market Economies,Latin America and the Caribbean
+GUY,20,329443.1331947331,Emerging Market Economies,Latin America and the Caribbean
+GUY,30,298511.47251433966,Emerging Market Economies,Latin America and the Caribbean
+GUY,40,274086.94260788074,Emerging Market Economies,Latin America and the Caribbean
+GUY,50,124237.22459228543,Emerging Market Economies,Latin America and the Caribbean
+GUY,60,132220.7631937218,Emerging Market Economies,Latin America and the Caribbean
+GUY,70,146699.21820923084,Emerging Market Economies,Latin America and the Caribbean
+GUY,80,111887.86596429897,Emerging Market Economies,Latin America and the Caribbean
+GUY,90,156381.68310160952,Emerging Market Economies,Latin America and the Caribbean
+GUY,100,647253.0980576711,Emerging Market Economies,Latin America and the Caribbean
+HTI,10,14743216.474026285,Low Income Developing Countries,Latin America and the Caribbean
+HTI,20,6967138.5872720955,Low Income Developing Countries,Latin America and the Caribbean
+HTI,30,5965952.78162613,Low Income Developing Countries,Latin America and the Caribbean
+HTI,40,4478324.975593471,Low Income Developing Countries,Latin America and the Caribbean
+HTI,50,1847992.1677489965,Low Income Developing Countries,Latin America and the Caribbean
+HTI,60,1994090.8497450736,Low Income Developing Countries,Latin America and the Caribbean
+HTI,70,4922271.888759802,Low Income Developing Countries,Latin America and the Caribbean
+HTI,80,3108821.4356474997,Low Income Developing Countries,Latin America and the Caribbean
+HTI,90,2879053.3423589324,Low Income Developing Countries,Latin America and the Caribbean
+HTI,100,1950982.0296455808,Low Income Developing Countries,Latin America and the Caribbean
+HND,10,11207192.081757737,Low Income Developing Countries,Latin America and the Caribbean
+HND,20,2347189.7421266157,Low Income Developing Countries,Latin America and the Caribbean
+HND,30,1553061.3280560642,Low Income Developing Countries,Latin America and the Caribbean
+HND,40,1680192.9253199215,Low Income Developing Countries,Latin America and the Caribbean
+HND,50,2142253.471481722,Low Income Developing Countries,Latin America and the Caribbean
+HND,60,1373198.1586211366,Low Income Developing Countries,Latin America and the Caribbean
+HND,70,2034823.7653048397,Low Income Developing Countries,Latin America and the Caribbean
+HND,80,1363308.5253128293,Low Income Developing Countries,Latin America and the Caribbean
+HND,90,1158143.960226307,Low Income Developing Countries,Latin America and the Caribbean
+HND,100,1541703.2012421887,Low Income Developing Countries,Latin America and the Caribbean
+HKG,10,5819690.713431429,Advanced Economies,Advanced Economies
+HKG,20,5542562.584220409,Advanced Economies,Advanced Economies
+HKG,30,7482459.488697553,Advanced Economies,Advanced Economies
+HKG,40,831384.3876330613,Advanced Economies,Advanced Economies
+HKG,50,2355589.0982936737,Advanced Economies,Advanced Economies
+HKG,60,6312362.94313991,Advanced Economies,Advanced Economies
+HKG,70,1576166.2348876789,Advanced Economies,Advanced Economies
+HKG,80,1801332.839871633,Advanced Economies,Advanced Economies
+HKG,90,2871047.4186261715,Advanced Economies,Advanced Economies
+HKG,100,1350999.6299037244,Advanced Economies,Advanced Economies
+HUN,10,12921393.964268457,Emerging Market Economies,Emerging and Developing Europe
+HUN,20,3050830.671596162,Emerging Market Economies,Emerging and Developing Europe
+HUN,30,2764683.548026618,Emerging Market Economies,Emerging and Developing Europe
+HUN,40,2380039.889775073,Emerging Market Economies,Emerging and Developing Europe
+HUN,50,1876663.6613801338,Emerging Market Economies,Emerging and Developing Europe
+HUN,60,1794230.369104233,Emerging Market Economies,Emerging and Developing Europe
+HUN,70,1341593.0191211863,Emerging Market Economies,Emerging and Developing Europe
+HUN,80,1343151.0623831989,Emerging Market Economies,Emerging and Developing Europe
+HUN,90,1170409.2133353148,Emerging Market Economies,Emerging and Developing Europe
+HUN,100,832666.9640988178,Emerging Market Economies,Emerging and Developing Europe
+ISL,10,825841.8250488396,Advanced Economies,Advanced Economies
+ISL,20,43523.215848820146,Advanced Economies,Advanced Economies
+ISL,30,41764.07509750269,Advanced Economies,Advanced Economies
+ISL,40,20631.643902968903,Advanced Economies,Advanced Economies
+ISL,50,61622.38687531399,Advanced Economies,Advanced Economies
+ISL,60,47304.69828390977,Advanced Economies,Advanced Economies
+ISL,70,69521.64463560966,Advanced Economies,Advanced Economies
+ISL,80,64084.375205434895,Advanced Economies,Advanced Economies
+ISL,90,48508.437965610945,Advanced Economies,Advanced Economies
+ISL,100,123903.42376514371,Advanced Economies,Advanced Economies
+IND,10,686587660.5484595,Emerging Market Economies,Emerging and Developing Asia
+IND,20,517654804.66429925,Emerging Market Economies,Emerging and Developing Asia
+IND,30,370420683.3955285,Emerging Market Economies,Emerging and Developing Asia
+IND,40,238618165.04699385,Emerging Market Economies,Emerging and Developing Asia
+IND,50,287587155.5014397,Emerging Market Economies,Emerging and Developing Asia
+IND,60,239467235.47850987,Emerging Market Economies,Emerging and Developing Asia
+IND,70,211427987.20980823,Emerging Market Economies,Emerging and Developing Asia
+IND,80,217870022.16227987,Emerging Market Economies,Emerging and Developing Asia
+IND,90,233568197.37000626,Emerging Market Economies,Emerging and Developing Asia
+IND,100,60917415.81608502,Emerging Market Economies,Emerging and Developing Asia
+IDN,10,180871034.17456344,Emerging Market Economies,Emerging and Developing Asia
+IDN,20,132029307.32514127,Emerging Market Economies,Emerging and Developing Asia
+IDN,30,120548298.98800653,Emerging Market Economies,Emerging and Developing Asia
+IDN,40,64210925.83178927,Emerging Market Economies,Emerging and Developing Asia
+IDN,50,32213668.94281786,Emerging Market Economies,Emerging and Developing Asia
+IDN,60,32152146.209890958,Emerging Market Economies,Emerging and Developing Asia
+IDN,70,26746619.364761878,Emerging Market Economies,Emerging and Developing Asia
+IDN,80,23969178.601025566,Emerging Market Economies,Emerging and Developing Asia
+IDN,90,38871461.87892515,Emerging Market Economies,Emerging and Developing Asia
+IDN,100,22394687.73985054,Emerging Market Economies,Emerging and Developing Asia
+IRN,10,27276641.391845297,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,20,16748785.630369991,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,30,10649691.197080927,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,40,8198911.813955021,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,50,6578009.410491785,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,60,5287615.506750762,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,70,13777894.458324732,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,80,14714221.104451492,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,90,13679364.669774726,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRN,100,4839144.141668087,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,10,33193815.47040047,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,20,18148151.326973878,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,30,8447627.153710615,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,40,8057065.975239159,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,50,6531068.005794895,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,60,5648566.1738003045,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,70,3571403.146097187,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,80,3111312.9403984346,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,90,6056600.909179991,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRQ,100,2536756.691301145,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+IRL,10,592520.8411210115,Advanced Economies,Advanced Economies
+IRL,20,159395.41893952523,Advanced Economies,Advanced Economies
+IRL,30,290321.9736114862,Advanced Economies,Advanced Economies
+IRL,40,107830.71805716727,Advanced Economies,Advanced Economies
+IRL,50,70218.6367868309,Advanced Economies,Advanced Economies
+IRL,60,67211.09825751711,Advanced Economies,Advanced Economies
+IRL,70,128992.0816204728,Advanced Economies,Advanced Economies
+IRL,80,73618.45010316983,Advanced Economies,Advanced Economies
+IRL,90,1472668.8049160305,Advanced Economies,Advanced Economies
+IRL,100,827801.9372092752,Advanced Economies,Advanced Economies
+IMN,10,130866.06101631519,0.0,0.0
+IMN,20,17320.508075688776,0.0,0.0
+IMN,30,11451.57558723224,0.0,0.0
+IMN,40,57813.577975995075,0.0,0.0
+IMN,50,14828.496806772742,0.0,0.0
+IMN,60,11045.558986994845,0.0,0.0
+IMN,70,16636.680552959984,0.0,0.0
+IMN,80,7526.936842768448,0.0,0.0
+IMN,90,6679.364172855399,0.0,0.0
+IMN,100,12544.894737947287,0.0,0.0
+ISR,10,5450186.541150069,Advanced Economies,Advanced Economies
+ISR,20,4495634.0960898865,Advanced Economies,Advanced Economies
+ISR,30,0.0,Advanced Economies,Advanced Economies
+ISR,40,9537826.447012618,Advanced Economies,Advanced Economies
+ISR,50,0.0,Advanced Economies,Advanced Economies
+ISR,60,3827832.2847272195,Advanced Economies,Advanced Economies
+ISR,70,4988306.3257983625,Advanced Economies,Advanced Economies
+ISR,80,0.0,Advanced Economies,Advanced Economies
+ISR,90,3927154.5732237455,Advanced Economies,Advanced Economies
+ISR,100,136901.29583024388,Advanced Economies,Advanced Economies
+ITA,10,227434.1193847681,Advanced Economies,Advanced Economies
+ITA,20,0.0,Advanced Economies,Advanced Economies
+ITA,30,0.0,Advanced Economies,Advanced Economies
+ITA,40,0.0,Advanced Economies,Advanced Economies
+ITA,50,0.0,Advanced Economies,Advanced Economies
+ITA,60,0.0,Advanced Economies,Advanced Economies
+ITA,70,0.0,Advanced Economies,Advanced Economies
+ITA,80,0.0,Advanced Economies,Advanced Economies
+ITA,90,0.0,Advanced Economies,Advanced Economies
+ITA,100,6136408.575386869,Advanced Economies,Advanced Economies
+JAM,10,2545054.247856309,Emerging Market Economies,Latin America and the Caribbean
+JAM,20,1676907.9655319892,Emerging Market Economies,Latin America and the Caribbean
+JAM,30,568640.0713568684,Emerging Market Economies,Latin America and the Caribbean
+JAM,40,1401575.5134847339,Emerging Market Economies,Latin America and the Caribbean
+JAM,50,450619.49935758783,Emerging Market Economies,Latin America and the Caribbean
+JAM,60,359006.8946597301,Emerging Market Economies,Latin America and the Caribbean
+JAM,70,744033.6013057465,Emerging Market Economies,Latin America and the Caribbean
+JAM,80,491943.424634946,Emerging Market Economies,Latin America and the Caribbean
+JAM,90,302135.25329662935,Emerging Market Economies,Latin America and the Caribbean
+JAM,100,463323.59102467453,Emerging Market Economies,Latin America and the Caribbean
+JPN,10,0.0,Advanced Economies,Advanced Economies
+JPN,20,0.0,Advanced Economies,Advanced Economies
+JPN,30,0.0,Advanced Economies,Advanced Economies
+JPN,40,0.0,Advanced Economies,Advanced Economies
+JPN,50,0.0,Advanced Economies,Advanced Economies
+JPN,60,0.0,Advanced Economies,Advanced Economies
+JPN,70,0.0,Advanced Economies,Advanced Economies
+JPN,80,0.0,Advanced Economies,Advanced Economies
+JPN,90,0.0,Advanced Economies,Advanced Economies
+JPN,100,2319045.6098711924,Advanced Economies,Advanced Economies
+JOR,10,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,20,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,30,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,40,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,60,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,70,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,80,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,90,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+JOR,100,521196.2650466254,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KAZ,10,0.0,Emerging Market Economies,Caucasus and Central Asia
+KAZ,20,0.0,Emerging Market Economies,Caucasus and Central Asia
+KAZ,30,0.0,Emerging Market Economies,Caucasus and Central Asia
+KAZ,40,3246180.8562210086,Emerging Market Economies,Caucasus and Central Asia
+KAZ,50,1399738.8080000663,Emerging Market Economies,Caucasus and Central Asia
+KAZ,60,1887935.3802499785,Emerging Market Economies,Caucasus and Central Asia
+KAZ,70,1972377.3169958366,Emerging Market Economies,Caucasus and Central Asia
+KAZ,80,1646366.118697437,Emerging Market Economies,Caucasus and Central Asia
+KAZ,90,1752108.971717519,Emerging Market Economies,Caucasus and Central Asia
+KAZ,100,3072179.8732238584,Emerging Market Economies,Caucasus and Central Asia
+KEN,10,23592622.75019983,Low Income Developing Countries,Sub-Sahara Africa
+KEN,20,14743920.102585124,Low Income Developing Countries,Sub-Sahara Africa
+KEN,30,15365191.9010441,Low Income Developing Countries,Sub-Sahara Africa
+KEN,40,13946513.716017997,Low Income Developing Countries,Sub-Sahara Africa
+KEN,50,13370832.10335033,Low Income Developing Countries,Sub-Sahara Africa
+KEN,60,13521677.501578161,Low Income Developing Countries,Sub-Sahara Africa
+KEN,70,13599681.463536192,Low Income Developing Countries,Sub-Sahara Africa
+KEN,80,18880767.721527312,Low Income Developing Countries,Sub-Sahara Africa
+KEN,90,18536379.113663018,Low Income Developing Countries,Sub-Sahara Africa
+KEN,100,13343900.766508903,Low Income Developing Countries,Sub-Sahara Africa
+PRK,10,22079759.519180067,0.0,0.0
+PRK,20,11255665.555647595,0.0,0.0
+PRK,30,8428390.169737823,0.0,0.0
+PRK,40,7819999.632234843,0.0,0.0
+PRK,50,7235122.633376705,0.0,0.0
+PRK,60,6286984.269681384,0.0,0.0
+PRK,70,4701280.76340123,0.0,0.0
+PRK,80,4063273.497807473,0.0,0.0
+PRK,90,3174856.3428589064,0.0,0.0
+PRK,100,2466497.372226863,0.0,0.0
+KOR,10,15411331.521596985,Advanced Economies,Advanced Economies
+KOR,20,9609609.959507812,Advanced Economies,Advanced Economies
+KOR,30,15786587.33571166,Advanced Economies,Advanced Economies
+KOR,40,12267812.654082492,Advanced Economies,Advanced Economies
+KOR,50,4815809.338618413,Advanced Economies,Advanced Economies
+KOR,60,3854822.6630910323,Advanced Economies,Advanced Economies
+KOR,70,1664552.5489535364,Advanced Economies,Advanced Economies
+KOR,80,1140121.956489024,Advanced Economies,Advanced Economies
+KOR,90,723686.9217216403,Advanced Economies,Advanced Economies
+KOR,100,1796390.0076026777,Advanced Economies,Advanced Economies
+KWT,10,945377.3161987474,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,20,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,30,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,40,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,60,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,70,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,80,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,90,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KWT,100,1132515.019274902,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+KGZ,10,5433356.396990411,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,20,1663872.7938050437,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,30,1178918.0298556678,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,40,1633028.8237402872,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,50,937680.7250055453,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,60,648404.0857861214,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,70,1276886.707593462,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,80,614080.7434580416,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,90,588338.5485064412,Low Income Developing Countries,Caucasus and Central Asia
+KGZ,100,387338.09266248654,Low Income Developing Countries,Caucasus and Central Asia
+LAO,10,0.0,Low Income Developing Countries,Emerging and Developing Asia
+LAO,20,0.0,Low Income Developing Countries,Emerging and Developing Asia
+LAO,30,3214339.8886863184,Low Income Developing Countries,Emerging and Developing Asia
+LAO,40,1993061.24176502,Low Income Developing Countries,Emerging and Developing Asia
+LAO,50,2535095.908937803,Low Income Developing Countries,Emerging and Developing Asia
+LAO,60,2077719.544242279,Low Income Developing Countries,Emerging and Developing Asia
+LAO,70,2115094.3561037863,Low Income Developing Countries,Emerging and Developing Asia
+LAO,80,1151920.7037498055,Low Income Developing Countries,Emerging and Developing Asia
+LAO,90,1321814.8734589135,Low Income Developing Countries,Emerging and Developing Asia
+LAO,100,874648.4402015675,Low Income Developing Countries,Emerging and Developing Asia
+LVA,10,2193944.346250093,Advanced Economies,Advanced Economies
+LVA,20,357548.9753752084,Advanced Economies,Advanced Economies
+LVA,30,308749.1131003353,Advanced Economies,Advanced Economies
+LVA,40,203859.0800457373,Advanced Economies,Advanced Economies
+LVA,50,272598.0735154395,Advanced Economies,Advanced Economies
+LVA,60,155152.17114780028,Advanced Economies,Advanced Economies
+LVA,70,238685.5998336306,Advanced Economies,Advanced Economies
+LVA,80,122469.24316616636,Advanced Economies,Advanced Economies
+LVA,90,330345.3902735708,Advanced Economies,Advanced Economies
+LVA,100,268997.1389407625,Advanced Economies,Advanced Economies
+LBN,10,13388200.5167489,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,20,6667082.587203287,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,30,2122944.7819401505,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,40,3162715.8671902963,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,50,1080018.7459591231,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,60,955062.3993800398,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,70,494677.02864715905,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,80,1517126.1098308887,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,90,444129.144729493,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBN,100,368076.2429592256,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LSO,10,778458.2332617589,Low Income Developing Countries,Sub-Sahara Africa
+LSO,20,1262828.9544917443,Low Income Developing Countries,Sub-Sahara Africa
+LSO,30,764673.9619078827,Low Income Developing Countries,Sub-Sahara Africa
+LSO,40,471344.3176709003,Low Income Developing Countries,Sub-Sahara Africa
+LSO,50,325958.06913774693,Low Income Developing Countries,Sub-Sahara Africa
+LSO,60,492417.7502509829,Low Income Developing Countries,Sub-Sahara Africa
+LSO,70,371971.4364466601,Low Income Developing Countries,Sub-Sahara Africa
+LSO,80,209449.2767230291,Low Income Developing Countries,Sub-Sahara Africa
+LSO,90,355600.8527795434,Low Income Developing Countries,Sub-Sahara Africa
+LSO,100,384683.45887608145,Low Income Developing Countries,Sub-Sahara Africa
+LBR,10,5705174.957559103,Low Income Developing Countries,Sub-Sahara Africa
+LBR,20,2233566.198425264,Low Income Developing Countries,Sub-Sahara Africa
+LBR,30,1231339.3885165479,Low Income Developing Countries,Sub-Sahara Africa
+LBR,40,833817.8474453416,Low Income Developing Countries,Sub-Sahara Africa
+LBR,50,955511.3659225008,Low Income Developing Countries,Sub-Sahara Africa
+LBR,60,735503.0036426334,Low Income Developing Countries,Sub-Sahara Africa
+LBR,70,687933.6850095054,Low Income Developing Countries,Sub-Sahara Africa
+LBR,80,930019.3789277583,Low Income Developing Countries,Sub-Sahara Africa
+LBR,90,494784.164849534,Low Income Developing Countries,Sub-Sahara Africa
+LBR,100,456457.741623471,Low Income Developing Countries,Sub-Sahara Africa
+LBY,10,7049027.25892806,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,20,5036632.68166384,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,30,1947754.9799746175,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,40,1837653.1296591451,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,50,1029102.207432478,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,60,1353709.8737708528,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,70,1118509.9141053674,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,80,1185456.4657810016,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,90,930359.043952109,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LBY,100,3407709.817859856,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+LTU,10,1869219.7488980046,Advanced Economies,Advanced Economies
+LTU,20,553038.4801956388,Advanced Economies,Advanced Economies
+LTU,30,313970.78227174847,Advanced Economies,Advanced Economies
+LTU,40,238789.09113094234,Advanced Economies,Advanced Economies
+LTU,50,206803.36866740315,Advanced Economies,Advanced Economies
+LTU,60,206512.04273948786,Advanced Economies,Advanced Economies
+LTU,70,142174.26730387696,Advanced Economies,Advanced Economies
+LTU,80,153527.4902271648,Advanced Economies,Advanced Economies
+LTU,90,150438.12453779197,Advanced Economies,Advanced Economies
+LTU,100,330148.18097326346,Advanced Economies,Advanced Economies
+LUX,10,1117673.777313867,Advanced Economies,Advanced Economies
+LUX,20,142786.2383192514,Advanced Economies,Advanced Economies
+LUX,30,73290.0837582862,Advanced Economies,Advanced Economies
+LUX,40,107290.92502440543,Advanced Economies,Advanced Economies
+LUX,50,94445.26643511561,Advanced Economies,Advanced Economies
+LUX,60,95519.01494995202,Advanced Economies,Advanced Economies
+LUX,70,56965.22656004282,Advanced Economies,Advanced Economies
+LUX,80,58592.80446175855,Advanced Economies,Advanced Economies
+LUX,90,15823.67404445632,Advanced Economies,Advanced Economies
+LUX,100,107863.15088292128,Advanced Economies,Advanced Economies
+MDG,10,19828667.533047285,Low Income Developing Countries,Sub-Sahara Africa
+MDG,20,10071063.547196971,Low Income Developing Countries,Sub-Sahara Africa
+MDG,30,7828485.816237297,Low Income Developing Countries,Sub-Sahara Africa
+MDG,40,7396722.973722881,Low Income Developing Countries,Sub-Sahara Africa
+MDG,50,5992947.114212237,Low Income Developing Countries,Sub-Sahara Africa
+MDG,60,5756564.173601691,Low Income Developing Countries,Sub-Sahara Africa
+MDG,70,5786132.229034779,Low Income Developing Countries,Sub-Sahara Africa
+MDG,80,7671773.354742855,Low Income Developing Countries,Sub-Sahara Africa
+MDG,90,7141360.949660216,Low Income Developing Countries,Sub-Sahara Africa
+MDG,100,5576075.97073477,Low Income Developing Countries,Sub-Sahara Africa
+MWI,10,10783140.726178303,Low Income Developing Countries,Sub-Sahara Africa
+MWI,20,4691822.2053857315,Low Income Developing Countries,Sub-Sahara Africa
+MWI,30,5124594.392243091,Low Income Developing Countries,Sub-Sahara Africa
+MWI,40,6694697.121403257,Low Income Developing Countries,Sub-Sahara Africa
+MWI,50,6661467.405909893,Low Income Developing Countries,Sub-Sahara Africa
+MWI,60,6561180.2327047,Low Income Developing Countries,Sub-Sahara Africa
+MWI,70,6489417.025691392,Low Income Developing Countries,Sub-Sahara Africa
+MWI,80,5160450.967285304,Low Income Developing Countries,Sub-Sahara Africa
+MWI,90,2524983.667273906,Low Income Developing Countries,Sub-Sahara Africa
+MWI,100,1211118.3513506886,Low Income Developing Countries,Sub-Sahara Africa
+MYS,10,9166808.091154484,Emerging Market Economies,Emerging and Developing Asia
+MYS,20,4091128.8151195184,Emerging Market Economies,Emerging and Developing Asia
+MYS,30,1421415.4825381895,Emerging Market Economies,Emerging and Developing Asia
+MYS,40,1992185.0437734588,Emerging Market Economies,Emerging and Developing Asia
+MYS,50,1610725.679207313,Emerging Market Economies,Emerging and Developing Asia
+MYS,60,1309350.8301496173,Emerging Market Economies,Emerging and Developing Asia
+MYS,70,748025.1711342429,Emerging Market Economies,Emerging and Developing Asia
+MYS,80,4395514.49911321,Emerging Market Economies,Emerging and Developing Asia
+MYS,90,2960428.4322031257,Emerging Market Economies,Emerging and Developing Asia
+MYS,100,2175496.5099883284,Emerging Market Economies,Emerging and Developing Asia
+MLI,10,20859359.26131713,Low Income Developing Countries,Sub-Sahara Africa
+MLI,20,7020039.832731807,Low Income Developing Countries,Sub-Sahara Africa
+MLI,30,7927898.815497206,Low Income Developing Countries,Sub-Sahara Africa
+MLI,40,5501345.582850417,Low Income Developing Countries,Sub-Sahara Africa
+MLI,50,8412645.07524961,Low Income Developing Countries,Sub-Sahara Africa
+MLI,60,3902971.7979427804,Low Income Developing Countries,Sub-Sahara Africa
+MLI,70,5107886.897480599,Low Income Developing Countries,Sub-Sahara Africa
+MLI,80,5339499.270607091,Low Income Developing Countries,Sub-Sahara Africa
+MLI,90,2707252.5406045895,Low Income Developing Countries,Sub-Sahara Africa
+MLI,100,2457350.5255359346,Low Income Developing Countries,Sub-Sahara Africa
+MLT,10,307920.1435678005,Advanced Economies,Advanced Economies
+MLT,20,277128.1292110205,Advanced Economies,Advanced Economies
+MLT,30,232787.62853725711,Advanced Economies,Advanced Economies
+MLT,40,130866.06101631519,Advanced Economies,Advanced Economies
+MLT,50,169670.2831904206,Advanced Economies,Advanced Economies
+MLT,60,190525.58883257653,Advanced Economies,Advanced Economies
+MLT,70,88681.0013475265,Advanced Economies,Advanced Economies
+MLT,80,128666.63141940223,Advanced Economies,Advanced Economies
+MLT,90,44477.35407090448,Advanced Economies,Advanced Economies
+MLT,100,18322.520939571586,Advanced Economies,Advanced Economies
+MTQ,10,485829.5598514184,0.0,0.0
+MTQ,20,236132.84382477475,0.0,0.0
+MTQ,30,151496.71063535765,0.0,0.0
+MTQ,40,103461.16823878084,0.0,0.0
+MTQ,50,121782.94951487737,0.0,0.0
+MTQ,60,118891.3887664562,0.0,0.0
+MTQ,70,30792.014356779986,0.0,0.0
+MTQ,80,39463.045599649246,0.0,0.0
+MTQ,90,35733.94258688043,0.0,0.0
+MTQ,100,25911.176434631427,0.0,0.0
+MRT,10,5061009.6930296505,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,20,1642631.437157359,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,30,937381.7975277308,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,40,1803565.4732249766,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,50,1391044.3582853167,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,60,1485687.8451198589,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,70,807367.6982676159,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,80,455604.8523088953,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,90,401145.1133234449,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MRT,100,2869919.8098008074,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+MUS,10,1855218.8649959976,Emerging Market Economies,Sub-Sahara Africa
+MUS,20,507144.4764561672,Emerging Market Economies,Sub-Sahara Africa
+MUS,30,336676.3222646279,Emerging Market Economies,Sub-Sahara Africa
+MUS,40,487023.99038859794,Emerging Market Economies,Sub-Sahara Africa
+MUS,50,364791.10885940405,Emerging Market Economies,Sub-Sahara Africa
+MUS,60,291908.2961022745,Emerging Market Economies,Sub-Sahara Africa
+MUS,70,140411.58546691685,Emerging Market Economies,Sub-Sahara Africa
+MUS,80,280375.72447521193,Emerging Market Economies,Sub-Sahara Africa
+MUS,90,210412.0981046635,Emerging Market Economies,Sub-Sahara Africa
+MUS,100,636.89314383456,Emerging Market Economies,Sub-Sahara Africa
+MEX,10,160374844.7190251,Emerging Market Economies,Latin America and the Caribbean
+MEX,20,42626214.53762053,Emerging Market Economies,Latin America and the Caribbean
+MEX,30,23908379.753514957,Emerging Market Economies,Latin America and the Caribbean
+MEX,40,23369292.756609175,Emerging Market Economies,Latin America and the Caribbean
+MEX,50,19734740.619503926,Emerging Market Economies,Latin America and the Caribbean
+MEX,60,18520358.03716581,Emerging Market Economies,Latin America and the Caribbean
+MEX,70,12999051.610638998,Emerging Market Economies,Latin America and the Caribbean
+MEX,80,13668238.37459964,Emerging Market Economies,Latin America and the Caribbean
+MEX,90,13072195.652005855,Emerging Market Economies,Latin America and the Caribbean
+MEX,100,3673482.634043175,Emerging Market Economies,Latin America and the Caribbean
+MDA,10,3056107.424910418,Low Income Developing Countries,Emerging and Developing Europe
+MDA,20,2020488.3494603138,Low Income Developing Countries,Emerging and Developing Europe
+MDA,30,1061146.2294534205,Low Income Developing Countries,Emerging and Developing Europe
+MDA,40,1396109.9309364008,Low Income Developing Countries,Emerging and Developing Europe
+MDA,50,710140.8311032396,Low Income Developing Countries,Emerging and Developing Europe
+MDA,60,896276.6492940389,Low Income Developing Countries,Emerging and Developing Europe
+MDA,70,652665.0226724842,Low Income Developing Countries,Emerging and Developing Europe
+MDA,80,561138.9146624869,Low Income Developing Countries,Emerging and Developing Europe
+MDA,90,734271.1115847514,Low Income Developing Countries,Emerging and Developing Europe
+MDA,100,604373.4215869119,Low Income Developing Countries,Emerging and Developing Europe
+MNG,10,0.0,Emerging Market Economies,Emerging and Developing Asia
+MNG,20,498261.57636121666,Emerging Market Economies,Emerging and Developing Asia
+MNG,30,405905.5630835311,Emerging Market Economies,Emerging and Developing Asia
+MNG,40,552888.991840085,Emerging Market Economies,Emerging and Developing Asia
+MNG,50,538966.4932573902,Emerging Market Economies,Emerging and Developing Asia
+MNG,60,656396.9772247069,Emerging Market Economies,Emerging and Developing Asia
+MNG,70,702429.7996185173,Emerging Market Economies,Emerging and Developing Asia
+MNG,80,812383.4703176068,Emerging Market Economies,Emerging and Developing Asia
+MNG,90,1003133.0569352584,Emerging Market Economies,Emerging and Developing Asia
+MNG,100,1829997.7427444253,Emerging Market Economies,Emerging and Developing Asia
+MNE,10,103064.18028508998,Emerging Market Economies,Emerging and Developing Europe
+MNE,20,740042.9562451078,Emerging Market Economies,Emerging and Developing Europe
+MNE,30,197777.42785388484,Emerging Market Economies,Emerging and Developing Europe
+MNE,40,134533.80787875626,Emerging Market Economies,Emerging and Developing Europe
+MNE,50,160118.47465525605,Emerging Market Economies,Emerging and Developing Europe
+MNE,60,319487.9890279467,Emerging Market Economies,Emerging and Developing Europe
+MNE,70,61062.13016513959,Emerging Market Economies,Emerging and Developing Europe
+MNE,80,124243.12081271615,Emerging Market Economies,Emerging and Developing Europe
+MNE,90,32929.030551376905,Emerging Market Economies,Emerging and Developing Europe
+MNE,100,20836.784911434643,Emerging Market Economies,Emerging and Developing Europe
+MAR,10,9751174.415471476,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,20,6289683.1341199875,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,30,4528801.071179824,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,40,4424135.03944345,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,50,4509622.089657016,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,60,2547282.8038273803,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,70,4115168.5946930433,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,80,2160017.2158136475,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,90,2193196.746892906,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MAR,100,1582249.3891079572,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+MOZ,10,16904316.65239634,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,20,11124186.145829935,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,30,13457341.954487137,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,40,10783921.533004573,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,50,9873425.190152226,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,60,6881159.87500813,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,70,5534816.99823867,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,80,4844367.323775446,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,90,2657382.8030188177,Low Income Developing Countries,Sub-Sahara Africa
+MOZ,100,1845736.7829889134,Low Income Developing Countries,Sub-Sahara Africa
+MMR,10,18273916.872032467,Low Income Developing Countries,Emerging and Developing Asia
+MMR,20,9513490.846927889,Low Income Developing Countries,Emerging and Developing Asia
+MMR,30,12566510.492163401,Low Income Developing Countries,Emerging and Developing Asia
+MMR,40,10775912.589155145,Low Income Developing Countries,Emerging and Developing Asia
+MMR,50,7917537.377026552,Low Income Developing Countries,Emerging and Developing Asia
+MMR,60,4147174.8017618665,Low Income Developing Countries,Emerging and Developing Asia
+MMR,70,6997293.81718397,Low Income Developing Countries,Emerging and Developing Asia
+MMR,80,4365151.024376848,Low Income Developing Countries,Emerging and Developing Asia
+MMR,90,9355922.622199805,Low Income Developing Countries,Emerging and Developing Asia
+MMR,100,4604852.382446874,Low Income Developing Countries,Emerging and Developing Asia
+NAM,10,1274574.8770777956,Emerging Market Economies,Sub-Sahara Africa
+NAM,20,891321.3605908431,Emerging Market Economies,Sub-Sahara Africa
+NAM,30,903264.4961471683,Emerging Market Economies,Sub-Sahara Africa
+NAM,40,481899.5797153123,Emerging Market Economies,Sub-Sahara Africa
+NAM,50,716275.5273199198,Emerging Market Economies,Sub-Sahara Africa
+NAM,60,729351.9716041854,Emerging Market Economies,Sub-Sahara Africa
+NAM,70,696630.0756875882,Emerging Market Economies,Sub-Sahara Africa
+NAM,80,614379.6487124958,Emerging Market Economies,Sub-Sahara Africa
+NAM,90,847132.9366006786,Emerging Market Economies,Sub-Sahara Africa
+NAM,100,1539287.7959927504,Emerging Market Economies,Sub-Sahara Africa
+NPL,10,43403992.84679919,Low Income Developing Countries,Emerging and Developing Asia
+NPL,20,16175430.041796008,Low Income Developing Countries,Emerging and Developing Asia
+NPL,30,10984127.361350566,Low Income Developing Countries,Emerging and Developing Asia
+NPL,40,17970027.128527097,Low Income Developing Countries,Emerging and Developing Asia
+NPL,50,8242450.75717098,Low Income Developing Countries,Emerging and Developing Asia
+NPL,60,5133468.679194606,Low Income Developing Countries,Emerging and Developing Asia
+NPL,70,13089150.896206426,Low Income Developing Countries,Emerging and Developing Asia
+NPL,80,5312584.726993205,Low Income Developing Countries,Emerging and Developing Asia
+NPL,90,5052258.971000895,Low Income Developing Countries,Emerging and Developing Asia
+NPL,100,2439782.0079409755,Low Income Developing Countries,Emerging and Developing Asia
+NLD,10,2447799.868422081,Advanced Economies,Advanced Economies
+NLD,20,1362662.1079346898,Advanced Economies,Advanced Economies
+NLD,30,586579.561268132,Advanced Economies,Advanced Economies
+NLD,40,0.0,Advanced Economies,Advanced Economies
+NLD,50,0.0,Advanced Economies,Advanced Economies
+NLD,60,0.0,Advanced Economies,Advanced Economies
+NLD,70,0.0,Advanced Economies,Advanced Economies
+NLD,80,0.0,Advanced Economies,Advanced Economies
+NLD,90,0.0,Advanced Economies,Advanced Economies
+NLD,100,2488639.3679408226,Advanced Economies,Advanced Economies
+NCL,10,556233.3913296087,0.0,0.0
+NCL,20,30578.22105011768,0.0,0.0
+NCL,30,33992.336735356075,0.0,0.0
+NCL,40,22604.802358336805,0.0,0.0
+NCL,50,29316.98752713459,0.0,0.0
+NCL,60,44150.742702486765,0.0,0.0
+NCL,70,24366.349310950503,0.0,0.0
+NCL,80,21164.63414688053,0.0,0.0
+NCL,90,15551.456289022364,0.0,0.0
+NCL,100,15093.17662396914,0.0,0.0
+NZL,10,0.0,Advanced Economies,Advanced Economies
+NZL,20,0.0,Advanced Economies,Advanced Economies
+NZL,30,0.0,Advanced Economies,Advanced Economies
+NZL,40,0.0,Advanced Economies,Advanced Economies
+NZL,50,0.0,Advanced Economies,Advanced Economies
+NZL,60,0.0,Advanced Economies,Advanced Economies
+NZL,70,0.0,Advanced Economies,Advanced Economies
+NZL,80,299771.0084619308,Advanced Economies,Advanced Economies
+NZL,90,312599.8393030634,Advanced Economies,Advanced Economies
+NZL,100,0.0,Advanced Economies,Advanced Economies
+NIC,10,5871652.237658494,Low Income Developing Countries,Latin America and the Caribbean
+NIC,20,2591646.992289208,Low Income Developing Countries,Latin America and the Caribbean
+NIC,30,3183568.3198778243,Low Income Developing Countries,Latin America and the Caribbean
+NIC,40,1270637.4152647934,Low Income Developing Countries,Latin America and the Caribbean
+NIC,50,1057871.1048027596,Low Income Developing Countries,Latin America and the Caribbean
+NIC,60,1472686.0043901845,Low Income Developing Countries,Latin America and the Caribbean
+NIC,70,1539117.7711562712,Low Income Developing Countries,Latin America and the Caribbean
+NIC,80,1785148.5571257065,Low Income Developing Countries,Latin America and the Caribbean
+NIC,90,2203425.7285193354,Low Income Developing Countries,Latin America and the Caribbean
+NIC,100,1347042.3016319782,Low Income Developing Countries,Latin America and the Caribbean
+NER,10,10445011.780131316,Low Income Developing Countries,Sub-Sahara Africa
+NER,20,8783358.475407112,Low Income Developing Countries,Sub-Sahara Africa
+NER,30,12921580.149688145,Low Income Developing Countries,Sub-Sahara Africa
+NER,40,5479289.707780637,Low Income Developing Countries,Sub-Sahara Africa
+NER,50,7554989.116264495,Low Income Developing Countries,Sub-Sahara Africa
+NER,60,5181730.448635442,Low Income Developing Countries,Sub-Sahara Africa
+NER,70,8073088.814078526,Low Income Developing Countries,Sub-Sahara Africa
+NER,80,5461760.266876809,Low Income Developing Countries,Sub-Sahara Africa
+NER,90,7886798.272136581,Low Income Developing Countries,Sub-Sahara Africa
+NER,100,3395227.2644813093,Low Income Developing Countries,Sub-Sahara Africa
+NGA,10,160693330.46223304,Low Income Developing Countries,Sub-Sahara Africa
+NGA,20,75295410.14116326,Low Income Developing Countries,Sub-Sahara Africa
+NGA,30,58842233.4326599,Low Income Developing Countries,Sub-Sahara Africa
+NGA,40,66179736.85630948,Low Income Developing Countries,Sub-Sahara Africa
+NGA,50,63924693.1110175,Low Income Developing Countries,Sub-Sahara Africa
+NGA,60,65560460.43608386,Low Income Developing Countries,Sub-Sahara Africa
+NGA,70,70248516.65337843,Low Income Developing Countries,Sub-Sahara Africa
+NGA,80,56649608.41288606,Low Income Developing Countries,Sub-Sahara Africa
+NGA,90,62334057.74340369,Low Income Developing Countries,Sub-Sahara Africa
+NGA,100,50144859.49188429,Low Income Developing Countries,Sub-Sahara Africa
+NOR,10,0.0,Advanced Economies,Advanced Economies
+NOR,20,0.0,Advanced Economies,Advanced Economies
+NOR,30,0.0,Advanced Economies,Advanced Economies
+NOR,40,0.0,Advanced Economies,Advanced Economies
+NOR,50,0.0,Advanced Economies,Advanced Economies
+NOR,60,0.0,Advanced Economies,Advanced Economies
+NOR,70,0.0,Advanced Economies,Advanced Economies
+NOR,80,0.0,Advanced Economies,Advanced Economies
+NOR,90,376525.2300222359,Advanced Economies,Advanced Economies
+NOR,100,71384.03433182658,Advanced Economies,Advanced Economies
+OMN,10,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,20,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,30,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,40,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,60,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,70,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,80,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,90,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+OMN,100,826814.7192563415,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,10,156152975.23764932,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,20,109591576.39295672,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,30,88308248.68867455,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,40,57356374.86000381,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,50,87559063.93860987,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,60,64798372.878915034,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,70,56877084.41894672,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,80,21288050.394364864,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,90,14488457.120925592,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PAK,100,14134125.796437383,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+PSE,10,3756625.7515271665,0.0,0.0
+PSE,20,969948.4522385716,0.0,0.0
+PSE,30,2840563.3244129596,0.0,0.0
+PSE,40,2855959.331591349,0.0,0.0
+PSE,50,1566971.3972672508,0.0,0.0
+PSE,60,476385.54442886123,0.0,0.0
+PSE,70,3300344.0842403322,0.0,0.0
+PSE,80,2005329.9349852994,0.0,0.0
+PSE,90,2264579.5647362075,0.0,0.0
+PSE,100,511822.65073566476,0.0,0.0
+PAN,10,7496007.975014526,Emerging Market Economies,Latin America and the Caribbean
+PAN,20,1351900.8009794601,Emerging Market Economies,Latin America and the Caribbean
+PAN,30,696008.8452242556,Emerging Market Economies,Latin America and the Caribbean
+PAN,40,622819.8103898037,Emerging Market Economies,Latin America and the Caribbean
+PAN,50,669350.5221439186,Emerging Market Economies,Latin America and the Caribbean
+PAN,60,452893.34956522624,Emerging Market Economies,Latin America and the Caribbean
+PAN,70,346512.02545540413,Emerging Market Economies,Latin America and the Caribbean
+PAN,80,465882.1117504415,Emerging Market Economies,Latin America and the Caribbean
+PAN,90,190210.67050391523,Emerging Market Economies,Latin America and the Caribbean
+PAN,100,225308.14414623202,Emerging Market Economies,Latin America and the Caribbean
+PNG,10,3304785.250069977,Low Income Developing Countries,Emerging and Developing Asia
+PNG,20,2934047.9537985935,Low Income Developing Countries,Emerging and Developing Asia
+PNG,30,2145294.0112082083,Low Income Developing Countries,Emerging and Developing Asia
+PNG,40,3889685.3543157666,Low Income Developing Countries,Emerging and Developing Asia
+PNG,50,2722163.2346068216,Low Income Developing Countries,Emerging and Developing Asia
+PNG,60,2684781.7274039835,Low Income Developing Countries,Emerging and Developing Asia
+PNG,70,1998470.9682369954,Low Income Developing Countries,Emerging and Developing Asia
+PNG,80,2482674.482990982,Low Income Developing Countries,Emerging and Developing Asia
+PNG,90,2201388.684799866,Low Income Developing Countries,Emerging and Developing Asia
+PNG,100,1828751.5132827787,Low Income Developing Countries,Emerging and Developing Asia
+PRY,10,3830120.260335548,Emerging Market Economies,Latin America and the Caribbean
+PRY,20,812344.4672308686,Emerging Market Economies,Latin America and the Caribbean
+PRY,30,399930.4669675666,Emerging Market Economies,Latin America and the Caribbean
+PRY,40,353329.30984399456,Emerging Market Economies,Latin America and the Caribbean
+PRY,50,411538.16401502816,Emerging Market Economies,Latin America and the Caribbean
+PRY,60,594414.1118840171,Emerging Market Economies,Latin America and the Caribbean
+PRY,70,317900.9884700999,Emerging Market Economies,Latin America and the Caribbean
+PRY,80,257408.58071251103,Emerging Market Economies,Latin America and the Caribbean
+PRY,90,955981.1945263345,Emerging Market Economies,Latin America and the Caribbean
+PRY,100,1168390.616784204,Emerging Market Economies,Latin America and the Caribbean
+PER,10,37635046.117880195,Emerging Market Economies,Latin America and the Caribbean
+PER,20,7263162.70076358,Emerging Market Economies,Latin America and the Caribbean
+PER,30,7484512.289654661,Emerging Market Economies,Latin America and the Caribbean
+PER,40,6823559.648685419,Emerging Market Economies,Latin America and the Caribbean
+PER,50,4551112.811611938,Emerging Market Economies,Latin America and the Caribbean
+PER,60,4617155.888548013,Emerging Market Economies,Latin America and the Caribbean
+PER,70,4553043.390965546,Emerging Market Economies,Latin America and the Caribbean
+PER,80,2586979.5711655626,Emerging Market Economies,Latin America and the Caribbean
+PER,90,4344346.058609367,Emerging Market Economies,Latin America and the Caribbean
+PER,100,3277398.5198228764,Emerging Market Economies,Latin America and the Caribbean
+PHL,10,147595969.71638525,Emerging Market Economies,Emerging and Developing Asia
+PHL,20,35907682.283182316,Emerging Market Economies,Emerging and Developing Asia
+PHL,30,30846933.805649024,Emerging Market Economies,Emerging and Developing Asia
+PHL,40,18991856.16185897,Emerging Market Economies,Emerging and Developing Asia
+PHL,50,15903351.686278865,Emerging Market Economies,Emerging and Developing Asia
+PHL,60,21616849.412191708,Emerging Market Economies,Emerging and Developing Asia
+PHL,70,19528421.18676112,Emerging Market Economies,Emerging and Developing Asia
+PHL,80,19683795.177571636,Emerging Market Economies,Emerging and Developing Asia
+PHL,90,14964053.853162367,Emerging Market Economies,Emerging and Developing Asia
+PHL,100,7612248.702330871,Emerging Market Economies,Emerging and Developing Asia
+POL,10,16761595.09884288,Emerging Market Economies,Emerging and Developing Europe
+POL,20,4390812.44857982,Emerging Market Economies,Emerging and Developing Europe
+POL,30,5686691.5806779405,Emerging Market Economies,Emerging and Developing Europe
+POL,40,4133718.4529442526,Emerging Market Economies,Emerging and Developing Europe
+POL,50,3752612.3262010254,Emerging Market Economies,Emerging and Developing Europe
+POL,60,3440751.4406583547,Emerging Market Economies,Emerging and Developing Europe
+POL,70,2817154.8154424387,Emerging Market Economies,Emerging and Developing Europe
+POL,80,2681832.6102034384,Emerging Market Economies,Emerging and Developing Europe
+POL,90,2264979.9109815634,Emerging Market Economies,Emerging and Developing Europe
+POL,100,5773354.890227337,Emerging Market Economies,Emerging and Developing Europe
+PRT,10,0.0,Advanced Economies,Advanced Economies
+PRT,20,0.0,Advanced Economies,Advanced Economies
+PRT,30,0.0,Advanced Economies,Advanced Economies
+PRT,40,0.0,Advanced Economies,Advanced Economies
+PRT,50,0.0,Advanced Economies,Advanced Economies
+PRT,60,0.0,Advanced Economies,Advanced Economies
+PRT,70,0.0,Advanced Economies,Advanced Economies
+PRT,80,0.0,Advanced Economies,Advanced Economies
+PRT,90,815407.2984662848,Advanced Economies,Advanced Economies
+PRT,100,502503.5786703337,Advanced Economies,Advanced Economies
+PRI,10,3625288.3841686533,Advanced Economies,Advanced Economies
+PRI,20,1454350.0995784947,Advanced Economies,Advanced Economies
+PRI,30,1390560.0803014513,Advanced Economies,Advanced Economies
+PRI,40,921875.205334618,Advanced Economies,Advanced Economies
+PRI,50,898501.3564263548,Advanced Economies,Advanced Economies
+PRI,60,854398.4883287854,Advanced Economies,Advanced Economies
+PRI,70,931458.4342925958,Advanced Economies,Advanced Economies
+PRI,80,800207.4730968203,Advanced Economies,Advanced Economies
+PRI,90,561066.5905198535,Advanced Economies,Advanced Economies
+PRI,100,353492.32481583324,Advanced Economies,Advanced Economies
+QAT,10,6555790.103844725,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,20,104931.15531128517,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,30,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,40,254344.379271096,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,60,36414.31959597718,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,70,1055091.8219691298,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,80,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,90,274686.5773988698,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+QAT,100,97992.50648901667,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+REU,10,909326.6739736608,0.0,0.0
+REU,20,526543.4455009386,0.0,0.0
+REU,30,140488.5655028089,0.0,0.0
+REU,40,792028.9136622653,0.0,0.0
+REU,50,97302.76536742483,0.0,0.0
+REU,60,270632.938682637,0.0,0.0
+REU,70,280898.5799485848,0.0,0.0
+REU,80,77942.28634059946,0.0,0.0
+REU,90,44113.16900526983,0.0,0.0
+REU,100,65130.836152382915,0.0,0.0
+ROU,10,35050357.10354351,Emerging Market Economies,Emerging and Developing Europe
+ROU,20,2352628.305313553,Emerging Market Economies,Emerging and Developing Europe
+ROU,30,1731730.0607224966,Emerging Market Economies,Emerging and Developing Europe
+ROU,40,1721019.6753289192,Emerging Market Economies,Emerging and Developing Europe
+ROU,50,1299792.5188879909,Emerging Market Economies,Emerging and Developing Europe
+ROU,60,1178596.7697315172,Emerging Market Economies,Emerging and Developing Europe
+ROU,70,1132976.745765569,Emerging Market Economies,Emerging and Developing Europe
+ROU,80,981824.4209789105,Emerging Market Economies,Emerging and Developing Europe
+ROU,90,896549.6347481946,Emerging Market Economies,Emerging and Developing Europe
+ROU,100,1578696.196741408,Emerging Market Economies,Emerging and Developing Europe
+RUS,10,9485912.141225845,Emerging Market Economies,Emerging and Developing Europe
+RUS,20,0.0,Emerging Market Economies,Emerging and Developing Europe
+RUS,30,0.0,Emerging Market Economies,Emerging and Developing Europe
+RUS,40,0.0,Emerging Market Economies,Emerging and Developing Europe
+RUS,50,0.0,Emerging Market Economies,Emerging and Developing Europe
+RUS,60,0.0,Emerging Market Economies,Emerging and Developing Europe
+RUS,70,17080719.976947963,Emerging Market Economies,Emerging and Developing Europe
+RUS,80,17046650.061631866,Emerging Market Economies,Emerging and Developing Europe
+RUS,90,15113554.845476475,Emerging Market Economies,Emerging and Developing Europe
+RUS,100,50851601.29069932,Emerging Market Economies,Emerging and Developing Europe
+RWA,10,4965433.344870342,Low Income Developing Countries,Sub-Sahara Africa
+RWA,20,4504481.928449138,Low Income Developing Countries,Sub-Sahara Africa
+RWA,30,4000604.6837971876,Low Income Developing Countries,Sub-Sahara Africa
+RWA,40,3214910.510603369,Low Income Developing Countries,Sub-Sahara Africa
+RWA,50,3542988.6871983013,Low Income Developing Countries,Sub-Sahara Africa
+RWA,60,3100992.2975388393,Low Income Developing Countries,Sub-Sahara Africa
+RWA,70,4458760.838786906,Low Income Developing Countries,Sub-Sahara Africa
+RWA,80,4057346.1985204336,Low Income Developing Countries,Sub-Sahara Africa
+RWA,90,3878042.8766630967,Low Income Developing Countries,Sub-Sahara Africa
+RWA,100,3929657.6937950193,Low Income Developing Countries,Sub-Sahara Africa
+WSM,10,204458.97532901927,Emerging Market Economies,Emerging and Developing Asia
+WSM,20,104209.33784381319,Emerging Market Economies,Emerging and Developing Asia
+WSM,30,51700.17225335892,Emerging Market Economies,Emerging and Developing Asia
+WSM,40,34386.510726591885,Emerging Market Economies,Emerging and Developing Asia
+WSM,50,36440.2536766626,Emerging Market Economies,Emerging and Developing Asia
+WSM,60,43360.183481996304,Emerging Market Economies,Emerging and Developing Asia
+WSM,70,23961.735029110318,Emerging Market Economies,Emerging and Developing Asia
+WSM,80,31537.841694141414,Emerging Market Economies,Emerging and Developing Asia
+WSM,90,32546.356480842598,Emerging Market Economies,Emerging and Developing Asia
+WSM,100,32906.19969438441,Emerging Market Economies,Emerging and Developing Asia
+SMR,10,43301.270189221934,Advanced Economies,Advanced Economies
+SMR,20,22903.15117446448,Advanced Economies,Advanced Economies
+SMR,30,11547.005383792512,Advanced Economies,Advanced Economies
+SMR,40,8199.057077249123,Advanced Economies,Advanced Economies
+SMR,50,0.0,Advanced Economies,Advanced Economies
+SMR,60,9897.433186107863,Advanced Economies,Advanced Economies
+SMR,70,8621.764019898403,Advanced Economies,Advanced Economies
+SMR,80,3695.041722813601,Advanced Economies,Advanced Economies
+SMR,90,5027.267650086528,Advanced Economies,Advanced Economies
+SMR,100,2862.8938968080547,Advanced Economies,Advanced Economies
+SAU,10,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,20,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,30,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,40,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,60,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,70,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,80,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,90,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SAU,100,3854230.3902407903,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SEN,10,12865959.326021897,Low Income Developing Countries,Sub-Sahara Africa
+SEN,20,7562169.602440095,Low Income Developing Countries,Sub-Sahara Africa
+SEN,30,4927064.068710869,Low Income Developing Countries,Sub-Sahara Africa
+SEN,40,2646767.11445817,Low Income Developing Countries,Sub-Sahara Africa
+SEN,50,1994851.3841226627,Low Income Developing Countries,Sub-Sahara Africa
+SEN,60,4130679.6010318506,Low Income Developing Countries,Sub-Sahara Africa
+SEN,70,3518853.096286924,Low Income Developing Countries,Sub-Sahara Africa
+SEN,80,3755134.096852433,Low Income Developing Countries,Sub-Sahara Africa
+SEN,90,3047255.9223442418,Low Income Developing Countries,Sub-Sahara Africa
+SEN,100,1216213.457247218,Low Income Developing Countries,Sub-Sahara Africa
+SRB,10,7755738.616113971,Emerging Market Economies,Emerging and Developing Europe
+SRB,20,3979329.431922323,Emerging Market Economies,Emerging and Developing Europe
+SRB,30,3199001.044447773,Emerging Market Economies,Emerging and Developing Europe
+SRB,40,1629446.2753004308,Emerging Market Economies,Emerging and Developing Europe
+SRB,50,1435539.0626720353,Emerging Market Economies,Emerging and Developing Europe
+SRB,60,1162398.5419684446,Emerging Market Economies,Emerging and Developing Europe
+SRB,70,1084545.3865767757,Emerging Market Economies,Emerging and Developing Europe
+SRB,80,663201.2293359817,Emerging Market Economies,Emerging and Developing Europe
+SRB,90,797898.0720200514,Emerging Market Economies,Emerging and Developing Europe
+SRB,100,448662.4927973207,Emerging Market Economies,Emerging and Developing Europe
+SYC,10,38490.01794597506,Emerging Market Economies,Sub-Sahara Africa
+SYC,20,16967.02831904206,Emerging Market Economies,Sub-Sahara Africa
+SYC,30,47898.68899943562,Emerging Market Economies,Sub-Sahara Africa
+SYC,40,29774.096526803827,Emerging Market Economies,Sub-Sahara Africa
+SYC,50,31156.41689354667,Emerging Market Economies,Sub-Sahara Africa
+SYC,60,17243.528039796805,Emerging Market Economies,Sub-Sahara Africa
+SYC,70,32475.95264191644,Emerging Market Economies,Sub-Sahara Africa
+SYC,80,25890.863282690465,Emerging Market Economies,Sub-Sahara Africa
+SYC,90,37704.50737564896,Emerging Market Economies,Sub-Sahara Africa
+SYC,100,10651.39277784732,Emerging Market Economies,Sub-Sahara Africa
+SLE,10,5473280.5519176535,Low Income Developing Countries,Sub-Sahara Africa
+SLE,20,2288356.830260224,Low Income Developing Countries,Sub-Sahara Africa
+SLE,30,1577995.698703624,Low Income Developing Countries,Sub-Sahara Africa
+SLE,40,3281352.5809513996,Low Income Developing Countries,Sub-Sahara Africa
+SLE,50,1283488.7791639965,Low Income Developing Countries,Sub-Sahara Africa
+SLE,60,1823195.170064938,Low Income Developing Countries,Sub-Sahara Africa
+SLE,70,3117477.620190928,Low Income Developing Countries,Sub-Sahara Africa
+SLE,80,931323.7192297841,Low Income Developing Countries,Sub-Sahara Africa
+SLE,90,548111.1782177899,Low Income Developing Countries,Sub-Sahara Africa
+SLE,100,1983556.8834134738,Low Income Developing Countries,Sub-Sahara Africa
+SGP,10,6242473.389733711,Advanced Economies,Advanced Economies
+SGP,20,0.0,Advanced Economies,Advanced Economies
+SGP,30,3086312.402139569,Advanced Economies,Advanced Economies
+SGP,40,0.0,Advanced Economies,Advanced Economies
+SGP,50,0.0,Advanced Economies,Advanced Economies
+SGP,60,2537806.7550147735,Advanced Economies,Advanced Economies
+SGP,70,0.0,Advanced Economies,Advanced Economies
+SGP,80,1650195.04913667,Advanced Economies,Advanced Economies
+SGP,90,0.0,Advanced Economies,Advanced Economies
+SGP,100,3741229.7443487765,Advanced Economies,Advanced Economies
+SVK,10,1761987.4881935245,Advanced Economies,Advanced Economies
+SVK,20,2700271.1365527264,Advanced Economies,Advanced Economies
+SVK,30,1944611.749775627,Advanced Economies,Advanced Economies
+SVK,40,2148562.907093127,Advanced Economies,Advanced Economies
+SVK,50,1919748.5583482767,Advanced Economies,Advanced Economies
+SVK,60,2038123.4302752616,Advanced Economies,Advanced Economies
+SVK,70,1430565.7138764192,Advanced Economies,Advanced Economies
+SVK,80,1525448.9594040073,Advanced Economies,Advanced Economies
+SVK,90,1132414.8179885305,Advanced Economies,Advanced Economies
+SVK,100,712732.4923116013,Advanced Economies,Advanced Economies
+SVN,10,2650037.7355803815,Advanced Economies,Advanced Economies
+SVN,20,822586.6692454083,Advanced Economies,Advanced Economies
+SVN,30,770194.4967032667,Advanced Economies,Advanced Economies
+SVN,40,616865.4671617462,Advanced Economies,Advanced Economies
+SVN,50,575884.3642397573,Advanced Economies,Advanced Economies
+SVN,60,482337.19374789856,Advanced Economies,Advanced Economies
+SVN,70,364578.34967789997,Advanced Economies,Advanced Economies
+SVN,80,296023.2289299513,Advanced Economies,Advanced Economies
+SVN,90,300115.2613242838,Advanced Economies,Advanced Economies
+SVN,100,156492.5578626312,Advanced Economies,Advanced Economies
+SLB,10,354998.84320419945,Low Income Developing Countries,Emerging and Developing Asia
+SLB,20,253155.1076529726,Low Income Developing Countries,Emerging and Developing Asia
+SLB,30,253315.63810844356,Low Income Developing Countries,Emerging and Developing Asia
+SLB,40,205029.00931380288,Low Income Developing Countries,Emerging and Developing Asia
+SLB,50,153843.46134859804,Low Income Developing Countries,Emerging and Developing Asia
+SLB,60,154171.26529800234,Low Income Developing Countries,Emerging and Developing Asia
+SLB,70,117945.2703926144,Low Income Developing Countries,Emerging and Developing Asia
+SLB,80,115565.64628570598,Low Income Developing Countries,Emerging and Developing Asia
+SLB,90,78536.80247707077,Low Income Developing Countries,Emerging and Developing Asia
+SLB,100,8690.379377200328,Low Income Developing Countries,Emerging and Developing Asia
+SOM,10,11955284.685263857,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,20,4433568.942152,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,30,4131117.9159300528,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,40,2493745.7071326096,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,50,1907172.3752395501,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,60,2441411.473292045,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,70,2515103.999285883,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,80,1838711.6654806356,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,90,1445838.8739143682,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SOM,100,1252267.1877815113,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+ZAF,10,35879437.53420659,Emerging Market Economies,Sub-Sahara Africa
+ZAF,20,6186249.864726985,Emerging Market Economies,Sub-Sahara Africa
+ZAF,30,8014475.124084585,Emerging Market Economies,Sub-Sahara Africa
+ZAF,40,8199847.661715946,Emerging Market Economies,Sub-Sahara Africa
+ZAF,50,6598511.923056809,Emerging Market Economies,Sub-Sahara Africa
+ZAF,60,4949345.660562178,Emerging Market Economies,Sub-Sahara Africa
+ZAF,70,5598581.82863962,Emerging Market Economies,Sub-Sahara Africa
+ZAF,80,3771900.961856289,Emerging Market Economies,Sub-Sahara Africa
+ZAF,90,7477782.951517039,Emerging Market Economies,Sub-Sahara Africa
+ZAF,100,4182795.341757151,Emerging Market Economies,Sub-Sahara Africa
+SSD,10,13177162.56722322,Low Income Developing Countries,Sub-Sahara Africa
+SSD,20,10205243.358195812,Low Income Developing Countries,Sub-Sahara Africa
+SSD,30,5695240.236212151,Low Income Developing Countries,Sub-Sahara Africa
+SSD,40,2538676.888782302,Low Income Developing Countries,Sub-Sahara Africa
+SSD,50,3293205.9354575784,Low Income Developing Countries,Sub-Sahara Africa
+SSD,60,4290927.327035833,Low Income Developing Countries,Sub-Sahara Africa
+SSD,70,3892079.9825026956,Low Income Developing Countries,Sub-Sahara Africa
+SSD,80,2834513.2190443557,Low Income Developing Countries,Sub-Sahara Africa
+SSD,90,1680295.551387963,Low Income Developing Countries,Sub-Sahara Africa
+SSD,100,3078255.9942265716,Low Income Developing Countries,Sub-Sahara Africa
+ESP,10,0.0,Advanced Economies,Advanced Economies
+ESP,20,0.0,Advanced Economies,Advanced Economies
+ESP,30,0.0,Advanced Economies,Advanced Economies
+ESP,40,0.0,Advanced Economies,Advanced Economies
+ESP,50,0.0,Advanced Economies,Advanced Economies
+ESP,60,0.0,Advanced Economies,Advanced Economies
+ESP,70,0.0,Advanced Economies,Advanced Economies
+ESP,80,0.0,Advanced Economies,Advanced Economies
+ESP,90,0.0,Advanced Economies,Advanced Economies
+ESP,100,2221244.2854823046,Advanced Economies,Advanced Economies
+LKA,10,9205479.712233074,Emerging Market Economies,Emerging and Developing Asia
+LKA,20,5562814.080176971,Emerging Market Economies,Emerging and Developing Asia
+LKA,30,3399808.1111458177,Emerging Market Economies,Emerging and Developing Asia
+LKA,40,3733955.311537697,Emerging Market Economies,Emerging and Developing Asia
+LKA,50,3787056.6625643275,Emerging Market Economies,Emerging and Developing Asia
+LKA,60,3336302.0770639046,Emerging Market Economies,Emerging and Developing Asia
+LKA,70,2664611.5821449403,Emerging Market Economies,Emerging and Developing Asia
+LKA,80,2544825.832997414,Emerging Market Economies,Emerging and Developing Asia
+LKA,90,4153956.238803938,Emerging Market Economies,Emerging and Developing Asia
+LKA,100,1812253.8830258492,Emerging Market Economies,Emerging and Developing Asia
+SDN,10,23562998.658118274,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,20,11997024.259954758,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,30,17391143.272684935,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,40,20635569.05328888,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,50,17311861.678057365,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,60,11014617.543474922,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,70,7587820.918444994,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,80,9555191.60442499,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,90,4823788.991949057,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SDN,100,6616028.315250697,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+SUR,10,521000.8829167183,Emerging Market Economies,Latin America and the Caribbean
+SUR,20,399064.5060638692,Emerging Market Economies,Latin America and the Caribbean
+SUR,30,394483.4084177277,Emerging Market Economies,Latin America and the Caribbean
+SUR,40,190615.70594015002,Emerging Market Economies,Latin America and the Caribbean
+SUR,50,159262.08893559236,Emerging Market Economies,Latin America and the Caribbean
+SUR,60,128783.97494858479,Emerging Market Economies,Latin America and the Caribbean
+SUR,70,150787.3459678098,Emerging Market Economies,Latin America and the Caribbean
+SUR,80,27363.501292709087,Emerging Market Economies,Latin America and the Caribbean
+SUR,90,215973.61096665772,Emerging Market Economies,Latin America and the Caribbean
+SUR,100,326572.3044385835,Emerging Market Economies,Latin America and the Caribbean
+SWE,10,1941202.9571481668,Advanced Economies,Advanced Economies
+SWE,20,0.0,Advanced Economies,Advanced Economies
+SWE,30,55610.69169008618,Advanced Economies,Advanced Economies
+SWE,40,0.0,Advanced Economies,Advanced Economies
+SWE,50,4568.332477769559,Advanced Economies,Advanced Economies
+SWE,60,0.0,Advanced Economies,Advanced Economies
+SWE,70,19875.766506966316,Advanced Economies,Advanced Economies
+SWE,80,13026.291258573863,Advanced Economies,Advanced Economies
+SWE,90,0.0,Advanced Economies,Advanced Economies
+SWE,100,858629.7861643983,Advanced Economies,Advanced Economies
+CHE,10,0.0,Advanced Economies,Advanced Economies
+CHE,20,0.0,Advanced Economies,Advanced Economies
+CHE,30,0.0,Advanced Economies,Advanced Economies
+CHE,40,0.0,Advanced Economies,Advanced Economies
+CHE,50,0.0,Advanced Economies,Advanced Economies
+CHE,60,0.0,Advanced Economies,Advanced Economies
+CHE,70,0.0,Advanced Economies,Advanced Economies
+CHE,80,0.0,Advanced Economies,Advanced Economies
+CHE,90,0.0,Advanced Economies,Advanced Economies
+CHE,100,496272.0467368589,Advanced Economies,Advanced Economies
+SYR,10,28934438.96007306,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,20,7197132.30240928,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,30,7172075.9839812005,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,40,5407246.114879087,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,50,8540507.315345794,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,60,3700697.3989199456,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,70,6794294.918240734,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,80,7646463.049539226,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,90,7445069.185550018,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+SYR,100,3024016.477880793,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TWN,10,14564622.790756965,Advanced Economies,Advanced Economies
+TWN,20,10469284.881305214,Advanced Economies,Advanced Economies
+TWN,30,24325062.933399968,Advanced Economies,Advanced Economies
+TWN,40,14113006.580190852,Advanced Economies,Advanced Economies
+TWN,50,6476484.379661544,Advanced Economies,Advanced Economies
+TWN,60,3893932.9992201505,Advanced Economies,Advanced Economies
+TWN,70,1917841.7246437382,Advanced Economies,Advanced Economies
+TWN,80,3697856.50528943,Advanced Economies,Advanced Economies
+TWN,90,2752214.8768204814,Advanced Economies,Advanced Economies
+TWN,100,1474554.865026152,Advanced Economies,Advanced Economies
+TJK,10,6586502.0090645775,Low Income Developing Countries,Caucasus and Central Asia
+TJK,20,4616621.645118928,Low Income Developing Countries,Caucasus and Central Asia
+TJK,30,4155334.0110031613,Low Income Developing Countries,Caucasus and Central Asia
+TJK,40,1881144.6305632626,Low Income Developing Countries,Caucasus and Central Asia
+TJK,50,2513648.435174517,Low Income Developing Countries,Caucasus and Central Asia
+TJK,60,1994564.7580910346,Low Income Developing Countries,Caucasus and Central Asia
+TJK,70,2315388.4128834195,Low Income Developing Countries,Caucasus and Central Asia
+TJK,80,1354968.9130044025,Low Income Developing Countries,Caucasus and Central Asia
+TJK,90,884323.9460655899,Low Income Developing Countries,Caucasus and Central Asia
+TJK,100,462820.1203242478,Low Income Developing Countries,Caucasus and Central Asia
+TZA,10,31003232.645812407,Low Income Developing Countries,Sub-Sahara Africa
+TZA,20,18779506.167711485,Low Income Developing Countries,Sub-Sahara Africa
+TZA,30,19598799.038768582,Low Income Developing Countries,Sub-Sahara Africa
+TZA,40,15048139.406729136,Low Income Developing Countries,Sub-Sahara Africa
+TZA,50,19605156.9869003,Low Income Developing Countries,Sub-Sahara Africa
+TZA,60,17667171.27603483,Low Income Developing Countries,Sub-Sahara Africa
+TZA,70,18107374.463226333,Low Income Developing Countries,Sub-Sahara Africa
+TZA,80,15542934.506153993,Low Income Developing Countries,Sub-Sahara Africa
+TZA,90,13156975.780531518,Low Income Developing Countries,Sub-Sahara Africa
+TZA,100,724113.2826155957,Low Income Developing Countries,Sub-Sahara Africa
+THA,10,20325503.2387697,Emerging Market Economies,Emerging and Developing Asia
+THA,20,4129320.720778411,Emerging Market Economies,Emerging and Developing Asia
+THA,30,3087694.2910966524,Emerging Market Economies,Emerging and Developing Asia
+THA,40,2533940.0737344236,Emerging Market Economies,Emerging and Developing Asia
+THA,50,2700158.909662239,Emerging Market Economies,Emerging and Developing Asia
+THA,60,2117820.544060406,Emerging Market Economies,Emerging and Developing Asia
+THA,70,1925414.7843259573,Emerging Market Economies,Emerging and Developing Asia
+THA,80,1835632.4035574642,Emerging Market Economies,Emerging and Developing Asia
+THA,90,1584953.516358073,Emerging Market Economies,Emerging and Developing Asia
+THA,100,8306706.601410664,Emerging Market Economies,Emerging and Developing Asia
+TLS,10,1741673.3120553705,Low Income Developing Countries,Emerging and Developing Asia
+TLS,20,618106.579392259,Low Income Developing Countries,Emerging and Developing Asia
+TLS,30,346410.1615137748,Low Income Developing Countries,Emerging and Developing Asia
+TLS,40,337975.20024486503,Low Income Developing Countries,Emerging and Developing Asia
+TLS,50,342988.82658524235,Low Income Developing Countries,Emerging and Developing Asia
+TLS,60,334112.600780036,Low Income Developing Countries,Emerging and Developing Asia
+TLS,70,252620.19941684802,Low Income Developing Countries,Emerging and Developing Asia
+TLS,80,147047.5787650304,Low Income Developing Countries,Emerging and Developing Asia
+TLS,90,144165.94117695527,Low Income Developing Countries,Emerging and Developing Asia
+TLS,100,118204.58579407736,Low Income Developing Countries,Emerging and Developing Asia
+TGO,10,11018614.41743017,Low Income Developing Countries,Sub-Sahara Africa
+TGO,20,3381134.2431208733,Low Income Developing Countries,Sub-Sahara Africa
+TGO,30,3893650.215414831,Low Income Developing Countries,Sub-Sahara Africa
+TGO,40,845337.0191384768,Low Income Developing Countries,Sub-Sahara Africa
+TGO,50,2600740.9049034147,Low Income Developing Countries,Sub-Sahara Africa
+TGO,60,2809155.4697690303,Low Income Developing Countries,Sub-Sahara Africa
+TGO,70,999914.7291861257,Low Income Developing Countries,Sub-Sahara Africa
+TGO,80,1115525.5552159513,Low Income Developing Countries,Sub-Sahara Africa
+TGO,90,1173945.5473522323,Low Income Developing Countries,Sub-Sahara Africa
+TGO,100,2530526.2298581265,Low Income Developing Countries,Sub-Sahara Africa
+TON,10,236072.11006864687,Emerging Market Economies,Emerging and Developing Asia
+TON,20,0.0,Emerging Market Economies,Emerging and Developing Asia
+TON,30,37854.60932246935,Emerging Market Economies,Emerging and Developing Asia
+TON,40,0.0,Emerging Market Economies,Emerging and Developing Asia
+TON,50,0.0,Emerging Market Economies,Emerging and Developing Asia
+TON,60,13938.8404632908,Emerging Market Economies,Emerging and Developing Asia
+TON,70,0.0,Emerging Market Economies,Emerging and Developing Asia
+TON,80,8611.584841598511,Emerging Market Economies,Emerging and Developing Asia
+TON,90,0.0,Emerging Market Economies,Emerging and Developing Asia
+TON,100,2032.5086007185596,Emerging Market Economies,Emerging and Developing Asia
+TTO,10,261732.12203263037,Emerging Market Economies,Latin America and the Caribbean
+TTO,20,79179.46548886294,Emerging Market Economies,Latin America and the Caribbean
+TTO,30,646632.3014923809,Emerging Market Economies,Latin America and the Caribbean
+TTO,40,490127.43513354,Emerging Market Economies,Latin America and the Caribbean
+TTO,50,66419.138405947,Emerging Market Economies,Latin America and the Caribbean
+TTO,60,996429.5845854011,Emerging Market Economies,Latin America and the Caribbean
+TTO,70,634657.6292425216,Emerging Market Economies,Latin America and the Caribbean
+TTO,80,507125.62420247856,Emerging Market Economies,Latin America and the Caribbean
+TTO,90,352135.9493073908,Emerging Market Economies,Latin America and the Caribbean
+TTO,100,388658.0620281899,Emerging Market Economies,Latin America and the Caribbean
+TUN,10,2608285.672636975,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,20,2877983.6384862033,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,30,461141.84807833825,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,40,716912.5333367222,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,50,526541.7413898627,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,60,277900.63512315456,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,70,247986.29585438094,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,80,205517.76280629597,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,90,1951491.4284015878,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUN,100,1561100.467508136,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+TUR,10,43062334.87006105,Emerging Market Economies,Emerging and Developing Europe
+TUR,20,10226807.657412507,Emerging Market Economies,Emerging and Developing Europe
+TUR,30,5419506.815219832,Emerging Market Economies,Emerging and Developing Europe
+TUR,40,3835476.946080097,Emerging Market Economies,Emerging and Developing Europe
+TUR,50,2959088.6283001606,Emerging Market Economies,Emerging and Developing Europe
+TUR,60,8188489.966032395,Emerging Market Economies,Emerging and Developing Europe
+TUR,70,5948782.625182978,Emerging Market Economies,Emerging and Developing Europe
+TUR,80,4007001.7786649284,Emerging Market Economies,Emerging and Developing Europe
+TUR,90,2759060.018378693,Emerging Market Economies,Emerging and Developing Europe
+TUR,100,1507829.5187975136,Emerging Market Economies,Emerging and Developing Europe
+TKM,10,3393064.788415258,Emerging Market Economies,Caucasus and Central Asia
+TKM,20,0.0,Emerging Market Economies,Caucasus and Central Asia
+TKM,30,5415725.183123378,Emerging Market Economies,Caucasus and Central Asia
+TKM,40,0.0,Emerging Market Economies,Caucasus and Central Asia
+TKM,50,5737702.841569814,Emerging Market Economies,Caucasus and Central Asia
+TKM,60,0.0,Emerging Market Economies,Caucasus and Central Asia
+TKM,70,5988659.234182224,Emerging Market Economies,Caucasus and Central Asia
+TKM,80,0.0,Emerging Market Economies,Caucasus and Central Asia
+TKM,90,5434317.139583101,Emerging Market Economies,Caucasus and Central Asia
+TKM,100,2534905.6294104173,Emerging Market Economies,Caucasus and Central Asia
+TUV,10,5542.5625842204,Emerging Market Economies,Emerging and Developing Asia
+TUV,20,4008.0514555312766,Emerging Market Economies,Emerging and Developing Asia
+TUV,30,1717.7363380848328,Emerging Market Economies,Emerging and Developing Asia
+TUV,40,988.5664537848495,Emerging Market Economies,Emerging and Developing Asia
+TUV,50,0.0,Emerging Market Economies,Emerging and Developing Asia
+TUV,60,1153.4989769449319,Emerging Market Economies,Emerging and Developing Asia
+TUV,70,1131.13522126947,Emerging Market Economies,Emerging and Developing Asia
+TUV,80,1212.4355652982126,Emerging Market Economies,Emerging and Developing Asia
+TUV,90,67.6582346706585,Emerging Market Economies,Emerging and Developing Asia
+TUV,100,117.81406279562398,Emerging Market Economies,Emerging and Developing Asia
+UGA,10,18974847.63108373,Low Income Developing Countries,Sub-Sahara Africa
+UGA,20,14587876.166165944,Low Income Developing Countries,Sub-Sahara Africa
+UGA,30,18313079.23235272,Low Income Developing Countries,Sub-Sahara Africa
+UGA,40,13957093.151094805,Low Income Developing Countries,Sub-Sahara Africa
+UGA,50,14448297.403186895,Low Income Developing Countries,Sub-Sahara Africa
+UGA,60,14247157.122738538,Low Income Developing Countries,Sub-Sahara Africa
+UGA,70,13191642.497712156,Low Income Developing Countries,Sub-Sahara Africa
+UGA,80,8951320.564086705,Low Income Developing Countries,Sub-Sahara Africa
+UGA,90,9177547.155065365,Low Income Developing Countries,Sub-Sahara Africa
+UGA,100,7940156.061767922,Low Income Developing Countries,Sub-Sahara Africa
+UKR,10,27651283.775679957,Emerging Market Economies,Emerging and Developing Europe
+UKR,20,7185303.1297222525,Emerging Market Economies,Emerging and Developing Europe
+UKR,30,6327622.108186512,Emerging Market Economies,Emerging and Developing Europe
+UKR,40,4389039.818041855,Emerging Market Economies,Emerging and Developing Europe
+UKR,50,3442541.705062353,Emerging Market Economies,Emerging and Developing Europe
+UKR,60,2659909.1271946817,Emerging Market Economies,Emerging and Developing Europe
+UKR,70,6670781.5974974735,Emerging Market Economies,Emerging and Developing Europe
+UKR,80,6413792.053586277,Emerging Market Economies,Emerging and Developing Europe
+UKR,90,4980694.8914535735,Emerging Market Economies,Emerging and Developing Europe
+UKR,100,3901063.537185572,Emerging Market Economies,Emerging and Developing Europe
+ARE,10,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,20,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,30,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,40,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,50,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,60,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,70,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,80,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,90,0.0,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+ARE,100,1642342.9037084559,Emerging Market Economies,"Middle East, North Africa, Afghanistan, and Pakistan"
+GBR,10,8751556.916286152,Advanced Economies,Advanced Economies
+GBR,20,11036542.376975255,Advanced Economies,Advanced Economies
+GBR,30,8297031.49082477,Advanced Economies,Advanced Economies
+GBR,40,5585247.418507889,Advanced Economies,Advanced Economies
+GBR,50,4771608.108530638,Advanced Economies,Advanced Economies
+GBR,60,4987708.383647082,Advanced Economies,Advanced Economies
+GBR,70,4406468.381432005,Advanced Economies,Advanced Economies
+GBR,80,5256852.917393034,Advanced Economies,Advanced Economies
+GBR,90,3258266.4609987,Advanced Economies,Advanced Economies
+GBR,100,11978093.584787408,Advanced Economies,Advanced Economies
+USA,10,0.0,Advanced Economies,Advanced Economies
+USA,20,0.0,Advanced Economies,Advanced Economies
+USA,30,0.0,Advanced Economies,Advanced Economies
+USA,40,0.0,Advanced Economies,Advanced Economies
+USA,50,0.0,Advanced Economies,Advanced Economies
+USA,60,0.0,Advanced Economies,Advanced Economies
+USA,70,0.0,Advanced Economies,Advanced Economies
+USA,80,0.0,Advanced Economies,Advanced Economies
+USA,90,0.0,Advanced Economies,Advanced Economies
+USA,100,14703989.096124653,Advanced Economies,Advanced Economies
+URY,10,8138945.234784092,Emerging Market Economies,Latin America and the Caribbean
+URY,20,1488366.1916601781,Emerging Market Economies,Latin America and the Caribbean
+URY,30,497704.7995549119,Emerging Market Economies,Latin America and the Caribbean
+URY,40,280154.72318271035,Emerging Market Economies,Latin America and the Caribbean
+URY,50,153926.610817152,Emerging Market Economies,Latin America and the Caribbean
+URY,60,111161.43322862142,Emerging Market Economies,Latin America and the Caribbean
+URY,70,97339.38731763995,Emerging Market Economies,Latin America and the Caribbean
+URY,80,103907.7178072245,Emerging Market Economies,Latin America and the Caribbean
+URY,90,87205.26192188398,Emerging Market Economies,Latin America and the Caribbean
+URY,100,100419.14393723768,Emerging Market Economies,Latin America and the Caribbean
+UZB,10,19700257.87575548,Low Income Developing Countries,Caucasus and Central Asia
+UZB,20,14183043.330630396,Low Income Developing Countries,Caucasus and Central Asia
+UZB,30,13298264.911450736,Low Income Developing Countries,Caucasus and Central Asia
+UZB,40,12244559.271566762,Low Income Developing Countries,Caucasus and Central Asia
+UZB,50,10217066.98152902,Low Income Developing Countries,Caucasus and Central Asia
+UZB,60,6946014.868069784,Low Income Developing Countries,Caucasus and Central Asia
+UZB,70,10827384.60382477,Low Income Developing Countries,Caucasus and Central Asia
+UZB,80,6416699.520712433,Low Income Developing Countries,Caucasus and Central Asia
+UZB,90,6983340.726682799,Low Income Developing Countries,Caucasus and Central Asia
+UZB,100,6185281.075758759,Low Income Developing Countries,Caucasus and Central Asia
+VUT,10,323931.9910333257,Emerging Market Economies,Emerging and Developing Asia
+VUT,20,99796.8332338848,Emerging Market Economies,Emerging and Developing Asia
+VUT,30,50225.19675083672,Emerging Market Economies,Emerging and Developing Asia
+VUT,40,33668.77694374557,Emerging Market Economies,Emerging and Developing Asia
+VUT,50,58434.94594682198,Emerging Market Economies,Emerging and Developing Asia
+VUT,60,95601.23322712982,Emerging Market Economies,Emerging and Developing Asia
+VUT,70,50673.22197350232,Emerging Market Economies,Emerging and Developing Asia
+VUT,80,42006.06110782121,Emerging Market Economies,Emerging and Developing Asia
+VUT,90,42661.43872544639,Emerging Market Economies,Emerging and Developing Asia
+VUT,100,28497.78773476698,Emerging Market Economies,Emerging and Developing Asia
+VEN,10,40037316.66740325,Emerging Market Economies,Latin America and the Caribbean
+VEN,20,23117576.084694795,Emerging Market Economies,Latin America and the Caribbean
+VEN,30,9428012.069281021,Emerging Market Economies,Latin America and the Caribbean
+VEN,40,8865134.43539127,Emerging Market Economies,Latin America and the Caribbean
+VEN,50,5302479.340068246,Emerging Market Economies,Latin America and the Caribbean
+VEN,60,6905737.6279641725,Emerging Market Economies,Latin America and the Caribbean
+VEN,70,5029623.610517019,Emerging Market Economies,Latin America and the Caribbean
+VEN,80,4156828.4559155335,Emerging Market Economies,Latin America and the Caribbean
+VEN,90,4596976.911442758,Emerging Market Economies,Latin America and the Caribbean
+VEN,100,2021060.7559207082,Emerging Market Economies,Latin America and the Caribbean
+VNM,10,38734206.155456096,Low Income Developing Countries,Emerging and Developing Asia
+VNM,20,0.0,Low Income Developing Countries,Emerging and Developing Asia
+VNM,30,571372.4200468346,Low Income Developing Countries,Emerging and Developing Asia
+VNM,40,171624.44668433635,Low Income Developing Countries,Emerging and Developing Asia
+VNM,50,0.0,Low Income Developing Countries,Emerging and Developing Asia
+VNM,60,0.0,Low Income Developing Countries,Emerging and Developing Asia
+VNM,70,0.0,Low Income Developing Countries,Emerging and Developing Asia
+VNM,80,0.0,Low Income Developing Countries,Emerging and Developing Asia
+VNM,90,0.0,Low Income Developing Countries,Emerging and Developing Asia
+VNM,100,8891194.145520234,Low Income Developing Countries,Emerging and Developing Asia
+VIR,10,79179.46548886294,0.0,0.0
+VIR,20,13741.89070467869,0.0,0.0
+VIR,30,67232.2680334428,0.0,0.0
+VIR,40,66454.19424958136,0.0,0.0
+VIR,50,20568.103339880414,0.0,0.0
+VIR,60,37704.50737564896,0.0,0.0
+VIR,70,20840.035316668702,0.0,0.0
+VIR,80,20867.315514511978,0.0,0.0
+VIR,90,3991.5574166195915,0.0,0.0
+VIR,100,87.31194997195799,0.0,0.0
+YEM,10,18636866.689441126,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,20,16979640.476759214,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,30,11070985.978174938,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,40,11694039.916015195,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,50,10947712.605757227,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,60,9454591.783204444,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,70,6486029.904112119,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,80,6219570.566722347,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,90,3857557.9661607565,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+YEM,100,2412399.6490581366,Low Income Developing Countries,"Middle East, North Africa, Afghanistan, and Pakistan"
+ZMB,10,9864197.448365437,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,20,7408942.985601832,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,30,5160333.140699756,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,40,5752603.804259586,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,50,3317318.8703214712,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,60,4408923.948287651,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,70,4805353.951383172,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,80,3432909.0803027204,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,90,2951192.873593994,Low Income Developing Countries,Sub-Sahara Africa
+ZMB,100,3031130.8064388093,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,10,7907138.275176888,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,20,4827096.056728212,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,30,3905244.3514328413,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,40,4038133.189446701,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,50,4037843.4451449444,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,60,3853249.361666652,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,70,2893937.5709053366,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,80,3747882.257831048,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,90,2135378.5696835443,Low Income Developing Countries,Sub-Sahara Africa
+ZWE,100,2021632.5926947892,Low Income Developing Countries,Sub-Sahara Africa
