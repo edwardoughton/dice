@@ -193,7 +193,7 @@ def generate_workbook():
     context = wb.create_sheet("Regional_Costs", (45-1))
     add_regional_group_costs(context, estimates)
 
-    estimates.state = 'hidden'
+    estimates.sheet_state = 'hidden'
     population.sheet_state  = 'hidden'
     area.sheet_state = 'hidden'
     pop_density.sheet_state = 'hidden'
@@ -301,7 +301,7 @@ def add_readme(ws):
     """
     ws.sheet_view.showGridLines = False
     ws.sheet_properties.tabColor = "004C97"
-    set_cell_color(ws, 'A1:O6', "004C97")
+    set_cell_color(ws, 'A1:Q6', "004C97")
     ws = set_font(ws, 'A1:AZ1000', 'Segoe UI')
 
     path = os.path.join(BASE_PATH, '..', 'images', 'imf_logo.png')
@@ -311,10 +311,30 @@ def add_readme(ws):
     img.anchor = 'A1'
     ws.add_image(img)
 
-    ws.merge_cells('A3:O4')
-    ws['A3'] = "Read Me & FAQ"
+    ws.merge_cells('A3:Q4')
+    ws['A3'] = "Read Me"
     ws['A3'].font = Font(size=20, color='FFFFFF')
     ws['A3'].alignment = Alignment(horizontal='center')
+
+    ws['B9'] = 'Overview'
+    ws['B10'] = '- This tool provides investment analytics for achieving universal mobile broadband (SDG Target 9c).'
+    ws['B11'] = '- DICE complements the IMF’s other SDG infrastructure costing tools, covering roads, electricity, and water and sanitation.'
+
+    ws['B13'] = 'Approach'
+    ws['B14'] = '- Comparative country-specific investment needs can be estimated to achieve universal broadband connectivity using 4G.'
+    ws['B15'] = '- The focus is on wireless cellular connectivity as this is one of the cheapest ways to provide wide-area broadband services affordably.'
+    ws['B16'] = '- The level of universal broadband can be specified by the DICE user, based on either a minimum speed or monthly data consumption.'
+    ws['B17'] = '- DICE estimates account for demographic forecast trends, population density, and economic characteristics.'
+
+    ws['B19'] = 'The DICE Method'
+    path = os.path.join(BASE_PATH, '..', 'images', 'method.png')
+    img = Image(path)
+    img.anchor = 'B20'
+    ws.add_image(img)
+
+    ws['B9'].font = Font(bold=True, name='Segoe UI')
+    ws['B13'].font = Font(bold=True, name='Segoe UI')
+    ws['B19'].font = Font(bold=True, name='Segoe UI')
 
     return ws
 
@@ -423,6 +443,27 @@ def add_settings(ws):
     set_border(ws, 'B6:C11', "thin", "000000")
     set_border(ws, 'B13:C19', "thin", "000000")
     set_border(ws, 'B21:C26', "thin", "000000")
+
+    yellow_fill = PatternFill(start_color='FFFF00',end_color='FFFF00',fill_type='solid')
+    ws['C8'].fill = yellow_fill
+    ws['C9'].fill = yellow_fill
+    ws['C10'].fill = yellow_fill
+    ws['C11'].fill = yellow_fill
+
+    ws['C15'].fill = yellow_fill
+    ws['C16'].fill = yellow_fill
+    ws['C17'].fill = yellow_fill
+    ws['C18'].fill = yellow_fill
+    ws['C19'].fill = yellow_fill
+
+    ws['C23'].fill = yellow_fill
+    ws['C24'].fill = yellow_fill
+    ws['C25'].fill = yellow_fill
+    ws['C26'].fill = yellow_fill
+
+    ws.merge_cells('B28:C28')
+    ws['B28'] = 'Yellow cells are capable of user-defined specification.'
+    ws = set_bold(ws, 'B28', 'Segoe UI')
 
     return ws
 
@@ -710,7 +751,6 @@ def add_estimates(ws):
     set_border(ws, 'B6:I11', "thin", "000000")
     set_border(ws, 'B15:I19', "thin", "000000")
     set_border(ws, 'B22:I30', "thin", "000000")
-
 
     return ws
 
