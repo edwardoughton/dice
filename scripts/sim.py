@@ -633,8 +633,8 @@ if __name__ == '__main__':
     }
 
     CONFIDENCE_INTERVALS = [
-        # 5,
-        # 50,
+        5,
+        50,
         95,
     ]
 
@@ -642,7 +642,7 @@ if __name__ == '__main__':
         for n in range(min, max, increment):
             yield n
 
-    INCREMENT_MA = (125,40000,125) #(400, 40400, 1000)
+    INCREMENT_MA = (125, 40000, 125) #(400, 40400, 1000) #1000,125)#
 
     SITE_RADII = {
         'macro': {

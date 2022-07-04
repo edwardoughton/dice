@@ -14,7 +14,7 @@ from openpyxl.drawing.image import Image
 from openpyxl.chart import BarChart, Reference
 from openpyxl.chart.label import DataLabelList
 
-from extract import extract_data
+# from extract import extract_data
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), 'script_config.ini'))
@@ -48,27 +48,27 @@ def generate_workbook():
     estimates = add_estimates(estimates)
 
     population = wb.create_sheet("Pop", (6-1))
-    population, lnth = add_country_data(population, 'population')
+    population, lnth = add_country_data(population, 'population', '0')
 
     cols = ['A','B','C','D','E','F','G','H','I','J','K','L']
     cum_pop = wb.create_sheet("Pop_C", (7-1))
     cum_pop = add_cum_pop(cum_pop, cols)
 
     area = wb.create_sheet("Area", (8-1))
-    area, lnth = add_country_data(area, 'area_km2')
+    area, lnth = add_country_data(area, 'area_km2', '0')
 
     pop_density = wb.create_sheet("P_Density_km2", (9-1))
-    pop_density, lnth = add_country_data(pop_density, 'population_km2')
+    pop_density, lnth = add_country_data(pop_density, 'population_km2', '0')
 
     pop_growth = wb.create_sheet("P_Growth", (10-1))
     pop_growth, lnth2 = add_pop_growth(pop_growth)
 
-    users = wb.create_sheet("Users_km2", (11-1))
-    users = add_users(users, cols, lnth)
+    users = wb.create_sheet("MNO_Users_km2", (11-1))
+    users = add_users(users, cols, lnth, '0.00')
     users.sheet_properties.tabColor = "66ff99"
 
-    data_demand = wb.create_sheet("Data_km2", (12-1))
-    data_demand = add_data_demand(data_demand, cols, lnth)
+    data_demand = wb.create_sheet("MNO_Data_km2", (12-1))
+    data_demand = add_data_demand(data_demand, cols, lnth, '0.00')
     data_demand.sheet_properties.tabColor = "66ff99"
 
     lookups = wb.create_sheet("Lookups", (13-1))
@@ -83,91 +83,95 @@ def generate_workbook():
     towers = add_towers_sheet(towers, cols, lnth)
     towers.sheet_properties.tabColor = "0000ff"
 
-    towers_4G = wb.create_sheet("Towers_4G", (16-1))
+    towers_km2 = wb.create_sheet("Towers_km2", (16-1))
+    towers_km2 = add_towers_km2_sheet(towers_km2, cols, lnth)
+    towers_km2.sheet_properties.tabColor = "0000ff"
+
+    towers_4G = wb.create_sheet("Towers_4G", (17-1))
     towers_4G = add_towers_4G_sheet(towers_4G, cols, lnth)
     towers_4G.sheet_properties.tabColor = "0000ff"
 
-    towers_4G_km2 = wb.create_sheet("Towers_4G_km2", (17-1))
+    towers_4G_km2 = wb.create_sheet("Towers_4G_km2", (18-1))
     towers_4G_km2 = add_towers_4G_km2_sheet(towers_4G_km2, cols, lnth)
     towers_4G_km2.sheet_properties.tabColor = "0000ff"
 
-    towers_mno = wb.create_sheet("Towers_MNO", (18-1))
+    towers_mno = wb.create_sheet("Towers_MNO", (19-1))
     towers_mno = add_towers_mno_sheet(towers_mno, cols, lnth)
     towers_mno.sheet_properties.tabColor = "0000ff"
 
-    towers_4G_mno = wb.create_sheet("Towers_4G_MNO", (19-1))
+    towers_4G_mno = wb.create_sheet("Towers_4G_MNO", (20-1))
     towers_4G_mno = add_towers_4G_mno_sheet(towers_4G_mno, cols, lnth)
     towers_4G_mno.sheet_properties.tabColor = "0000ff"
 
-    towers_non_4G_mno = wb.create_sheet("Towers_non_4G_MNO", (20-1))
+    towers_non_4G_mno = wb.create_sheet("Towers_non_4G_MNO", (21-1))
     towers_non_4G_mno = add_towers_non_4G_mno_sheet(towers_non_4G_mno, cols, lnth)
     towers_non_4G_mno.sheet_properties.tabColor = "0000ff"
 
-    capacity = wb.create_sheet("Capacity_km2_MNO", (21-1))
+    capacity = wb.create_sheet("Capacity_km2_MNO", (22-1))
     capacity = add_capacity_sheet(capacity, cols, lnth)
     capacity.sheet_properties.tabColor = "0000ff"
 
-    sites = wb.create_sheet("Total_Sites_MNO", (22-1))
+    sites = wb.create_sheet("Total_Sites_MNO", (23-1))
     sites = add_sites_sheet(sites, cols, lnth)
     sites.sheet_properties.tabColor = "0000ff"
 
-    site_users = wb.create_sheet("Site_Users", (23-1))
+    site_users = wb.create_sheet("Site_Users", (24-1))
     site_users = add_site_users_sheet(site_users, cols, lnth)
     site_users.sheet_properties.tabColor = "0000ff"
 
-    sites_km2 = wb.create_sheet("Total_Sites_km2", (24-1))
+    sites_km2 = wb.create_sheet("Total_Sites_km2", (25-1))
     sites_km2 = add_sites_km2_sheet(sites_km2, cols, lnth)
     sites_km2.sheet_properties.tabColor = "0000ff"
 
-    new = wb.create_sheet("New_4G_Sites", (25-1))
+    new = wb.create_sheet("New_4G_Sites", (26-1))
     new = add_new_sites_sheet(new, cols, lnth)
     new.sheet_properties.tabColor = "0000ff"
 
-    upgrades = wb.create_sheet("Upgrades", (26-1))
+    upgrades = wb.create_sheet("Upgrades", (27-1))
     upgrades = add_upgrades(upgrades, cols, lnth)
     upgrades.sheet_properties.tabColor = "0000ff"
 
-    new_builds = wb.create_sheet("New_Builds", (27-1))
+    new_builds = wb.create_sheet("New_Builds", (28-1))
     new_builds = add_new_builds(new_builds, cols, lnth)
     new_builds.sheet_properties.tabColor = "0000ff"
 
-    site_costs = wb.create_sheet("RAN_Capex", (28-1))
+    site_costs = wb.create_sheet("RAN_Capex", (29-1))
     site_costs = add_site_costs(site_costs, cols, lnth)
 
-    bh_costs = wb.create_sheet("BH_Capex", (29-1))
+    bh_costs = wb.create_sheet("BH_Capex", (30-1))
     bh_costs = add_bh_costs(bh_costs, cols, lnth)
 
-    tower_costs = wb.create_sheet("Tower_Capex", (30-1))
+    tower_costs = wb.create_sheet("Tower_Capex", (31-1))
     tower_costs = add_tower_costs(tower_costs, cols, lnth)
 
-    labor_costs = wb.create_sheet("Labor_Capex", (31-1))
+    labor_costs = wb.create_sheet("Labor_Capex", (32-1))
     labor_costs = add_labor_costs(labor_costs, cols, lnth)
 
-    power_cost = wb.create_sheet("Power_Capex", (32-1))
+    power_cost = wb.create_sheet("Power_Capex", (33-1))
     power_cost = add_power_costs(power_cost, cols, lnth)
 
-    site_opex = wb.create_sheet("RAN_Opex", (33-1))
+    site_opex = wb.create_sheet("RAN_Opex", (34-1))
     site_opex = add_site_opex(site_opex, cols, lnth)
 
-    bh_opex = wb.create_sheet("BH_Opex", (34-1))
+    bh_opex = wb.create_sheet("BH_Opex", (35-1))
     bh_opex = add_bh_opex(bh_opex, cols, lnth)
 
-    tower_opex = wb.create_sheet("Tower_Opex", (35-1))
+    tower_opex = wb.create_sheet("Tower_Opex", (36-1))
     tower_opex = add_tower_opex(tower_opex, cols, lnth)
 
-    power_opex = wb.create_sheet("Power_Opex", (36-1))
+    power_opex = wb.create_sheet("Power_Opex", (37-1))
     power_opex = add_power_opex(power_opex, cols, lnth)
 
-    mno_cost = wb.create_sheet("MNO_Costs", (37-1))
+    mno_cost = wb.create_sheet("MNO_Costs", (38-1))
     mno_cost = add_mno_costs(mno_cost, cols, lnth)
 
-    total_cost = wb.create_sheet("Total_Costs", (38-1))
+    total_cost = wb.create_sheet("Total_Costs", (39-1))
     total_cost = add_total_costs(total_cost, cols, lnth)
 
-    gdp = wb.create_sheet("GDP", (39-1))
+    gdp = wb.create_sheet("GDP", (40-1))
     gdp = add_gdp_sheet(gdp)
 
-    options = wb.create_sheet("Options", (40-1))
+    options = wb.create_sheet("Options", (41-1))
     options = add_options(options)
 
     # ################
@@ -177,20 +181,30 @@ def generate_workbook():
 
     context_data = wb.create_sheet("Context_Data", (41-1))
     add_context_data(context_data, population, area, pop_density,
-        pop_growth, users, data_demand)
+        pop_growth, users, data_demand, towers_km2, towers_4G_km2,
+        upgrades, new_builds)
+
+    transpose = wb.create_sheet("Transpose", (42-1))
+    add_transpose_sheet(transpose)
 
     estimates = relocate_estimates_data(estimates)
 
-    context = wb.create_sheet("Country_Context", (42-1))
+    context = wb.create_sheet("Country_Context", (43-1))
     add_country_context(context, context_data)
 
-    context = wb.create_sheet("Country_Costs", (43-1))
+    context = wb.create_sheet("Country_Demand", (44-1))
+    add_country_demand(context, context_data)
+
+    context = wb.create_sheet("Country_Supply", (45-1))
+    add_country_supply(context, context_data)
+
+    context = wb.create_sheet("Country_Costs", (46-1))
     add_country_costs(context, estimates)
 
-    context = wb.create_sheet("Income_Group_Costs", (44-1))
+    context = wb.create_sheet("Income_Group_Costs", (47-1))
     add_income_group_costs(context, estimates)
 
-    context = wb.create_sheet("Regional_Costs", (45-1))
+    context = wb.create_sheet("Regional_Costs", (48-1))
     add_regional_group_costs(context, estimates)
 
     estimates.sheet_state = 'hidden'
@@ -204,6 +218,7 @@ def generate_workbook():
     lookups.sheet_state = 'hidden'
     coverage.sheet_state = 'hidden'
     towers.sheet_state = 'hidden'
+    towers_km2.sheet_state = 'hidden'
     towers_4G.sheet_state = 'hidden'
     towers_4G_km2.sheet_state = 'hidden'
     towers_mno.sheet_state = 'hidden'
@@ -226,10 +241,11 @@ def generate_workbook():
     tower_opex.sheet_state = 'hidden'
     power_opex.sheet_state = 'hidden'
     mno_cost.sheet_state = 'hidden'
-    total_cost.sheet_state = 'hidden'
+    # total_cost.sheet_state = 'hidden'
     gdp.sheet_state = 'hidden'
     options.sheet_state = 'hidden'
     context_data.sheet_state = 'hidden'
+    transpose.sheet_state = 'hidden'
 
     wb.save('Oughton et al. (2022) DICE.xlsx')
 
@@ -505,29 +521,29 @@ def add_country_selection(ws):
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
     data_val.add(ws["B8"])
-    ws['B8'] = "Afghanistan"
-    ws['C8'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B8, Options!A2:A1611)), \"\")"
+    ws['B8'] = "Bolivia (Plurinational State of)"
+    ws['C8'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B8, Options!A2:A1611, 0)), \"\")"
 
     # ### Country 2
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
     data_val.add(ws["B9"])
-    ws['B9'] = "Bhutan"
-    ws['C9'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B9, Options!A2:A1611)), \"\")"
+    ws['B9'] = "Colombia"
+    ws['C9'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B9, Options!A2:A1611, 0)), \"\")"
 
     ### Country 3
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
     data_val.add(ws["B10"])
-    ws['B10'] = "Bangladesh"
-    ws['C10'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B10, Options!A2:A1611)), \"\")"
+    ws['B10'] = "Ecuador"
+    ws['C10'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B10, Options!A2:A1611, 0)), \"\")"
 
     ### Country 4
     data_val = DataValidation(type="list", formula1='=Options!A2:A251')
     ws.add_data_validation(data_val)
     data_val.add(ws["B11"])
-    ws['B11'] = "India"
-    ws['C11'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B11, Options!A2:A1611)), \"\")"
+    ws['B11'] = "Peru"
+    ws['C11'] = "=IFERROR(INDEX(Options!B2:B1611,MATCH(B11, Options!A2:A1611, 0)), \"\")"
 
     ws.merge_cells('B13:C13')
     ws.merge_cells('B14:C14')
@@ -576,41 +592,41 @@ def add_estimates(ws):
     # ### Country 1
     ws['B8'] = "=IFERROR(Countries!B8, \"\")"
     ws['C8'] = "=IFERROR(Countries!C8, \"\")"
-    ws['D8'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C8, Total_Costs!A2:A1611))/1e9, \"\")"
-    ws['E8'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C8, GDP!A2:A1611)), \"\")"
-    ws['F8'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C8, GDP!A2:A1611)), )"
+    ws['D8'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C8, Total_Costs!A2:A1611,0))/1e9, \"\")"
+    ws['E8'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C8, GDP!A2:A1611,0)), \"\")"
+    ws['F8'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C8, GDP!A2:A1611,0)), )"
     ws['G8'] = "=IF(F8=0,D8/Settings!C10,(D8*(1-(1+F8)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F8)/(1-Settings!C11))^(Settings!C10+1))))"
-    ws['H8'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C8, GDP!A2:A1611)), \"\")"
+    ws['H8'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C8, GDP!A2:A1611,0)), \"\")"
     ws['I8'] = "=IFERROR(G8/H8, \"\")"
 
     # ### Country 2
     ws['B9'] = "=IFERROR(Countries!B9, \"\")"
     ws['C9'] = "=IFERROR(Countries!C9, \"\")"
-    ws['D9'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C9, Total_Costs!A2:A1611))/1e9, \"\")"
-    ws['E9'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C9, GDP!A2:A1611)), \"\")"
-    ws['F9'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C9, GDP!A2:A1611)), )"
+    ws['D9'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C9, Total_Costs!A2:A1611,0))/1e9, \"\")"
+    ws['E9'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C9, GDP!A2:A1611,0)), \"\")"
+    ws['F9'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C9, GDP!A2:A1611,0)), )"
     ws['G9'] = "=IF(F8=0,D9/Settings!C10,(D9*(1-(1+F9)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F9)/(1-Settings!C11))^(Settings!C10+1))))"
-    ws['H9'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C9, GDP!A2:A1611)), \"\")"
+    ws['H9'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C9, GDP!A2:A1611,0)), \"\")"
     ws['I9'] = "=IFERROR(G9/H9, \"\")"
 
     # ### Country 3
     ws['B10'] = "=IFERROR(Countries!B10, \"\")"
     ws['C10'] = "=IFERROR(Countries!C10, \"\")"
-    ws['D10'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C10, Total_Costs!A2:A1611))/1e9, \"\")"
-    ws['E10'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C10, GDP!A2:A1611)), \"\")"
-    ws['F10'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C10, GDP!A2:A1611)), )"
+    ws['D10'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C10, Total_Costs!A2:A1611,0))/1e9, \"\")"
+    ws['E10'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C10, GDP!A2:A1611,0)), \"\")"
+    ws['F10'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C10, GDP!A2:A1611,0)), )"
     ws['G10'] = "=IF(F8=0,D10/Settings!C10,(D10*(1-(1+F10)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F10)/(1-Settings!C11))^(Settings!C10+1))))"
-    ws['H10'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C10, GDP!A2:A1611)), \"\")"
+    ws['H10'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C10, GDP!A2:A1611,0)), \"\")"
     ws['I10'] = "=IFERROR(G10/H10, \"\")"
 
     # ### Country 4
     ws['B11'] = "=IFERROR(Countries!B11, \"\")"
     ws['C11'] = "=IFERROR(Countries!C11, \"\")"
-    ws['D11'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C11, Total_Costs!A2:A1611))/1e9, \"\")"
-    ws['E11'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C11, GDP!A2:A1611)), \"\")"
-    ws['F11'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C11, GDP!A2:A1611)), )"
+    ws['D11'] = "=IFERROR(INDEX(Total_Costs!M2:M1611,MATCH(C11, Total_Costs!A2:A1611,0))/1e9, \"\")"
+    ws['E11'] = "=IFERROR(INDEX(GDP!L2:L1611,MATCH(C11, GDP!A2:A1611,0)), \"\")"
+    ws['F11'] = "=IFERROR(INDEX(GDP!M2:M1611,MATCH(C11, GDP!A2:A1611,0)), )"
     ws['G11'] = "=IF(F8=0,D11/Settings!C10,(D11*(1-(1+F11)/(1-Settings!C11)))/((1-Settings!C11)^Settings!C10*(1-((1+F11)/(1-Settings!C11))^(Settings!C10+1))))"
-    ws['H11'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C11, GDP!A2:A1611)), \"\")"
+    ws['H11'] = "=IFERROR(INDEX(GDP!C2:C1611,MATCH(C11, GDP!A2:A1611,0)), \"\")"
     ws['I11'] = "=IFERROR(G11/H11, \"\")"
 
     # ##Set column width
@@ -912,6 +928,17 @@ def set_bold(ws, cell_id, font):
     return ws
 
 
+def set_decimal(ws, cell_range, decimal):
+    """
+
+    """
+    for row in ws[cell_range]:
+        for cell in row:
+            cell.number_format = str(decimal)
+
+    return ws
+
+
 def center_text(ws, cell_range):
     """
 
@@ -997,7 +1024,7 @@ def add_options(ws):
     return ws
 
 
-def add_country_data(ws, metric):
+def add_country_data(ws, metric, decimal):
     """
     Add the country data sheets.
 
@@ -1012,7 +1039,7 @@ def add_country_data(ws, metric):
         'GID_0': 'ISO3',
         }, axis='columns')
 
-    lnth = len(data)+2
+    lnth = len(data) + 2
 
     for r in dataframe_to_rows(data, index=False, header=True):
         ws.append(r)
@@ -1049,6 +1076,8 @@ def add_country_data(ws, metric):
         set_border(ws, 'M1:M{}'.format(len(data)+1), "thin", "000000")
         ws.column_dimensions['M'].width = 20
         set_border(ws, 'A1:O{}'.format(len(data)+1), "thin", "000000")
+
+    ws = set_decimal(ws, 'C1:M{}'.format(len(data)+1), decimal)
 
     return ws, lnth
 
@@ -1130,8 +1159,8 @@ def add_pop_growth(ws):
     return ws, lnth
 
 
-def add_context_data(ws, population, area, pop_density,
-        pop_growth, users, data_demand):
+def add_context_data(ws, population, area, pop_density, pop_growth,
+    users, data_demand, towers_km2, towers_4G_km2, upgrades, new_builds):
 
     cols = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
     for col in cols:
@@ -1192,15 +1221,193 @@ def add_context_data(ws, population, area, pop_density,
                 if col not in ['A','B']:
                     ws[new_cell] = "=INDEX(P_Growth!{}2:{}1611,MATCH(B{}, P_Growth!A2:A1611,FALSE))".format(col, col, i)
 
-    ws['A31'] = "=TRANSPOSE(A1:L5)"
-    ws['A44'] = "=TRANSPOSE(A7:L11)"
-    ws['A57'] = "=TRANSPOSE(A13:L17)"
-    ws['A70'] = "=TRANSPOSE(A19:L25)"
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 24)
+                ws[new_cell] = '=MNO_Users_km2!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 24)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(MNO_Users_km2!{}2:{}1611,MATCH(B{}, MNO_Users_km2!A2:A1611,FALSE))".format(col, col, i)
 
-    ws.formula_attributes['A31'] = {'t': 'array', 'ref': "A31:E42"}
-    ws.formula_attributes['A44'] = {'t': 'array', 'ref': "A44:E55"}
-    ws.formula_attributes['A57'] = {'t': 'array', 'ref': "A57:E68"}
-    ws.formula_attributes['A70'] = {'t': 'array', 'ref': "A70:E81"}
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 30)
+                ws[new_cell] = '=MNO_Data_km2!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 30)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(MNO_Data_km2!{}2:{}1611,MATCH(B{}, MNO_Data_km2!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 36)
+                ws[new_cell] = '=towers_km2!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 36)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(towers_km2!{}2:{}1611,MATCH(B{}, towers_km2!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 42)
+                ws[new_cell] = '=towers_4G_km2!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 42)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(towers_4G_km2!{}2:{}1611,MATCH(B{}, towers_4G_km2!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 48)
+                ws[new_cell] = '=Capacity_km2_MNO!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 48)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(Capacity_km2_MNO!{}2:{}1611,MATCH(B{}, Capacity_km2_MNO!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 54)
+                ws[new_cell] = '=Total_Sites_km2!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 54)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(Total_Sites_km2!{}2:{}1611,MATCH(B{}, Total_Sites_km2!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 60)
+                ws[new_cell] = '=New_Builds!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 60)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "={}{}/INDEX(Area!C2:C1611,MATCH(B{}, Area!A2:A1611,FALSE))".format(col, i+66, i+66)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 66)
+                ws[new_cell] = '=New_Builds!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 66)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(New_Builds!{}2:{}1611,MATCH(B{}, New_Builds!A2:A1611,FALSE))".format(col, col, i)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 72)
+                ws[new_cell] = '=Upgrades!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 72)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "={}{}/INDEX(Area!C2:C1611,MATCH(B{}, Area!A2:A1611,FALSE))".format(col, i+78, i+78)
+
+    for i in range(1,5+1):
+        for col in cols:
+            if i == 1:
+                old_cell = '{}{}'.format(col, i)
+                new_cell = '{}{}'.format(col, i + 78)
+                ws[new_cell] = '=Upgrades!{}'.format(old_cell)
+            else:
+                new_cell = '{}{}'.format(col, i + 78)
+                if col == 'B':
+                    ws[new_cell] = '=Countries!C{}'.format(i+6)
+                if col == 'A':
+                    ws[new_cell] = '=Countries!B{}'.format(i+6)
+                if col not in ['A','B']:
+                    ws[new_cell] = "=INDEX(Upgrades!{}2:{}1611,MATCH(B{}, Upgrades!A2:A1611,FALSE))".format(col, col, i)
+
+    return ws
+
+
+def add_transpose_sheet(ws):
+    """
+    Add transpose sheet.
+
+    """
+    ws['A1'] = "=TRANSPOSE(Context_Data!A1:L6)"
+    ws['A14'] = "=TRANSPOSE(Context_Data!A7:L11)"
+    ws['A27'] = "=TRANSPOSE(Context_Data!A13:L17)"
+    ws['A40'] = "=TRANSPOSE(Context_Data!A19:L23)"
+    ws['A53'] = "=TRANSPOSE(Context_Data!A25:L29)"
+    ws['A66'] = "=TRANSPOSE(Context_Data!A31:L35)"
+    ws['A79'] = "=TRANSPOSE(Context_Data!A37:L41)"
+    ws['A92'] = "=TRANSPOSE(Context_Data!A43:L47)"
+    ws['A105'] = "=TRANSPOSE(Context_Data!A49:L53)"
+    ws['A118'] = "=TRANSPOSE(Context_Data!A55:L59)"
+    ws['A131'] = "=TRANSPOSE(Context_Data!A61:L65)"
+    ws['A144'] = "=TRANSPOSE(Context_Data!A67:L71)"
+    ws['A157'] = "=TRANSPOSE(Context_Data!A73:L77)"
+    ws['A170'] = "=TRANSPOSE(Context_Data!A79:L83)"
+
+    ws.formula_attributes['A1'] = {'t': 'array', 'ref': "A1:E12"}
+    ws.formula_attributes['A14'] = {'t': 'array', 'ref': "A14:E25"}
+    ws.formula_attributes['A27'] = {'t': 'array', 'ref': "A27:E38"}
+    ws.formula_attributes['A40'] = {'t': 'array', 'ref': "A40:E51"}
+    ws.formula_attributes['A53'] = {'t': 'array', 'ref': "A53:E64"}
+    ws.formula_attributes['A66'] = {'t': 'array', 'ref': "A66:E77"}
+    ws.formula_attributes['A79'] = {'t': 'array', 'ref': "A79:E90"}
+    ws.formula_attributes['A92'] = {'t': 'array', 'ref': "A92:E103"}
+    ws.formula_attributes['A105'] = {'t': 'array', 'ref': "A105:E116"}
+    ws.formula_attributes['A118'] = {'t': 'array', 'ref': "A118:E129"}
+    ws.formula_attributes['A131'] = {'t': 'array', 'ref': "A131:E142"}
+    ws.formula_attributes['A144'] = {'t': 'array', 'ref': "A144:E155"}
+    ws.formula_attributes['A157'] = {'t': 'array', 'ref': "A157:E168"}
+    ws.formula_attributes['A170'] = {'t': 'array', 'ref': "A170:E181"}
 
     return ws
 
@@ -1218,10 +1425,10 @@ def add_country_context(ws, data_sheet):
     set_cell_color(ws, 'A1:AZ1', "004C97")
     set_cell_color(ws, 'A2:AZ2', "C00000")
 
-    ws = decile_bar_chart(ws, "Context_Data!$B$32:$E$42", "Context_Data!$A$33:$A$42", "Population by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Population (Millions)', "B4")
-    ws = decile_bar_chart(ws, "Context_Data!$B$45:$E$55", "Context_Data!$A$46:$A$55", "Area by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Area (Km^2)', "L4")
-    ws = decile_bar_chart(ws, "Context_Data!$B$58:$E$68", "Context_Data!$A$59:$A$68", "Population Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Population Density (Km^2)', "B20")
-    ws = decile_bar_chart(ws, "Context_Data!$B$71:$E$81", "Context_Data!$A$72:$A$81", "Population Growth Forecast", 'Year','Growth Rate (%)', "L20")
+    ws = decile_bar_chart(ws, "Transpose!$B$2:$E$12", "Transpose!$A$3:$A$12", "Population by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Population (Millions)', "B4")
+    ws = decile_bar_chart(ws, "Transpose!$B$15:$E$25", "Transpose!$A$16:$A$25", "Area by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Area (Km^2)', "L4")
+    ws = decile_bar_chart(ws, "Transpose!$B$28:$E$38", "Transpose!$A$29:$A$38", "Population Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Population Density (Km^2)', "B20")
+    ws = decile_bar_chart(ws, "Transpose!$B$41:$E$51", "Transpose!$A$42:$A$51", "Population Growth Forecast", 'Year','Growth Rate (%)', "L20")
 
     return ws
 
@@ -1241,6 +1448,53 @@ def decile_bar_chart(ws, data, categories, title, x_axis, y_axis, loc):
     # chart1.dataLabels = DataLabelList()
     # chart1.dataLabels.showVal = True
     ws.add_chart(chart1, loc)
+
+    return ws
+
+
+def add_country_demand(ws, data_sheet):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "92D050"
+
+    ##Color white
+    ws.sheet_view.showGridLines = False
+
+    #Set blue and red border strips
+    set_cell_color(ws, 'A1:AZ1', "004C97")
+    set_cell_color(ws, 'A2:AZ2', "C00000")
+
+    ws = decile_bar_chart(ws, "Transpose!$B$54:$E$64", "Transpose!$A$55:$A$64", "Active User Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Active Users (Km^2)', "B4")
+    ws = decile_bar_chart(ws, "Transpose!$B$67:$E$77", "Transpose!$A$68:$A$77", "Traffic Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Traffic Density (Mbps Km^2)', "L4")
+    # ws = decile_bar_chart(ws, "Context_Data!$B$58:$E$68", "Context_Data!$A$59:$A$68", "Population Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Population Density (Km^2)', "B20")
+    # ws = decile_bar_chart(ws, "Context_Data!$B$71:$E$81", "Context_Data!$A$72:$A$81", "Population Growth Forecast", 'Year','Growth Rate (%)', "L20")
+
+    return ws
+
+
+def add_country_supply(ws, data_sheet):
+    """
+
+    """
+    ws.sheet_properties.tabColor = "92D050"
+
+    ##Color white
+    ws.sheet_view.showGridLines = False
+
+    #Set blue and red border strips
+    set_cell_color(ws, 'A1:AZ1', "004C97")
+    set_cell_color(ws, 'A2:AZ2', "C00000")
+
+    ws = decile_bar_chart(ws, "Transpose!$B$80:$E$90", "Transpose!$A$81:$A$90", "Existing Site Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Site (Km^2)', "B4")
+    ws = decile_bar_chart(ws, "Transpose!$B$93:$E$103", "Transpose!$A$94:$A$103", "Existing 4G Site Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', '4G Sites (Mbps Km^2)', "L4")
+    ws = decile_bar_chart(ws, "Transpose!$B$106:$E$116", "Transpose!$A$107:$A$116", "Existing Traffic Capacity Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Traffic Capacity (Mbps Km^2)', "B20")
+    ws = decile_bar_chart(ws, "Transpose!$B$119:$E$129", "Transpose!$A$120:$A$129", "Required Total Site Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)','Site (Km^2)', "L20")
+
+    ws = decile_bar_chart(ws, "Transpose!$B$132:$E$142", "Transpose!$A$133:$A$142", "New Build Site Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'New Build Sites (Km^2)', "B36")
+    ws = decile_bar_chart(ws, "Transpose!$B$145:$E$155", "Transpose!$A$146:$A$155", "Total New Build Sites by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)','New Build Sites', "L36")
+    ws = decile_bar_chart(ws, "Transpose!$B$158:$E$168", "Transpose!$A$159:$A$168", "Upgraded Site Density by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)', 'Upgraded Sites (Km^2)', "B52")
+    ws = decile_bar_chart(ws, "Transpose!$B$171:$E$181", "Transpose!$A$172:$A$181", "Total Upgraded Sites by Density Decile", 'Population Density Deciles\n(10 represents the first 10 percent of the densest statistical areas)','Upgraded Sites', "L52")
 
     return ws
 
@@ -1326,7 +1580,7 @@ def bar_chart(ws, data, categories, title, y_axis, loc):
     return ws
 
 
-def add_users(ws, cols, lnth):
+def add_users(ws, cols, lnth, decimal):
     """
     Calculate the total number of users.
 
@@ -1350,33 +1604,35 @@ def add_users(ws, cols, lnth):
 
     set_border(ws, 'A1:L{}'.format(lnth-1), "thin", "000000")
     ws.column_dimensions['B'].width = 30
+    ws = set_decimal(ws, 'C1:M{}'.format(lnth), decimal)
 
     return ws
 
 
-def add_data_demand(ws, cols, lnth):
+def add_data_demand(ws, cols, lnth, decimal):
     """
     Calculate the total data demand.
 
     """
     for col in cols:
             cell = "{}1".format(col)
-            ws[cell] = "='Users_km2'!{}".format(cell)
+            ws[cell] = "='MNO_Users_km2'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Users_km2'!{}".format(cell)
+            ws[cell] = "='MNO_Users_km2'!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, lnth): #Decile
             cell = "{}{}".format(col, i)
-            part1 = "=(Users_km2!{}*MAX(Settings!$C$18,".format(cell)
+            part1 = "=(MNO_Users_km2!{}*MAX(Settings!$C$18,".format(cell)
             part2 = "(Settings!$C$19*1024*8*(1/30)*(15/100)*(1/3600))))"
             ws[cell] = part1 + part2
 
     set_border(ws, 'A1:L{}'.format(lnth-1), "thin", "000000")
     ws.column_dimensions['B'].width = 30
+    ws = set_decimal(ws, 'C1:M{}'.format(lnth), decimal)
 
     return ws
 
@@ -1580,12 +1836,12 @@ def add_towers_sheet(ws, cols, lnth):
     """
     for col in cols:
         cell = "{}1".format(col)
-        ws[cell] = "='Data_km2'!{}".format(cell)
+        ws[cell] = "='MNO_Data_km2'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(1, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Data_km2'!{}".format(cell)
+            ws[cell] = "='MNO_Data_km2'!{}".format(cell)
 
     for i in range(2, lnth): #Decile
         cell = "C{}".format(i)
@@ -1661,6 +1917,29 @@ def add_towers_sheet(ws, cols, lnth):
     return ws
 
 
+def add_towers_km2_sheet(ws, cols, lnth):
+    """
+
+    """
+    for col in cols:
+        cell = "{}1".format(col)
+        ws[cell] = "=Towers!{}".format(cell)
+
+    for col in cols[:2]:
+        for i in range(1, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "=Towers!{}".format(cell)
+
+    for col in cols[2:]:
+        for i in range(2, lnth):
+            cell = "{}{}".format(col, i)
+            ws[cell] = "=IFERROR(Towers!{}/Area!{},0)".format(cell,cell)
+
+    set_border(ws, 'A1:L{}'.format(lnth-1), "thin", "000000")
+
+    return ws
+
+
 def add_towers_4G_sheet(ws, cols, lnth):
     """
 
@@ -1702,17 +1981,17 @@ def add_towers_4G_km2_sheet(ws, cols, lnth):
     """
     for col in cols:
         cell = "{}1".format(col)
-        ws[cell] = "=Towers!{}".format(cell)
+        ws[cell] = "=Towers_4G!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(1, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "=Towers!{}".format(cell)
+            ws[cell] = "=Towers_4G!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "=IFERROR(Towers!{}/Area!{},0)".format(cell,cell)
+            ws[cell] = "=IFERROR(Towers_4G!{}/Area!{},0)".format(cell,cell)
 
     set_border(ws, 'A1:L{}'.format(lnth-1), "thin", "000000")
 
@@ -1794,12 +2073,12 @@ def add_capacity_sheet(ws, cols, lnth):
     """
     for col in cols:
             cell = "{}1".format(col)
-            ws[cell] = "='Data_km2'!{}".format(cell)
+            ws[cell] = "='MNO_Data_km2'!{}".format(cell)
 
     for col in cols[:2]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            ws[cell] = "='Data_km2'!{}".format(cell)
+            ws[cell] = "='MNO_Data_km2'!{}".format(cell)
 
     for col in cols[2:]:
         for i in range(2, lnth): #Total_Sites Density
@@ -1830,7 +2109,7 @@ def add_sites_sheet(ws, cols, lnth):
     for col in cols[2:]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            part1 = "=MIN(IF('Lookups'!$H$3:$H$250>'Data_km2'!{}".format(cell)
+            part1 = "=MIN(IF('Lookups'!$H$3:$H$250>'MNO_Data_km2'!{}".format(cell)
             part2 = ",'Lookups'!$E$3:$E$250))*Area!{}".format(cell)
             ws[cell] = part1 + part2
             ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
@@ -1859,7 +2138,7 @@ def add_sites_km2_sheet(ws, cols, lnth):
     for col in cols[2:]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            part1 = "=MIN(IF('Lookups'!$H$3:$H$250>'Data_km2'!{}".format(cell)
+            part1 = "=MIN(IF('Lookups'!$H$3:$H$250>'MNO_Data_km2'!{}".format(cell)
             part2 = ",'Lookups'!$E$3:$E$250))"#*Area!{}".format(cell)
             ws[cell] = part1 + part2
             ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
@@ -1973,7 +2252,7 @@ def add_site_users_sheet(ws, cols, lnth):
     for col in cols[2:]:
         for i in range(2, lnth):
             cell = "{}{}".format(col, i)
-            part1 = "=IFERROR((Users_km2!{}*Area!{})/Total_Sites_MNO!{},0)".format(cell,cell,cell)
+            part1 = "=IFERROR((MNO_Users_km2!{}*Area!{})/Total_Sites_MNO!{},0)".format(cell,cell,cell)
             ws[cell] = part1
             ws.formula_attributes[cell] = {'t': 'array', 'ref': "{}:{}".format(cell, cell)}
 
@@ -2566,6 +2845,6 @@ if __name__ == "__main__":
     generate_workbook()
 
     # try:
-    extract_data()
+    # extract_data()
     # except:
     #     print('Problem extracting results')
