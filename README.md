@@ -1,7 +1,7 @@
 Digital Infrastructure Cost Estimator (DICE)
 ============================================
 
-This repository is a place holder for the `dice` model.
+This repository is the home of the `dice` model.
 
 
 Authors
