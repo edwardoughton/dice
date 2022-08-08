@@ -1,7 +1,10 @@
 """
 Preprocess sites data.
-Ed Oughton
-February 2022
+
+Written by Ed Oughton.
+
+February 2022.
+
 """
 import sys
 import os
@@ -476,13 +479,15 @@ if __name__ == "__main__":
 
         print('-- {}'.format(country['country']))
 
-        # try:
-        run_site_processing(country['ISO_3digit'], country['lowest'])
+        try:
+            run_site_processing(country['ISO_3digit'], country['lowest'])
 
-        # except:
-        #     print('Failed on {}'.format(country['country']))
-        #     failed.append(country['country'])
-        #     continue
-        # print(failed)
+        except:
+            print('Failed on {}'.format(country['country']))
+            failed.append(country['country'])
+            continue
 
     print('--Complete')
+    print('--')
+    print('--Failed on the following:')
+    print(failed)
