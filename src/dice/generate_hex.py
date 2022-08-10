@@ -40,18 +40,6 @@ def convert_point_to_projected_crs(point, original_crs, new_crs):
         Geojson point in desired Coordinate Reference System.
 
     """
-    # project = partial(
-    #     pyproj.transform,
-    #     pyproj.Proj(original_crs),
-    #     pyproj.Proj(new_crs)
-    #     )
-
-    # new_geom = transform(project, Point(point))
-
-    # from pyproj import Transformer
-    # transformer = Transformer.from_crs("epsg:4326", "epsg:3857")
-    # transformer.transform(12, 12)
-
     geom = Point(point)
 
     geo = gpd.GeoDataFrame(geometry=gpd.GeoSeries(geom), crs='epsg:4326')
