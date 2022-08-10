@@ -1,0 +1,43 @@
+"","Category","region","cost"
+"1","ICT Skills/Content","Advanced Economies",1.328985578508
+"2","Policy/Regulation","Advanced Economies",0.190633177245
+"3","Remote Coverage","Advanced Economies",8.38841166804064
+"4","Mobile Infra Opex","Advanced Economies",0.429111318661695
+"5","Metro+Backbone Fiber","Advanced Economies",0.32612245088258
+"6","Mobile Infra Capex","Advanced Economies",0.356714703856608
+"7","ICT Skills/Content","Caucasus and Central Asia",0.407215588058
+"8","Policy/Regulation","Caucasus and Central Asia",0.0584120720575
+"9","Remote Coverage","Caucasus and Central Asia",2.69075140722419
+"10","Mobile Infra Opex","Caucasus and Central Asia",1.62856076538511
+"11","Metro+Backbone Fiber","Caucasus and Central Asia",1.00508738623396
+"12","Mobile Infra Capex","Caucasus and Central Asia",1.35380155654863
+"13","ICT Skills/Content","Emerging and Developing Asia",20.420271466796
+"14","Policy/Regulation","Emerging and Developing Asia",2.929137300565
+"15","Remote Coverage","Emerging and Developing Asia",2.41674433050116
+"16","Mobile Infra Opex","Emerging and Developing Asia",67.547378918886
+"17","Metro+Backbone Fiber","Emerging and Developing Asia",26.6884570528282
+"18","Mobile Infra Capex","Emerging and Developing Asia",56.1512647638567
+"19","ICT Skills/Content","Emerging and Developing Europe",0.890216261444
+"20","Policy/Regulation","Emerging and Developing Europe",0.127694955535
+"21","Remote Coverage","Emerging and Developing Europe",8.46017150923491
+"22","Mobile Infra Opex","Emerging and Developing Europe",1.92092374541532
+"23","Metro+Backbone Fiber","Emerging and Developing Europe",1.36758576218008
+"24","Mobile Infra Capex","Emerging and Developing Europe",1.59683913049418
+"25","ICT Skills/Content","Latin America and the Caribbean",2.23817198888
+"26","Policy/Regulation","Latin America and the Caribbean",0.3210492607
+"27","Remote Coverage","Latin America and the Caribbean",24.1886415548713
+"28","Mobile Infra Opex","Latin America and the Caribbean",9.66228903954733
+"29","Metro+Backbone Fiber","Latin America and the Caribbean",5.31526948361209
+"30","Mobile Infra Capex","Latin America and the Caribbean",8.03213623930621
+"31","ICT Skills/Content","MENA, AFG and PAK",3.986110591104
+"32","Policy/Regulation","MENA, AFG and PAK",0.57177815856
+"33","Remote Coverage","MENA, AFG and PAK",17.9320487512318
+"34","Mobile Infra Opex","MENA, AFG and PAK",21.7361930438076
+"35","Metro+Backbone Fiber","MENA, AFG and PAK",6.78540151456685
+"36","Mobile Infra Capex","MENA, AFG and PAK",18.0690168900083
+"37","ICT Skills/Content","Sub-Saharan Africa",9.417199808896
+"38","Policy/Regulation","Sub-Saharan Africa",1.35082784144
+"39","Remote Coverage","Sub-Saharan Africa",4.46060885490269
+"40","Mobile Infra Opex","Sub-Saharan Africa",29.1910505561806
+"41","Metro+Backbone Fiber","Sub-Saharan Africa",22.0532552929076
+"42","Mobile Infra Capex","Sub-Saharan Africa",24.2661437756681
