@@ -19,71 +19,6 @@ import numpy as np
 from math import pi, sqrt, log10
 
 
-# def path_loss_calculator(frequency, distance, ant_height, ant_type,
-#     building_height, street_width, settlement_type, type_of_sight,
-#     ue_height, above_roof, indoor, seed_value, iterations):
-#     """
-#     Calculate the correct path loss given a range of critera.
-
-#     Parameters
-#     ----------
-#     frequency : float
-#         Frequency band given in GHz.
-#     distance : float
-#         Distance between the transmitter and receiver in km.
-#     ant_height:
-#         Height of the antenna.
-#     ant_type : string
-#         Indicates the type of site antenna (hotspot, micro, macro).
-#     building_height : int
-#         Height of surrounding buildings in meters (m).
-#     street_width : float
-#         Width of street in meters (m).
-#     settlement_type : string
-#         Gives the type of settlement (urban, suburban or rural).
-#     type_of_sight : string
-#         Indicates whether the path is (Non) Line of Sight (LOS or NLOS).
-#     ue_height : float
-#         Height of the User Equipment.
-#     above_roof : int
-#         Indicates if the propagation line is above or below building roofs.
-#         Above = 1, below = 0.
-#     indoor : binary
-#         Indicates if the user is indoor (True) or outdoor (False).
-#     seed_value : int
-#         Dictates repeatable random number generation.
-#     iterations : int
-#         Specifies how many iterations a specific calculation should be run for.
-
-#     Returns
-#     -------
-#     path_loss : float
-#         Path loss in decibels (dB)
-#     model : string
-#         Type of model used for path loss estimation.
-
-#     """
-#     if 0.05 < frequency <= 100:
-
-#         path_loss = etsi_tr_138_901(frequency, distance, ant_height, ant_type,
-#             building_height, street_width, settlement_type, type_of_sight,
-#             ue_height, above_roof, indoor, seed_value, iterations
-#         )
-
-#         path_loss = path_loss + outdoor_to_indoor_path_loss(
-#             frequency, indoor, seed_value
-#         )
-
-#         model = 'etsi_tr_138_901'
-
-#     else:
-
-#         raise ValueError (
-#             "frequency of {} is NOT within correct range".format(frequency)
-#         )
-
-#     return round(path_loss), model
-
 def path_loss_calculator(distance, frequency, simulation_parameters):
     """
     Calculate the free space path loss in decibels.
@@ -112,8 +47,6 @@ def path_loss_calculator(distance, frequency, simulation_parameters):
 
     """
 
-    # frequency_MHz = frequency / 1e6
-    # print(frequency, frequency_MHz)
     path_loss = 20*log10(distance) + 20*log10(frequency) + 32.44
 
     random_variations = generate_log_normal_dist_value(

@@ -105,4 +105,7 @@ venv.bak/
 
 # specific folders
 /data/*
-/vis/*
+/vis/data/*
+/vis/disputed_areas/*
+/vis/percentages/*
+/vis/report_map_map_clearance/*
