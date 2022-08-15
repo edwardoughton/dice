@@ -740,3 +740,558 @@ path = file.path(folder, 'figures', 'gdp_perc_costs.tiff')
 tiff(path, units="in", width=8, height=6, res=300)
 print(gdp_perc_costs)
 dev.off()
+
+######################################
+######################################
+######################################
+####################20/10 GB
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_data_consumption_twenty_and_ten_gig.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Income_Group", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:4]
+data = data[1:6,]
+
+data = data %>% gather(income, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$income = factor(data$income,
+                     levels=c('Low Income Developing Countries',
+                              'Emerging Market Economies',
+                              'Advanced Economies'),
+                     labels=c('Low Income\nDeveloping\nCountries',
+                              'Emerging\nMarket\nEconomies',
+                              'Advanced\nEconomies')
+)
+
+plot1 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
+  geom_bar(stat="identity") + coord_flip() +
+  geom_text(aes(label = round(after_stat(y),0), group = income),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(A) Lower Data Consumption by Income",
+       fill="Cost\nType",
+       subtitle = "EMEs/AEs: 20 GB/Month. LIDCs: 10 GB/Month",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,650)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_data_consumption_twenty_and_ten_gig.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Region", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:8]
+data = data[1:6,]
+
+data = data %>% gather(region, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$region = factor(data$region,
+                     levels=c("Sub-Sahara Africa",
+                              "Middle East, North Africa, Afghanistan, and Pakistan",
+                              "Latin America and the Caribbean",
+                              "Emerging and Developing Europe",
+                              'Emerging and Developing Asia',
+                              'Caucasus and Central Asia',
+                              'Advanced Economies'),
+                     labels=c("Sub-Saharan\nAfrica",
+                              "MENA, AFG\nand PAK",
+                              "Latin America\nand the\nCaribbean",
+                              "Emerging and\nDeveloping\nEurope",
+                              'Emerging and\nDeveloping\nAsia',
+                              'Caucasus and\nCentral\nAsia',
+                              'Advanced\nEconomies')
+)
+
+plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
+  geom_text(aes(label = round(after_stat(y),0), group = region),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  geom_bar(stat="identity")  +   coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(C) Lower Data Consumption by Region",
+       fill="Cost\nType",
+       subtitle = "EMEs/AEs: 20 GB/Month. LIDCs: 10 GB/Month",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,430)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+
+######################################
+####################100/80 GB
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_data_consumption_one_hundred_and_eighty_gig.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Income_Group", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:4]
+data = data[1:6,]
+
+data = data %>% gather(income, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$income = factor(data$income,
+                     levels=c('Low Income Developing Countries',
+                              'Emerging Market Economies',
+                              'Advanced Economies'),
+                     labels=c('Low Income\nDeveloping\nCountries',
+                              'Emerging\nMarket\nEconomies',
+                              'Advanced\nEconomies')
+)
+
+plot3 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
+  geom_bar(stat="identity") + coord_flip() +
+  geom_text(aes(label = round(after_stat(y),0), group = income),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(B) Higher Data Consumption by Income",
+       fill="Cost\nType",
+       subtitle = "EMEs/AEs: 100 GB/Month. LIDCs: 80 GB/Month",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,650)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_data_consumption_one_hundred_and_eighty_gig.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Region", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:8]
+data = data[1:6,]
+
+data = data %>% gather(region, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$region = factor(data$region,
+                     levels=c("Sub-Sahara Africa",
+                              "Middle East, North Africa, Afghanistan, and Pakistan",
+                              "Latin America and the Caribbean",
+                              "Emerging and Developing Europe",
+                              'Emerging and Developing Asia',
+                              'Caucasus and Central Asia',
+                              'Advanced Economies'),
+                     labels=c("Sub-Saharan\nAfrica",
+                              "MENA, AFG\nand PAK",
+                              "Latin America\nand the\nCaribbean",
+                              "Emerging and\nDeveloping\nEurope",
+                              'Emerging and\nDeveloping\nAsia',
+                              'Caucasus and\nCentral\nAsia',
+                              'Advanced\nEconomies')
+)
+
+plot4 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
+  geom_text(aes(label = round(after_stat(y),0), group = region),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  geom_bar(stat="identity")  +   coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(D) Higher Data Consumption by Region",
+       fill="Cost\nType",
+       subtitle = "EMEs/AEs: 100 GB/Month. LIDCs: 80 GB/Month",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,430)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+
+data_consumption_sensitivity.tiff <- ggarrange(plot1, plot3, plot2, plot4,
+                                               ncol = 2, nrow = 2, align = c("hv"),
+                                               common.legend = TRUE, legend='bottom',
+                                               heights=c(.6,1, .6,1))
+
+path = file.path(folder, 'figures', 'data_consumption_sensitivity.tiff')
+tiff(path, units="in", width=9, height=8, res=300)
+print(data_consumption_sensitivity.tiff)
+dev.off()
+
+
+######################################
+######################################
+######################################
+####################Reliability 5%
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_reliability_five_percent.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Income_Group", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:4]
+data = data[1:6,]
+
+data = data %>% gather(income, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$income = factor(data$income,
+                     levels=c('Low Income Developing Countries',
+                              'Emerging Market Economies',
+                              'Advanced Economies'),
+                     labels=c('Low Income\nDeveloping\nCountries',
+                              'Emerging\nMarket\nEconomies',
+                              'Advanced\nEconomies')
+)
+
+plot1 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
+  geom_bar(stat="identity") + coord_flip() +
+  geom_text(aes(label = round(after_stat(y),0), group = income),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(A) Lower QoS Reliability by Income",
+       fill="Cost\nType",
+       subtitle = "Quality of service reduced to 5% reliability",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,190)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_reliability_five_percent.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Region", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:8]
+data = data[1:6,]
+
+data = data %>% gather(region, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$region = factor(data$region,
+                     levels=c("Sub-Sahara Africa",
+                              "Middle East, North Africa, Afghanistan, and Pakistan",
+                              "Latin America and the Caribbean",
+                              "Emerging and Developing Europe",
+                              'Emerging and Developing Asia',
+                              'Caucasus and Central Asia',
+                              'Advanced Economies'),
+                     labels=c("Sub-Saharan\nAfrica",
+                              "MENA, AFG\nand PAK",
+                              "Latin America\nand the\nCaribbean",
+                              "Emerging and\nDeveloping\nEurope",
+                              'Emerging and\nDeveloping\nAsia',
+                              'Caucasus and\nCentral\nAsia',
+                              'Advanced\nEconomies')
+)
+
+plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
+  geom_text(aes(label = round(after_stat(y),0), group = region),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  geom_bar(stat="identity")  +   coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(C) Lower QoS Reliability by Region",
+       fill="Cost\nType",
+       subtitle = "Quality of service reduced to 5% reliability",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,80)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+
+######################################
+####################50%
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_reliability_fifty_percent.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Income_Group", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:4]
+data = data[1:6,]
+
+data = data %>% gather(income, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$income = factor(data$income,
+                     levels=c('Low Income Developing Countries',
+                              'Emerging Market Economies',
+                              'Advanced Economies'),
+                     labels=c('Low Income\nDeveloping\nCountries',
+                              'Emerging\nMarket\nEconomies',
+                              'Advanced\nEconomies')
+)
+
+plot3 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
+  geom_bar(stat="identity") + coord_flip() +
+  geom_text(aes(label = round(after_stat(y),0), group = income),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(B) Lower QoS Reliability by Income",
+       fill="Cost\nType",
+       subtitle = "Quality of service reduced to 50% reliability",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,190)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', 'sensitivity', "dice_reliability_fifty_percent.xlsx")
+data <- read_excel(path, sheet = "Cost_Comp_IMF_Region", col_names = T)
+names(data) <- data[1,]
+data <- data[-1,]
+data = data[, 1:8]
+data = data[1:6,]
+
+data = data %>% gather(region, cost, -Category)
+data$cost <- as.numeric(data$cost)
+
+data$Category = factor(data$Category,
+                       levels=c('Mobile Infra Capex', 'Metro+backbone fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content'),
+                       labels=c('Mobile Infra Capex', 'Metro+Backbone Fiber',
+                                'Mobile Infra Opex','Remote Coverage','Policy/Regulation',
+                                'ICT Skills/Content')
+)
+
+data$region = factor(data$region,
+                     levels=c("Sub-Sahara Africa",
+                              "Middle East, North Africa, Afghanistan, and Pakistan",
+                              "Latin America and the Caribbean",
+                              "Emerging and Developing Europe",
+                              'Emerging and Developing Asia',
+                              'Caucasus and Central Asia',
+                              'Advanced Economies'),
+                     labels=c("Sub-Saharan\nAfrica",
+                              "MENA, AFG\nand PAK",
+                              "Latin America\nand the\nCaribbean",
+                              "Emerging and\nDeveloping\nEurope",
+                              'Emerging and\nDeveloping\nAsia',
+                              'Caucasus and\nCentral\nAsia',
+                              'Advanced\nEconomies')
+)
+
+plot4 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
+  geom_text(aes(label = round(after_stat(y),0), group = region),
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
+  geom_bar(stat="identity")  +   coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 0, hjust=.5)) +
+  labs(title="(D) Lower QoS Reliability by Region",
+       fill="Cost\nType",
+       subtitle = "Quality of service reduced to 50% reliability",
+       x=NULL, y='Investment Cost ($Bn)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,80)) +
+  scale_fill_viridis_d(direction=-1) +
+  guides(fill = guide_legend(reverse=T))
+
+data_consumption_sensitivity.tiff <- ggarrange(plot1, plot3, plot2, plot4,
+                                               ncol = 2, nrow = 2, align = c("hv"),
+                                               common.legend = TRUE, legend='bottom',
+                                               heights=c(.6,1, .6,1))
+
+path = file.path(folder, 'figures', 'reliability_sensitivity.tiff')
+tiff(path, units="in", width=9, height=8, res=300)
+print(data_consumption_sensitivity.tiff)
+dev.off()
+
+######################################
+######################################
+######################################
+###########Validation 
+folder <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+data <- read_excel(path, sheet = "Validation", col_names = T)
+
+colnames(data)[2] <- "ITU"
+colnames(data)[4] <- "DICE"
+
+data$"ITU" <- as.numeric(data$"ITU")
+data$"DICE" <- as.numeric(data$"DICE")
+
+######################################
+###########cost categories 
+
+asset_type = data[1:6,]
+asset_type = select(asset_type, Category, "ITU", "DICE")
+
+asset_type$Category = factor(asset_type$Category,
+                             levels=c('ICT Skills/Content', 'Policy/Regulation',
+                                      'Remote Coverage', 'Mobile Infra Opex','Metro+backbone fiber',
+                                      'Mobile Infra Capex'),
+                             labels=c('ICT Skills/Content', 'Policy/Regulation',
+                                      'Remote Coverage', 'Mobile Infra Opex','Metro+Backbone Fiber',
+                                      'Mobile Infra Capex'
+                             )
+)
+
+asset_type = gather(asset_type, model, value, "ITU":"DICE")
+
+plot1 = ggplot(asset_type, aes(x=Category, y=value, fill=model, group=model)) +
+  geom_text(aes(label = round(after_stat(y),0), group = model), 
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5,
+            position = position_dodge(width = .9)) +
+  geom_bar(stat="identity", position="dodge") + coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 15, hjust=1)) +
+  labs(title="(A) Comparison of DICE Model Baseline to ITU (2019)",
+       fill="Model",
+       subtitle = bquote("Compared based on investment cost categories."),
+       x="",
+       y='Estimated Cost (US$ Billions)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,250)) +
+  scale_fill_viridis_d() 
+
+
+######################################
+###########regions
+
+regions = data[11:16,]
+regions = select(regions, Category, "ITU", "DICE")
+
+regions$Category = factor(regions$Category,
+                          levels=c("SSA",
+                                   "South Asia",
+                                   "MENA",
+                                   'Europe + Central Asia',
+                                   'East Asia + Pacific',
+                                   'Americas'),
+                          labels=c("SSA",
+                                   "South Asia",
+                                   "MENA",
+                                   'Europe + Central Asia',
+                                   'East Asia + Pacific',
+                                   'Americas')
+)
+
+regions = gather(regions, model, value, "ITU":"DICE")
+
+plot2 = ggplot(regions, aes(x=Category, y=value, fill=model, group=model)) +
+  geom_text(aes(label = round(after_stat(y),0), group = model), 
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5,
+            position = position_dodge(width = .9)) +
+  geom_bar(stat="identity", position="dodge") + coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 15, hjust=1)) +
+  labs(title="(B) Comparison of DICE Model Baseline to ITU (2019)",
+       fill="Model",
+       subtitle = bquote("Compared based on ITU geographic regions."),
+       x="",
+       y='Estimated Cost (US$ Billions)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,250)) +
+  scale_fill_viridis_d() 
+
+
+
+######################################
+###########regions
+
+income = data[21:24,]
+income = select(income, Category, "ITU", "DICE")
+
+income$Category = factor(income$Category,
+                         levels=c("High Income",
+                                  "Upper Middle Income",
+                                  "Lower Middle Income",
+                                  'Low Income'),
+                         labels=c("High Income",
+                                  "Upper Middle Income",
+                                  "Lower Middle Income",
+                                  'Low Income')
+)
+
+income = gather(income, model, value, "ITU":"DICE")
+
+plot3 = 
+  ggplot(income, aes(x=Category, y=value, fill=model, group=model)) +
+  geom_text(aes(label = round(after_stat(y),0), group = model), 
+            stat = 'summary', fun = sum, hjust = -.5, size=2.5,
+            position = position_dodge(width = .9)) +
+  geom_bar(stat="identity", position="dodge") + coord_flip() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 15, hjust=1)) +
+  labs(title="(C) Comparison of DICE Model Baseline to ITU (2019)",
+       fill="Model",
+       subtitle = bquote("Compared based on World Bank income groups."),
+       x="",
+       y='Estimated Cost (US$ Billions)') +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,250)) +
+  scale_fill_viridis_d() 
+
+
+panel <- ggarrange(plot1, plot2, plot3,
+                   ncol = 1, nrow = 3, align = c("hv"),
+                   common.legend = TRUE, legend='bottom',
+                   heights=c(1,1,.85))
+
+path = file.path(folder, 'figures', 'validation.tiff')
+tiff(path, units="in", width=8, height=8, res=300)
+print(panel)
+dev.off()
