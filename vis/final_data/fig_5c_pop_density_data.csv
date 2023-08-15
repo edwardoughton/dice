@@ -1,0 +1,1701 @@
+"","ISO3","income_group","region","decile","pop"
+"1","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","1",9469741
+"2","ALB","Emerging Market Economies","Emerging and Developing Europe","1",1326086
+"3","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",18583179
+"4","AGO","Emerging Market Economies","Sub-Sahara Africa","1",22367436
+"5","ARG","Emerging Market Economies","Latin America and the Caribbean","1",24210939
+"6","ARM","Emerging Market Economies","Caucasus and Central Asia","1",998494
+"7","AUS","Advanced Economies","Advanced Economies","1",4486595
+"8","AUT","Advanced Economies","Advanced Economies","1",4361121
+"9","AZE","Emerging Market Economies","Caucasus and Central Asia","1",3362731
+"10","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",624938
+"11","BGD","Low Income Developing Countries","Emerging and Developing Asia","1",17750065
+"12","BRB","Emerging Market Economies","Latin America and the Caribbean","1",82748
+"13","BLR","Emerging Market Economies","Emerging and Developing Europe","1",5369484
+"14","BEL","Advanced Economies","Advanced Economies","1",3472380
+"15","BLZ","Emerging Market Economies","Latin America and the Caribbean","1",129640
+"16","BEN","Low Income Developing Countries","Sub-Sahara Africa","1",3033395
+"17","BTN","Low Income Developing Countries","Emerging and Developing Asia","1",256276
+"18","BOL","Emerging Market Economies","Latin America and the Caribbean","1",6799358
+"19","BIH","Emerging Market Economies","Emerging and Developing Europe","1",515776
+"20","BWA","Emerging Market Economies","Sub-Sahara Africa","1",172465
+"21","BRA","Emerging Market Economies","Latin America and the Caribbean","1",118027198
+"22","BRN","Emerging Market Economies","Emerging and Developing Asia","1",173492
+"23","BGR","Emerging Market Economies","Emerging and Developing Europe","1",3629130
+"24","BFA","Low Income Developing Countries","Sub-Sahara Africa","1",7827690
+"25","BDI","Low Income Developing Countries","Sub-Sahara Africa","1",1146190
+"26","CPV","Emerging Market Economies","Sub-Sahara Africa","1",181703
+"27","KHM","Low Income Developing Countries","Emerging and Developing Asia","1",4225797
+"28","CMR","Low Income Developing Countries","Sub-Sahara Africa","1",9246476
+"29","CAN","Advanced Economies","Advanced Economies","1",24684716
+"30","TCD","Low Income Developing Countries","Sub-Sahara Africa","1",2761039
+"31","CHL","Emerging Market Economies","Latin America and the Caribbean","1",10850575
+"32","CHN","Emerging Market Economies","Emerging and Developing Asia","1",400588832
+"33","COL","Emerging Market Economies","Latin America and the Caribbean","1",36371184
+"34","COD","Low Income Developing Countries","Sub-Sahara Africa","1",17335627
+"35","COG","Low Income Developing Countries","Sub-Sahara Africa","1",1678342
+"36","CRI","Emerging Market Economies","Latin America and the Caribbean","1",742540
+"37","CIV","Low Income Developing Countries","Sub-Sahara Africa","1",8088529
+"38","HRV","Emerging Market Economies","Emerging and Developing Europe","1",2038710
+"39","CYP","Advanced Economies","Advanced Economies","1",50949
+"40","CZE","Advanced Economies","Advanced Economies","1",631322
+"41","DNK","Advanced Economies","Advanced Economies","1",1107002
+"42","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","1",611426
+"43","DMA","Emerging Market Economies","Latin America and the Caribbean","1",21141
+"44","DOM","Emerging Market Economies","Latin America and the Caribbean","1",6145736
+"45","ECU","Emerging Market Economies","Latin America and the Caribbean","1",8699167
+"46","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",10161433
+"47","SLV","Emerging Market Economies","Latin America and the Caribbean","1",2404057
+"48","EST","Advanced Economies","Advanced Economies","1",722164
+"49","SWZ","Emerging Market Economies","Sub-Sahara Africa","1",195040
+"50","ETH","Low Income Developing Countries","Sub-Sahara Africa","1",14878015
+"51","FJI","Emerging Market Economies","Emerging and Developing Asia","1",547700
+"52","FIN","Advanced Economies","Advanced Economies","1",1714496
+"53","FRA","Advanced Economies","Advanced Economies","1",17822290
+"54","GAB","Emerging Market Economies","Sub-Sahara Africa","1",1803923
+"55","GMB","Low Income Developing Countries","Sub-Sahara Africa","1",1199498
+"56","GEO","Emerging Market Economies","Caucasus and Central Asia","1",1827898
+"57","DEU","Advanced Economies","Advanced Economies","1",18187323
+"58","GHA","Low Income Developing Countries","Sub-Sahara Africa","1",12056723
+"59","GRC","Advanced Economies","Advanced Economies","1",5589793
+"60","GRD","Emerging Market Economies","Latin America and the Caribbean","1",32531
+"61","GTM","Emerging Market Economies","Latin America and the Caribbean","1",3063142
+"62","GIN","Low Income Developing Countries","Sub-Sahara Africa","1",3472750
+"63","GUY","Emerging Market Economies","Latin America and the Caribbean","1",235434
+"64","HTI","Low Income Developing Countries","Latin America and the Caribbean","1",4312172
+"65","HND","Low Income Developing Countries","Latin America and the Caribbean","1",4157230
+"66","HKG","Advanced Economies","Advanced Economies","1",1100391
+"67","HUN","Emerging Market Economies","Emerging and Developing Europe","1",3899933
+"68","ISL","Advanced Economies","Advanced Economies","1",270359
+"69","IND","Emerging Market Economies","Emerging and Developing Asia","1",295949858
+"70","IDN","Emerging Market Economies","Emerging and Developing Asia","1",58847708
+"71","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",23872849
+"72","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",13540495
+"73","IRL","Advanced Economies","Advanced Economies","1",1900576
+"74","ISR","Advanced Economies","Advanced Economies","1",1448695
+"75","ITA","Advanced Economies","Advanced Economies","1",15143868
+"76","JAM","Emerging Market Economies","Latin America and the Caribbean","1",647081
+"77","JPN","Advanced Economies","Advanced Economies","1",48220422
+"78","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",2686757
+"79","KAZ","Emerging Market Economies","Caucasus and Central Asia","1",9060938
+"80","KEN","Low Income Developing Countries","Sub-Sahara Africa","1",7399561
+"81","KOR","Advanced Economies","Advanced Economies","1",8704883
+"82","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",660539
+"83","KGZ","Low Income Developing Countries","Caucasus and Central Asia","1",2100972
+"84","LAO","Low Income Developing Countries","Emerging and Developing Asia","1",1598788
+"85","LVA","Advanced Economies","Advanced Economies","1",1310210
+"86","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",3475434
+"87","LSO","Low Income Developing Countries","Sub-Sahara Africa","1",279175
+"88","LBR","Low Income Developing Countries","Sub-Sahara Africa","1",1729405
+"89","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",2259132
+"90","LTU","Advanced Economies","Advanced Economies","1",1185875
+"91","LUX","Advanced Economies","Advanced Economies","1",351102
+"92","MDG","Low Income Developing Countries","Sub-Sahara Africa","1",7318883
+"93","MWI","Low Income Developing Countries","Sub-Sahara Africa","1",3063833
+"94","MYS","Emerging Market Economies","Emerging and Developing Asia","1",13423124
+"95","MLI","Low Income Developing Countries","Sub-Sahara Africa","1",7621397
+"96","MLT","Advanced Economies","Advanced Economies","1",75884
+"97","MUS","Emerging Market Economies","Sub-Sahara Africa","1",473335
+"98","MEX","Emerging Market Economies","Latin America and the Caribbean","1",66286226
+"99","MDA","Low Income Developing Countries","Emerging and Developing Europe","1",979975
+"100","MNG","Emerging Market Economies","Emerging and Developing Asia","1",2374455
+"101","MNE","Emerging Market Economies","Emerging and Developing Europe","1",33282
+"102","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",6938387
+"103","MOZ","Low Income Developing Countries","Sub-Sahara Africa","1",7926455
+"104","MMR","Low Income Developing Countries","Emerging and Developing Asia","1",10881383
+"105","NAM","Emerging Market Economies","Sub-Sahara Africa","1",524500
+"106","NPL","Low Income Developing Countries","Emerging and Developing Asia","1",15079581
+"107","NLD","Advanced Economies","Advanced Economies","1",5506822
+"108","NZL","Advanced Economies","Advanced Economies","1",2154125
+"109","NIC","Low Income Developing Countries","Latin America and the Caribbean","1",1644844
+"110","NER","Low Income Developing Countries","Sub-Sahara Africa","1",3502868
+"111","NGA","Low Income Developing Countries","Sub-Sahara Africa","1",35003533
+"112","NOR","Advanced Economies","Advanced Economies","1",2590686
+"113","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",1016836
+"114","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",50841164
+"115","PAN","Emerging Market Economies","Latin America and the Caribbean","1",2407736
+"116","PNG","Low Income Developing Countries","Emerging and Developing Asia","1",1271258
+"117","PRY","Emerging Market Economies","Latin America and the Caribbean","1",3452697
+"118","PER","Emerging Market Economies","Latin America and the Caribbean","1",19143013
+"119","PHL","Emerging Market Economies","Emerging and Developing Asia","1",39159602
+"120","POL","Emerging Market Economies","Emerging and Developing Europe","1",10067201
+"121","PRT","Advanced Economies","Advanced Economies","1",4586925
+"122","PRI","Advanced Economies","Advanced Economies","1",1080606
+"123","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",3031343
+"124","ROU","Emerging Market Economies","Emerging and Developing Europe","1",24642325
+"125","RUS","Emerging Market Economies","Emerging and Developing Europe","1",43949353
+"126","RWA","Low Income Developing Countries","Sub-Sahara Africa","1",1681525
+"127","WSM","Emerging Market Economies","Emerging and Developing Asia","1",66172
+"128","SMR","Advanced Economies","Advanced Economies","1",11899
+"129","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",11111577
+"130","SEN","Low Income Developing Countries","Sub-Sahara Africa","1",4443048
+"131","SRB","Emerging Market Economies","Emerging and Developing Europe","1",2429958
+"132","SYC","Emerging Market Economies","Sub-Sahara Africa","1",11980
+"133","SLE","Low Income Developing Countries","Sub-Sahara Africa","1",1404292
+"134","SGP","Advanced Economies","Advanced Economies","1",1066216
+"135","SVK","Advanced Economies","Advanced Economies","1",578290
+"136","SVN","Advanced Economies","Advanced Economies","1",794565
+"137","SLB","Low Income Developing Countries","Emerging and Developing Asia","1",103673
+"138","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","1",3792583
+"139","ZAF","Emerging Market Economies","Sub-Sahara Africa","1",23613886
+"140","SSD","Low Income Developing Countries","Sub-Sahara Africa","1",4740530
+"141","ESP","Advanced Economies","Advanced Economies","1",18807537
+"142","LKA","Emerging Market Economies","Emerging and Developing Asia","1",5239195
+"143","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","1",7744791
+"144","SUR","Emerging Market Economies","Latin America and the Caribbean","1",138935
+"145","SWE","Advanced Economies","Advanced Economies","1",3529149
+"146","CHE","Advanced Economies","Advanced Economies","1",2647353
+"147","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",8615985
+"148","TWN","Advanced Economies","Advanced Economies","1",3384007
+"149","TJK","Low Income Developing Countries","Caucasus and Central Asia","1",2286628
+"150","TZA","Low Income Developing Countries","Sub-Sahara Africa","1",12016261
+"151","THA","Emerging Market Economies","Emerging and Developing Asia","1",26325003
+"152","TLS","Low Income Developing Countries","Emerging and Developing Asia","1",536045
+"153","TGO","Low Income Developing Countries","Sub-Sahara Africa","1",2709043
+"154","TON","Emerging Market Economies","Emerging and Developing Asia","1",74923
+"155","TTO","Emerging Market Economies","Latin America and the Caribbean","1",80142
+"156","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",1681801
+"157","TUR","Emerging Market Economies","Emerging and Developing Europe","1",42593681
+"158","TKM","Emerging Market Economies","Caucasus and Central Asia","1",1152790
+"159","UGA","Low Income Developing Countries","Sub-Sahara Africa","1",5945016
+"160","UKR","Emerging Market Economies","Emerging and Developing Europe","1",15240178
+"161","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","1",117354
+"162","GBR","Advanced Economies","Advanced Economies","1",13164302
+"163","USA","Advanced Economies","Advanced Economies","1",197220867
+"164","URY","Emerging Market Economies","Latin America and the Caribbean","1",2477500
+"165","UZB","Low Income Developing Countries","Caucasus and Central Asia","1",6078843
+"166","VUT","Emerging Market Economies","Emerging and Developing Asia","1",96691
+"167","VEN","Emerging Market Economies","Latin America and the Caribbean","1",9963112
+"168","VNM","Low Income Developing Countries","Emerging and Developing Asia","1",24260853
+"169","ZMB","Low Income Developing Countries","Sub-Sahara Africa","1",4561851
+"170","ZWE","Low Income Developing Countries","Sub-Sahara Africa","1",4137390
+"171","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","2",2665061
+"172","ALB","Emerging Market Economies","Emerging and Developing Europe","2",359589
+"173","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",5644390
+"174","AGO","Emerging Market Economies","Sub-Sahara Africa","2",3496433
+"175","ARG","Emerging Market Economies","Latin America and the Caribbean","2",6563459
+"176","ARM","Emerging Market Economies","Caucasus and Central Asia","2",303801
+"177","AUS","Advanced Economies","Advanced Economies","2",6753033
+"178","AUT","Advanced Economies","Advanced Economies","2",928249
+"179","AZE","Emerging Market Economies","Caucasus and Central Asia","2",1082087
+"180","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",0
+"181","BGD","Low Income Developing Countries","Emerging and Developing Asia","2",26658099
+"182","BRB","Emerging Market Economies","Latin America and the Caribbean","2",51535
+"183","BLR","Emerging Market Economies","Emerging and Developing Europe","2",1298640
+"184","BEL","Advanced Economies","Advanced Economies","2",1579585
+"185","BLZ","Emerging Market Economies","Latin America and the Caribbean","2",0
+"186","BEN","Low Income Developing Countries","Sub-Sahara Africa","2",1320379
+"187","BTN","Low Income Developing Countries","Emerging and Developing Asia","2",102254
+"188","BOL","Emerging Market Economies","Latin America and the Caribbean","2",846383
+"189","BIH","Emerging Market Economies","Emerging and Developing Europe","2",471153
+"190","BWA","Emerging Market Economies","Sub-Sahara Africa","2",381412
+"191","BRA","Emerging Market Economies","Latin America and the Caribbean","2",28130188
+"192","BRN","Emerging Market Economies","Emerging and Developing Asia","2",92435
+"193","BGR","Emerging Market Economies","Emerging and Developing Europe","2",860760
+"194","BFA","Low Income Developing Countries","Sub-Sahara Africa","2",1463769
+"195","BDI","Low Income Developing Countries","Sub-Sahara Africa","2",1983476
+"196","CPV","Emerging Market Economies","Sub-Sahara Africa","2",61119
+"197","KHM","Low Income Developing Countries","Emerging and Developing Asia","2",3816765
+"198","CMR","Low Income Developing Countries","Sub-Sahara Africa","2",3440230
+"199","CAN","Advanced Economies","Advanced Economies","2",2885372
+"200","TCD","Low Income Developing Countries","Sub-Sahara Africa","2",1683305
+"201","CHL","Emerging Market Economies","Latin America and the Caribbean","2",1473201
+"202","CHN","Emerging Market Economies","Emerging and Developing Asia","2",203316304
+"203","COL","Emerging Market Economies","Latin America and the Caribbean","2",5977664
+"204","COD","Low Income Developing Countries","Sub-Sahara Africa","2",10280901
+"205","COG","Low Income Developing Countries","Sub-Sahara Africa","2",378919
+"206","CRI","Emerging Market Economies","Latin America and the Caribbean","2",662080
+"207","CIV","Low Income Developing Countries","Sub-Sahara Africa","2",3455766
+"208","HRV","Emerging Market Economies","Emerging and Developing Europe","2",499927
+"209","CYP","Advanced Economies","Advanced Economies","2",0
+"210","CZE","Advanced Economies","Advanced Economies","2",619241
+"211","DNK","Advanced Economies","Advanced Economies","2",678715
+"212","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","2",136118
+"213","DMA","Emerging Market Economies","Latin America and the Caribbean","2",1282
+"214","DOM","Emerging Market Economies","Latin America and the Caribbean","2",1431560
+"215","ECU","Emerging Market Economies","Latin America and the Caribbean","2",2774132
+"216","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",14287589
+"217","SLV","Emerging Market Economies","Latin America and the Caribbean","2",935874
+"218","EST","Advanced Economies","Advanced Economies","2",319990
+"219","SWZ","Emerging Market Economies","Sub-Sahara Africa","2",112241
+"220","ETH","Low Income Developing Countries","Sub-Sahara Africa","2",14420100
+"221","FJI","Emerging Market Economies","Emerging and Developing Asia","2",41243
+"222","FIN","Advanced Economies","Advanced Economies","2",578188
+"223","FRA","Advanced Economies","Advanced Economies","2",10510117
+"224","GAB","Emerging Market Economies","Sub-Sahara Africa","2",411494
+"225","GMB","Low Income Developing Countries","Sub-Sahara Africa","2",400150
+"226","GEO","Emerging Market Economies","Caucasus and Central Asia","2",405582
+"227","DEU","Advanced Economies","Advanced Economies","2",5950413
+"228","GHA","Low Income Developing Countries","Sub-Sahara Africa","2",3473733
+"229","GRC","Advanced Economies","Advanced Economies","2",188870
+"230","GRD","Emerging Market Economies","Latin America and the Caribbean","2",13254
+"231","GTM","Emerging Market Economies","Latin America and the Caribbean","2",1888537
+"232","GIN","Low Income Developing Countries","Sub-Sahara Africa","2",673352
+"233","GUY","Emerging Market Economies","Latin America and the Caribbean","2",101571
+"234","HTI","Low Income Developing Countries","Latin America and the Caribbean","2",2109019
+"235","HND","Low Income Developing Countries","Latin America and the Caribbean","2",867207
+"236","HKG","Advanced Economies","Advanced Economies","2",820622
+"237","HUN","Emerging Market Economies","Emerging and Developing Europe","2",1007225
+"238","ISL","Advanced Economies","Advanced Economies","2",14210
+"239","IND","Emerging Market Economies","Emerging and Developing Asia","2",208982631
+"240","IDN","Emerging Market Economies","Emerging and Developing Asia","2",52470064
+"241","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",14891883
+"242","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",8789177
+"243","IRL","Advanced Economies","Advanced Economies","2",430826
+"244","ISR","Advanced Economies","Advanced Economies","2",1200958
+"245","ITA","Advanced Economies","Advanced Economies","2",9961675
+"246","JAM","Emerging Market Economies","Latin America and the Caribbean","2",541268
+"247","JPN","Advanced Economies","Advanced Economies","2",24613287
+"248","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",1557821
+"249","KAZ","Emerging Market Economies","Caucasus and Central Asia","2",3754501
+"250","KEN","Low Income Developing Countries","Sub-Sahara Africa","2",5272307
+"251","KOR","Advanced Economies","Advanced Economies","2",9875319
+"252","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",0
+"253","KGZ","Low Income Developing Countries","Caucasus and Central Asia","2",716258
+"254","LAO","Low Income Developing Countries","Emerging and Developing Asia","2",1016041
+"255","LVA","Advanced Economies","Advanced Economies","2",205505
+"256","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",2196608
+"257","LSO","Low Income Developing Countries","Sub-Sahara Africa","2",451695
+"258","LBR","Low Income Developing Countries","Sub-Sahara Africa","2",716722
+"259","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",1583475
+"260","LTU","Advanced Economies","Advanced Economies","2",413026
+"261","LUX","Advanced Economies","Advanced Economies","2",44873
+"262","MDG","Low Income Developing Countries","Sub-Sahara Africa","2",3236407
+"263","MWI","Low Income Developing Countries","Sub-Sahara Africa","2",1873210
+"264","MYS","Emerging Market Economies","Emerging and Developing Asia","2",5807545
+"265","MLI","Low Income Developing Countries","Sub-Sahara Africa","2",2630212
+"266","MLT","Advanced Economies","Advanced Economies","2",60687
+"267","MUS","Emerging Market Economies","Sub-Sahara Africa","2",145994
+"268","MEX","Emerging Market Economies","Latin America and the Caribbean","2",18653074
+"269","MDA","Low Income Developing Countries","Emerging and Developing Europe","2",634258
+"270","MNG","Emerging Market Economies","Emerging and Developing Asia","2",163257
+"271","MNE","Emerging Market Economies","Emerging and Developing Europe","2",232664
+"272","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",4773288
+"273","MOZ","Low Income Developing Countries","Sub-Sahara Africa","2",4908990
+"274","MMR","Low Income Developing Countries","Emerging and Developing Asia","2",5657694
+"275","NAM","Emerging Market Economies","Sub-Sahara Africa","2",350261
+"276","NPL","Low Income Developing Countries","Emerging and Developing Asia","2",4809998
+"277","NLD","Advanced Economies","Advanced Economies","2",2544695
+"278","NZL","Advanced Economies","Advanced Economies","2",662064
+"279","NIC","Low Income Developing Countries","Latin America and the Caribbean","2",807832
+"280","NER","Low Income Developing Countries","Sub-Sahara Africa","2",2827173
+"281","NGA","Low Income Developing Countries","Sub-Sahara Africa","2",24208138
+"282","NOR","Advanced Economies","Advanced Economies","2",754953
+"283","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",547159
+"284","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",42512844
+"285","PAN","Emerging Market Economies","Latin America and the Caribbean","2",434930
+"286","PNG","Low Income Developing Countries","Emerging and Developing Asia","2",1249152
+"287","PRY","Emerging Market Economies","Latin America and the Caribbean","2",786643
+"288","PER","Emerging Market Economies","Latin America and the Caribbean","2",3733444
+"289","PHL","Emerging Market Economies","Emerging and Developing Asia","2",13959430
+"290","POL","Emerging Market Economies","Emerging and Developing Europe","2",3697788
+"291","PRT","Advanced Economies","Advanced Economies","2",1905177
+"292","PRI","Advanced Economies","Advanced Economies","2",453308
+"293","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",213058
+"294","ROU","Emerging Market Economies","Emerging and Developing Europe","2",1854213
+"295","RUS","Emerging Market Economies","Emerging and Developing Europe","2",28483619
+"296","RWA","Low Income Developing Countries","Sub-Sahara Africa","2",1381840
+"297","WSM","Emerging Market Economies","Emerging and Developing Asia","2",33755
+"298","SMR","Advanced Economies","Advanced Economies","2",7208
+"299","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",495947
+"300","SEN","Low Income Developing Countries","Sub-Sahara Africa","2",2857732
+"301","SRB","Emerging Market Economies","Emerging and Developing Europe","2",1213306
+"302","SYC","Emerging Market Economies","Sub-Sahara Africa","2",5488
+"303","SLE","Low Income Developing Countries","Sub-Sahara Africa","2",733526
+"304","SGP","Advanced Economies","Advanced Economies","2",0
+"305","SVK","Advanced Economies","Advanced Economies","2",845827
+"306","SVN","Advanced Economies","Advanced Economies","2",255582
+"307","SLB","Low Income Developing Countries","Emerging and Developing Asia","2",80178
+"308","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","2",1406361
+"309","ZAF","Emerging Market Economies","Sub-Sahara Africa","2",4082431
+"310","SSD","Low Income Developing Countries","Sub-Sahara Africa","2",3262461
+"311","ESP","Advanced Economies","Advanced Economies","2",7867898
+"312","LKA","Emerging Market Economies","Emerging and Developing Asia","2",2790252
+"313","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","2",4348196
+"314","SUR","Emerging Market Economies","Latin America and the Caribbean","2",124200
+"315","SWE","Advanced Economies","Advanced Economies","2",1819323
+"316","CHE","Advanced Economies","Advanced Economies","2",1467631
+"317","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",2276414
+"318","TWN","Advanced Economies","Advanced Economies","2",3180401
+"319","TJK","Low Income Developing Countries","Caucasus and Central Asia","2",1604054
+"320","TZA","Low Income Developing Countries","Sub-Sahara Africa","2",5660088
+"321","THA","Emerging Market Economies","Emerging and Developing Asia","2",9523969
+"322","TLS","Low Income Developing Countries","Emerging and Developing Asia","2",201048
+"323","TGO","Low Income Developing Countries","Sub-Sahara Africa","2",1023607
+"324","TON","Emerging Market Economies","Emerging and Developing Asia","2",0
+"325","TTO","Emerging Market Economies","Latin America and the Caribbean","2",25416
+"326","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",1834211
+"327","TUR","Emerging Market Economies","Emerging and Developing Europe","2",14316896
+"328","TKM","Emerging Market Economies","Caucasus and Central Asia","2",0
+"329","UGA","Low Income Developing Countries","Sub-Sahara Africa","2",5061723
+"330","UKR","Emerging Market Economies","Emerging and Developing Europe","2",5638855
+"331","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","2",875947
+"332","GBR","Advanced Economies","Advanced Economies","2",7618145
+"333","USA","Advanced Economies","Advanced Economies","2",59925378
+"334","URY","Emerging Market Economies","Latin America and the Caribbean","2",487774
+"335","UZB","Low Income Developing Countries","Caucasus and Central Asia","2",4419688
+"336","VUT","Emerging Market Economies","Emerging and Developing Asia","2",31793
+"337","VEN","Emerging Market Economies","Latin America and the Caribbean","2",6641376
+"338","VNM","Low Income Developing Countries","Emerging and Developing Asia","2",12068615
+"339","ZMB","Low Income Developing Countries","Sub-Sahara Africa","2",3426599
+"340","ZWE","Low Income Developing Countries","Sub-Sahara Africa","2",1587498
+"341","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","3",2915517
+"342","ALB","Emerging Market Economies","Emerging and Developing Europe","3",120974
+"343","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",4180520
+"344","AGO","Emerging Market Economies","Sub-Sahara Africa","3",2735637
+"345","ARG","Emerging Market Economies","Latin America and the Caribbean","3",3593590
+"346","ARM","Emerging Market Economies","Caucasus and Central Asia","3",259765
+"347","AUS","Advanced Economies","Advanced Economies","3",5162098
+"348","AUT","Advanced Economies","Advanced Economies","3",729246
+"349","AZE","Emerging Market Economies","Caucasus and Central Asia","3",1186514
+"350","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",311962
+"351","BGD","Low Income Developing Countries","Emerging and Developing Asia","3",21248529
+"352","BRB","Emerging Market Economies","Latin America and the Caribbean","3",27121
+"353","BLR","Emerging Market Economies","Emerging and Developing Europe","3",617936
+"354","BEL","Advanced Economies","Advanced Economies","3",1168656
+"355","BLZ","Emerging Market Economies","Latin America and the Caribbean","3",52926
+"356","BEN","Low Income Developing Countries","Sub-Sahara Africa","3",933318
+"357","BTN","Low Income Developing Countries","Emerging and Developing Asia","3",106184
+"358","BOL","Emerging Market Economies","Latin America and the Caribbean","3",842794
+"359","BIH","Emerging Market Economies","Emerging and Developing Europe","3",475781
+"360","BWA","Emerging Market Economies","Sub-Sahara Africa","3",394651
+"361","BRA","Emerging Market Economies","Latin America and the Caribbean","3",15783448
+"362","BRN","Emerging Market Economies","Emerging and Developing Asia","3",69406
+"363","BGR","Emerging Market Economies","Emerging and Developing Europe","3",677118
+"364","BFA","Low Income Developing Countries","Sub-Sahara Africa","3",2446414
+"365","BDI","Low Income Developing Countries","Sub-Sahara Africa","3",1107856
+"366","CPV","Emerging Market Economies","Sub-Sahara Africa","3",118477
+"367","KHM","Low Income Developing Countries","Emerging and Developing Asia","3",1722529
+"368","CMR","Low Income Developing Countries","Sub-Sahara Africa","3",2805131
+"369","CAN","Advanced Economies","Advanced Economies","3",2444346
+"370","TCD","Low Income Developing Countries","Sub-Sahara Africa","3",2010848
+"371","CHL","Emerging Market Economies","Latin America and the Caribbean","3",2294881
+"372","CHN","Emerging Market Economies","Emerging and Developing Asia","3",186888080
+"373","COL","Emerging Market Economies","Latin America and the Caribbean","3",4498631
+"374","COD","Low Income Developing Countries","Sub-Sahara Africa","3",3411547
+"375","COG","Low Income Developing Countries","Sub-Sahara Africa","3",1052750
+"376","CRI","Emerging Market Economies","Latin America and the Caribbean","3",817922
+"377","CIV","Low Income Developing Countries","Sub-Sahara Africa","3",3498665
+"378","HRV","Emerging Market Economies","Emerging and Developing Europe","3",310417
+"379","CYP","Advanced Economies","Advanced Economies","3",271283
+"380","CZE","Advanced Economies","Advanced Economies","3",1837075
+"381","DNK","Advanced Economies","Advanced Economies","3",621490
+"382","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","3",58322
+"383","DMA","Emerging Market Economies","Latin America and the Caribbean","3",10841
+"384","DOM","Emerging Market Economies","Latin America and the Caribbean","3",1382244
+"385","ECU","Emerging Market Economies","Latin America and the Caribbean","3",1104355
+"386","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",10043617
+"387","SLV","Emerging Market Economies","Latin America and the Caribbean","3",1067458
+"388","EST","Advanced Economies","Advanced Economies","3",92789
+"389","SWZ","Emerging Market Economies","Sub-Sahara Africa","3",139798
+"390","ETH","Low Income Developing Countries","Sub-Sahara Africa","3",20356940
+"391","FJI","Emerging Market Economies","Emerging and Developing Asia","3",77192
+"392","FIN","Advanced Economies","Advanced Economies","3",711693
+"393","FRA","Advanced Economies","Advanced Economies","3",10611255
+"394","GAB","Emerging Market Economies","Sub-Sahara Africa","3",162446
+"395","GMB","Low Income Developing Countries","Sub-Sahara Africa","3",120696
+"396","GEO","Emerging Market Economies","Caucasus and Central Asia","3",323092
+"397","DEU","Advanced Economies","Advanced Economies","3",10177279
+"398","GHA","Low Income Developing Countries","Sub-Sahara Africa","3",2339165
+"399","GRC","Advanced Economies","Advanced Economies","3",623264
+"400","GRD","Emerging Market Economies","Latin America and the Caribbean","3",0
+"401","GTM","Emerging Market Economies","Latin America and the Caribbean","3",1944609
+"402","GIN","Low Income Developing Countries","Sub-Sahara Africa","3",954065
+"403","GUY","Emerging Market Economies","Latin America and the Caribbean","3",90808
+"404","HTI","Low Income Developing Countries","Latin America and the Caribbean","3",1684310
+"405","HND","Low Income Developing Countries","Latin America and the Caribbean","3",611789
+"406","HKG","Advanced Economies","Advanced Economies","3",768629
+"407","HUN","Emerging Market Economies","Emerging and Developing Europe","3",913471
+"408","ISL","Advanced Economies","Advanced Economies","3",13748
+"409","IND","Emerging Market Economies","Emerging and Developing Asia","3",183278009
+"410","IDN","Emerging Market Economies","Emerging and Developing Asia","3",54156047
+"411","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",8869501
+"412","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",4385965
+"413","IRL","Advanced Economies","Advanced Economies","3",991467
+"414","ISR","Advanced Economies","Advanced Economies","3",0
+"415","ITA","Advanced Economies","Advanced Economies","3",8708972
+"416","JAM","Emerging Market Economies","Latin America and the Caribbean","3",184186
+"417","JPN","Advanced Economies","Advanced Economies","3",16238399
+"418","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",965795
+"419","KAZ","Emerging Market Economies","Caucasus and Central Asia","3",1216446
+"420","KEN","Low Income Developing Countries","Sub-Sahara Africa","3",5422396
+"421","KOR","Advanced Economies","Advanced Economies","3",7944224
+"422","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",351844
+"423","KGZ","Low Income Developing Countries","Caucasus and Central Asia","3",506947
+"424","LAO","Low Income Developing Countries","Emerging and Developing Asia","3",1042685
+"425","LVA","Advanced Economies","Advanced Economies","3",177261
+"426","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",989759
+"427","LSO","Low Income Developing Countries","Sub-Sahara Africa","3",274488
+"428","LBR","Low Income Developing Countries","Sub-Sahara Africa","3",395357
+"429","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",632214
+"430","LTU","Advanced Economies","Advanced Economies","3",235736
+"431","LUX","Advanced Economies","Advanced Economies","3",22671
+"432","MDG","Low Income Developing Countries","Sub-Sahara Africa","3",2450665
+"433","MWI","Low Income Developing Countries","Sub-Sahara Africa","3",2245141
+"434","MYS","Emerging Market Economies","Emerging and Developing Asia","3",2956020
+"435","MLI","Low Income Developing Countries","Sub-Sahara Africa","3",2532343
+"436","MLT","Advanced Economies","Advanced Economies","3",58352
+"437","MUS","Emerging Market Economies","Sub-Sahara Africa","3",107593
+"438","MEX","Emerging Market Economies","Latin America and the Caribbean","3",11154338
+"439","MDA","Low Income Developing Countries","Emerging and Developing Europe","3",328447
+"440","MNG","Emerging Market Economies","Emerging and Developing Asia","3",104185
+"441","MNE","Emerging Market Economies","Emerging and Developing Europe","3",64857
+"442","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",4559746
+"443","MOZ","Low Income Developing Countries","Sub-Sahara Africa","3",4266187
+"444","MMR","Low Income Developing Countries","Emerging and Developing Asia","3",6717422
+"445","NAM","Emerging Market Economies","Sub-Sahara Africa","3",287277
+"446","NPL","Low Income Developing Countries","Emerging and Developing Asia","3",3336762
+"447","NLD","Advanced Economies","Advanced Economies","3",2078134
+"448","NZL","Advanced Economies","Advanced Economies","3",501049
+"449","NIC","Low Income Developing Countries","Latin America and the Caribbean","3",973995
+"450","NER","Low Income Developing Countries","Sub-Sahara Africa","3",4014480
+"451","NGA","Low Income Developing Countries","Sub-Sahara Africa","3",21047136
+"452","NOR","Advanced Economies","Advanced Economies","3",491327
+"453","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",469974
+"454","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",33096280
+"455","PAN","Emerging Market Economies","Latin America and the Caribbean","3",218981
+"456","PNG","Low Income Developing Countries","Emerging and Developing Asia","3",881703
+"457","PRY","Emerging Market Economies","Latin America and the Caribbean","3",434617
+"458","PER","Emerging Market Economies","Latin America and the Caribbean","3",2401502
+"459","PHL","Emerging Market Economies","Emerging and Developing Asia","3",10942257
+"460","POL","Emerging Market Economies","Emerging and Developing Europe","3",4923713
+"461","PRT","Advanced Economies","Advanced Economies","3",1203040
+"462","PRI","Advanced Economies","Advanced Economies","3",422012
+"463","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",0
+"464","ROU","Emerging Market Economies","Emerging and Developing Europe","3",1352629
+"465","RUS","Emerging Market Economies","Emerging and Developing Europe","3",21632187
+"466","RWA","Low Income Developing Countries","Sub-Sahara Africa","3",1267744
+"467","WSM","Emerging Market Economies","Emerging and Developing Asia","3",16897
+"468","SMR","Advanced Economies","Advanced Economies","3",3348
+"469","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",1650793
+"470","SEN","Low Income Developing Countries","Sub-Sahara Africa","3",1977716
+"471","SRB","Emerging Market Economies","Emerging and Developing Europe","3",1001067
+"472","SYC","Emerging Market Economies","Sub-Sahara Africa","3",13873
+"473","SLE","Low Income Developing Countries","Sub-Sahara Africa","3",512447
+"474","SGP","Advanced Economies","Advanced Economies","3",910042
+"475","SVK","Advanced Economies","Advanced Economies","3",593349
+"476","SVN","Advanced Economies","Advanced Economies","3",241243
+"477","SLB","Low Income Developing Countries","Emerging and Developing Asia","3",82835
+"478","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","3",1315764
+"479","ZAF","Emerging Market Economies","Sub-Sahara Africa","3",6238893
+"480","SSD","Low Income Developing Countries","Sub-Sahara Africa","3",1801064
+"481","ESP","Advanced Economies","Advanced Economies","3",7143213
+"482","LKA","Emerging Market Economies","Emerging and Developing Asia","3",2139189
+"483","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","3",5445401
+"484","SUR","Emerging Market Economies","Latin America and the Caribbean","3",123012
+"485","SWE","Advanced Economies","Advanced Economies","3",1438447
+"486","CHE","Advanced Economies","Advanced Economies","3",984404
+"487","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",2274829
+"488","TWN","Advanced Economies","Advanced Economies","3",7399253
+"489","TJK","Low Income Developing Countries","Caucasus and Central Asia","3",1594460
+"490","TZA","Low Income Developing Countries","Sub-Sahara Africa","3",6255961
+"491","THA","Emerging Market Economies","Emerging and Developing Asia","3",7028613
+"492","TLS","Low Income Developing Countries","Emerging and Developing Asia","3",113534
+"493","TGO","Low Income Developing Countries","Sub-Sahara Africa","3",1165709
+"494","TON","Emerging Market Economies","Emerging and Developing Asia","3",11823
+"495","TTO","Emerging Market Economies","Latin America and the Caribbean","3",203428
+"496","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",1656739
+"497","TUR","Emerging Market Economies","Emerging and Developing Europe","3",7329220
+"498","TKM","Emerging Market Economies","Caucasus and Central Asia","3",2015959
+"499","UGA","Low Income Developing Countries","Sub-Sahara Africa","3",5251859
+"500","UKR","Emerging Market Economies","Emerging and Developing Europe","3",6157127
+"501","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","3",1342065
+"502","GBR","Advanced Economies","Advanced Economies","3",8555565
+"503","USA","Advanced Economies","Advanced Economies","3",30016894
+"504","URY","Emerging Market Economies","Latin America and the Caribbean","3",161630
+"505","UZB","Low Income Developing Countries","Caucasus and Central Asia","3",4425271
+"506","VUT","Emerging Market Economies","Emerging and Developing Asia","3",16013
+"507","VEN","Emerging Market Economies","Latin America and the Caribbean","3",2982118
+"508","VNM","Low Income Developing Countries","Emerging and Developing Asia","3",11946011
+"509","ZMB","Low Income Developing Countries","Sub-Sahara Africa","3",1677375
+"510","ZWE","Low Income Developing Countries","Sub-Sahara Africa","3",1272816
+"511","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","4",2540871
+"512","ALB","Emerging Market Economies","Emerging and Developing Europe","4",305196
+"513","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",3260085
+"514","AGO","Emerging Market Economies","Sub-Sahara Africa","4",2025377
+"515","ARG","Emerging Market Economies","Latin America and the Caribbean","4",3796975
+"516","ARM","Emerging Market Economies","Caucasus and Central Asia","4",212401
+"517","AUS","Advanced Economies","Advanced Economies","4",1959489
+"518","AUT","Advanced Economies","Advanced Economies","4",505952
+"519","AZE","Emerging Market Economies","Caucasus and Central Asia","4",800550
+"520","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",0
+"521","BGD","Low Income Developing Countries","Emerging and Developing Asia","4",19358557
+"522","BRB","Emerging Market Economies","Latin America and the Caribbean","4",37264
+"523","BLR","Emerging Market Economies","Emerging and Developing Europe","4",416965
+"524","BEL","Advanced Economies","Advanced Economies","4",1364790
+"525","BLZ","Emerging Market Economies","Latin America and the Caribbean","4",0
+"526","BEN","Low Income Developing Countries","Sub-Sahara Africa","4",1060272
+"527","BTN","Low Income Developing Countries","Emerging and Developing Asia","4",72835
+"528","BOL","Emerging Market Economies","Latin America and the Caribbean","4",497856
+"529","BIH","Emerging Market Economies","Emerging and Developing Europe","4",246380
+"530","BWA","Emerging Market Economies","Sub-Sahara Africa","4",288706
+"531","BRA","Emerging Market Economies","Latin America and the Caribbean","4",11277933
+"532","BRN","Emerging Market Economies","Emerging and Developing Asia","4",39361
+"533","BGR","Emerging Market Economies","Emerging and Developing Europe","4",408538
+"534","BFA","Low Income Developing Countries","Sub-Sahara Africa","4",1472016
+"535","BDI","Low Income Developing Countries","Sub-Sahara Africa","4",1309449
+"536","CPV","Emerging Market Economies","Sub-Sahara Africa","4",38816
+"537","KHM","Low Income Developing Countries","Emerging and Developing Asia","4",1947352
+"538","CMR","Low Income Developing Countries","Sub-Sahara Africa","4",2074836
+"539","CAN","Advanced Economies","Advanced Economies","4",1932225
+"540","TCD","Low Income Developing Countries","Sub-Sahara Africa","4",1569700
+"541","CHL","Emerging Market Economies","Latin America and the Caribbean","4",1743486
+"542","CHN","Emerging Market Economies","Emerging and Developing Asia","4",171519677
+"543","COL","Emerging Market Economies","Latin America and the Caribbean","4",3095246
+"544","COD","Low Income Developing Countries","Sub-Sahara Africa","4",12102929
+"545","COG","Low Income Developing Countries","Sub-Sahara Africa","4",211451
+"546","CRI","Emerging Market Economies","Latin America and the Caribbean","4",396716
+"547","CIV","Low Income Developing Countries","Sub-Sahara Africa","4",1855783
+"548","HRV","Emerging Market Economies","Emerging and Developing Europe","4",299884
+"549","CYP","Advanced Economies","Advanced Economies","4",0
+"550","CZE","Advanced Economies","Advanced Economies","4",1509782
+"551","DNK","Advanced Economies","Advanced Economies","4",803524
+"552","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","4",49501
+"553","DMA","Emerging Market Economies","Latin America and the Caribbean","4",1649
+"554","DOM","Emerging Market Economies","Latin America and the Caribbean","4",769159
+"555","ECU","Emerging Market Economies","Latin America and the Caribbean","4",945177
+"556","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",12781266
+"557","SLV","Emerging Market Economies","Latin America and the Caribbean","4",434423
+"558","EST","Advanced Economies","Advanced Economies","4",71960
+"559","SWZ","Emerging Market Economies","Sub-Sahara Africa","4",92256
+"560","ETH","Low Income Developing Countries","Sub-Sahara Africa","4",12841799
+"561","FJI","Emerging Market Economies","Emerging and Developing Asia","4",55852
+"562","FIN","Advanced Economies","Advanced Economies","4",389436
+"563","FRA","Advanced Economies","Advanced Economies","4",6802753
+"564","GAB","Emerging Market Economies","Sub-Sahara Africa","4",141752
+"565","GMB","Low Income Developing Countries","Sub-Sahara Africa","4",220615
+"566","GEO","Emerging Market Economies","Caucasus and Central Asia","4",333539
+"567","DEU","Advanced Economies","Advanced Economies","4",7867438
+"568","GHA","Low Income Developing Countries","Sub-Sahara Africa","4",2432769
+"569","GRC","Advanced Economies","Advanced Economies","4",924023
+"570","GRD","Emerging Market Economies","Latin America and the Caribbean","4",24289
+"571","GTM","Emerging Market Economies","Latin America and the Caribbean","4",1652215
+"572","GIN","Low Income Developing Countries","Sub-Sahara Africa","4",1983434
+"573","GUY","Emerging Market Economies","Latin America and the Caribbean","4",85288
+"574","HTI","Low Income Developing Countries","Latin America and the Caribbean","4",1281520
+"575","HND","Low Income Developing Countries","Latin America and the Caribbean","4",637243
+"576","HKG","Advanced Economies","Advanced Economies","4",229500
+"577","HUN","Emerging Market Economies","Emerging and Developing Europe","4",798613
+"578","ISL","Advanced Economies","Advanced Economies","4",6196
+"579","IND","Emerging Market Economies","Emerging and Developing Asia","4",134555430
+"580","IDN","Emerging Market Economies","Emerging and Developing Asia","4",30070155
+"581","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",7153194
+"582","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",4311562
+"583","IRL","Advanced Economies","Advanced Economies","4",246516
+"584","ISR","Advanced Economies","Advanced Economies","4",2412443
+"585","ITA","Advanced Economies","Advanced Economies","4",6219847
+"586","JAM","Emerging Market Economies","Latin America and the Caribbean","4",445152
+"587","JPN","Advanced Economies","Advanced Economies","4",11281130
+"588","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",297918
+"589","KAZ","Emerging Market Economies","Caucasus and Central Asia","4",1065944
+"590","KEN","Low Income Developing Countries","Sub-Sahara Africa","4",5356850
+"591","KOR","Advanced Economies","Advanced Economies","4",11462091
+"592","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",0
+"593","KGZ","Low Income Developing Countries","Caucasus and Central Asia","4",695533
+"594","LAO","Low Income Developing Countries","Emerging and Developing Asia","4",653022
+"595","LVA","Advanced Economies","Advanced Economies","4",122095
+"596","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",1167873
+"597","LSO","Low Income Developing Countries","Sub-Sahara Africa","4",173406
+"598","LBR","Low Income Developing Countries","Sub-Sahara Africa","4",272080
+"599","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",602458
+"600","LTU","Advanced Economies","Advanced Economies","4",175161
+"601","LUX","Advanced Economies","Advanced Economies","4",33225
+"602","MDG","Low Income Developing Countries","Sub-Sahara Africa","4",2380385
+"603","MWI","Low Income Developing Countries","Sub-Sahara Africa","4",2122740
+"604","MYS","Emerging Market Economies","Emerging and Developing Asia","4",2923467
+"605","MLI","Low Income Developing Countries","Sub-Sahara Africa","4",1802208
+"606","MLT","Advanced Economies","Advanced Economies","4",35012
+"607","MUS","Emerging Market Economies","Sub-Sahara Africa","4",141527
+"608","MEX","Emerging Market Economies","Latin America and the Caribbean","4",10356042
+"609","MDA","Low Income Developing Countries","Emerging and Developing Europe","4",431374
+"610","MNG","Emerging Market Economies","Emerging and Developing Asia","4",110403
+"611","MNE","Emerging Market Economies","Emerging and Developing Europe","4",42632
+"612","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",4280753
+"613","MOZ","Low Income Developing Countries","Sub-Sahara Africa","4",3384880
+"614","MMR","Low Income Developing Countries","Emerging and Developing Asia","4",6387211
+"615","NAM","Emerging Market Economies","Sub-Sahara Africa","4",154986
+"616","NPL","Low Income Developing Countries","Emerging and Developing Asia","4",5321232
+"617","NLD","Advanced Economies","Advanced Economies","4",1240070
+"618","NZL","Advanced Economies","Advanced Economies","4",301345
+"619","NIC","Low Income Developing Countries","Latin America and the Caribbean","4",394763
+"620","NER","Low Income Developing Countries","Sub-Sahara Africa","4",1741787
+"621","NGA","Low Income Developing Countries","Sub-Sahara Africa","4",19407310
+"622","NOR","Advanced Economies","Advanced Economies","4",331304
+"623","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",307900
+"624","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",23367983
+"625","PAN","Emerging Market Economies","Latin America and the Caribbean","4",198964
+"626","PNG","Low Income Developing Countries","Emerging and Developing Asia","4",1229082
+"627","PRY","Emerging Market Economies","Latin America and the Caribbean","4",378747
+"628","PER","Emerging Market Economies","Latin America and the Caribbean","4",2197699
+"629","PHL","Emerging Market Economies","Emerging and Developing Asia","4",7971031
+"630","POL","Emerging Market Economies","Emerging and Developing Europe","4",4148315
+"631","PRT","Advanced Economies","Advanced Economies","4",814765
+"632","PRI","Advanced Economies","Advanced Economies","4",272647
+"633","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",827197
+"634","ROU","Emerging Market Economies","Emerging and Developing Europe","4",1298283
+"635","RUS","Emerging Market Economies","Emerging and Developing Europe","4",11678315
+"636","RWA","Low Income Developing Countries","Sub-Sahara Africa","4",1127232
+"637","WSM","Emerging Market Economies","Emerging and Developing Asia","4",10761
+"638","SMR","Advanced Economies","Advanced Economies","4",2406
+"639","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",2275141
+"640","SEN","Low Income Developing Countries","Sub-Sahara Africa","4",1063814
+"641","SRB","Emerging Market Economies","Emerging and Developing Europe","4",527798
+"642","SYC","Emerging Market Economies","Sub-Sahara Africa","4",9541
+"643","SLE","Low Income Developing Countries","Sub-Sahara Africa","4",1058353
+"644","SGP","Advanced Economies","Advanced Economies","4",0
+"645","SVK","Advanced Economies","Advanced Economies","4",677077
+"646","SVN","Advanced Economies","Advanced Economies","4",196751
+"647","SLB","Low Income Developing Countries","Emerging and Developing Asia","4",66266
+"648","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","4",804903
+"649","ZAF","Emerging Market Economies","Sub-Sahara Africa","4",6170753
+"650","SSD","Low Income Developing Countries","Sub-Sahara Africa","4",809004
+"651","ESP","Advanced Economies","Advanced Economies","4",3914143
+"652","LKA","Emerging Market Economies","Emerging and Developing Asia","4",1991323
+"653","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","4",6506592
+"654","SUR","Emerging Market Economies","Latin America and the Caribbean","4",60018
+"655","SWE","Advanced Economies","Advanced Economies","4",713571
+"656","CHE","Advanced Economies","Advanced Economies","4",864421
+"657","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",1729636
+"658","TWN","Advanced Economies","Advanced Economies","4",3991629
+"659","TJK","Low Income Developing Countries","Caucasus and Central Asia","4",716640
+"660","TZA","Low Income Developing Countries","Sub-Sahara Africa","4",4694813
+"661","THA","Emerging Market Economies","Emerging and Developing Asia","4",5738161
+"662","TLS","Low Income Developing Countries","Emerging and Developing Asia","4",108931
+"663","TGO","Low Income Developing Countries","Sub-Sahara Africa","4",266801
+"664","TON","Emerging Market Economies","Emerging and Developing Asia","4",0
+"665","TTO","Emerging Market Economies","Latin America and the Caribbean","4",153768
+"666","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",1453965
+"667","TUR","Emerging Market Economies","Emerging and Developing Europe","4",5199385
+"668","TKM","Emerging Market Economies","Caucasus and Central Asia","4",0
+"669","UGA","Low Income Developing Countries","Sub-Sahara Africa","4",4478784
+"670","UKR","Emerging Market Economies","Emerging and Developing Europe","4",3875793
+"671","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","4",188324
+"672","GBR","Advanced Economies","Advanced Economies","4",5870392
+"673","USA","Advanced Economies","Advanced Economies","4",16477232
+"674","URY","Emerging Market Economies","Latin America and the Caribbean","4",91546
+"675","UZB","Low Income Developing Countries","Caucasus and Central Asia","4",3785381
+"676","VUT","Emerging Market Economies","Emerging and Developing Asia","4",11009
+"677","VEN","Emerging Market Economies","Latin America and the Caribbean","4",2754101
+"678","VNM","Low Income Developing Countries","Emerging and Developing Asia","4",9665771
+"679","ZMB","Low Income Developing Countries","Sub-Sahara Africa","4",1876431
+"680","ZWE","Low Income Developing Countries","Sub-Sahara Africa","4",1320547
+"681","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","5",2660109
+"682","ALB","Emerging Market Economies","Emerging and Developing Europe","5",255557
+"683","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",2683755
+"684","AGO","Emerging Market Economies","Sub-Sahara Africa","5",1569076
+"685","ARG","Emerging Market Economies","Latin America and the Caribbean","5",2166594
+"686","ARM","Emerging Market Economies","Caucasus and Central Asia","5",220125
+"687","AUS","Advanced Economies","Advanced Economies","5",1197177
+"688","AUT","Advanced Economies","Advanced Economies","5",533582
+"689","AZE","Emerging Market Economies","Caucasus and Central Asia","5",692711
+"690","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",0
+"691","BGD","Low Income Developing Countries","Emerging and Developing Asia","5",17124182
+"692","BRB","Emerging Market Economies","Latin America and the Caribbean","5",17288
+"693","BLR","Emerging Market Economies","Emerging and Developing Europe","5",362606
+"694","BEL","Advanced Economies","Advanced Economies","5",1346077
+"695","BLZ","Emerging Market Economies","Latin America and the Caribbean","5",46163
+"696","BEN","Low Income Developing Countries","Sub-Sahara Africa","5",852005
+"697","BTN","Low Income Developing Countries","Emerging and Developing Asia","5",61559
+"698","BOL","Emerging Market Economies","Latin America and the Caribbean","5",588090
+"699","BIH","Emerging Market Economies","Emerging and Developing Europe","5",251483
+"700","BWA","Emerging Market Economies","Sub-Sahara Africa","5",211130
+"701","BRA","Emerging Market Economies","Latin America and the Caribbean","5",9070546
+"702","BRN","Emerging Market Economies","Emerging and Developing Asia","5",35429
+"703","BGR","Emerging Market Economies","Emerging and Developing Europe","5",359983
+"704","BFA","Low Income Developing Countries","Sub-Sahara Africa","5",1534317
+"705","BDI","Low Income Developing Countries","Sub-Sahara Africa","5",1369291
+"706","CPV","Emerging Market Economies","Sub-Sahara Africa","5",40681
+"707","KHM","Low Income Developing Countries","Emerging and Developing Asia","5",1509796
+"708","CMR","Low Income Developing Countries","Sub-Sahara Africa","5",3076237
+"709","CAN","Advanced Economies","Advanced Economies","5",1568680
+"710","TCD","Low Income Developing Countries","Sub-Sahara Africa","5",1677090
+"711","CHL","Emerging Market Economies","Latin America and the Caribbean","5",1506992
+"712","CHN","Emerging Market Economies","Emerging and Developing Asia","5",132176778
+"713","COL","Emerging Market Economies","Latin America and the Caribbean","5",3400194
+"714","COD","Low Income Developing Countries","Sub-Sahara Africa","5",20437293
+"715","COG","Low Income Developing Countries","Sub-Sahara Africa","5",151773
+"716","CRI","Emerging Market Economies","Latin America and the Caribbean","5",303690
+"717","CIV","Low Income Developing Countries","Sub-Sahara Africa","5",2138716
+"718","HRV","Emerging Market Economies","Emerging and Developing Europe","5",204046
+"719","CYP","Advanced Economies","Advanced Economies","5",0
+"720","CZE","Advanced Economies","Advanced Economies","5",1485384
+"721","DNK","Advanced Economies","Advanced Economies","5",562503
+"722","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","5",46855
+"723","DMA","Emerging Market Economies","Latin America and the Caribbean","5",6574
+"724","DOM","Emerging Market Economies","Latin America and the Caribbean","5",531422
+"725","ECU","Emerging Market Economies","Latin America and the Caribbean","5",1033044
+"726","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",15103280
+"727","SLV","Emerging Market Economies","Latin America and the Caribbean","5",520331
+"728","EST","Advanced Economies","Advanced Economies","5",56874
+"729","SWZ","Emerging Market Economies","Sub-Sahara Africa","5",101906
+"730","ETH","Low Income Developing Countries","Sub-Sahara Africa","5",9240048
+"731","FJI","Emerging Market Economies","Emerging and Developing Asia","5",35258
+"732","FIN","Advanced Economies","Advanced Economies","5",196190
+"733","FRA","Advanced Economies","Advanced Economies","5",6267826
+"734","GAB","Emerging Market Economies","Sub-Sahara Africa","5",75993
+"735","GMB","Low Income Developing Countries","Sub-Sahara Africa","5",64673
+"736","GEO","Emerging Market Economies","Caucasus and Central Asia","5",185076
+"737","DEU","Advanced Economies","Advanced Economies","5",8960697
+"738","GHA","Low Income Developing Countries","Sub-Sahara Africa","5",1900859
+"739","GRC","Advanced Economies","Advanced Economies","5",718693
+"740","GRD","Emerging Market Economies","Latin America and the Caribbean","5",0
+"741","GTM","Emerging Market Economies","Latin America and the Caribbean","5",2005368
+"742","GIN","Low Income Developing Countries","Sub-Sahara Africa","5",552947
+"743","GUY","Emerging Market Economies","Latin America and the Caribbean","5",39573
+"744","HTI","Low Income Developing Countries","Latin America and the Caribbean","5",578767
+"745","HND","Low Income Developing Countries","Latin America and the Caribbean","5",848994
+"746","HKG","Advanced Economies","Advanced Economies","5",598372
+"747","HUN","Emerging Market Economies","Emerging and Developing Europe","5",620535
+"748","ISL","Advanced Economies","Advanced Economies","5",12760
+"749","IND","Emerging Market Economies","Emerging and Developing Asia","5",135608481
+"750","IDN","Emerging Market Economies","Emerging and Developing Asia","5",18396048
+"751","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",5581386
+"752","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",3774254
+"753","IRL","Advanced Economies","Advanced Economies","5",263593
+"754","ISR","Advanced Economies","Advanced Economies","5",0
+"755","ITA","Advanced Economies","Advanced Economies","5",4041221
+"756","JAM","Emerging Market Economies","Latin America and the Caribbean","5",145694
+"757","JPN","Advanced Economies","Advanced Economies","5",9579510
+"758","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",552186
+"759","KAZ","Emerging Market Economies","Caucasus and Central Asia","5",455650
+"760","KEN","Low Income Developing Countries","Sub-Sahara Africa","5",5197588
+"761","KOR","Advanced Economies","Advanced Economies","5",4961513
+"762","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",378326
+"763","KGZ","Low Income Developing Countries","Caucasus and Central Asia","5",405252
+"764","LAO","Low Income Developing Countries","Emerging and Developing Asia","5",822456
+"765","LVA","Advanced Economies","Advanced Economies","5",163065
+"766","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",419868
+"767","LSO","Low Income Developing Countries","Sub-Sahara Africa","5",106688
+"768","LBR","Low Income Developing Countries","Sub-Sahara Africa","5",304910
+"769","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",335330
+"770","LTU","Advanced Economies","Advanced Economies","5",149983
+"771","LUX","Advanced Economies","Advanced Economies","5",30069
+"772","MDG","Low Income Developing Countries","Sub-Sahara Africa","5",1945123
+"773","MWI","Low Income Developing Countries","Sub-Sahara Africa","5",2153172
+"774","MYS","Emerging Market Economies","Emerging and Developing Asia","5",2663318
+"775","MLI","Low Income Developing Countries","Sub-Sahara Africa","5",2700200
+"776","MLT","Advanced Economies","Advanced Economies","5",45176
+"777","MUS","Emerging Market Economies","Sub-Sahara Africa","5",105903
+"778","MEX","Emerging Market Economies","Latin America and the Caribbean","5",9075077
+"779","MDA","Low Income Developing Countries","Emerging and Developing Europe","5",221633
+"780","MNG","Emerging Market Economies","Emerging and Developing Asia","5",82420
+"781","MNE","Emerging Market Economies","Emerging and Developing Europe","5",52672
+"782","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",3934721
+"783","MOZ","Low Income Developing Countries","Sub-Sahara Africa","5",3233787
+"784","MMR","Low Income Developing Countries","Emerging and Developing Asia","5",4725592
+"785","NAM","Emerging Market Economies","Sub-Sahara Africa","5",232802
+"786","NPL","Low Income Developing Countries","Emerging and Developing Asia","5",2636401
+"787","NLD","Advanced Economies","Advanced Economies","5",1167274
+"788","NZL","Advanced Economies","Advanced Economies","5",207060
+"789","NIC","Low Income Developing Countries","Latin America and the Caribbean","5",342259
+"790","NER","Low Income Developing Countries","Sub-Sahara Africa","5",2382760
+"791","NGA","Low Income Developing Countries","Sub-Sahara Africa","5",18350908
+"792","NOR","Advanced Economies","Advanced Economies","5",225287
+"793","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",130432
+"794","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",26864381
+"795","PAN","Emerging Market Economies","Latin America and the Caribbean","5",216893
+"796","PNG","Low Income Developing Countries","Emerging and Developing Asia","5",892645
+"797","PRY","Emerging Market Economies","Latin America and the Caribbean","5",474735
+"798","PER","Emerging Market Economies","Latin America and the Caribbean","5",1487404
+"799","PHL","Emerging Market Economies","Emerging and Developing Asia","5",6642935
+"800","POL","Emerging Market Economies","Emerging and Developing Europe","5",3556646
+"801","PRT","Advanced Economies","Advanced Economies","5",534344
+"802","PRI","Advanced Economies","Advanced Economies","5",295181
+"803","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",0
+"804","ROU","Emerging Market Economies","Emerging and Developing Europe","5",979959
+"805","RUS","Emerging Market Economies","Emerging and Developing Europe","5",8996398
+"806","RWA","Low Income Developing Countries","Sub-Sahara Africa","5",1165361
+"807","WSM","Emerging Market Economies","Emerging and Developing Asia","5",11544
+"808","SMR","Advanced Economies","Advanced Economies","5",0
+"809","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",9768954
+"810","SEN","Low Income Developing Countries","Sub-Sahara Africa","5",813449
+"811","SRB","Emerging Market Economies","Emerging and Developing Europe","5",461153
+"812","SYC","Emerging Market Economies","Sub-Sahara Africa","5",10100
+"813","SLE","Low Income Developing Countries","Sub-Sahara Africa","5",397531
+"814","SGP","Advanced Economies","Advanced Economies","5",0
+"815","SVK","Advanced Economies","Advanced Economies","5",591304
+"816","SVN","Advanced Economies","Advanced Economies","5",177949
+"817","SLB","Low Income Developing Countries","Emerging and Developing Asia","5",49748
+"818","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","5",617500
+"819","ZAF","Emerging Market Economies","Sub-Sahara Africa","5",5169484
+"820","SSD","Low Income Developing Countries","Sub-Sahara Africa","5",1056700
+"821","ESP","Advanced Economies","Advanced Economies","5",3508214
+"822","LKA","Emerging Market Economies","Emerging and Developing Asia","5",2266978
+"823","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","5",5693331
+"824","SUR","Emerging Market Economies","Latin America and the Caribbean","5",52086
+"825","SWE","Advanced Economies","Advanced Economies","5",727373
+"826","CHE","Advanced Economies","Advanced Economies","5",663695
+"827","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",2721759
+"828","TWN","Advanced Economies","Advanced Economies","5",1779621
+"829","TJK","Low Income Developing Countries","Caucasus and Central Asia","5",918067
+"830","TZA","Low Income Developing Countries","Sub-Sahara Africa","5",6369746
+"831","THA","Emerging Market Economies","Emerging and Developing Asia","5",5696243
+"832","TLS","Low Income Developing Countries","Emerging and Developing Asia","5",112157
+"833","TGO","Low Income Developing Countries","Sub-Sahara Africa","5",820200
+"834","TON","Emerging Market Economies","Emerging and Developing Asia","5",0
+"835","TTO","Emerging Market Economies","Latin America and the Caribbean","5",18788
+"836","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",1124436
+"837","TUR","Emerging Market Economies","Emerging and Developing Europe","5",3538409
+"838","TKM","Emerging Market Economies","Caucasus and Central Asia","5",2173298
+"839","UGA","Low Income Developing Countries","Sub-Sahara Africa","5",4366567
+"840","UKR","Emerging Market Economies","Emerging and Developing Europe","5",3167791
+"841","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","5",1153916
+"842","GBR","Advanced Economies","Advanced Economies","5",6494716
+"843","USA","Advanced Economies","Advanced Economies","5",11930316
+"844","URY","Emerging Market Economies","Latin America and the Caribbean","5",50478
+"845","UZB","Low Income Developing Countries","Caucasus and Central Asia","5",3191101
+"846","VUT","Emerging Market Economies","Emerging and Developing Asia","5",19222
+"847","VEN","Emerging Market Economies","Latin America and the Caribbean","5",1731379
+"848","VNM","Low Income Developing Countries","Emerging and Developing Asia","5",9824995
+"849","ZMB","Low Income Developing Countries","Sub-Sahara Africa","5",1073205
+"850","ZWE","Low Income Developing Countries","Sub-Sahara Africa","5",1303726
+"851","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","6",2500780
+"852","ALB","Emerging Market Economies","Emerging and Developing Europe","6",133861
+"853","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",2055684
+"854","AGO","Emerging Market Economies","Sub-Sahara Africa","6",1251701
+"855","ARG","Emerging Market Economies","Latin America and the Caribbean","6",1783205
+"856","ARM","Emerging Market Economies","Caucasus and Central Asia","6",191189
+"857","AUS","Advanced Economies","Advanced Economies","6",613888
+"858","AUT","Advanced Economies","Advanced Economies","6",443499
+"859","AZE","Emerging Market Economies","Caucasus and Central Asia","6",764422
+"860","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",614354
+"861","BGD","Low Income Developing Countries","Emerging and Developing Asia","6",16895611
+"862","BRB","Emerging Market Economies","Latin America and the Caribbean","6",20466
+"863","BLR","Emerging Market Economies","Emerging and Developing Europe","6",293268
+"864","BEL","Advanced Economies","Advanced Economies","6",996781
+"865","BLZ","Emerging Market Economies","Latin America and the Caribbean","6",0
+"866","BEN","Low Income Developing Countries","Sub-Sahara Africa","6",701654
+"867","BTN","Low Income Developing Countries","Emerging and Developing Asia","6",71887
+"868","BOL","Emerging Market Economies","Latin America and the Caribbean","6",737932
+"869","BIH","Emerging Market Economies","Emerging and Developing Europe","6",377198
+"870","BWA","Emerging Market Economies","Sub-Sahara Africa","6",187006
+"871","BRA","Emerging Market Economies","Latin America and the Caribbean","6",7999117
+"872","BRN","Emerging Market Economies","Emerging and Developing Asia","6",19880
+"873","BGR","Emerging Market Economies","Emerging and Developing Europe","6",315482
+"874","BFA","Low Income Developing Countries","Sub-Sahara Africa","6",2034260
+"875","BDI","Low Income Developing Countries","Sub-Sahara Africa","6",957586
+"876","CPV","Emerging Market Economies","Sub-Sahara Africa","6",16309
+"877","KHM","Low Income Developing Countries","Emerging and Developing Asia","6",1746796
+"878","CMR","Low Income Developing Countries","Sub-Sahara Africa","6",2070241
+"879","CAN","Advanced Economies","Advanced Economies","6",849416
+"880","TCD","Low Income Developing Countries","Sub-Sahara Africa","6",1916914
+"881","CHL","Emerging Market Economies","Latin America and the Caribbean","6",432855
+"882","CHN","Emerging Market Economies","Emerging and Developing Asia","6",117704769
+"883","COL","Emerging Market Economies","Latin America and the Caribbean","6",2124155
+"884","COD","Low Income Developing Countries","Sub-Sahara Africa","6",16960582
+"885","COG","Low Income Developing Countries","Sub-Sahara Africa","6",154691
+"886","CRI","Emerging Market Economies","Latin America and the Caribbean","6",392963
+"887","CIV","Low Income Developing Countries","Sub-Sahara Africa","6",2281748
+"888","HRV","Emerging Market Economies","Emerging and Developing Europe","6",179954
+"889","CYP","Advanced Economies","Advanced Economies","6",345447
+"890","CZE","Advanced Economies","Advanced Economies","6",1284103
+"891","DNK","Advanced Economies","Advanced Economies","6",511990
+"892","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","6",36726
+"893","DMA","Emerging Market Economies","Latin America and the Caribbean","6",6673
+"894","DOM","Emerging Market Economies","Latin America and the Caribbean","6",485331
+"895","ECU","Emerging Market Economies","Latin America and the Caribbean","6",1112231
+"896","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",14299825
+"897","SLV","Emerging Market Economies","Latin America and the Caribbean","6",382475
+"898","EST","Advanced Economies","Advanced Economies","6",45745
+"899","SWZ","Emerging Market Economies","Sub-Sahara Africa","6",80025
+"900","ETH","Low Income Developing Countries","Sub-Sahara Africa","6",9228800
+"901","FJI","Emerging Market Economies","Emerging and Developing Asia","6",17985
+"902","FIN","Advanced Economies","Advanced Economies","6",411370
+"903","FRA","Advanced Economies","Advanced Economies","6",4360707
+"904","GAB","Emerging Market Economies","Sub-Sahara Africa","6",154581
+"905","GMB","Low Income Developing Countries","Sub-Sahara Africa","6",104945
+"906","GEO","Emerging Market Economies","Caucasus and Central Asia","6",214618
+"907","DEU","Advanced Economies","Advanced Economies","6",6663829
+"908","GHA","Low Income Developing Countries","Sub-Sahara Africa","6",2369462
+"909","GRC","Advanced Economies","Advanced Economies","6",181013
+"910","GRD","Emerging Market Economies","Latin America and the Caribbean","6",10086
+"911","GTM","Emerging Market Economies","Latin America and the Caribbean","6",1593439
+"912","GIN","Low Income Developing Countries","Sub-Sahara Africa","6",844269
+"913","GUY","Emerging Market Economies","Latin America and the Caribbean","6",42132
+"914","HTI","Low Income Developing Countries","Latin America and the Caribbean","6",577716
+"915","HND","Low Income Developing Countries","Latin America and the Caribbean","6",437675
+"916","HKG","Advanced Economies","Advanced Economies","6",1352909
+"917","HUN","Emerging Market Economies","Emerging and Developing Europe","6",599162
+"918","ISL","Advanced Economies","Advanced Economies","6",5219
+"919","IND","Emerging Market Economies","Emerging and Developing Asia","6",122343806
+"920","IDN","Emerging Market Economies","Emerging and Developing Asia","6",17449083
+"921","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",4541923
+"922","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",3238881
+"923","IRL","Advanced Economies","Advanced Economies","6",194915
+"924","ISR","Advanced Economies","Advanced Economies","6",1012860
+"925","ITA","Advanced Economies","Advanced Economies","6",3903582
+"926","JAM","Emerging Market Economies","Latin America and the Caribbean","6",110731
+"927","JPN","Advanced Economies","Advanced Economies","6",6568194
+"928","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",362521
+"929","KAZ","Emerging Market Economies","Caucasus and Central Asia","6",622187
+"930","KEN","Low Income Developing Countries","Sub-Sahara Africa","6",4965970
+"931","KOR","Advanced Economies","Advanced Economies","6",4535722
+"932","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",0
+"933","KGZ","Low Income Developing Countries","Caucasus and Central Asia","6",275870
+"934","LAO","Low Income Developing Countries","Emerging and Developing Asia","6",674921
+"935","LVA","Advanced Economies","Advanced Economies","6",90441
+"936","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",412746
+"937","LSO","Low Income Developing Countries","Sub-Sahara Africa","6",157424
+"938","LBR","Low Income Developing Countries","Sub-Sahara Africa","6",234098
+"939","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",444795
+"940","LTU","Advanced Economies","Advanced Economies","6",156014
+"941","LUX","Advanced Economies","Advanced Economies","6",31406
+"942","MDG","Low Income Developing Countries","Sub-Sahara Africa","6",1854823
+"943","MWI","Low Income Developing Countries","Sub-Sahara Africa","6",2119790
+"944","MYS","Emerging Market Economies","Emerging and Developing Asia","6",2162470
+"945","MLI","Low Income Developing Countries","Sub-Sahara Africa","6",1268949
+"946","MLT","Advanced Economies","Advanced Economies","6",55288
+"947","MUS","Emerging Market Economies","Sub-Sahara Africa","6",90369
+"948","MEX","Emerging Market Economies","Latin America and the Caribbean","6",8636581
+"949","MDA","Low Income Developing Countries","Emerging and Developing Europe","6",279421
+"950","MNG","Emerging Market Economies","Emerging and Developing Asia","6",77865
+"951","MNE","Emerging Market Economies","Emerging and Developing Europe","6",103157
+"952","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",2521327
+"953","MOZ","Low Income Developing Countries","Sub-Sahara Africa","6",2205291
+"954","MMR","Low Income Developing Countries","Emerging and Developing Asia","6",2288856
+"955","NAM","Emerging Market Economies","Sub-Sahara Africa","6",238012
+"956","NPL","Low Income Developing Countries","Emerging and Developing Asia","6",1551561
+"957","NLD","Advanced Economies","Advanced Economies","6",1128290
+"958","NZL","Advanced Economies","Advanced Economies","6",226976
+"959","NIC","Low Income Developing Countries","Latin America and the Caribbean","6",465253
+"960","NER","Low Income Developing Countries","Sub-Sahara Africa","6",1642625
+"961","NGA","Low Income Developing Countries","Sub-Sahara Africa","6",20388551
+"962","NOR","Advanced Economies","Advanced Economies","6",166198
+"963","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",315287
+"964","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",19955883
+"965","PAN","Emerging Market Economies","Latin America and the Caribbean","6",145582
+"966","PNG","Low Income Developing Countries","Emerging and Developing Asia","6",860485
+"967","PRY","Emerging Market Economies","Latin America and the Caribbean","6",691112
+"968","PER","Emerging Market Economies","Latin America and the Caribbean","6",1499763
+"969","PHL","Emerging Market Economies","Emerging and Developing Asia","6",6393435
+"970","POL","Emerging Market Economies","Emerging and Developing Europe","6",3252422
+"971","PRT","Advanced Economies","Advanced Economies","6",486457
+"972","PRI","Advanced Economies","Advanced Economies","6",275248
+"973","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",112857
+"974","ROU","Emerging Market Economies","Emerging and Developing Europe","6",920740
+"975","RUS","Emerging Market Economies","Emerging and Developing Europe","6",6256675
+"976","RWA","Low Income Developing Countries","Sub-Sahara Africa","6",1161011
+"977","WSM","Emerging Market Economies","Emerging and Developing Asia","6",13700
+"978","SMR","Advanced Economies","Advanced Economies","6",3158
+"979","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",8123399
+"980","SEN","Low Income Developing Countries","Sub-Sahara Africa","6",1333329
+"981","SRB","Emerging Market Economies","Emerging and Developing Europe","6",381683
+"982","SYC","Emerging Market Economies","Sub-Sahara Africa","6",5670
+"983","SLE","Low Income Developing Countries","Sub-Sahara Africa","6",582856
+"984","SGP","Advanced Economies","Advanced Economies","6",719475
+"985","SVK","Advanced Economies","Advanced Economies","6",630599
+"986","SVN","Advanced Economies","Advanced Economies","6",156383
+"987","SLB","Low Income Developing Countries","Emerging and Developing Asia","6",49770
+"988","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","6",794878
+"989","ZAF","Emerging Market Economies","Sub-Sahara Africa","6",3736713
+"990","SSD","Low Income Developing Countries","Sub-Sahara Africa","6",1377576
+"991","ESP","Advanced Economies","Advanced Economies","6",4065493
+"992","LKA","Emerging Market Economies","Emerging and Developing Asia","6",2011104
+"993","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","6",3618505
+"994","SUR","Emerging Market Economies","Latin America and the Caribbean","6",42045
+"995","SWE","Advanced Economies","Advanced Economies","6",463640
+"996","CHE","Advanced Economies","Advanced Economies","6",577864
+"997","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",1217078
+"998","TWN","Advanced Economies","Advanced Economies","6",1119401
+"999","TJK","Low Income Developing Countries","Caucasus and Central Asia","6",643891
+"1000","TZA","Low Income Developing Countries","Sub-Sahara Africa","6",5535622
+"1001","THA","Emerging Market Economies","Emerging and Developing Asia","6",4588616
+"1002","TLS","Low Income Developing Countries","Emerging and Developing Asia","6",109796
+"1003","TGO","Low Income Developing Countries","Sub-Sahara Africa","6",890843
+"1004","TON","Emerging Market Economies","Emerging and Developing Asia","6",4495
+"1005","TTO","Emerging Market Economies","Latin America and the Caribbean","6",308746
+"1006","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",1049265
+"1007","TUR","Emerging Market Economies","Emerging and Developing Europe","6",2621928
+"1008","TKM","Emerging Market Economies","Caucasus and Central Asia","6",0
+"1009","UGA","Low Income Developing Countries","Sub-Sahara Africa","6",4535856
+"1010","UKR","Emerging Market Economies","Emerging and Developing Europe","6",2491777
+"1011","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","6",1424241
+"1012","GBR","Advanced Economies","Advanced Economies","6",5409870
+"1013","USA","Advanced Economies","Advanced Economies","6",8706150
+"1014","URY","Emerging Market Economies","Latin America and the Caribbean","6",36245
+"1015","UZB","Low Income Developing Countries","Caucasus and Central Asia","6",2192457
+"1016","VUT","Emerging Market Economies","Emerging and Developing Asia","6",31336
+"1017","VEN","Emerging Market Economies","Latin America and the Caribbean","6",2209191
+"1018","VNM","Low Income Developing Countries","Emerging and Developing Asia","6",8900320
+"1019","ZMB","Low Income Developing Countries","Sub-Sahara Africa","6",1427615
+"1020","ZWE","Low Income Developing Countries","Sub-Sahara Africa","6",1238236
+"1021","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","7",2528815
+"1022","ALB","Emerging Market Economies","Emerging and Developing Europe","7",103038
+"1023","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",2128004
+"1024","AGO","Emerging Market Economies","Sub-Sahara Africa","7",951178
+"1025","ARG","Emerging Market Economies","Latin America and the Caribbean","7",1030368
+"1026","ARM","Emerging Market Economies","Caucasus and Central Asia","7",129528
+"1027","AUS","Advanced Economies","Advanced Economies","7",393569
+"1028","AUT","Advanced Economies","Advanced Economies","7",353675
+"1029","AZE","Emerging Market Economies","Caucasus and Central Asia","7",819584
+"1030","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",0
+"1031","BGD","Low Income Developing Countries","Emerging and Developing Asia","7",13303923
+"1032","BRB","Emerging Market Economies","Latin America and the Caribbean","7",10627
+"1033","BLR","Emerging Market Economies","Emerging and Developing Europe","7",210193
+"1034","BEL","Advanced Economies","Advanced Economies","7",381139
+"1035","BLZ","Emerging Market Economies","Latin America and the Caribbean","7",98797
+"1036","BEN","Low Income Developing Countries","Sub-Sahara Africa","7",1370380
+"1037","BTN","Low Income Developing Countries","Emerging and Developing Asia","7",57771
+"1038","BOL","Emerging Market Economies","Latin America and the Caribbean","7",464622
+"1039","BIH","Emerging Market Economies","Emerging and Developing Europe","7",522383
+"1040","BWA","Emerging Market Economies","Sub-Sahara Africa","7",379956
+"1041","BRA","Emerging Market Economies","Latin America and the Caribbean","7",6721339
+"1042","BRN","Emerging Market Economies","Emerging and Developing Asia","7",9937
+"1043","BGR","Emerging Market Economies","Emerging and Developing Europe","7",227701
+"1044","BFA","Low Income Developing Countries","Sub-Sahara Africa","7",1425054
+"1045","BDI","Low Income Developing Countries","Sub-Sahara Africa","7",1174241
+"1046","CPV","Emerging Market Economies","Sub-Sahara Africa","7",14111
+"1047","KHM","Low Income Developing Countries","Emerging and Developing Asia","7",1797472
+"1048","CMR","Low Income Developing Countries","Sub-Sahara Africa","7",1412892
+"1049","CAN","Advanced Economies","Advanced Economies","7",780262
+"1050","TCD","Low Income Developing Countries","Sub-Sahara Africa","7",1526642
+"1051","CHL","Emerging Market Economies","Latin America and the Caribbean","7",1023802
+"1052","CHN","Emerging Market Economies","Emerging and Developing Asia","7",82067139
+"1053","COL","Emerging Market Economies","Latin America and the Caribbean","7",2315208
+"1054","COD","Low Income Developing Countries","Sub-Sahara Africa","7",14135778
+"1055","COG","Low Income Developing Countries","Sub-Sahara Africa","7",111903
+"1056","CRI","Emerging Market Economies","Latin America and the Caribbean","7",576014
+"1057","CIV","Low Income Developing Countries","Sub-Sahara Africa","7",1578371
+"1058","HRV","Emerging Market Economies","Emerging and Developing Europe","7",168180
+"1059","CYP","Advanced Economies","Advanced Economies","7",0
+"1060","CZE","Advanced Economies","Advanced Economies","7",981499
+"1061","DNK","Advanced Economies","Advanced Economies","7",540542
+"1062","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","7",33213
+"1063","DMA","Emerging Market Economies","Latin America and the Caribbean","7",8035
+"1064","DOM","Emerging Market Economies","Latin America and the Caribbean","7",502380
+"1065","ECU","Emerging Market Economies","Latin America and the Caribbean","7",628637
+"1066","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",9635855
+"1067","SLV","Emerging Market Economies","Latin America and the Caribbean","7",307726
+"1068","EST","Advanced Economies","Advanced Economies","7",22552
+"1069","SWZ","Emerging Market Economies","Sub-Sahara Africa","7",138091
+"1070","ETH","Low Income Developing Countries","Sub-Sahara Africa","7",8565988
+"1071","FJI","Emerging Market Economies","Emerging and Developing Asia","7",26449
+"1072","FIN","Advanced Economies","Advanced Economies","7",268237
+"1073","FRA","Advanced Economies","Advanced Economies","7",4192560
+"1074","GAB","Emerging Market Economies","Sub-Sahara Africa","7",82469
+"1075","GMB","Low Income Developing Countries","Sub-Sahara Africa","7",117708
+"1076","GEO","Emerging Market Economies","Caucasus and Central Asia","7",129391
+"1077","DEU","Advanced Economies","Advanced Economies","7",5881361
+"1078","GHA","Low Income Developing Countries","Sub-Sahara Africa","7",2115903
+"1079","GRC","Advanced Economies","Advanced Economies","7",934274
+"1080","GRD","Emerging Market Economies","Latin America and the Caribbean","7",6697
+"1081","GTM","Emerging Market Economies","Latin America and the Caribbean","7",1589539
+"1082","GIN","Low Income Developing Countries","Sub-Sahara Africa","7",1160380
+"1083","GUY","Emerging Market Economies","Latin America and the Caribbean","7",47748
+"1084","HTI","Low Income Developing Countries","Latin America and the Caribbean","7",1541244
+"1085","HND","Low Income Developing Countries","Latin America and the Caribbean","7",668229
+"1086","HKG","Advanced Economies","Advanced Economies","7",457126
+"1087","HUN","Emerging Market Economies","Emerging and Developing Europe","7",438188
+"1088","ISL","Advanced Economies","Advanced Economies","7",5341
+"1089","IND","Emerging Market Economies","Emerging and Developing Asia","7",113138645
+"1090","IDN","Emerging Market Economies","Emerging and Developing Asia","7",15171767
+"1091","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",4443360
+"1092","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",1940080
+"1093","IRL","Advanced Economies","Advanced Economies","7",430108
+"1094","ISR","Advanced Economies","Advanced Economies","7",1507850
+"1095","ITA","Advanced Economies","Advanced Economies","7",3932796
+"1096","JAM","Emerging Market Economies","Latin America and the Caribbean","7",238784
+"1097","JPN","Advanced Economies","Advanced Economies","7",4542961
+"1098","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",243295
+"1099","KAZ","Emerging Market Economies","Caucasus and Central Asia","7",647769
+"1100","KEN","Low Income Developing Countries","Sub-Sahara Africa","7",5061841
+"1101","KOR","Advanced Economies","Advanced Economies","7",1641713
+"1102","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",1084946
+"1103","KGZ","Low Income Developing Countries","Caucasus and Central Asia","7",417060
+"1104","LAO","Low Income Developing Countries","Emerging and Developing Asia","7",688171
+"1105","LVA","Advanced Economies","Advanced Economies","7",139729
+"1106","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",223991
+"1107","LSO","Low Income Developing Countries","Sub-Sahara Africa","7",118975
+"1108","LBR","Low Income Developing Countries","Sub-Sahara Africa","7",224447
+"1109","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",365553
+"1110","LTU","Advanced Economies","Advanced Economies","7",105603
+"1111","LUX","Advanced Economies","Advanced Economies","7",17600
+"1112","MDG","Low Income Developing Countries","Sub-Sahara Africa","7",1860869
+"1113","MWI","Low Income Developing Countries","Sub-Sahara Africa","7",2059949
+"1114","MYS","Emerging Market Economies","Emerging and Developing Asia","7",1402762
+"1115","MLI","Low Income Developing Countries","Sub-Sahara Africa","7",1670669
+"1116","MLT","Advanced Economies","Advanced Economies","7",24823
+"1117","MUS","Emerging Market Economies","Sub-Sahara Africa","7",42599
+"1118","MEX","Emerging Market Economies","Latin America and the Caribbean","7",5843219
+"1119","MDA","Low Income Developing Countries","Emerging and Developing Europe","7",210425
+"1120","MNG","Emerging Market Economies","Emerging and Developing Asia","7",68576
+"1121","MNE","Emerging Market Economies","Emerging and Developing Europe","7",19666
+"1122","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",3817723
+"1123","MOZ","Low Income Developing Countries","Sub-Sahara Africa","7",1815187
+"1124","MMR","Low Income Developing Countries","Emerging and Developing Asia","7",3906955
+"1125","NAM","Emerging Market Economies","Sub-Sahara Africa","7",227402
+"1126","NPL","Low Income Developing Countries","Emerging and Developing Asia","7",4146760
+"1127","NLD","Advanced Economies","Advanced Economies","7",964356
+"1128","NZL","Advanced Economies","Advanced Economies","7",143606
+"1129","NIC","Low Income Developing Countries","Latin America and the Caribbean","7",500967
+"1130","NER","Low Income Developing Countries","Sub-Sahara Africa","7",2610604
+"1131","NGA","Low Income Developing Countries","Sub-Sahara Africa","7",21792318
+"1132","NOR","Advanced Economies","Advanced Economies","7",122711
+"1133","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",326572
+"1134","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",18442930
+"1135","PAN","Emerging Market Economies","Latin America and the Caribbean","7",111330
+"1136","PNG","Low Income Developing Countries","Emerging and Developing Asia","7",641436
+"1137","PRY","Emerging Market Economies","Latin America and the Caribbean","7",382562
+"1138","PER","Emerging Market Economies","Latin America and the Caribbean","7",1472516
+"1139","PHL","Emerging Market Economies","Emerging and Developing Asia","7",6086602
+"1140","POL","Emerging Market Economies","Emerging and Developing Europe","7",2916948
+"1141","PRT","Advanced Economies","Advanced Economies","7",391571
+"1142","PRI","Advanced Economies","Advanced Economies","7",301611
+"1143","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",1885430
+"1144","ROU","Emerging Market Economies","Emerging and Developing Europe","7",886312
+"1145","RUS","Emerging Market Economies","Emerging and Developing Europe","7",5543979
+"1146","RWA","Low Income Developing Countries","Sub-Sahara Africa","7",1636077
+"1147","WSM","Emerging Market Economies","Emerging and Developing Asia","7",7831
+"1148","SMR","Advanced Economies","Advanced Economies","7",2773
+"1149","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",786376
+"1150","SEN","Low Income Developing Countries","Sub-Sahara Africa","7",1153157
+"1151","SRB","Emerging Market Economies","Emerging and Developing Europe","7",345373
+"1152","SYC","Emerging Market Economies","Sub-Sahara Africa","7",10518
+"1153","SLE","Low Income Developing Countries","Sub-Sahara Africa","7",972844
+"1154","SGP","Advanced Economies","Advanced Economies","7",0
+"1155","SVK","Advanced Economies","Advanced Economies","7",451925
+"1156","SVN","Advanced Economies","Advanced Economies","7",116173
+"1157","SLB","Low Income Developing Countries","Emerging and Developing Asia","7",38399
+"1158","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","7",814649
+"1159","ZAF","Emerging Market Economies","Sub-Sahara Africa","7",4148416
+"1160","SSD","Low Income Developing Countries","Sub-Sahara Africa","7",1244001
+"1161","ESP","Advanced Economies","Advanced Economies","7",2398371
+"1162","LKA","Emerging Market Economies","Emerging and Developing Asia","7",1461052
+"1163","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","7",2469049
+"1164","SUR","Emerging Market Economies","Latin America and the Caribbean","7",49610
+"1165","SWE","Advanced Economies","Advanced Economies","7",492483
+"1166","CHE","Advanced Economies","Advanced Economies","7",500941
+"1167","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",2122471
+"1168","TWN","Advanced Economies","Advanced Economies","7",581501
+"1169","TJK","Low Income Developing Countries","Caucasus and Central Asia","7",754300
+"1170","TZA","Low Income Developing Countries","Sub-Sahara Africa","7",5755557
+"1171","THA","Emerging Market Economies","Emerging and Developing Asia","7",4812095
+"1172","TLS","Low Income Developing Countries","Emerging and Developing Asia","7",80803
+"1173","TGO","Low Income Developing Countries","Sub-Sahara Africa","7",318824
+"1174","TON","Emerging Market Economies","Emerging and Developing Asia","7",0
+"1175","TTO","Emerging Market Economies","Latin America and the Caribbean","7",190727
+"1176","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",989816
+"1177","TUR","Emerging Market Economies","Emerging and Developing Europe","7",1921608
+"1178","TKM","Emerging Market Economies","Caucasus and Central Asia","7",1956916
+"1179","UGA","Low Income Developing Countries","Sub-Sahara Africa","7",4221592
+"1180","UKR","Emerging Market Economies","Emerging and Developing Europe","7",2145497
+"1181","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","7",134327
+"1182","GBR","Advanced Economies","Advanced Economies","7",6261995
+"1183","USA","Advanced Economies","Advanced Economies","7",6758661
+"1184","URY","Emerging Market Economies","Latin America and the Caribbean","7",17812
+"1185","UZB","Low Income Developing Countries","Caucasus and Central Asia","7",3385154
+"1186","VUT","Emerging Market Economies","Emerging and Developing Asia","7",16579
+"1187","VEN","Emerging Market Economies","Latin America and the Caribbean","7",1609505
+"1188","VNM","Low Income Developing Countries","Emerging and Developing Asia","7",7990385
+"1189","ZMB","Low Income Developing Countries","Sub-Sahara Africa","7",1577284
+"1190","ZWE","Low Income Developing Countries","Sub-Sahara Africa","7",930529
+"1191","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","8",2186660
+"1192","ALB","Emerging Market Economies","Emerging and Developing Europe","8",81767
+"1193","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",1763772
+"1194","AGO","Emerging Market Economies","Sub-Sahara Africa","8",746529
+"1195","ARG","Emerging Market Economies","Latin America and the Caribbean","8",1180028
+"1196","ARM","Emerging Market Economies","Caucasus and Central Asia","8",110057
+"1197","AUS","Advanced Economies","Advanced Economies","8",236527
+"1198","AUT","Advanced Economies","Advanced Economies","8",377525
+"1199","AZE","Emerging Market Economies","Caucasus and Central Asia","8",672328
+"1200","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",449411
+"1201","BGD","Low Income Developing Countries","Emerging and Developing Asia","8",13371435
+"1202","BRB","Emerging Market Economies","Latin America and the Caribbean","8",9142
+"1203","BLR","Emerging Market Economies","Emerging and Developing Europe","8",222546
+"1204","BEL","Advanced Economies","Advanced Economies","8",378695
+"1205","BLZ","Emerging Market Economies","Latin America and the Caribbean","8",0
+"1206","BEN","Low Income Developing Countries","Sub-Sahara Africa","8",1398367
+"1207","BTN","Low Income Developing Countries","Emerging and Developing Asia","8",49076
+"1208","BOL","Emerging Market Economies","Latin America and the Caribbean","8",432711
+"1209","BIH","Emerging Market Economies","Emerging and Developing Europe","8",237766
+"1210","BWA","Emerging Market Economies","Sub-Sahara Africa","8",200897
+"1211","BRA","Emerging Market Economies","Latin America and the Caribbean","8",5864607
+"1212","BRN","Emerging Market Economies","Emerging and Developing Asia","8",5298
+"1213","BGR","Emerging Market Economies","Emerging and Developing Europe","8",187828
+"1214","BFA","Low Income Developing Countries","Sub-Sahara Africa","8",1704370
+"1215","BDI","Low Income Developing Countries","Sub-Sahara Africa","8",877354
+"1216","CPV","Emerging Market Economies","Sub-Sahara Africa","8",10136
+"1217","KHM","Low Income Developing Countries","Emerging and Developing Asia","8",1410596
+"1218","CMR","Low Income Developing Countries","Sub-Sahara Africa","8",1721255
+"1219","CAN","Advanced Economies","Advanced Economies","8",776556
+"1220","TCD","Low Income Developing Countries","Sub-Sahara Africa","8",1405231
+"1221","CHL","Emerging Market Economies","Latin America and the Caribbean","8",1117840
+"1222","CHN","Emerging Market Economies","Emerging and Developing Asia","8",67306422
+"1223","COL","Emerging Market Economies","Latin America and the Caribbean","8",1872692
+"1224","COD","Low Income Developing Countries","Sub-Sahara Africa","8",9533380
+"1225","COG","Low Income Developing Countries","Sub-Sahara Africa","8",165314
+"1226","CRI","Emerging Market Economies","Latin America and the Caribbean","8",429932
+"1227","CIV","Low Income Developing Countries","Sub-Sahara Africa","8",1313540
+"1228","HRV","Emerging Market Economies","Emerging and Developing Europe","8",155680
+"1229","CYP","Advanced Economies","Advanced Economies","8",158721
+"1230","CZE","Advanced Economies","Advanced Economies","8",855444
+"1231","DNK","Advanced Economies","Advanced Economies","8",423664
+"1232","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","8",52391
+"1233","DMA","Emerging Market Economies","Latin America and the Caribbean","8",5261
+"1234","DOM","Emerging Market Economies","Latin America and the Caribbean","8",293410
+"1235","ECU","Emerging Market Economies","Latin America and the Caribbean","8",490292
+"1236","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",5629749
+"1237","SLV","Emerging Market Economies","Latin America and the Caribbean","8",340918
+"1238","EST","Advanced Economies","Advanced Economies","8",24066
+"1239","SWZ","Emerging Market Economies","Sub-Sahara Africa","8",111941
+"1240","ETH","Low Income Developing Countries","Sub-Sahara Africa","8",5429523
+"1241","FJI","Emerging Market Economies","Emerging and Developing Asia","8",20819
+"1242","FIN","Advanced Economies","Advanced Economies","8",668804
+"1243","FRA","Advanced Economies","Advanced Economies","8",2905189
+"1244","GAB","Emerging Market Economies","Sub-Sahara Africa","8",78372
+"1245","GMB","Low Income Developing Countries","Sub-Sahara Africa","8",60435
+"1246","GEO","Emerging Market Economies","Caucasus and Central Asia","8",145944
+"1247","DEU","Advanced Economies","Advanced Economies","8",5294231
+"1248","GHA","Low Income Developing Countries","Sub-Sahara Africa","8",2162205
+"1249","GRC","Advanced Economies","Advanced Economies","8",541494
+"1250","GRD","Emerging Market Economies","Latin America and the Caribbean","8",0
+"1251","GTM","Emerging Market Economies","Latin America and the Caribbean","8",1455767
+"1252","GIN","Low Income Developing Countries","Sub-Sahara Africa","8",1089309
+"1253","GUY","Emerging Market Economies","Latin America and the Caribbean","8",36519
+"1254","HTI","Low Income Developing Countries","Latin America and the Caribbean","8",959584
+"1255","HND","Low Income Developing Countries","Latin America and the Caribbean","8",434368
+"1256","HKG","Advanced Economies","Advanced Economies","8",480537
+"1257","HUN","Emerging Market Economies","Emerging and Developing Europe","8",437944
+"1258","ISL","Advanced Economies","Advanced Economies","8",4072
+"1259","IND","Emerging Market Economies","Emerging and Developing Asia","8",115857147
+"1260","IDN","Emerging Market Economies","Emerging and Developing Asia","8",13447414
+"1261","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",4729391
+"1262","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",1696424
+"1263","IRL","Advanced Economies","Advanced Economies","8",260451
+"1264","ISR","Advanced Economies","Advanced Economies","8",0
+"1265","ITA","Advanced Economies","Advanced Economies","8",5141989
+"1266","JAM","Emerging Market Economies","Latin America and the Caribbean","8",153020
+"1267","JPN","Advanced Economies","Advanced Economies","8",3140557
+"1268","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",235455
+"1269","KAZ","Emerging Market Economies","Caucasus and Central Asia","8",506399
+"1270","KEN","Low Income Developing Countries","Sub-Sahara Africa","8",6161664
+"1271","KOR","Advanced Economies","Advanced Economies","8",1129179
+"1272","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",0
+"1273","KGZ","Low Income Developing Countries","Caucasus and Central Asia","8",201954
+"1274","LAO","Low Income Developing Countries","Emerging and Developing Asia","8",370962
+"1275","LVA","Advanced Economies","Advanced Economies","8",73869
+"1276","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",729352
+"1277","LSO","Low Income Developing Countries","Sub-Sahara Africa","8",68052
+"1278","LBR","Low Income Developing Countries","Sub-Sahara Africa","8",297999
+"1279","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",344429
+"1280","LTU","Advanced Economies","Advanced Economies","8",109818
+"1281","LUX","Advanced Economies","Advanced Economies","8",18837
+"1282","MDG","Low Income Developing Countries","Sub-Sahara Africa","8",2435083
+"1283","MWI","Low Income Developing Countries","Sub-Sahara Africa","8",1612755
+"1284","MYS","Emerging Market Economies","Emerging and Developing Asia","8",1414174
+"1285","MLI","Low Income Developing Countries","Sub-Sahara Africa","8",1735601
+"1286","MLT","Advanced Economies","Advanced Economies","8",41358
+"1287","MUS","Emerging Market Economies","Sub-Sahara Africa","8",84698
+"1288","MEX","Emerging Market Economies","Latin America and the Caribbean","8",4436311
+"1289","MDA","Low Income Developing Countries","Emerging and Developing Europe","8",175842
+"1290","MNG","Emerging Market Economies","Emerging and Developing Asia","8",64047
+"1291","MNE","Emerging Market Economies","Emerging and Developing Europe","8",40806
+"1292","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",2085608
+"1293","MOZ","Low Income Developing Countries","Sub-Sahara Africa","8",1561246
+"1294","MMR","Low Income Developing Countries","Emerging and Developing Asia","8",2614765
+"1295","NAM","Emerging Market Economies","Sub-Sahara Africa","8",160876
+"1296","NPL","Low Income Developing Countries","Emerging and Developing Asia","8",1628631
+"1297","NLD","Advanced Economies","Advanced Economies","8",948100
+"1298","NZL","Advanced Economies","Advanced Economies","8",98338
+"1299","NIC","Low Income Developing Countries","Latin America and the Caribbean","8",567799
+"1300","NER","Low Income Developing Countries","Sub-Sahara Africa","8",1783025
+"1301","NGA","Low Income Developing Countries","Sub-Sahara Africa","8",18414837
+"1302","NOR","Advanced Economies","Advanced Economies","8",90446
+"1303","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",144384
+"1304","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",6594664
+"1305","PAN","Emerging Market Economies","Latin America and the Caribbean","8",150755
+"1306","PNG","Low Income Developing Countries","Emerging and Developing Asia","8",815133
+"1307","PRY","Emerging Market Economies","Latin America and the Caribbean","8",313086
+"1308","PER","Emerging Market Economies","Latin America and the Caribbean","8",834480
+"1309","PHL","Emerging Market Economies","Emerging and Developing Asia","8",6036196
+"1310","POL","Emerging Market Economies","Emerging and Developing Europe","8",2464578
+"1311","PRT","Advanced Economies","Advanced Economies","8",275697
+"1312","PRI","Advanced Economies","Advanced Economies","8",256072
+"1313","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",0
+"1314","ROU","Emerging Market Economies","Emerging and Developing Europe","8",756455
+"1315","RUS","Emerging Market Economies","Emerging and Developing Europe","8",5550855
+"1316","RWA","Low Income Developing Countries","Sub-Sahara Africa","8",1491102
+"1317","WSM","Emerging Market Economies","Emerging and Developing Asia","8",10085
+"1318","SMR","Advanced Economies","Advanced Economies","8",1152
+"1319","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",641015
+"1320","SEN","Low Income Developing Countries","Sub-Sahara Africa","8",1225212
+"1321","SRB","Emerging Market Economies","Emerging and Developing Europe","8",217368
+"1322","SYC","Emerging Market Economies","Sub-Sahara Africa","8",7642
+"1323","SLE","Low Income Developing Countries","Sub-Sahara Africa","8",296193
+"1324","SGP","Advanced Economies","Advanced Economies","8",717676
+"1325","SVK","Advanced Economies","Advanced Economies","8",480352
+"1326","SVN","Advanced Economies","Advanced Economies","8",96839
+"1327","SLB","Low Income Developing Countries","Emerging and Developing Asia","8",37664
+"1328","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","8",600006
+"1329","ZAF","Emerging Market Economies","Sub-Sahara Africa","8",2953643
+"1330","SSD","Low Income Developing Countries","Sub-Sahara Africa","8",917893
+"1331","ESP","Advanced Economies","Advanced Economies","8",2122346
+"1332","LKA","Emerging Market Economies","Emerging and Developing Asia","8",1463483
+"1333","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","8",3122126
+"1334","SUR","Emerging Market Economies","Latin America and the Caribbean","8",8755
+"1335","SWE","Advanced Economies","Advanced Economies","8",372168
+"1336","CHE","Advanced Economies","Advanced Economies","8",473616
+"1337","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",2501880
+"1338","TWN","Advanced Economies","Advanced Economies","8",1166791
+"1339","TJK","Low Income Developing Countries","Caucasus and Central Asia","8",430430
+"1340","TZA","Low Income Developing Countries","Sub-Sahara Africa","8",4977865
+"1341","THA","Emerging Market Economies","Emerging and Developing Asia","8",4357223
+"1342","TLS","Low Income Developing Countries","Emerging and Developing Asia","8",47916
+"1343","TGO","Low Income Developing Countries","Sub-Sahara Africa","8",351418
+"1344","TON","Emerging Market Economies","Emerging and Developing Asia","8",2779
+"1345","TTO","Emerging Market Economies","Latin America and the Caribbean","8",154584
+"1346","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",703228
+"1347","TUR","Emerging Market Economies","Emerging and Developing Europe","8",1301584
+"1348","TKM","Emerging Market Economies","Caucasus and Central Asia","8",0
+"1349","UGA","Low Income Developing Countries","Sub-Sahara Africa","8",2804744
+"1350","UKR","Emerging Market Economies","Emerging and Developing Europe","8",2057871
+"1351","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","8",431615
+"1352","GBR","Advanced Economies","Advanced Economies","8",5757545
+"1353","USA","Advanced Economies","Advanced Economies","8",5266334
+"1354","URY","Emerging Market Economies","Latin America and the Caribbean","8",10080
+"1355","UZB","Low Income Developing Countries","Caucasus and Central Asia","8",2039793
+"1356","VUT","Emerging Market Economies","Emerging and Developing Asia","8",13781
+"1357","VEN","Emerging Market Economies","Latin America and the Caribbean","8",1340043
+"1358","VNM","Low Income Developing Countries","Emerging and Developing Asia","8",6312007
+"1359","ZMB","Low Income Developing Countries","Sub-Sahara Africa","8",1109872
+"1360","ZWE","Low Income Developing Countries","Sub-Sahara Africa","8",1205304
+"1361","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","9",1893471
+"1362","ALB","Emerging Market Economies","Emerging and Developing Europe","9",61259
+"1363","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",1739151
+"1364","AGO","Emerging Market Economies","Sub-Sahara Africa","9",556729
+"1365","ARG","Emerging Market Economies","Latin America and the Caribbean","9",586526
+"1366","ARM","Emerging Market Economies","Caucasus and Central Asia","9",210800
+"1367","AUS","Advanced Economies","Advanced Economies","9",168960
+"1368","AUT","Advanced Economies","Advanced Economies","9",320300
+"1369","AZE","Emerging Market Economies","Caucasus and Central Asia","9",506538
+"1370","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",0
+"1371","BGD","Low Income Developing Countries","Emerging and Developing Asia","9",11849044
+"1372","BRB","Emerging Market Economies","Latin America and the Caribbean","9",9118
+"1373","BLR","Emerging Market Economies","Emerging and Developing Europe","9",196132
+"1374","BEL","Advanced Economies","Advanced Economies","9",571235
+"1375","BLZ","Emerging Market Economies","Latin America and the Caribbean","9",46413
+"1376","BEN","Low Income Developing Countries","Sub-Sahara Africa","9",1261314
+"1377","BTN","Low Income Developing Countries","Emerging and Developing Asia","9",52487
+"1378","BOL","Emerging Market Economies","Latin America and the Caribbean","9",355203
+"1379","BIH","Emerging Market Economies","Emerging and Developing Europe","9",151687
+"1380","BWA","Emerging Market Economies","Sub-Sahara Africa","9",129470
+"1381","BRA","Emerging Market Economies","Latin America and the Caribbean","9",5807064
+"1382","BRN","Emerging Market Economies","Emerging and Developing Asia","9",3058
+"1383","BGR","Emerging Market Economies","Emerging and Developing Europe","9",151699
+"1384","BFA","Low Income Developing Countries","Sub-Sahara Africa","9",1406767
+"1385","BDI","Low Income Developing Countries","Sub-Sahara Africa","9",835136
+"1386","CPV","Emerging Market Economies","Sub-Sahara Africa","9",26923
+"1387","KHM","Low Income Developing Countries","Emerging and Developing Asia","9",996694
+"1388","CMR","Low Income Developing Countries","Sub-Sahara Africa","9",1463821
+"1389","CAN","Advanced Economies","Advanced Economies","9",419382
+"1390","TCD","Low Income Developing Countries","Sub-Sahara Africa","9",1227352
+"1391","CHL","Emerging Market Economies","Latin America and the Caribbean","9",159289
+"1392","CHN","Emerging Market Economies","Emerging and Developing Asia","9",54791086
+"1393","COL","Emerging Market Economies","Latin America and the Caribbean","9",1585739
+"1394","COD","Low Income Developing Countries","Sub-Sahara Africa","9",6481143
+"1395","COG","Low Income Developing Countries","Sub-Sahara Africa","9",122272
+"1396","CRI","Emerging Market Economies","Latin America and the Caribbean","9",256916
+"1397","CIV","Low Income Developing Countries","Sub-Sahara Africa","9",1425197
+"1398","HRV","Emerging Market Economies","Emerging and Developing Europe","9",152485
+"1399","CYP","Advanced Economies","Advanced Economies","9",0
+"1400","CZE","Advanced Economies","Advanced Economies","9",975595
+"1401","DNK","Advanced Economies","Advanced Economies","9",322165
+"1402","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","9",28858
+"1403","DMA","Emerging Market Economies","Latin America and the Caribbean","9",5159
+"1404","DOM","Emerging Market Economies","Latin America and the Caribbean","9",206840
+"1405","ECU","Emerging Market Economies","Latin America and the Caribbean","9",564645
+"1406","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",2113306
+"1407","SLV","Emerging Market Economies","Latin America and the Caribbean","9",196355
+"1408","EST","Advanced Economies","Advanced Economies","9",19273
+"1409","SWZ","Emerging Market Economies","Sub-Sahara Africa","9",62547
+"1410","ETH","Low Income Developing Countries","Sub-Sahara Africa","9",5520426
+"1411","FJI","Emerging Market Economies","Emerging and Developing Asia","9",49908
+"1412","FIN","Advanced Economies","Advanced Economies","9",190643
+"1413","FRA","Advanced Economies","Advanced Economies","9",2481921
+"1414","GAB","Emerging Market Economies","Sub-Sahara Africa","9",63471
+"1415","GMB","Low Income Developing Countries","Sub-Sahara Africa","9",66290
+"1416","GEO","Emerging Market Economies","Caucasus and Central Asia","9",104014
+"1417","DEU","Advanced Economies","Advanced Economies","9",4742870
+"1418","GHA","Low Income Developing Countries","Sub-Sahara Africa","9",2292407
+"1419","GRC","Advanced Economies","Advanced Economies","9",519823
+"1420","GRD","Emerging Market Economies","Latin America and the Caribbean","9",4065
+"1421","GTM","Emerging Market Economies","Latin America and the Caribbean","9",1483695
+"1422","GIN","Low Income Developing Countries","Sub-Sahara Africa","9",724522
+"1423","GUY","Emerging Market Economies","Latin America and the Caribbean","9",22515
+"1424","HTI","Low Income Developing Countries","Latin America and the Caribbean","9",853354
+"1425","HND","Low Income Developing Countries","Latin America and the Caribbean","9",380697
+"1426","HKG","Advanced Economies","Advanced Economies","9",892382
+"1427","HUN","Emerging Market Economies","Emerging and Developing Europe","9",387364
+"1428","ISL","Advanced Economies","Advanced Economies","9",2154
+"1429","IND","Emerging Market Economies","Emerging and Developing Asia","9",75748349
+"1430","IDN","Emerging Market Economies","Emerging and Developing Asia","9",12356499
+"1431","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",4488920
+"1432","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",1992332
+"1433","IRL","Advanced Economies","Advanced Economies","9",479714
+"1434","ISR","Advanced Economies","Advanced Economies","9",1256413
+"1435","ITA","Advanced Economies","Advanced Economies","9",2575915
+"1436","JAM","Emerging Market Economies","Latin America and the Caribbean","9",93450
+"1437","JPN","Advanced Economies","Advanced Economies","9",1762271
+"1438","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",69274
+"1439","KAZ","Emerging Market Economies","Caucasus and Central Asia","9",439276
+"1440","KEN","Low Income Developing Countries","Sub-Sahara Africa","9",6012335
+"1441","KOR","Advanced Economies","Advanced Economies","9",788486
+"1442","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",708964
+"1443","KGZ","Low Income Developing Countries","Caucasus and Central Asia","9",193017
+"1444","LAO","Low Income Developing Countries","Emerging and Developing Asia","9",430107
+"1445","LVA","Advanced Economies","Advanced Economies","9",106840
+"1446","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",193571
+"1447","LSO","Low Income Developing Countries","Sub-Sahara Africa","9",113134
+"1448","LBR","Low Income Developing Countries","Sub-Sahara Africa","9",162647
+"1449","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",153985
+"1450","LTU","Advanced Economies","Advanced Economies","9",112308
+"1451","LUX","Advanced Economies","Advanced Economies","9",5155
+"1452","MDG","Low Income Developing Countries","Sub-Sahara Africa","9",2276407
+"1453","MWI","Low Income Developing Countries","Sub-Sahara Africa","9",804804
+"1454","MYS","Emerging Market Economies","Emerging and Developing Asia","9",967331
+"1455","MLI","Low Income Developing Countries","Sub-Sahara Africa","9",889595
+"1456","MLT","Advanced Economies","Advanced Economies","9",14374
+"1457","MUS","Emerging Market Economies","Sub-Sahara Africa","9",66189
+"1458","MEX","Emerging Market Economies","Latin America and the Caribbean","9",4220057
+"1459","MDA","Low Income Developing Countries","Emerging and Developing Europe","9",239168
+"1460","MNG","Emerging Market Economies","Emerging and Developing Asia","9",56700
+"1461","MNE","Emerging Market Economies","Emerging and Developing Europe","9",10782
+"1462","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",2158111
+"1463","MOZ","Low Income Developing Countries","Sub-Sahara Africa","9",866079
+"1464","MMR","Low Income Developing Countries","Emerging and Developing Asia","9",3016925
+"1465","NAM","Emerging Market Economies","Sub-Sahara Africa","9",138449
+"1466","NPL","Low Income Developing Countries","Emerging and Developing Asia","9",1544467
+"1467","NLD","Advanced Economies","Advanced Economies","9",914924
+"1468","NZL","Advanced Economies","Advanced Economies","9",69697
+"1469","NIC","Low Income Developing Countries","Latin America and the Caribbean","9",723023
+"1470","NER","Low Income Developing Countries","Sub-Sahara Africa","9",2539923
+"1471","NGA","Low Income Developing Countries","Sub-Sahara Africa","9",19352850
+"1472","NOR","Advanced Economies","Advanced Economies","9",64381
+"1473","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",238557
+"1474","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",4738713
+"1475","PAN","Emerging Market Economies","Latin America and the Caribbean","9",62392
+"1476","PNG","Low Income Developing Countries","Emerging and Developing Asia","9",716009
+"1477","PRY","Emerging Market Economies","Latin America and the Caribbean","9",309162
+"1478","PER","Emerging Market Economies","Latin America and the Caribbean","9",1416385
+"1479","PHL","Emerging Market Economies","Emerging and Developing Asia","9",4874726
+"1480","POL","Emerging Market Economies","Emerging and Developing Europe","9",2276412
+"1481","PRT","Advanced Economies","Advanced Economies","9",261983
+"1482","PRI","Advanced Economies","Advanced Economies","9",170303
+"1483","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",602510
+"1484","ROU","Emerging Market Economies","Emerging and Developing Europe","9",691942
+"1485","RUS","Emerging Market Economies","Emerging and Developing Europe","9",4934217
+"1486","RWA","Low Income Developing Countries","Sub-Sahara Africa","9",1317869
+"1487","WSM","Emerging Market Economies","Emerging and Developing Asia","9",10440
+"1488","SMR","Advanced Economies","Advanced Economies","9",1576
+"1489","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",801960
+"1490","SEN","Low Income Developing Countries","Sub-Sahara Africa","9",993531
+"1491","SRB","Emerging Market Economies","Emerging and Developing Europe","9",260685
+"1492","SYC","Emerging Market Economies","Sub-Sahara Africa","9",12131
+"1493","SLE","Low Income Developing Countries","Sub-Sahara Africa","9",173634
+"1494","SGP","Advanced Economies","Advanced Economies","9",0
+"1495","SVK","Advanced Economies","Advanced Economies","9",365581
+"1496","SVN","Advanced Economies","Advanced Economies","9",97383
+"1497","SLB","Low Income Developing Countries","Emerging and Developing Asia","9",25669
+"1498","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","9",470035
+"1499","ZAF","Emerging Market Economies","Sub-Sahara Africa","9",2428694
+"1500","SSD","Low Income Developing Countries","Sub-Sahara Africa","9",549475
+"1501","ESP","Advanced Economies","Advanced Economies","9",1131076
+"1502","LKA","Emerging Market Economies","Emerging and Developing Asia","9",1279443
+"1503","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","9",1569560
+"1504","SUR","Emerging Market Economies","Latin America and the Caribbean","9",18876
+"1505","SWE","Advanced Economies","Advanced Economies","9",281935
+"1506","CHE","Advanced Economies","Advanced Economies","9",365102
+"1507","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",2355085
+"1508","TWN","Advanced Economies","Advanced Economies","9",839826
+"1509","TJK","Low Income Developing Countries","Caucasus and Central Asia","9",286218
+"1510","TZA","Low Income Developing Countries","Sub-Sahara Africa","9",4249655
+"1511","THA","Emerging Market Economies","Emerging and Developing Asia","9",3985272
+"1512","TLS","Low Income Developing Countries","Emerging and Developing Asia","9",46523
+"1513","TGO","Low Income Developing Countries","Sub-Sahara Africa","9",381329
+"1514","TON","Emerging Market Economies","Emerging and Developing Asia","9",0
+"1515","TTO","Emerging Market Economies","Latin America and the Caribbean","9",107413
+"1516","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",619828
+"1517","TUR","Emerging Market Economies","Emerging and Developing Europe","9",899840
+"1518","TKM","Emerging Market Economies","Caucasus and Central Asia","9",1748459
+"1519","UGA","Low Income Developing Countries","Sub-Sahara Africa","9",2935393
+"1520","UKR","Emerging Market Economies","Emerging and Developing Europe","9",1629670
+"1521","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","9",2863046
+"1522","GBR","Advanced Economies","Advanced Economies","9",4305028
+"1523","USA","Advanced Economies","Advanced Economies","9",3811996
+"1524","URY","Emerging Market Economies","Latin America and the Caribbean","9",5017
+"1525","UZB","Low Income Developing Countries","Caucasus and Central Asia","9",2209364
+"1526","VUT","Emerging Market Economies","Emerging and Developing Asia","9",13939
+"1527","VEN","Emerging Market Economies","Latin America and the Caribbean","9",1506889
+"1528","VNM","Low Income Developing Countries","Emerging and Developing Asia","9",5014270
+"1529","ZMB","Low Income Developing Countries","Sub-Sahara Africa","9",970553
+"1530","ZWE","Low Income Developing Countries","Sub-Sahara Africa","9",701252
+"1531","AFG","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","10",1028675
+"1532","ALB","Emerging Market Economies","Emerging and Developing Europe","10",40289
+"1533","DZA","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",1956872
+"1534","AGO","Emerging Market Economies","Sub-Sahara Africa","10",371660
+"1535","ARG","Emerging Market Economies","Latin America and the Caribbean","10",325953
+"1536","ARM","Emerging Market Economies","Caucasus and Central Asia","10",153801
+"1537","AUS","Advanced Economies","Advanced Economies","10",108439
+"1538","AUT","Advanced Economies","Advanced Economies","10",229592
+"1539","AZE","Emerging Market Economies","Caucasus and Central Asia","10",332834
+"1540","BHR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",239097
+"1541","BGD","Low Income Developing Countries","Emerging and Developing Asia","10",7160951
+"1542","BRB","Emerging Market Economies","Latin America and the Caribbean","10",10137
+"1543","BLR","Emerging Market Economies","Emerging and Developing Europe","10",181720
+"1544","BEL","Advanced Economies","Advanced Economies","10",339246
+"1545","BLZ","Emerging Market Economies","Latin America and the Caribbean","10",36682
+"1546","BEN","Low Income Developing Countries","Sub-Sahara Africa","10",1084110
+"1547","BTN","Low Income Developing Countries","Emerging and Developing Asia","10",28107
+"1548","BOL","Emerging Market Economies","Latin America and the Caribbean","10",295488
+"1549","BIH","Emerging Market Economies","Emerging and Developing Europe","10",101618
+"1550","BWA","Emerging Market Economies","Sub-Sahara Africa","10",57031
+"1551","BRA","Emerging Market Economies","Latin America and the Caribbean","10",5914041
+"1552","BRN","Emerging Market Economies","Emerging and Developing Asia","10",838
+"1553","BGR","Emerging Market Economies","Emerging and Developing Europe","10",97640
+"1554","BFA","Low Income Developing Countries","Sub-Sahara Africa","10",1503143
+"1555","BDI","Low Income Developing Countries","Sub-Sahara Africa","10",594002
+"1556","CPV","Emerging Market Economies","Sub-Sahara Africa","10",22894
+"1557","KHM","Low Income Developing Countries","Emerging and Developing Asia","10",431118
+"1558","CMR","Low Income Developing Countries","Sub-Sahara Africa","10",898226
+"1559","CAN","Advanced Economies","Advanced Economies","10",46720
+"1560","TCD","Low Income Developing Countries","Sub-Sahara Africa","10",798065
+"1561","CHL","Emerging Market Economies","Latin America and the Caribbean","10",50527
+"1562","CHN","Emerging Market Economies","Emerging and Developing Asia","10",23155699
+"1563","COL","Emerging Market Economies","Latin America and the Caribbean","10",1759422
+"1564","COD","Low Income Developing Countries","Sub-Sahara Africa","10",3731158
+"1565","COG","Low Income Developing Countries","Sub-Sahara Africa","10",12460
+"1566","CRI","Emerging Market Economies","Latin America and the Caribbean","10",230584
+"1567","CIV","Low Income Developing Countries","Sub-Sahara Africa","10",869467
+"1568","HRV","Emerging Market Economies","Emerging and Developing Europe","10",85136
+"1569","CYP","Advanced Economies","Advanced Economies","10",119242
+"1570","CZE","Advanced Economies","Advanced Economies","10",661110
+"1571","DNK","Advanced Economies","Advanced Economies","10",268441
+"1572","DJI","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","10",68738
+"1573","DMA","Emerging Market Economies","Latin America and the Caribbean","10",1325
+"1574","DOM","Emerging Market Economies","Latin America and the Caribbean","10",251597
+"1575","ECU","Emerging Market Economies","Latin America and the Caribbean","10",287320
+"1576","EGY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",849927
+"1577","SLV","Emerging Market Economies","Latin America and the Caribbean","10",144015
+"1578","EST","Advanced Economies","Advanced Economies","10",10839
+"1579","SWZ","Emerging Market Economies","Sub-Sahara Africa","10",63796
+"1580","ETH","Low Income Developing Countries","Sub-Sahara Africa","10",3344327
+"1581","FJI","Emerging Market Economies","Emerging and Developing Asia","10",18159
+"1582","FIN","Advanced Economies","Advanced Economies","10",398878
+"1583","FRA","Advanced Economies","Advanced Economies","10",1793909
+"1584","GAB","Emerging Market Economies","Sub-Sahara Africa","10",43184
+"1585","GMB","Low Income Developing Countries","Sub-Sahara Africa","10",37663
+"1586","GEO","Emerging Market Economies","Caucasus and Central Asia","10",41857
+"1587","DEU","Advanced Economies","Advanced Economies","10",4613182
+"1588","GHA","Low Income Developing Countries","Sub-Sahara Africa","10",1767145
+"1589","GRC","Advanced Economies","Advanced Economies","10",276707
+"1590","GRD","Emerging Market Economies","Latin America and the Caribbean","10",3793
+"1591","GTM","Emerging Market Economies","Latin America and the Caribbean","10",1588024
+"1592","GIN","Low Income Developing Countries","Sub-Sahara Africa","10",893243
+"1593","GUY","Emerging Market Economies","Latin America and the Caribbean","10",15794
+"1594","HTI","Low Income Developing Countries","Latin America and the Caribbean","10",629684
+"1595","HND","Low Income Developing Countries","Latin America and the Caribbean","10",498751
+"1596","HKG","Advanced Economies","Advanced Economies","10",396709
+"1597","HUN","Emerging Market Economies","Emerging and Developing Europe","10",267299
+"1598","ISL","Advanced Economies","Advanced Economies","10",2010
+"1599","IND","Emerging Market Economies","Emerging and Developing Asia","10",19775811
+"1600","IDN","Emerging Market Economies","Emerging and Developing Asia","10",7281124
+"1601","IRN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",1577125
+"1602","IRQ","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",825728
+"1603","IRL","Advanced Economies","Advanced Economies","10",264588
+"1604","ISR","Advanced Economies","Advanced Economies","10",44506
+"1605","ITA","Advanced Economies","Advanced Economies","10",1952824
+"1606","JAM","Emerging Market Economies","Latin America and the Caribbean","10",152463
+"1607","JPN","Advanced Economies","Advanced Economies","10",759399
+"1608","JOR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",170967
+"1609","KAZ","Emerging Market Economies","Caucasus and Central Asia","10",371434
+"1610","KEN","Low Income Developing Countries","Sub-Sahara Africa","10",4323337
+"1611","KOR","Advanced Economies","Advanced Economies","10",583721
+"1612","KWT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",359992
+"1613","KGZ","Low Income Developing Countries","Caucasus and Central Asia","10",126830
+"1614","LAO","Low Income Developing Countries","Emerging and Developing Asia","10",286432
+"1615","LVA","Advanced Economies","Advanced Economies","10",86795
+"1616","LBN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",119562
+"1617","LSO","Low Income Developing Countries","Sub-Sahara Africa","10",125491
+"1618","LBR","Low Income Developing Countries","Sub-Sahara Africa","10",148276
+"1619","LBY","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",184007
+"1620","LTU","Advanced Economies","Advanced Economies","10",108415
+"1621","LUX","Advanced Economies","Advanced Economies","10",34019
+"1622","MDG","Low Income Developing Countries","Sub-Sahara Africa","10",1825499
+"1623","MWI","Low Income Developing Countries","Sub-Sahara Africa","10",393144
+"1624","MYS","Emerging Market Economies","Emerging and Developing Asia","10",704299
+"1625","MLI","Low Income Developing Countries","Sub-Sahara Africa","10",414733
+"1626","MLT","Advanced Economies","Advanced Economies","10",5189
+"1627","MUS","Emerging Market Economies","Sub-Sahara Africa","10",209
+"1628","MEX","Emerging Market Economies","Latin America and the Caribbean","10",1208068
+"1629","MDA","Low Income Developing Countries","Emerging and Developing Europe","10",192256
+"1630","MNG","Emerging Market Economies","Emerging and Developing Asia","10",60508
+"1631","MNE","Emerging Market Economies","Emerging and Developing Europe","10",6818
+"1632","MAR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",518624
+"1633","MOZ","Low Income Developing Countries","Sub-Sahara Africa","10",600548
+"1634","MMR","Low Income Developing Countries","Emerging and Developing Asia","10",1492905
+"1635","NAM","Emerging Market Economies","Sub-Sahara Africa","10",119370
+"1636","NPL","Low Income Developing Countries","Emerging and Developing Asia","10",784327
+"1637","NLD","Advanced Economies","Advanced Economies","10",809986
+"1638","NZL","Advanced Economies","Advanced Economies","10",0
+"1639","NIC","Low Income Developing Countries","Latin America and the Caribbean","10",441517
+"1640","NER","Low Income Developing Countries","Sub-Sahara Africa","10",926280
+"1641","NGA","Low Income Developing Countries","Sub-Sahara Africa","10",16081730
+"1642","NOR","Advanced Economies","Advanced Economies","10",3248
+"1643","OMN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",230762
+"1644","PAK","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",4630306
+"1645","PAN","Emerging Market Economies","Latin America and the Caribbean","10",73964
+"1646","PNG","Low Income Developing Countries","Emerging and Developing Asia","10",599125
+"1647","PRY","Emerging Market Economies","Latin America and the Caribbean","10",269902
+"1648","PER","Emerging Market Economies","Latin America and the Caribbean","10",1069823
+"1649","PHL","Emerging Market Economies","Emerging and Developing Asia","10",2478755
+"1650","POL","Emerging Market Economies","Emerging and Developing Europe","10",1891882
+"1651","PRT","Advanced Economies","Advanced Economies","10",164873
+"1652","PRI","Advanced Economies","Advanced Economies","10",110250
+"1653","QAT","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",31418
+"1654","ROU","Emerging Market Economies","Emerging and Developing Europe","10",510443
+"1655","RUS","Emerging Market Economies","Emerging and Developing Europe","10",3423694
+"1656","RWA","Low Income Developing Countries","Sub-Sahara Africa","10",1280023
+"1657","WSM","Emerging Market Economies","Emerging and Developing Asia","10",10636
+"1658","SMR","Advanced Economies","Advanced Economies","10",935
+"1659","SAU","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",1262449
+"1660","SEN","Low Income Developing Countries","Sub-Sahara Africa","10",393305
+"1661","SRB","Emerging Market Economies","Emerging and Developing Europe","10",144748
+"1662","SYC","Emerging Market Economies","Sub-Sahara Africa","10",3458
+"1663","SLE","Low Income Developing Countries","Sub-Sahara Africa","10",632554
+"1664","SGP","Advanced Economies","Advanced Economies","10",1061096
+"1665","SVK","Advanced Economies","Advanced Economies","10",233310
+"1666","SVN","Advanced Economies","Advanced Economies","10",50674
+"1667","SLB","Low Income Developing Countries","Emerging and Developing Asia","10",2830
+"1668","SOM","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","10",408180
+"1669","ZAF","Emerging Market Economies","Sub-Sahara Africa","10",1367855
+"1670","SSD","Low Income Developing Countries","Sub-Sahara Africa","10",1011448
+"1671","ESP","Advanced Economies","Advanced Economies","10",721822
+"1672","LKA","Emerging Market Economies","Emerging and Developing Asia","10",592209
+"1673","SDN","Low Income Developing Countries","Middle East, North Africa, Afghanistan, and Pakistan","10",2167004
+"1674","SUR","Emerging Market Economies","Latin America and the Caribbean","10",7210
+"1675","SWE","Advanced Economies","Advanced Economies","10",164650
+"1676","CHE","Advanced Economies","Advanced Economies","10",160411
+"1677","SYR","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",972964
+"1678","TWN","Advanced Economies","Advanced Economies","10",483606
+"1679","TJK","Low Income Developing Countries","Caucasus and Central Asia","10",150993
+"1680","TZA","Low Income Developing Countries","Sub-Sahara Africa","10",236992
+"1681","THA","Emerging Market Economies","Emerging and Developing Asia","10",2686500
+"1682","TLS","Low Income Developing Countries","Emerging and Developing Asia","10",38744
+"1683","TGO","Low Income Developing Countries","Sub-Sahara Africa","10",819656
+"1684","TON","Emerging Market Economies","Emerging and Developing Asia","10",661
+"1685","TTO","Emerging Market Economies","Latin America and the Caribbean","10",121682
+"1686","TUN","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",509606
+"1687","TUR","Emerging Market Economies","Emerging and Developing Europe","10",490877
+"1688","TKM","Emerging Market Economies","Caucasus and Central Asia","10",821091
+"1689","UGA","Low Income Developing Countries","Sub-Sahara Africa","10",2529507
+"1690","UKR","Emerging Market Economies","Emerging and Developing Europe","10",1263207
+"1691","ARE","Emerging Market Economies","Middle East, North Africa, Afghanistan, and Pakistan","10",534069
+"1692","GBR","Advanced Economies","Advanced Economies","10",3845880
+"1693","USA","Advanced Economies","Advanced Economies","10",1515334
+"1694","URY","Emerging Market Economies","Latin America and the Caribbean","10",2609
+"1695","UZB","Low Income Developing Countries","Caucasus and Central Asia","10",2002382
+"1696","VUT","Emerging Market Economies","Emerging and Developing Asia","10",9345
+"1697","VEN","Emerging Market Economies","Latin America and the Caribbean","10",538842
+"1698","VNM","Low Income Developing Countries","Emerging and Developing Asia","10",2817666
+"1699","ZMB","Low Income Developing Countries","Sub-Sahara Africa","10",991314
+"1700","ZWE","Low Income Developing Countries","Sub-Sahara Africa","10",663228

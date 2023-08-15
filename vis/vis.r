@@ -13,7 +13,7 @@ library(lemon)
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
 #mobile capex
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 data <- read_excel(path, sheet = "Pop", col_names = T)
 data$ISO3 = NULL
 data$`country_name` = NULL
@@ -57,7 +57,7 @@ plot1 =
   geom_bar(stat="identity")  +              
   theme(legend.position = "bottom",
         axis.text.x = element_text(angle = 15, hjust=1)) +
-  labs(title="(A) Population by Density Deciles for IMF Income Groups and Regions",
+  labs(title="(A) Population by Density Deciles for Income Groups and Regions",
        fill="Region",
        subtitle = bquote("Aggregated from WorldPop Global Mosaic 1 km^2 (2020)"),
        x="Population Density Decile \n(Decile 1 is the most densely populated, Decile 10 is the least densely populated)", 
@@ -65,6 +65,8 @@ plot1 =
   scale_y_continuous(expand = c(0, 0), limits=c(0,1800)) +#
   scale_fill_viridis_d() + #direction = -1
   facet_wrap(~income_group) #direction = -1
+
+write.csv(data, file.path(folder, 'final_data', 'fig_5a_area_data.csv')) 
 
 data_pop = data
 
@@ -84,7 +86,7 @@ data_pop = data
 ####################AREA
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 data <- read_excel(path, sheet = "Area", col_names = T)
 data$ISO3 = NULL
 data$`country_name` = NULL
@@ -129,7 +131,7 @@ plot2 = ggplot(data, aes(x=decile, y=value, fill=region, group=region)) +
   geom_bar(stat="identity")  +              #
   theme(legend.position = "bottom",
         axis.text.x = element_text(angle = 15, hjust=1)) +
-  labs(title="(B) Geographic Area by Density Deciles for IMF Income Groups and Regions",
+  labs(title="(B) Geographic Area by Density Deciles for Income Groups and Regions",
        fill="Region",
        subtitle = bquote("Aggregated from GADM Adminstrative Area Boundaries"),
        x="Population Density Decile \n(Decile 1 is the most densely populated, Decile 10 is the least densely populated)",
@@ -137,6 +139,8 @@ plot2 = ggplot(data, aes(x=decile, y=value, fill=region, group=region)) +
   scale_y_continuous(expand = c(0, 0), limits=c(0,40)) +#
   scale_fill_viridis_d() +
   facet_wrap(~income_group) #, scales = "free"
+
+write.csv(data, file.path(folder, 'final_data', 'fig_5b_area_data.csv')) 
 
 # #export to folder
 # path = file.path(folder, 'figures', 'area.tiff')
@@ -154,7 +158,7 @@ plot2 = ggplot(data, aes(x=decile, y=value, fill=region, group=region)) +
 ####################POP DENSITY
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 data <- read_excel(path, sheet = "Pop", col_names = T)
 data$`Population Sum` = NULL
 data$`country_name` = NULL
@@ -175,7 +179,7 @@ data = data %>% gather(decile, pop, (4:13))
 data$pop <- as.numeric(data$pop)
 data = data[complete.cases(data), ]
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 area <- read_excel(path, sheet = "Area", col_names = T)
 area$`country_name` = NULL
 area$`area_km2_sum` = NULL
@@ -224,7 +228,7 @@ plot3 = ggplot(data_pop_d, aes(x=decile, y=pop_d_km2, fill=region, group=region)
             stat = 'summary', fun = sum, vjust = -.5, size=2.5) +
   theme(legend.position = "bottom",
         axis.text.x = element_text(angle = 15, hjust=1)) +
-  labs(title="(C) Population Density by Density Deciles for IMF Income Groups and Regions",
+  labs(title="(C) Population Density by Density Deciles for Income Groups and Regions",
        fill="Region",
        subtitle = bquote("Estimated from WorldPop and GADM Adminstrative Areas"),
        x="Population Density Decile \n(Decile 1 is the most densely populated, Decile 10 is the least densely populated)", 
@@ -232,6 +236,8 @@ plot3 = ggplot(data_pop_d, aes(x=decile, y=pop_d_km2, fill=region, group=region)
   scale_y_continuous(expand = c(0, 0), limits=c(0,6750)) +#
   scale_fill_viridis_d() +
   facet_wrap(~income_group) #, scales = "free"
+
+write.csv(data, file.path(folder, 'final_data', 'fig_5c_pop_density_data.csv')) 
 
 # #export to folder
 # path = file.path(folder, 'figures', 'pop_density.tiff')
@@ -253,7 +259,7 @@ plot3 = ggplot(data_pop_d, aes(x=decile, y=pop_d_km2, fill=region, group=region)
 ####################GDP
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 data <- read_excel(path, sheet = "GDP", col_names = T)
 data$ISO3 = NULL
 data$`country_name` = NULL
@@ -287,9 +293,9 @@ plot4 = ggplot(data, aes(x=year, y=value, fill=region, group=region)) +
           geom_bar(stat="identity")  +              #
           theme(legend.position = "bottom",
                 axis.text.x = element_text(angle = 15, hjust=1)) +
-          labs(title="(D) Gross Domestic Product (GDP) by IMF Income Group and Region",
+          labs(title="(D) Gross Domestic Product (GDP) by Income Group and Region",
                fill="Region",
-               subtitle = "IMF Forecasts for IMF Member Countries (2022-2030)",
+               subtitle = "IMF Forecasts for Member Countries (2022-2030)",
                x=NULL, y='GDP ($Tn)') +
           scale_y_continuous(expand = c(0, 0), limits=c(0,72)) +#
           scale_fill_viridis_d() + 
@@ -312,13 +318,14 @@ plot4 = ggplot(data, aes(x=year, y=value, fill=region, group=region)) +
 # 
 # write.csv(perc_gdp, file.path(folder, 'percentages', 'perc_gdp.csv')) 
 
-context <- ggarrange(plot1, plot2, plot3, plot4, 
-                     ncol = 1, nrow = 4, align = c("hv"),
+context <- ggarrange(plot1, plot2, plot3, #plot4, 
+                     ncol = 1, nrow = 3, align = c("hv"),
                      common.legend = TRUE, legend='bottom')
 
-path = file.path(folder, 'figures', 'context.tiff')
+path = file.path(folder, 'figures', 'context.svg')
 dir.create(file.path(folder, 'figures'), showWarnings = FALSE)
-tiff(path, units="in", width=10, height=12, res=300)
+tiff(path, units="in", width=10, height=10, res=300)
+# svg(path,width=10, height=10)
 print(context)
 dev.off()
 
@@ -327,8 +334,8 @@ dev.off()
 ####################AGGREGATED RESULTS
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
-data <- read_excel(path, sheet = "Cost_Comp_IMF_Income_Group", col_names = T)
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
+data <- read_excel(path, sheet = "Cost_by_IMF_Income_Group", col_names = T)
 names(data) <- data[1,]
 data <- data[-1,]
 data = data[, 1:4]
@@ -358,7 +365,7 @@ plot1 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
             stat = 'summary', fun = sum, hjust = -.5, size=2.5) +
   theme(legend.position = "bottom",
         axis.text.x = element_text(angle = 0, hjust=.5)) +
-  labs(title="(A) Aggregate Cost for IMF Income Groups By Asset Cost Type",
+  labs(title="(A) Aggregate Cost for Income Groups By Asset Cost Type",
        fill="Cost\nType",
        subtitle = "Based on 50 GB/Month in EMEs and AEs, and 40 GB/Month in LIDCs",
        x=NULL, y='Investment Cost ($Bn)') +
@@ -367,11 +374,12 @@ plot1 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
   guides(fill = guide_legend(reverse=T))
 
 write.csv(data, file.path(folder, 'aggregated_income.csv'))
+write.csv(data, file.path(folder, 'final_data', 'fig_6a_aggregated_income.csv'))
 
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
-data <- read_excel(path, sheet = "Cost_Comp_IMF_Region", col_names = T)
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
+data <- read_excel(path, sheet = "Cost_by_IMF_Regions", col_names = T)
 names(data) <- data[1,]
 data <- data[-1,]
 data = data[, 1:8]
@@ -396,14 +404,16 @@ data$region = factor(data$region,
                               "Emerging and Developing Europe",
                               'Emerging and Developing Asia',
                               'Caucasus and Central Asia',
-                              'Advanced Economies'),
+                              'Advanced Economies'
+                              ),
                       labels=c("Sub-Saharan Africa",
                               "MENA, AFG and PAK",
                               "Latin America and the Caribbean",
                               "Emerging and Developing Europe",
                               'Emerging and Developing Asia',
                               'Caucasus and Central Asia',
-                              'Advanced Economies')
+                              'Advanced Economies'
+                              )
 )
 
 plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
@@ -412,7 +422,7 @@ plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
   geom_bar(stat="identity")  +   coord_flip() +
   theme(legend.position = "bottom",
         axis.text.x = element_text(angle = 0, hjust=.5)) +
-  labs(title="(B) Aggregate Cost for IMF Regions By Asset Cost Type",
+  labs(title="(B) Aggregate Cost for Regions By Asset Cost Type",
        fill="Cost\nType",
        subtitle = "Based on 50 GB/Month in EMEs and AEs, and 40 GB/Month in LIDCs",
        x=NULL, y='Investment Cost ($Bn)') +
@@ -420,7 +430,7 @@ plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
 
-write.csv(data, file.path(folder, 'aggregated_regions.csv'))
+write.csv(data, file.path(folder, 'final_data', 'fig_6b_aggregated_regions.csv'))
 
 aggregated_costs <- ggarrange(plot1, plot2,
                               ncol = 1, nrow = 2, align = c("hv"),
@@ -428,7 +438,7 @@ aggregated_costs <- ggarrange(plot1, plot2,
                               heights=c(.65,1))
 
 path = file.path(folder, 'figures', 'aggregated_costs.tiff')
-tiff(path, units="in", width=8, height=5, res=300)
+tiff(path, units="in", width=8, height=4.5, res=300)
 print(aggregated_costs)
 dev.off()
 
@@ -446,7 +456,7 @@ dev.off()
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
 #mobile capex
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 capex <- read_excel(path, sheet = "Capex_Per_Decile", col_names = T)
 capex$ISO3 = NULL
 capex$`Country Name` = NULL
@@ -496,16 +506,16 @@ remove(capex, metro_and_backbone_fiber, opex, remote_coverage, policy_regulation
 
 data = na.omit(data)
 
-colnames(data)[3] <- "Decile 1"
-colnames(data)[4] <- "Decile 2"
-colnames(data)[5] <- "Decile 3"
-colnames(data)[6] <- "Decile 4"
-colnames(data)[7] <- "Decile 5"
-colnames(data)[8] <- "Decile 6"
-colnames(data)[9] <- "Decile 7"
-colnames(data)[10] <- "Decile 8"
-colnames(data)[11] <- "Decile 9"
-colnames(data)[12] <- "Decile 10"
+colnames(data)[3] <- "D1"
+colnames(data)[4] <- "D2"
+colnames(data)[5] <- "D3"
+colnames(data)[6] <- "D4"
+colnames(data)[7] <- "D5"
+colnames(data)[8] <- "D6"
+colnames(data)[9] <- "D7"
+colnames(data)[10] <- "D8"
+colnames(data)[11] <- "D9"
+colnames(data)[12] <- "D10"
 
 data = data[!(data$`Income Group`=="-"),]
 names(data)[names(data) == 'Income Group'] <- 'income_group'
@@ -531,16 +541,16 @@ income$income_group = factor(income$income_group,
 )
 
 income$decile = factor(income$decile,
-                       levels=c('Decile 1', 
-                                'Decile 2',
-                                'Decile 3',
-                                'Decile 4',
-                                'Decile 5',
-                                'Decile 6',
-                                'Decile 7',
-                                'Decile 8',
-                                'Decile 9',
-                                'Decile 10'
+                       levels=c('D1', 
+                                'D2',
+                                'D3',
+                                'D4',
+                                'D5',
+                                'D6',
+                                'D7',
+                                'D8',
+                                'D9',
+                                'D10'
                        )
 )
 
@@ -549,15 +559,17 @@ plot1 = ggplot(income, aes(x=decile, y=value, fill=type, group=type)) +
   geom_text(aes(label = round(after_stat(y),1), group = income_group),
             stat = 'summary', fun = sum, vjust = -.5, size=2.2) +
   theme(legend.position = "None",
-        axis.text.x = element_text(angle = 90, vjust=.5, hjust=.5)) +
-  labs(title="(A) Decile Cost for IMF Income Groups By Asset Cost Type",
+        axis.text.x = element_text(angle = 45, vjust=.5, hjust=.5)) +
+  labs(title="(A) Decile Cost for Income Groups By Asset Cost Type",
        fill="Cost\nType",
        subtitle = "Based on 50 GB/Month in EMEs and AEs, and 40 GB/Month in LIDCs",
-       x=NULL, y='Investment Cost ($Bn)') +
+       x=NULL, y='Cost ($Bn)') +
   scale_y_continuous(expand = c(0, 0), limits=c(0,55)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T)) +
   facet_wrap(~income_group, scales = "free")
+
+write.csv(income, file.path(folder, 'final_data', 'fig_7a_income.csv'))
 
 regions = data
 regions$income_group = NULL
@@ -567,34 +579,39 @@ regions = regions %>%
   group_by(Region, type, decile) %>%
   summarize(value = sum(value)/1e9)
 
+regions = regions %>% 
+  filter(Region != 'Advanced Economies')
+
 regions$Region = factor(regions$Region,
                         levels=c("Sub-Sahara Africa",
                                  "Middle East, North Africa, Afghanistan, and Pakistan",
                                  "Latin America and the Caribbean",
                                  "Emerging and Developing Europe",
                                  'Emerging and Developing Asia',
-                                 'Caucasus and Central Asia',
-                                 'Advanced Economies'),
+                                 'Caucasus and Central Asia'#,
+                                 # 'Advanced Economies'
+                                 ),
                         labels=c("Sub-Sahara Africa",
                                  "MENA, AFG and PAK",
                                  "Latin America and the Caribbean",
                                  "Emerging and Developing Europe",
                                  'Emerging and Developing Asia',
-                                 'Caucasus and Central Asia',
-                                 'Advanced Economies')
+                                 'Caucasus and Central Asia'#,
+                                 # 'Advanced Economies'
+                                 )
 )
 
 regions$decile = factor(regions$decile,
-                        levels=c('Decile 1', 
-                                 'Decile 2',
-                                 'Decile 3',
-                                 'Decile 4',
-                                 'Decile 5',
-                                 'Decile 6',
-                                 'Decile 7',
-                                 'Decile 8',
-                                 'Decile 9',
-                                 'Decile 10'
+                        levels=c('D1', 
+                                 'D2',
+                                 'D3',
+                                 'D4',
+                                 'D5',
+                                 'D6',
+                                 'D7',
+                                 'D8',
+                                 'D9',
+                                 'D10'
                         )
 )
 
@@ -603,46 +620,48 @@ plot2 = ggplot(regions, aes(x=decile, y=value, fill=type, group=type)) +
   geom_text(aes(label = round(after_stat(y),1), group = Region),
             stat = 'summary', fun = sum, vjust = -.5, size=2.2) +
   theme(legend.position = "bottom",
-        axis.text.x = element_text(angle = 90, vjust=.5, hjust=.5)) +
-  labs(title="(B) Decile Cost for IMF Regions By Asset Cost Type",
+        axis.text.x = element_text(angle = 45, vjust=.5, hjust=.5)) +
+  labs(title="(B) Decile Cost for Regions By Asset Cost Type",
        fill="Cost\nType",
        subtitle = "Based on 50 GB/Month in EMEs and AEs, and 40 GB/Month in LIDCs",
-       x=NULL, y='Investment Cost ($Bn)') +
+       x=NULL, y='Cost ($Bn)') +
   scale_y_continuous(expand = c(0, 0), limits=c(0,35)) +
   scale_fill_viridis_d(direction=-1) +
-  guides(fill = guide_legend(reverse=T, ncol=2)) + 
+  guides(fill = guide_legend(reverse=T, ncol=3)) + 
   facet_wrap(~Region, scales = "free")
 
-shift_legend2 <- function(p) {
-  # to grob
-  gp <- ggplotGrob(p)
-  facet.panels <- grep("^panel", gp[["layout"]][["name"]])
-  empty.facet.panels <- sapply(facet.panels, function(i) "zeroGrob" %in% class(gp[["grobs"]][[i]]))
-  empty.facet.panels <- facet.panels[empty.facet.panels]
-  # establish name of empty panels
-  empty.facet.panels <- gp[["layout"]][empty.facet.panels, ]
-  names <- empty.facet.panels$name
-  # example of names:
-  #[1] "panel-3-2" "panel-3-3"
-  # now we just need a simple call to reposition the legend
-  reposition_legend(p, 'center', panel=names)
-}
+write.csv(regions, file.path(folder, 'final_data', 'fig_7b_regions.csv'))
 
-plot2 = shift_legend2(plot2)
+# shift_legend2 <- function(p) {
+#   # to grob
+#   gp <- ggplotGrob(p)
+#   facet.panels <- grep("^panel", gp[["layout"]][["name"]])
+#   empty.facet.panels <- sapply(facet.panels, function(i) "zeroGrob" %in% class(gp[["grobs"]][[i]]))
+#   empty.facet.panels <- facet.panels[empty.facet.panels]
+#   # establish name of empty panels
+#   empty.facet.panels <- gp[["layout"]][empty.facet.panels, ]
+#   names <- empty.facet.panels$name
+#   # example of names:
+#   #[1] "panel-3-2" "panel-3-3"
+#   # now we just need a simple call to reposition the legend
+#   reposition_legend(p, 'center', panel=names)
+# }
+
+# plot2 = shift_legend2(plot2)
 
 aggregated_costs <- ggarrange(plot1, plot2,
                               ncol = 1, nrow = 2, 
                               heights=c(0.45,1))
 
 path = file.path(folder, 'figures', 'decile_panel_costs2.tiff')
-tiff(path, units="in", width=8, height=9, res=300)
+tiff(path, units="in", width=8, height=6, res=300)
 print(aggregated_costs)
 dev.off()
 
 ####################GDP
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 data <- read_excel(path, sheet = "GDP", col_names = T)
 data$ISO3 = NULL
 data$`country_name` = NULL
@@ -663,15 +682,15 @@ data$income = factor(data$income,
 income = data %>%
   group_by(income) %>%
   summarize(
-    value = sum(value, na.rm=TRUE)
+    value = sum(value, na.rm=TRUE) 
   )
 
 income_results = read.csv(file.path(folder, 'aggregated_income.csv'))
 income_results$X = NULL
 income = merge(income, income_results, by=c("income"))
-income$gdp_perc = income$cost/income$value 
+income$gdp_perc = (income$cost/income$value) * 100
 remove(income_results)
-
+# write.csv(income, file.path(folder,'gdp_perc_by_income_group.csv'))
 options(scipen=999)
 
 plot1 = ggplot(income, aes(x=income, y=gdp_perc, fill=Category, group=Category)) +
@@ -684,9 +703,11 @@ plot1 = ggplot(income, aes(x=income, y=gdp_perc, fill=Category, group=Category))
        fill="Cost\nType",
        subtitle = "Based on 50 GB/Month in EMEs and AEs, and 40 GB/Month in LIDCs",
        x=NULL, y='Percentage of GDP (%)') +
-  scale_y_continuous(expand = c(0, 0), limits=c(0,0.039)) +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,3.8)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
+
+write.csv(income, file.path(folder, 'final_data', 'fig_8a_income.csv'))
 
 data$region = factor(data$region,
                      levels=c("Sub-Sahara Africa",
@@ -708,13 +729,13 @@ data$region = factor(data$region,
 region = data %>%
   group_by(region) %>%
   summarize(
-    value = sum(value, na.rm=TRUE)
+    value = sum(value, na.rm=TRUE) 
   )
 
 region_results = read.csv(file.path(folder, 'aggregated_regions.csv'))
 region_results$X = NULL
 region = merge(region, region_results, by=c("region"))
-region$gdp_perc = region$cost/region$value 
+region$gdp_perc = region$cost/region$value * 100
 remove(region_results, data)
 
 plot2 = ggplot(region, aes(x=region, y=gdp_perc, fill=Category, group=Category)) +
@@ -723,13 +744,15 @@ plot2 = ggplot(region, aes(x=region, y=gdp_perc, fill=Category, group=Category))
   geom_bar(stat="identity")  +   coord_flip() +
   theme(legend.position = "bottom",
         axis.text.x = element_text(angle = 0, hjust=0)) +
-  labs(title="(A) Total Investment as a Percentage of Annual GDP by Income Group",
+  labs(title="(B) Total Investment as a Percentage of Annual GDP by Region",
        fill="Cost\nType",
        subtitle = "Based on 50 GB/Month in EMEs and AEs, and 40 GB/Month in LIDCs",
        x=NULL, y='Percentage of GDP (%)') +
-  scale_y_continuous(expand = c(0, 0), limits=c(0,0.095)) +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,4.85)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
+
+write.csv(income, file.path(folder, 'final_data', 'fig_8b_regions.csv'))
 
 gdp_perc_costs <- ggarrange(plot1, plot2,
                             ncol = 1, nrow = 2, align = c("hv"),
@@ -789,6 +812,8 @@ plot1 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
 
+write.csv(data, file.path(folder, 'final_data', 'fig_11a.csv'))
+
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
 path = file.path(folder, '..', 'sensitivity', "dice_data_consumption_twenty_and_ten_gig.xlsx")
@@ -841,6 +866,7 @@ plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
 
+write.csv(data, file.path(folder, 'final_data', 'fig_11b.csv'))
 
 ######################################
 ####################100/80 GB
@@ -887,6 +913,8 @@ plot3 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
   scale_y_continuous(expand = c(0, 0), limits=c(0,650)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
+
+write.csv(data, file.path(folder, 'final_data', 'fig_11c.csv'))
 
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
@@ -940,6 +968,7 @@ plot4 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
 
+write.csv(data, file.path(folder, 'final_data', 'fig_11d.csv'))
 
 data_consumption_sensitivity.tiff <- ggarrange(plot1, plot3, plot2, plot4,
                                                ncol = 2, nrow = 2, align = c("hv"),
@@ -1000,6 +1029,8 @@ plot1 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
 
+write.csv(data, file.path(folder, 'final_data', 'fig_12a.csv'))
+
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
 path = file.path(folder, '..', 'sensitivity', "dice_reliability_five_percent.xlsx")
@@ -1052,6 +1083,7 @@ plot2 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
 
+write.csv(data, file.path(folder, 'final_data', 'fig_12b.csv'))
 
 ######################################
 ####################50%
@@ -1095,9 +1127,11 @@ plot3 = ggplot(data, aes(x=income, y=cost, fill=Category, group=Category)) +
        fill="Cost\nType",
        subtitle = "Quality of service reduced to 50% reliability",
        x=NULL, y='Investment Cost ($Bn)') +
-  scale_y_continuous(expand = c(0, 0), limits=c(0,190)) +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,230)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
+
+write.csv(data, file.path(folder, 'final_data', 'fig_12c.csv'))
 
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
@@ -1147,9 +1181,11 @@ plot4 = ggplot(data, aes(x=region, y=cost, fill=Category, group=Category)) +
        fill="Cost\nType",
        subtitle = "Quality of service reduced to 50% reliability",
        x=NULL, y='Investment Cost ($Bn)') +
-  scale_y_continuous(expand = c(0, 0), limits=c(0,80)) +
+  scale_y_continuous(expand = c(0, 0), limits=c(0,115)) +
   scale_fill_viridis_d(direction=-1) +
   guides(fill = guide_legend(reverse=T))
+
+write.csv(data, file.path(folder, 'final_data', 'fig_12d.csv'))
 
 data_consumption_sensitivity.tiff <- ggarrange(plot1, plot3, plot2, plot4,
                                                ncol = 2, nrow = 2, align = c("hv"),
@@ -1167,7 +1203,7 @@ dev.off()
 ###########Validation 
 folder <- dirname(rstudioapi::getSourceEditorContext()$path)
 
-path = file.path(folder, '..', "Oughton et al. (2022) DICE v3.6.xlsx")
+path = file.path(folder, '..', "Oughton et al. (2023) DICE v1.0.0.xlsx")
 data <- read_excel(path, sheet = "Validation", col_names = T)
 
 colnames(data)[2] <- "ITU"
@@ -1196,7 +1232,7 @@ asset_type = gather(asset_type, model, value, "ITU":"DICE")
 
 plot1 = ggplot(asset_type, aes(x=Category, y=value, fill=model, group=model)) +
   geom_text(aes(label = round(after_stat(y),0), group = model), 
-            stat = 'summary', fun = sum, hjust = -.5, size=2.5,
+            stat = 'summary', fun = sum, hjust = -.5, size=2,
             position = position_dodge(width = .9)) +
   geom_bar(stat="identity", position="dodge") + coord_flip() +
   theme(legend.position = "bottom",
@@ -1209,6 +1245,7 @@ plot1 = ggplot(asset_type, aes(x=Category, y=value, fill=model, group=model)) +
   scale_y_continuous(expand = c(0, 0), limits=c(0,250)) +
   scale_fill_viridis_d() 
 
+write.csv(asset_type, file.path(folder, 'final_data', 'fig_10a.csv'))
 
 ######################################
 ###########regions
@@ -1235,7 +1272,7 @@ regions = gather(regions, model, value, "ITU":"DICE")
 
 plot2 = ggplot(regions, aes(x=Category, y=value, fill=model, group=model)) +
   geom_text(aes(label = round(after_stat(y),0), group = model), 
-            stat = 'summary', fun = sum, hjust = -.5, size=2.5,
+            stat = 'summary', fun = sum, hjust = -.5, size=2,
             position = position_dodge(width = .9)) +
   geom_bar(stat="identity", position="dodge") + coord_flip() +
   theme(legend.position = "bottom",
@@ -1248,7 +1285,7 @@ plot2 = ggplot(regions, aes(x=Category, y=value, fill=model, group=model)) +
   scale_y_continuous(expand = c(0, 0), limits=c(0,250)) +
   scale_fill_viridis_d() 
 
-
+write.csv(regions, file.path(folder, 'final_data', 'fig_10b.csv'))
 
 ######################################
 ###########regions
@@ -1272,7 +1309,7 @@ income = gather(income, model, value, "ITU":"DICE")
 plot3 = 
   ggplot(income, aes(x=Category, y=value, fill=model, group=model)) +
   geom_text(aes(label = round(after_stat(y),0), group = model), 
-            stat = 'summary', fun = sum, hjust = -.5, size=2.5,
+            stat = 'summary', fun = sum, hjust = -.5, size=2,
             position = position_dodge(width = .9)) +
   geom_bar(stat="identity", position="dodge") + coord_flip() +
   theme(legend.position = "bottom",
@@ -1285,13 +1322,22 @@ plot3 =
   scale_y_continuous(expand = c(0, 0), limits=c(0,250)) +
   scale_fill_viridis_d() 
 
+write.csv(income, file.path(folder, 'final_data', 'fig_10c.csv'))
 
 panel <- ggarrange(plot1, plot2, plot3,
                    ncol = 1, nrow = 3, align = c("hv"),
                    common.legend = TRUE, legend='bottom',
                    heights=c(1,1,.85))
 
-path = file.path(folder, 'figures', 'validation.tiff')
-tiff(path, units="in", width=8, height=8, res=300)
-print(panel)
-dev.off()
+path = file.path(folder, 'figures', 'test_panel.png')
+dir.create(file.path(folder, 'figures'), showWarnings = FALSE)
+ggsave(
+  'panel.png',
+  plot = last_plot(),
+  device = "png",
+  path=file.path(folder, 'figures'),
+  units = c("in"),
+  width = 8.3,
+  height = 8.3,
+  bg="white"
+)

@@ -1,0 +1,181 @@
+"","income_group","type","decile","value"
+"1","Advanced Economies","Mobile Infra Capex","D1",0
+"2","Advanced Economies","Mobile Infra Capex","D10",0.0874300456844749
+"3","Advanced Economies","Mobile Infra Capex","D2",0
+"4","Advanced Economies","Mobile Infra Capex","D3",8.3894824773996e-05
+"5","Advanced Economies","Mobile Infra Capex","D4",0.000951016509033286
+"6","Advanced Economies","Mobile Infra Capex","D5",0.0189925927210509
+"7","Advanced Economies","Mobile Infra Capex","D6",0.0386238280412701
+"8","Advanced Economies","Mobile Infra Capex","D7",0.0472734886151009
+"9","Advanced Economies","Mobile Infra Capex","D8",0.0742651401328057
+"10","Advanced Economies","Mobile Infra Capex","D9",0.0890946973280979
+"11","Advanced Economies","Metro+Backbone Fiber","D1",0
+"12","Advanced Economies","Metro+Backbone Fiber","D10",0.0693588894762952
+"13","Advanced Economies","Metro+Backbone Fiber","D2",0
+"14","Advanced Economies","Metro+Backbone Fiber","D3",3.94697404989797e-06
+"15","Advanced Economies","Metro+Backbone Fiber","D4",0.000912453627170131
+"16","Advanced Economies","Metro+Backbone Fiber","D5",0.0216321029228448
+"17","Advanced Economies","Metro+Backbone Fiber","D6",0.0448974365398523
+"18","Advanced Economies","Metro+Backbone Fiber","D7",0.051326169437763
+"19","Advanced Economies","Metro+Backbone Fiber","D8",0.0642629737072589
+"20","Advanced Economies","Metro+Backbone Fiber","D9",0.0737284781973459
+"21","Advanced Economies","Mobile Infra Opex","D1",0
+"22","Advanced Economies","Mobile Infra Opex","D10",0.105174308175977
+"23","Advanced Economies","Mobile Infra Opex","D2",0
+"24","Advanced Economies","Mobile Infra Opex","D3",0.000100921600647369
+"25","Advanced Economies","Mobile Infra Opex","D4",0.00114402895044203
+"26","Advanced Economies","Mobile Infra Opex","D5",0.022847212125606
+"27","Advanced Economies","Mobile Infra Opex","D6",0.0464626818108803
+"28","Advanced Economies","Mobile Infra Opex","D7",0.0568678241127929
+"29","Advanced Economies","Mobile Infra Opex","D8",0.089337534641673
+"30","Advanced Economies","Mobile Infra Opex","D9",0.107176807243676
+"31","Advanced Economies","Remote Coverage","D1",0
+"32","Advanced Economies","Remote Coverage","D10",0.476987074480872
+"33","Advanced Economies","Remote Coverage","D2",0
+"34","Advanced Economies","Remote Coverage","D3",0
+"35","Advanced Economies","Remote Coverage","D4",0
+"36","Advanced Economies","Remote Coverage","D5",1.404131849162
+"37","Advanced Economies","Remote Coverage","D6",2.01551169822822
+"38","Advanced Economies","Remote Coverage","D7",1.49635570446037
+"39","Advanced Economies","Remote Coverage","D8",1.68450608989179
+"40","Advanced Economies","Remote Coverage","D9",1.31091925181738
+"41","Advanced Economies","Policy/Regulation","D1",0
+"42","Advanced Economies","Policy/Regulation","D10",0.0360615530275
+"43","Advanced Economies","Policy/Regulation","D2",0
+"44","Advanced Economies","Policy/Regulation","D3",3.1185e-06
+"45","Advanced Economies","Policy/Regulation","D4",0.000393652069999999
+"46","Advanced Economies","Policy/Regulation","D5",0.011911902625
+"47","Advanced Economies","Policy/Regulation","D6",0.0285789740425
+"48","Advanced Economies","Policy/Regulation","D7",0.0361261335575
+"49","Advanced Economies","Policy/Regulation","D8",0.0380071713525
+"50","Advanced Economies","Policy/Regulation","D9",0.03955067207
+"51","Advanced Economies","ICT Skills/Content","D1",0
+"52","Advanced Economies","ICT Skills/Content","D10",0.251400541106
+"53","Advanced Economies","ICT Skills/Content","D2",0
+"54","Advanced Economies","ICT Skills/Content","D3",2.17404e-05
+"55","Advanced Economies","ICT Skills/Content","D4",0.00274431728799999
+"56","Advanced Economies","ICT Skills/Content","D5",0.0830429782999999
+"57","Advanced Economies","ICT Skills/Content","D6",0.199236276182
+"58","Advanced Economies","ICT Skills/Content","D7",0.251850759658
+"59","Advanced Economies","ICT Skills/Content","D8",0.264964280286
+"60","Advanced Economies","ICT Skills/Content","D9",0.275724685288
+"61","Emerging Market Economies","Mobile Infra Capex","D1",0.699018394276553
+"62","Emerging Market Economies","Mobile Infra Capex","D10",3.3098855408418
+"63","Emerging Market Economies","Mobile Infra Capex","D2",2.89984090192806
+"64","Emerging Market Economies","Mobile Infra Capex","D3",8.8551554469335
+"65","Emerging Market Economies","Mobile Infra Capex","D4",11.8793219966001
+"66","Emerging Market Economies","Mobile Infra Capex","D5",12.8272267650574
+"67","Emerging Market Economies","Mobile Infra Capex","D6",12.0068880327567
+"68","Emerging Market Economies","Mobile Infra Capex","D7",11.2975550221064
+"69","Emerging Market Economies","Mobile Infra Capex","D8",10.1151392940519
+"70","Emerging Market Economies","Mobile Infra Capex","D9",7.50671621628696
+"71","Emerging Market Economies","Metro+Backbone Fiber","D1",0.349608267092123
+"72","Emerging Market Economies","Metro+Backbone Fiber","D10",1.82549490713985
+"73","Emerging Market Economies","Metro+Backbone Fiber","D2",1.02023906921102
+"74","Emerging Market Economies","Metro+Backbone Fiber","D3",3.63779596519396
+"75","Emerging Market Economies","Metro+Backbone Fiber","D4",5.17091118013179
+"76","Emerging Market Economies","Metro+Backbone Fiber","D5",6.11571982496647
+"77","Emerging Market Economies","Metro+Backbone Fiber","D6",5.9269669306899
+"78","Emerging Market Economies","Metro+Backbone Fiber","D7",5.60606552412383
+"79","Emerging Market Economies","Metro+Backbone Fiber","D8",5.10623567071843
+"80","Emerging Market Economies","Metro+Backbone Fiber","D9",3.90474893070215
+"81","Emerging Market Economies","Mobile Infra Opex","D1",0.840886853538196
+"82","Emerging Market Economies","Mobile Infra Opex","D10",3.9816394830218
+"83","Emerging Market Economies","Mobile Infra Opex","D2",3.4883747148132
+"84","Emerging Market Economies","Mobile Infra Opex","D3",10.6523431462343
+"85","Emerging Market Economies","Mobile Infra Opex","D4",14.2902758749666
+"86","Emerging Market Economies","Mobile Infra Opex","D5",15.4305615451697
+"87","Emerging Market Economies","Mobile Infra Opex","D6",14.4437319265389
+"88","Emerging Market Economies","Mobile Infra Opex","D7",13.5904370657451
+"89","Emerging Market Economies","Mobile Infra Opex","D8",12.1680455388857
+"90","Emerging Market Economies","Mobile Infra Opex","D9",9.03023301132237
+"91","Emerging Market Economies","Remote Coverage","D1",3.91259282062054
+"92","Emerging Market Economies","Remote Coverage","D10",6.20555386663826
+"93","Emerging Market Economies","Remote Coverage","D2",2.50792394555857
+"94","Emerging Market Economies","Remote Coverage","D3",1.86686282719486
+"95","Emerging Market Economies","Remote Coverage","D4",3.57821918594907
+"96","Emerging Market Economies","Remote Coverage","D5",6.50552307659509
+"97","Emerging Market Economies","Remote Coverage","D6",8.77727724747197
+"98","Emerging Market Economies","Remote Coverage","D7",9.81233760061686
+"99","Emerging Market Economies","Remote Coverage","D8",8.41393486643428
+"100","Emerging Market Economies","Remote Coverage","D9",7.22842087748591
+"101","Emerging Market Economies","Policy/Regulation","D1",0.0211559115775
+"102","Emerging Market Economies","Policy/Regulation","D10",0.16919968359
+"103","Emerging Market Economies","Policy/Regulation","D2",0.078694904365
+"104","Emerging Market Economies","Policy/Regulation","D3",0.288724711345
+"105","Emerging Market Economies","Policy/Regulation","D4",0.4105491106675
+"106","Emerging Market Economies","Policy/Regulation","D5",0.5808375398
+"107","Emerging Market Economies","Policy/Regulation","D6",0.6095070109975
+"108","Emerging Market Economies","Policy/Regulation","D7",0.5389410145175
+"109","Emerging Market Economies","Policy/Regulation","D8",0.48551590857
+"110","Emerging Market Economies","Policy/Regulation","D9",0.3711506295
+"111","Emerging Market Economies","ICT Skills/Content","D1",0.147486926426
+"112","Emerging Market Economies","ICT Skills/Content","D10",1.179563508456
+"113","Emerging Market Economies","ICT Skills/Content","D2",0.548615904716
+"114","Emerging Market Economies","ICT Skills/Content","D3",2.012823701948
+"115","Emerging Market Economies","ICT Skills/Content","D4",2.862113800082
+"116","Emerging Market Economies","ICT Skills/Content","D5",4.04926742032
+"117","Emerging Market Economies","ICT Skills/Content","D6",4.249134590954
+"118","Emerging Market Economies","ICT Skills/Content","D7",3.757188786922
+"119","Emerging Market Economies","ICT Skills/Content","D8",3.384739476888
+"120","Emerging Market Economies","ICT Skills/Content","D9",2.5874501028
+"121","Low Income Developing Countries","Mobile Infra Capex","D1",0.88494069349688
+"122","Low Income Developing Countries","Mobile Infra Capex","D10",1.88754126515408
+"123","Low Income Developing Countries","Mobile Infra Capex","D2",2.2907033729265
+"124","Low Income Developing Countries","Mobile Infra Capex","D3",3.47378496505893
+"125","Low Income Developing Countries","Mobile Infra Capex","D4",3.78720185716908
+"126","Low Income Developing Countries","Mobile Infra Capex","D5",3.75029283280718
+"127","Low Income Developing Countries","Mobile Infra Capex","D6",3.50621528151371
+"128","Low Income Developing Countries","Mobile Infra Capex","D7",3.58665421606894
+"129","Low Income Developing Countries","Mobile Infra Capex","D8",2.92393908390221
+"130","Low Income Developing Countries","Mobile Infra Capex","D9",2.63394355194019
+"131","Low Income Developing Countries","Metro+Backbone Fiber","D1",1.11344492372738
+"132","Low Income Developing Countries","Metro+Backbone Fiber","D10",1.51345375782935
+"133","Low Income Developing Countries","Metro+Backbone Fiber","D2",2.33609529787893
+"134","Low Income Developing Countries","Metro+Backbone Fiber","D3",2.69780827244773
+"135","Low Income Developing Countries","Metro+Backbone Fiber","D4",3.0942065460969
+"136","Low Income Developing Countries","Metro+Backbone Fiber","D5",3.42200259156048
+"137","Low Income Developing Countries","Metro+Backbone Fiber","D6",3.20807117357147
+"138","Low Income Developing Countries","Metro+Backbone Fiber","D7",3.1305249573602
+"139","Low Income Developing Countries","Metro+Backbone Fiber","D8",2.61516088246915
+"140","Low Income Developing Countries","Metro+Backbone Fiber","D9",2.2342494763213
+"141","Low Income Developing Countries","Mobile Infra Opex","D1",1.06454279517586
+"142","Low Income Developing Countries","Mobile Infra Opex","D10",2.27062499123731
+"143","Low Income Developing Countries","Mobile Infra Opex","D2",2.75561039226019
+"144","Low Income Developing Countries","Mobile Infra Opex","D3",4.17880292286133
+"145","Low Income Developing Countries","Mobile Infra Opex","D4",4.55582897311997
+"146","Low Income Developing Countries","Mobile Infra Opex","D5",4.51142912096019
+"147","Low Income Developing Countries","Mobile Infra Opex","D6",4.21781509619782
+"148","Low Income Developing Countries","Mobile Infra Opex","D7",4.31457942047589
+"149","Low Income Developing Countries","Mobile Infra Opex","D8",3.51736371507722
+"150","Low Income Developing Countries","Mobile Infra Opex","D9",3.16851247967581
+"151","Low Income Developing Countries","Remote Coverage","D1",0.119740748184511
+"152","Low Income Developing Countries","Remote Coverage","D10",0.0316710949686939
+"153","Low Income Developing Countries","Remote Coverage","D2",0.20496039708012
+"154","Low Income Developing Countries","Remote Coverage","D3",0.206748442852192
+"155","Low Income Developing Countries","Remote Coverage","D4",0.139778440475099
+"156","Low Income Developing Countries","Remote Coverage","D5",0.20716769681861
+"157","Low Income Developing Countries","Remote Coverage","D6",0.0984985786509855
+"158","Low Income Developing Countries","Remote Coverage","D7",0.12842520081618
+"159","Low Income Developing Countries","Remote Coverage","D8",0.134087982692471
+"160","Low Income Developing Countries","Remote Coverage","D9",0.0692415108617707
+"161","Low Income Developing Countries","Policy/Regulation","D1",0.0540982831725
+"162","Low Income Developing Countries","Policy/Regulation","D10",0.12224829925
+"163","Low Income Developing Countries","Policy/Regulation","D2",0.1364236325375
+"164","Low Income Developing Countries","Policy/Regulation","D3",0.2237043454625
+"165","Low Income Developing Countries","Policy/Regulation","D4",0.241637875185
+"166","Low Income Developing Countries","Policy/Regulation","D5",0.236727302
+"167","Low Income Developing Countries","Policy/Regulation","D6",0.23120853266
+"168","Low Income Developing Countries","Policy/Regulation","D7",0.234320926
+"169","Low Income Developing Countries","Policy/Regulation","D8",0.1948252075
+"170","Low Income Developing Countries","Policy/Regulation","D9",0.1744039115
+"171","Low Income Developing Countries","ICT Skills/Content","D1",0.377142316974
+"172","Low Income Developing Countries","ICT Skills/Content","D10",0.8522452862
+"173","Low Income Developing Countries","ICT Skills/Content","D2",0.95106760969
+"174","Low Income Developing Countries","ICT Skills/Content","D3",1.55953886551
+"175","Low Income Developing Countries","ICT Skills/Content","D4",1.684561187004
+"176","Low Income Developing Countries","ICT Skills/Content","D5",1.6503274768
+"177","Low Income Developing Countries","ICT Skills/Content","D6",1.611853770544
+"178","Low Income Developing Countries","ICT Skills/Content","D7",1.6335515984
+"179","Low Income Developing Countries","ICT Skills/Content","D8",1.358210018
+"180","Low Income Developing Countries","ICT Skills/Content","D9",1.2158444116
