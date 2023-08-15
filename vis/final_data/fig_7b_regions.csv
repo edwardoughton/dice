@@ -1,0 +1,361 @@
+"","Region","type","decile","value"
+"1","Caucasus and Central Asia","Mobile Infra Capex","D1",0.00693723636743016
+"2","Caucasus and Central Asia","Mobile Infra Capex","D10",0.167175203218474
+"3","Caucasus and Central Asia","Mobile Infra Capex","D2",0.0501749168656799
+"4","Caucasus and Central Asia","Mobile Infra Capex","D3",0.135471300844086
+"5","Caucasus and Central Asia","Mobile Infra Capex","D4",0.0385458738588619
+"6","Caucasus and Central Asia","Mobile Infra Capex","D5",0.190166745254597
+"7","Caucasus and Central Asia","Mobile Infra Capex","D6",0.0505520618802691
+"8","Caucasus and Central Asia","Mobile Infra Capex","D7",0.309248567837539
+"9","Caucasus and Central Asia","Mobile Infra Capex","D8",0.147370251592543
+"10","Caucasus and Central Asia","Mobile Infra Capex","D9",0.258159398829154
+"11","Caucasus and Central Asia","Metro+Backbone Fiber","D1",0.0081751137174123
+"12","Caucasus and Central Asia","Metro+Backbone Fiber","D10",0.11417444004312
+"13","Caucasus and Central Asia","Metro+Backbone Fiber","D2",0.0591281065561546
+"14","Caucasus and Central Asia","Metro+Backbone Fiber","D3",0.100289468889251
+"15","Caucasus and Central Asia","Metro+Backbone Fiber","D4",0.0423256058975224
+"16","Caucasus and Central Asia","Metro+Backbone Fiber","D5",0.106728572159626
+"17","Caucasus and Central Asia","Metro+Backbone Fiber","D6",0.0715174919475842
+"18","Caucasus and Central Asia","Metro+Backbone Fiber","D7",0.222178468224505
+"19","Caucasus and Central Asia","Metro+Backbone Fiber","D8",0.11930595956369
+"20","Caucasus and Central Asia","Metro+Backbone Fiber","D9",0.161264159235091
+"21","Caucasus and Central Asia","Mobile Infra Opex","D1",0.00834517504692617
+"22","Caucasus and Central Asia","Mobile Infra Opex","D10",0.20110405073028
+"23","Caucasus and Central Asia","Mobile Infra Opex","D2",0.0603581083347428
+"24","Caucasus and Central Asia","Mobile Infra Opex","D3",0.162965719992829
+"25","Caucasus and Central Asia","Mobile Infra Opex","D4",0.0463689065287102
+"26","Caucasus and Central Asia","Mobile Infra Opex","D5",0.228761814244151
+"27","Caucasus and Central Asia","Mobile Infra Opex","D6",0.0608117963739162
+"28","Caucasus and Central Asia","Mobile Infra Opex","D7",0.372011748616762
+"29","Caucasus and Central Asia","Mobile Infra Opex","D8",0.17727960834999
+"30","Caucasus and Central Asia","Mobile Infra Opex","D9",0.310553837166801
+"31","Caucasus and Central Asia","Remote Coverage","D1",0
+"32","Caucasus and Central Asia","Remote Coverage","D10",0.393529133332853
+"33","Caucasus and Central Asia","Remote Coverage","D2",0
+"34","Caucasus and Central Asia","Remote Coverage","D3",0
+"35","Caucasus and Central Asia","Remote Coverage","D4",0
+"36","Caucasus and Central Asia","Remote Coverage","D5",0
+"37","Caucasus and Central Asia","Remote Coverage","D6",0.608990619453574
+"38","Caucasus and Central Asia","Remote Coverage","D7",0.686302204886707
+"39","Caucasus and Central Asia","Remote Coverage","D8",0.536522665105035
+"40","Caucasus and Central Asia","Remote Coverage","D9",0.465406784446018
+"41","Caucasus and Central Asia","Policy/Regulation","D1",0.000388111815000001
+"42","Caucasus and Central Asia","Policy/Regulation","D10",0.0070021385
+"43","Caucasus and Central Asia","Policy/Regulation","D2",0.0028070945
+"44","Caucasus and Central Asia","Policy/Regulation","D3",0.00549282097
+"45","Caucasus and Central Asia","Policy/Regulation","D4",0.0027881804475
+"46","Caucasus and Central Asia","Policy/Regulation","D5",0.00644296275
+"47","Caucasus and Central Asia","Policy/Regulation","D6",0.0033101688375
+"48","Caucasus and Central Asia","Policy/Regulation","D7",0.0130225599875
+"49","Caucasus and Central Asia","Policy/Regulation","D8",0.00718708375
+"50","Caucasus and Central Asia","Policy/Regulation","D9",0.0099709505
+"51","Caucasus and Central Asia","ICT Skills/Content","D1",0.00270569379600001
+"52","Caucasus and Central Asia","ICT Skills/Content","D10",0.0488149084
+"53","Caucasus and Central Asia","ICT Skills/Content","D2",0.0195694588
+"54","Caucasus and Central Asia","ICT Skills/Content","D3",0.038292809048
+"55","Caucasus and Central Asia","ICT Skills/Content","D4",0.019437600834
+"56","Caucasus and Central Asia","ICT Skills/Content","D5",0.0449166546
+"57","Caucasus and Central Asia","ICT Skills/Content","D6",0.02307660561
+"58","Caucasus and Central Asia","ICT Skills/Content","D7",0.09078584677
+"59","Caucasus and Central Asia","ICT Skills/Content","D8",0.050104241
+"60","Caucasus and Central Asia","ICT Skills/Content","D9",0.0695117692
+"61","Emerging and Developing Asia","Mobile Infra Capex","D1",0.0354954093094963
+"62","Emerging and Developing Asia","Mobile Infra Capex","D10",1.86592984013735
+"63","Emerging and Developing Asia","Mobile Infra Capex","D2",0.333283083147934
+"64","Emerging and Developing Asia","Mobile Infra Capex","D3",6.25736779119438
+"65","Emerging and Developing Asia","Mobile Infra Capex","D4",9.34875547219312
+"66","Emerging and Developing Asia","Mobile Infra Capex","D5",9.07209868009697
+"67","Emerging and Developing Asia","Mobile Infra Capex","D6",8.45413318362637
+"68","Emerging and Developing Asia","Mobile Infra Capex","D7",7.74385227955785
+"69","Emerging and Developing Asia","Mobile Infra Capex","D8",7.64437593277258
+"70","Emerging and Developing Asia","Mobile Infra Capex","D9",5.39597309182064
+"71","Emerging and Developing Asia","Metro+Backbone Fiber","D1",0.0288096991843321
+"72","Emerging and Developing Asia","Metro+Backbone Fiber","D10",0.949731706960502
+"73","Emerging and Developing Asia","Metro+Backbone Fiber","D2",0.117920758273527
+"74","Emerging and Developing Asia","Metro+Backbone Fiber","D3",2.74006170608329
+"75","Emerging and Developing Asia","Metro+Backbone Fiber","D4",4.17325033648634
+"76","Emerging and Developing Asia","Metro+Backbone Fiber","D5",4.3272658307594
+"77","Emerging and Developing Asia","Metro+Backbone Fiber","D6",4.20687086753385
+"78","Emerging and Developing Asia","Metro+Backbone Fiber","D7",3.79664357770376
+"79","Emerging and Developing Asia","Metro+Backbone Fiber","D8",3.69983292534158
+"80","Emerging and Developing Asia","Metro+Backbone Fiber","D9",2.64806964450166
+"81","Emerging and Developing Asia","Mobile Infra Opex","D1",0.0426993385205598
+"82","Emerging and Developing Asia","Mobile Infra Opex","D10",2.2446274447756
+"83","Emerging and Developing Asia","Mobile Infra Opex","D2",0.400924160823868
+"84","Emerging and Developing Asia","Mobile Infra Opex","D3",7.52732454031387
+"85","Emerging and Developing Asia","Mobile Infra Opex","D4",11.2461211863336
+"86","Emerging and Developing Asia","Mobile Infra Opex","D5",10.9133158391203
+"87","Emerging and Developing Asia","Mobile Infra Opex","D6",10.1699318793032
+"88","Emerging and Developing Asia","Mobile Infra Opex","D7",9.31549674649299
+"89","Emerging and Developing Asia","Mobile Infra Opex","D8",9.19583129428938
+"90","Emerging and Developing Asia","Mobile Infra Opex","D9",6.49110648891264
+"91","Emerging and Developing Asia","Remote Coverage","D1",0.789158862187828
+"92","Emerging and Developing Asia","Remote Coverage","D10",0.124970089705141
+"93","Emerging and Developing Asia","Remote Coverage","D2",0.337148938553104
+"94","Emerging and Developing Asia","Remote Coverage","D3",0.215156851854163
+"95","Emerging and Developing Asia","Remote Coverage","D4",0.227997906754861
+"96","Emerging and Developing Asia","Remote Coverage","D5",0.170209029417096
+"97","Emerging and Developing Asia","Remote Coverage","D6",0.160851749757643
+"98","Emerging and Developing Asia","Remote Coverage","D7",0.141766933793313
+"99","Emerging and Developing Asia","Remote Coverage","D8",0.132344935697332
+"100","Emerging and Developing Asia","Remote Coverage","D9",0.117139032780674
+"101","Emerging and Developing Asia","Policy/Regulation","D1",0.00154530502
+"102","Emerging and Developing Asia","Policy/Regulation","D10",0.12247485425
+"103","Emerging and Developing Asia","Policy/Regulation","D2",0.01896677685
+"104","Emerging and Developing Asia","Policy/Regulation","D3",0.25371050467
+"105","Emerging and Developing Asia","Policy/Regulation","D4",0.363952925
+"106","Emerging and Developing Asia","Policy/Regulation","D5",0.4835546569
+"107","Emerging and Developing Asia","Policy/Regulation","D6",0.519158173625
+"108","Emerging and Developing Asia","Policy/Regulation","D7",0.4446363635
+"109","Emerging and Developing Asia","Policy/Regulation","D8",0.41168129975
+"110","Emerging and Developing Asia","Policy/Regulation","D9",0.309456441
+"111","Emerging and Developing Asia","ICT Skills/Content","D1",0.010772983568
+"112","Emerging and Developing Asia","ICT Skills/Content","D10",0.8538246982
+"113","Emerging and Developing Asia","ICT Skills/Content","D2",0.13222553004
+"114","Emerging and Developing Asia","ICT Skills/Content","D3",1.768724661128
+"115","Emerging and Developing Asia","ICT Skills/Content","D4",2.53727182
+"116","Emerging and Developing Asia","ICT Skills/Content","D5",3.37106675096
+"117","Emerging and Developing Asia","ICT Skills/Content","D6",3.6192741247
+"118","Emerging and Developing Asia","ICT Skills/Content","D7",3.0997506484
+"119","Emerging and Developing Asia","ICT Skills/Content","D8",2.8700067754
+"120","Emerging and Developing Asia","ICT Skills/Content","D9",2.1573534744
+"121","Emerging and Developing Europe","Mobile Infra Capex","D1",0
+"122","Emerging and Developing Europe","Mobile Infra Capex","D10",0.193367955521059
+"123","Emerging and Developing Europe","Mobile Infra Capex","D2",0.00149516670937607
+"124","Emerging and Developing Europe","Mobile Infra Capex","D3",0.0705634534247878
+"125","Emerging and Developing Europe","Mobile Infra Capex","D4",0.149232355072961
+"126","Emerging and Developing Europe","Mobile Infra Capex","D5",0.155384469683081
+"127","Emerging and Developing Europe","Mobile Infra Capex","D6",0.194018644762866
+"128","Emerging and Developing Europe","Mobile Infra Capex","D7",0.276310069438782
+"129","Emerging and Developing Europe","Mobile Infra Capex","D8",0.312884358345773
+"130","Emerging and Developing Europe","Mobile Infra Capex","D9",0.268401664131442
+"131","Emerging and Developing Europe","Metro+Backbone Fiber","D1",0
+"132","Emerging and Developing Europe","Metro+Backbone Fiber","D10",0.191255479327264
+"133","Emerging and Developing Europe","Metro+Backbone Fiber","D2",0.000785296149917017
+"134","Emerging and Developing Europe","Metro+Backbone Fiber","D3",0.0355639436902289
+"135","Emerging and Developing Europe","Metro+Backbone Fiber","D4",0.0738693317983555
+"136","Emerging and Developing Europe","Metro+Backbone Fiber","D5",0.0783747679922722
+"137","Emerging and Developing Europe","Metro+Backbone Fiber","D6",0.141991238193811
+"138","Emerging and Developing Europe","Metro+Backbone Fiber","D7",0.286891174291131
+"139","Emerging and Developing Europe","Metro+Backbone Fiber","D8",0.308076711225247
+"140","Emerging and Developing Europe","Metro+Backbone Fiber","D9",0.268476500427121
+"141","Emerging and Developing Europe","Mobile Infra Opex","D1",0
+"142","Emerging and Developing Europe","Mobile Infra Opex","D10",0.232612722389803
+"143","Emerging and Developing Europe","Mobile Infra Opex","D2",0.00179861651718551
+"144","Emerging and Developing Europe","Mobile Infra Opex","D3",0.0848845764446131
+"145","Emerging and Developing Europe","Mobile Infra Opex","D4",0.179519632860692
+"146","Emerging and Developing Europe","Mobile Infra Opex","D5",0.186920342683877
+"147","Emerging and Developing Europe","Mobile Infra Opex","D6",0.233395471504353
+"148","Emerging and Developing Europe","Mobile Infra Opex","D7",0.332388255865231
+"149","Emerging and Developing Europe","Mobile Infra Opex","D8",0.376385436728012
+"150","Emerging and Developing Europe","Mobile Infra Opex","D9",0.322874809423988
+"151","Emerging and Developing Europe","Remote Coverage","D1",0
+"152","Emerging and Developing Europe","Remote Coverage","D10",1.37487525557805
+"153","Emerging and Developing Europe","Remote Coverage","D2",0
+"154","Emerging and Developing Europe","Remote Coverage","D3",0
+"155","Emerging and Developing Europe","Remote Coverage","D4",0
+"156","Emerging and Developing Europe","Remote Coverage","D5",0
+"157","Emerging and Developing Europe","Remote Coverage","D6",0.648405109092344
+"158","Emerging and Developing Europe","Remote Coverage","D7",2.22633200997062
+"159","Emerging and Developing Europe","Remote Coverage","D8",2.22909325039029
+"160","Emerging and Developing Europe","Remote Coverage","D9",1.98146588420361
+"161","Emerging and Developing Europe","Policy/Regulation","D1",0
+"162","Emerging and Developing Europe","Policy/Regulation","D10",0.01522084725
+"163","Emerging and Developing Europe","Policy/Regulation","D2",0.000104585634999998
+"164","Emerging and Developing Europe","Policy/Regulation","D3",0.00586572850499999
+"165","Emerging and Developing Europe","Policy/Regulation","D4",0.01226919309
+"166","Emerging and Developing Europe","Policy/Regulation","D5",0.01239028483
+"167","Emerging and Developing Europe","Policy/Regulation","D6",0.01588556284
+"168","Emerging and Developing Europe","Policy/Regulation","D7",0.021943279225
+"169","Emerging and Developing Europe","Policy/Regulation","D8",0.0243055575
+"170","Emerging and Developing Europe","Policy/Regulation","D9",0.0210758485
+"171","Emerging and Developing Europe","ICT Skills/Content","D1",0
+"172","Emerging and Developing Europe","ICT Skills/Content","D10",0.1061110494
+"173","Emerging and Developing Europe","ICT Skills/Content","D2",0.000729111283999985
+"174","Emerging and Developing Europe","ICT Skills/Content","D3",0.040892507292
+"175","Emerging and Developing Europe","ICT Skills/Content","D4",0.085533803256
+"176","Emerging and Developing Europe","ICT Skills/Content","D5",0.086377985672
+"177","Emerging and Developing Europe","ICT Skills/Content","D6",0.110745066656
+"178","Emerging and Developing Europe","ICT Skills/Content","D7",0.15297600374
+"179","Emerging and Developing Europe","ICT Skills/Content","D8",0.169444458
+"180","Emerging and Developing Europe","ICT Skills/Content","D9",0.1469287724
+"181","Latin America and the Caribbean","Mobile Infra Capex","D1",0.004086308694625
+"182","Latin America and the Caribbean","Mobile Infra Capex","D10",0.669018543846364
+"183","Latin America and the Caribbean","Mobile Infra Capex","D2",0.100846036720657
+"184","Latin America and the Caribbean","Mobile Infra Capex","D3",0.489984865596257
+"185","Latin America and the Caribbean","Mobile Infra Capex","D4",0.857890617581784
+"186","Latin America and the Caribbean","Mobile Infra Capex","D5",1.44338424695688
+"187","Latin America and the Caribbean","Mobile Infra Capex","D6",1.40508239932788
+"188","Latin America and the Caribbean","Mobile Infra Capex","D7",1.1775202707286
+"189","Latin America and the Caribbean","Mobile Infra Capex","D8",0.974127791675374
+"190","Latin America and the Caribbean","Mobile Infra Capex","D9",0.910195158177779
+"191","Latin America and the Caribbean","Metro+Backbone Fiber","D1",0.0029825543774689
+"192","Latin America and the Caribbean","Metro+Backbone Fiber","D10",0.449807887521287
+"193","Latin America and the Caribbean","Metro+Backbone Fiber","D2",0.0586641053261476
+"194","Latin America and the Caribbean","Metro+Backbone Fiber","D3",0.321458312999509
+"195","Latin America and the Caribbean","Metro+Backbone Fiber","D4",0.528573642724653
+"196","Latin America and the Caribbean","Metro+Backbone Fiber","D5",0.960155915211348
+"197","Latin America and the Caribbean","Metro+Backbone Fiber","D6",0.950689705200488
+"198","Latin America and the Caribbean","Metro+Backbone Fiber","D7",0.783280597574506
+"199","Latin America and the Caribbean","Metro+Backbone Fiber","D8",0.653419494524217
+"200","Latin America and the Caribbean","Metro+Backbone Fiber","D9",0.60623726815246
+"201","Latin America and the Caribbean","Mobile Infra Opex","D1",0.00491564068834725
+"202","Latin America and the Caribbean","Mobile Infra Opex","D10",0.804798418610862
+"203","Latin America and the Caribbean","Mobile Infra Opex","D2",0.121313125955139
+"204","Latin America and the Caribbean","Mobile Infra Opex","D3",0.589429169941934
+"205","Latin America and the Caribbean","Mobile Infra Opex","D4",1.03200280279446
+"206","Latin America and the Caribbean","Mobile Infra Opex","D5",1.7363246057728
+"207","Latin America and the Caribbean","Mobile Infra Opex","D6",1.69024925153154
+"208","Latin America and the Caribbean","Mobile Infra Opex","D7",1.41650251772728
+"209","Latin America and the Caribbean","Mobile Infra Opex","D8",1.17183075637627
+"210","Latin America and the Caribbean","Mobile Infra Opex","D9",1.0949227501487
+"211","Latin America and the Caribbean","Remote Coverage","D1",0
+"212","Latin America and the Caribbean","Remote Coverage","D10",2.94528927788099
+"213","Latin America and the Caribbean","Remote Coverage","D2",0.184440134061417
+"214","Latin America and the Caribbean","Remote Coverage","D3",0.335384008627098
+"215","Latin America and the Caribbean","Remote Coverage","D4",0.887492503974782
+"216","Latin America and the Caribbean","Remote Coverage","D5",4.42611652500768
+"217","Latin America and the Caribbean","Remote Coverage","D6",4.79390762355396
+"218","Latin America and the Caribbean","Remote Coverage","D7",3.9266549214037
+"219","Latin America and the Caribbean","Remote Coverage","D8",3.45371632910474
+"220","Latin America and the Caribbean","Remote Coverage","D9",3.2356402312569
+"221","Latin America and the Caribbean","Policy/Regulation","D1",0.000261647995000001
+"222","Latin America and the Caribbean","Policy/Regulation","D10",0.02787612975
+"223","Latin America and the Caribbean","Policy/Regulation","D2",0.005554479735
+"224","Latin America and the Caribbean","Policy/Regulation","D3",0.0193572433775
+"225","Latin America and the Caribbean","Policy/Regulation","D4",0.03302548508
+"226","Latin America and the Caribbean","Policy/Regulation","D5",0.05591338662
+"227","Latin America and the Caribbean","Policy/Regulation","D6",0.054674436985
+"228","Latin America and the Caribbean","Policy/Regulation","D7",0.047605924205
+"229","Latin America and the Caribbean","Policy/Regulation","D8",0.0400545772025
+"230","Latin America and the Caribbean","Policy/Regulation","D9",0.03672594975
+"231","Latin America and the Caribbean","ICT Skills/Content","D1",0.00182406030800001
+"232","Latin America and the Caribbean","ICT Skills/Content","D10",0.1943364474
+"233","Latin America and the Caribbean","ICT Skills/Content","D2",0.038722658724
+"234","Latin America and the Caribbean","ICT Skills/Content","D3",0.134947639546
+"235","Latin America and the Caribbean","ICT Skills/Content","D4",0.230234810272
+"236","Latin America and the Caribbean","ICT Skills/Content","D5",0.389796181008
+"237","Latin America and the Caribbean","ICT Skills/Content","D6",0.381158932124
+"238","Latin America and the Caribbean","ICT Skills/Content","D7",0.331881300172
+"239","Latin America and the Caribbean","ICT Skills/Content","D8",0.279237623926
+"240","Latin America and the Caribbean","ICT Skills/Content","D9",0.2560323354
+"241","MENA, AFG and PAK","Mobile Infra Capex","D1",0.362545841501924
+"242","MENA, AFG and PAK","Mobile Infra Capex","D10",0.742886599853115
+"243","MENA, AFG and PAK","Mobile Infra Capex","D2",2.66008668100915
+"244","MENA, AFG and PAK","Mobile Infra Capex","D3",2.70776861836102
+"245","MENA, AFG and PAK","Mobile Infra Capex","D4",2.3428019754812
+"246","MENA, AFG and PAK","Mobile Infra Capex","D5",2.54277426451872
+"247","MENA, AFG and PAK","Mobile Infra Capex","D6",2.35108006124575
+"248","MENA, AFG and PAK","Mobile Infra Capex","D7",2.37310787430878
+"249","MENA, AFG and PAK","Mobile Infra Capex","D8",1.51599311419555
+"250","MENA, AFG and PAK","Mobile Infra Capex","D9",1.09791522793204
+"251","MENA, AFG and PAK","Metro+Backbone Fiber","D1",0.464835260631494
+"252","MENA, AFG and PAK","Metro+Backbone Fiber","D10",0.339476025842724
+"253","MENA, AFG and PAK","Metro+Backbone Fiber","D2",0.987907890378806
+"254","MENA, AFG and PAK","Metro+Backbone Fiber","D3",1.09297106552891
+"255","MENA, AFG and PAK","Metro+Backbone Fiber","D4",0.977827135934663
+"256","MENA, AFG and PAK","Metro+Backbone Fiber","D5",0.995900485788032
+"257","MENA, AFG and PAK","Metro+Backbone Fiber","D6",0.82787187983588
+"258","MENA, AFG and PAK","Metro+Backbone Fiber","D7",0.815435059741302
+"259","MENA, AFG and PAK","Metro+Backbone Fiber","D8",0.613626093821859
+"260","MENA, AFG and PAK","Metro+Backbone Fiber","D9",0.465599593051507
+"261","MENA, AFG and PAK","Mobile Infra Opex","D1",0.436125908016233
+"262","MENA, AFG and PAK","Mobile Infra Opex","D10",0.89365827938289
+"263","MENA, AFG and PAK","Mobile Infra Opex","D2",3.19996145687646
+"264","MENA, AFG and PAK","Mobile Infra Opex","D3",3.25732062596087
+"265","MENA, AFG and PAK","Mobile Infra Opex","D4",2.81828260565924
+"266","MENA, AFG and PAK","Mobile Infra Opex","D5",3.05884003633689
+"267","MENA, AFG and PAK","Mobile Infra Opex","D6",2.82824076062178
+"268","MENA, AFG and PAK","Mobile Infra Opex","D7",2.85473920267788
+"269","MENA, AFG and PAK","Mobile Infra Opex","D8",1.82366972059554
+"270","MENA, AFG and PAK","Mobile Infra Opex","D9",1.3207413267328
+"271","MENA, AFG and PAK","Remote Coverage","D1",2.50512571442497
+"272","MENA, AFG and PAK","Remote Coverage","D10",1.22139567049303
+"273","MENA, AFG and PAK","Remote Coverage","D2",1.75589737149006
+"274","MENA, AFG and PAK","Remote Coverage","D3",1.03240567693598
+"275","MENA, AFG and PAK","Remote Coverage","D4",2.23139289348496
+"276","MENA, AFG and PAK","Remote Coverage","D5",1.65880566263987
+"277","MENA, AFG and PAK","Remote Coverage","D6",2.25423863024169
+"278","MENA, AFG and PAK","Remote Coverage","D7",2.3209873042114
+"279","MENA, AFG and PAK","Remote Coverage","D8",1.75073270457064
+"280","MENA, AFG and PAK","Remote Coverage","D9",1.20106712273923
+"281","MENA, AFG and PAK","Policy/Regulation","D1",0.017203922435
+"282","MENA, AFG and PAK","Policy/Regulation","D10",0.02965983384
+"283","MENA, AFG and PAK","Policy/Regulation","D2",0.07476540561
+"284","MENA, AFG and PAK","Policy/Regulation","D3",0.082153163575
+"285","MENA, AFG and PAK","Policy/Regulation","D4",0.07607514075
+"286","MENA, AFG and PAK","Policy/Regulation","D5",0.080411555
+"287","MENA, AFG and PAK","Policy/Regulation","D6",0.0758180325
+"288","MENA, AFG and PAK","Policy/Regulation","D7",0.0785714881
+"289","MENA, AFG and PAK","Policy/Regulation","D8",0.05770648625
+"290","MENA, AFG and PAK","Policy/Regulation","D9",0.04302235
+"291","MENA, AFG and PAK","ICT Skills/Content","D1",0.119935916404
+"292","MENA, AFG and PAK","ICT Skills/Content","D10",0.206771413056
+"293","MENA, AFG and PAK","ICT Skills/Content","D2",0.521221684824
+"294","MENA, AFG and PAK","ICT Skills/Content","D3",0.57272491178
+"295","MENA, AFG and PAK","ICT Skills/Content","D4",0.5303524098
+"296","MENA, AFG and PAK","ICT Skills/Content","D5",0.560583412
+"297","MENA, AFG and PAK","ICT Skills/Content","D6",0.528559998
+"298","MENA, AFG and PAK","ICT Skills/Content","D7",0.54775551704
+"299","MENA, AFG and PAK","ICT Skills/Content","D8",0.402296647
+"300","MENA, AFG and PAK","ICT Skills/Content","D9",0.29992724
+"301","Sub-Sahara Africa","Mobile Infra Capex","D1",1.17489429189996
+"302","Sub-Sahara Africa","Mobile Infra Capex","D10",1.55904866341951
+"303","Sub-Sahara Africa","Mobile Infra Capex","D2",2.04465839040177
+"304","Sub-Sahara Africa","Mobile Infra Capex","D3",2.6677843825719
+"305","Sub-Sahara Africa","Mobile Infra Capex","D4",2.92929755958121
+"306","Sub-Sahara Africa","Mobile Infra Capex","D5",3.17371119135436
+"307","Sub-Sahara Africa","Mobile Infra Capex","D6",3.05823696342726
+"308","Sub-Sahara Africa","Mobile Infra Capex","D7",3.00417017630382
+"309","Sub-Sahara Africa","Mobile Infra Capex","D8",2.44432692937226
+"310","Sub-Sahara Africa","Mobile Infra Capex","D9",2.21001522733609
+"311","Sub-Sahara Africa","Metro+Backbone Fiber","D1",0.958250562908793
+"312","Sub-Sahara Africa","Metro+Backbone Fiber","D10",1.2945031252743
+"313","Sub-Sahara Africa","Metro+Backbone Fiber","D2",2.13192821040539
+"314","Sub-Sahara Africa","Metro+Backbone Fiber","D3",2.0452597404505
+"315","Sub-Sahara Africa","Metro+Backbone Fiber","D4",2.46927167338715
+"316","Sub-Sahara Africa","Metro+Backbone Fiber","D5",3.06929684461628
+"317","Sub-Sahara Africa","Metro+Backbone Fiber","D6",2.93609692154976
+"318","Sub-Sahara Africa","Metro+Backbone Fiber","D7",2.83216160394882
+"319","Sub-Sahara Africa","Metro+Backbone Fiber","D8",2.32713536871099
+"320","Sub-Sahara Africa","Metro+Backbone Fiber","D9",1.9893512416556
+"321","Sub-Sahara Africa","Mobile Infra Opex","D1",1.41334358644199
+"322","Sub-Sahara Africa","Mobile Infra Opex","D10",1.87546355836967
+"323","Sub-Sahara Africa","Mobile Infra Opex","D2",2.45962963856599
+"324","Sub-Sahara Africa","Mobile Infra Opex","D3",3.20922143644149
+"325","Sub-Sahara Africa","Mobile Infra Opex","D4",3.52380971390981
+"326","Sub-Sahara Africa","Mobile Infra Opex","D5",3.81782802797189
+"327","Sub-Sahara Africa","Mobile Infra Opex","D6",3.67891786340194
+"328","Sub-Sahara Africa","Mobile Infra Opex","D7",3.61387801484087
+"329","Sub-Sahara Africa","Mobile Infra Opex","D8",2.94041243762369
+"330","Sub-Sahara Africa","Mobile Infra Opex","D9",2.65854627861326
+"331","Sub-Sahara Africa","Remote Coverage","D1",0.738048992192255
+"332","Sub-Sahara Africa","Remote Coverage","D10",0.177165534616887
+"333","Sub-Sahara Africa","Remote Coverage","D2",0.435397898534107
+"334","Sub-Sahara Africa","Remote Coverage","D3",0.490664732629812
+"335","Sub-Sahara Africa","Remote Coverage","D4",0.371114322209566
+"336","Sub-Sahara Africa","Remote Coverage","D5",0.457559556349052
+"337","Sub-Sahara Africa","Remote Coverage","D6",0.409382094023745
+"338","Sub-Sahara Africa","Remote Coverage","D7",0.638719427167293
+"339","Sub-Sahara Africa","Remote Coverage","D8",0.445612964258719
+"340","Sub-Sahara Africa","Remote Coverage","D9",0.29694333292125
+"341","Sub-Sahara Africa","Policy/Regulation","D1",0.055855207485
+"342","Sub-Sahara Africa","Policy/Regulation","D10",0.08921417925
+"343","Sub-Sahara Africa","Policy/Regulation","D2",0.1129201945725
+"344","Sub-Sahara Africa","Policy/Regulation","D3",0.14584959571
+"345","Sub-Sahara Africa","Policy/Regulation","D4",0.164076061485
+"346","Sub-Sahara Africa","Policy/Regulation","D5",0.1788519957
+"347","Sub-Sahara Africa","Policy/Regulation","D6",0.17186916887
+"348","Sub-Sahara Africa","Policy/Regulation","D7",0.1674823255
+"349","Sub-Sahara Africa","Policy/Regulation","D8",0.1394061116175
+"350","Sub-Sahara Africa","Policy/Regulation","D9",0.12530300125
+"351","Sub-Sahara Africa","ICT Skills/Content","D1",0.389390589324
+"352","Sub-Sahara Africa","ICT Skills/Content","D10",0.6219502782
+"353","Sub-Sahara Africa","ICT Skills/Content","D2",0.787215070734
+"354","Sub-Sahara Africa","ICT Skills/Content","D3",1.016780038664
+"355","Sub-Sahara Africa","ICT Skills/Content","D4",1.143844542924
+"356","Sub-Sahara Africa","ICT Skills/Content","D5",1.24685391288
+"357","Sub-Sahara Africa","ICT Skills/Content","D6",1.198173634408
+"358","Sub-Sahara Africa","ICT Skills/Content","D7",1.1675910692
+"359","Sub-Sahara Africa","ICT Skills/Content","D8",0.971859749562
+"360","Sub-Sahara Africa","ICT Skills/Content","D9",0.873540923
