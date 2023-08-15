@@ -21,13 +21,13 @@ Citation
 ## Estimated gross investment to connect the unconnected
 
 <p align="center">
-  <img src="/vis/figures/aggregated_costs.tif" />
+  <img src="/vis/figures/aggregated_costs.png" />
 </p>
 
 ## Estimated relative GDP investment to connect the unconnected
 
 <p align="center">
-  <img src="/vis/figures/gdp_perc_costs.tif" />
+  <img src="/vis/figures/gdp_perc_costs.png" />
 </p>
 
 ## Estimated investment by sub-national region to connect the unconnected
