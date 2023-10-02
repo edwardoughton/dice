@@ -384,9 +384,9 @@ def combine_data(deciles, regions):
     return regions
 
 
-def plot_regions_by_geotype(regions, path, imf_countries, non_imf):
+def plot_regions_by_cost(regions, path, imf_countries, non_imf):
     """
-    Plot regions by geotype.
+    Plot regions by cost.
 
     """
     metric = 'cost'
@@ -462,4 +462,4 @@ if __name__ == "__main__":
     regions = gpd.read_file(os.path.join(VIS,'..','data','test3.shp'), crs='epsg:4326')
     path = os.path.join(VIS, 'regions_by_cost.png')
 
-    plot_regions_by_geotype(regions, path, imf_countries, non_imf)
+    plot_regions_by_cost(regions, path, imf_countries, non_imf)
